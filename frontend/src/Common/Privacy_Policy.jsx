@@ -81,11 +81,45 @@ const PrivacyPolicy = () => {
         jurisdiction of the courts in [Your State or Country].
       </p>
       <h2 className="lg:text-xl text-lg font-semibold text-gray-800 lg:mb-4 lg:mt-7 my-3">
-        8. If you have any query about this disclaimer, please contact us at:
+        8. Third Party Data
       </h2>
       <p className="lg:mb-10 mb-5 text-justify">
-        Trust Financial Advisory 
-        Email: info@trustfinancialadvisory.com
+        On Trust Financial Advisory, we incorporate the sophisticated
+        TradingView widget on our site to bring real-time market highlights and
+        complete charting functionalities to our visitors. Through incorporation
+        of the third-party link
+        "https://www.tradingview.com/widget-docs/widgets/charts/advanced-chart/",
+        we provide access to state-of-the-art financial information, interactive
+        charts, and technical analysis functions. Note that our site does not
+        have control or association with data presented by the widget, since it
+        is externally sourced and operated by TradingView. The incorporation is
+        for sole purposes of optimizing user experience and offering further
+        resources for market analysis.
+      </p>
+      <p className="lg:mb-10 mb-5 text-justify">
+        At Trust Financial Advisory, we employ the Wise graph widget (from
+        "https://wise.com/gb/business-tools/fx-widget") to display real-time
+        graphs of currency exchange rates on our website. This facilitates easy
+        tracking of currency trends by users. Please be aware that the
+        information displayed in this widget is maintained by Wise and that our
+        website is not in control of or affiliated with it. We employ this tool
+        to deliver useful information and enhance your experience.
+      </p>
+      <p className="lg:mb-10 mb-5 text-justify">
+        We at Trust Financial Advisory use "https://www.exchangerate-api.com/"
+        to show live currency exchange rates and provide currency conversion
+        tools on our website. This enables users to quickly check and convert
+        currency values. Please be aware that the information and rates
+        presented are handled solely by Exchange Rate API, and our website has
+        no affiliation or control over the information presented. We incorporate
+        this service to provide you with accurate and dependable currency
+        information for your convenience.
+      </p>
+      <h2 className="lg:text-xl text-lg font-semibold text-gray-800 lg:mb-4 lg:mt-7 my-3">
+        9. If you have any query about this disclaimer, please contact us at:
+      </h2>
+      <p className="lg:mb-10 mb-5 text-justify">
+        Trust Financial Advisory Email: info@trustfinancialadvisory.com
       </p>
     </div>
   );
