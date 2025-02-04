@@ -7,15 +7,16 @@ import ProtectedRoute from "./Common/ProtectedRoute";
 import PageNotFound from "./Common/PageNotFound";
 import Unauthorized from "./Common/Unauthorized";
 import UserHome from "./Components/User/UserHome";
-// import Disclaimer from "./common/Disclaimer";
-// import Privacy_Policy from "./common/Privacy_Policy";
-// import About_us from "./common/About_Us";
-// import Terms_and_Condition from "./common/Terms_and_Condition";
+import Disclaimer from "./Common/Disclaimer";
+import Privacy_Policy from "./Common/Privacy_Policy";
+import About_us from "./Common/About_Us";
+import Terms_and_Condition from "./Common/Terms_and_Condition";
 import CategoryBlogs from "./Components/User/CategoryBlogs";
 import CalculatorHome from "./Components/User/CalculatorHome";
 import Subscribe from "./Common/Subscribe";
-// import Popup from "./common/Popup";
+import Popup from "./Common/Popup";
 import { HelmetProvider } from "react-helmet-async";
+import ScrollToTop from "./Common/ScrollToTop";
 // Lazy loading components for Admin
 const AdminLogin = React.lazy(() => import("./Components/Admin/AdminLogin"));
 const Admin = React.lazy(() => import("./Components/Admin/Admin"));
@@ -37,7 +38,8 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <Navbar />
-        {/* <Popup/> */}
+        <ScrollToTop/>
+        <Popup />
         <Suspense fallback={<div>Loading public content...</div>}>
           <Routes>
             {/* Public Routes */}
@@ -49,10 +51,13 @@ function App() {
             />
             <Route path="/adminlogin" element={<AdminLogin />} />
             <Route path="/unauthorized" element={<Unauthorized />} />
-            {/* <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="/privacy_policy" element={<Privacy_Policy />} />
-          <Route path="/terms_and_condition" element={<Terms_and_Condition />} />
-          <Route path="/About_us" element={<About_us />} /> */}
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/privacy_policy" element={<Privacy_Policy />} />
+            <Route
+              path="/terms_and_condition"
+              element={<Terms_and_Condition />}
+            />
+            <Route path="/About_us" element={<About_us />} />
             <Route path="/:category/:id_or_slug" element={<FullPostAdmin />} />
             <Route path="/categoryData" element={<CategoryBlogs />} />
             <Route path="/calculator" element={<CalculatorHome />} />
@@ -79,7 +84,7 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>
-        <Subscribe/>
+        <Subscribe />
         <Footer />
       </BrowserRouter>
     </HelmetProvider>

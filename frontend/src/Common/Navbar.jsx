@@ -30,10 +30,25 @@ function Navbar() {
   const [posts, setPosts] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const dropdownRef = useRef();
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); // Check if admin is authenticated
+  useEffect(() => {
+    // Handle scroll event
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   useEffect(() => {
     // Fetch categories from your API or backend
     const fetchCategories = async () => {
@@ -162,18 +177,20 @@ function Navbar() {
 
   return (
     <>
-      <header>
-        <nav className="relative bg-black border-b-2 shadow-xl">
+      <header className="mb-[68px]">
+        <nav className="fixed top-0 w-full z-50 bg-black shadow-md">
           <div className="flex justify-between items-center">
             <div className="flex flex-row items-center  lg:gap-4 gap-2 lg:w-[30%] pl-3 py-1">
-              <div onClick={handleLogoClick}>
-                <img
-                  src="/logo.png"
-                  alt="Logo"
-                  width={80}
-                  height={80}
-                  loading="lazy"
-                />
+              <div onClick={handleLogoClick} className="cursor-pointer">
+                <Link to="/">
+                  <img
+                    src="/logo.png"
+                    alt="Logo"
+                    width={80}
+                    height={80}
+                    loading="lazy"
+                  />
+                </Link>
               </div>
               <div>
                 <h1 className="lg:text-lg text-[#FF822E] text-sm font-medium text-center">
@@ -190,7 +207,6 @@ function Navbar() {
                   aria-label="Search">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    
                     className="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -212,7 +228,7 @@ function Navbar() {
               )}
               <button
                 onClick={toggleMenu}
-                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                className="inline-flex items-center p-2 text-sm text-white rounded-lg lg:hidden">
                 <span className="sr-only">Open main menu</span>
                 {/* Hamburger Icon */}
                 <svg
@@ -273,7 +289,7 @@ function Navbar() {
                   </>
                 ) : (
                   <>
-                    <div className="flex flex-row justify-center items-center gap-32">
+                    <div className="flex flex-row justify-center items-center gap-20">
                       <div
                         className={`${
                           isMenuOpen ? "block" : "hidden"
@@ -327,7 +343,7 @@ function Navbar() {
                             {suggestions.map((suggestion) => (
                               <li
                                 key={suggestion?.id}
-                                className="px-6 py-2 flex items-center font-medium justify-between hover:bg-gray-200 hover:border-black hover:border-l-4 cursor-pointer transition-transform duration-200"
+                                className="px-6 py-2 flex items-center font-medium justify-between hover:bg-gray-200 hover:border-[#FF822E] hover:border-l-4 cursor-pointer transition-transform duration-200"
                                 onClick={() =>
                                   handleSuggestionClick(suggestion)
                                 }>
@@ -364,13 +380,13 @@ function Navbar() {
 
             {/* Mobile Links */}
             <div
-              className={`lg:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
+              className={`lg:hidden absolute w-full bg-black shadow-lg transition-all duration-300 ease-in-out ${
                 isMenuOpen
                   ? "opacity-100 top-[100%] visible"
                   : "opacity-0 -top-full invisible"
               }`}
               style={{ zIndex: 1000 }}>
-              <ul className="space-y-4 p-4">
+              <ul className="space-y-4">
                 {isAuthenticated ? (
                   <>
                     <li>
@@ -398,7 +414,7 @@ function Navbar() {
                         <div key={type} className="relative group">
                           {/* Category Header */}
                           <button
-                            className="flex justify-between items-center w-full px-4 py-2 text-white text-xl font-semibold border-b"
+                            className="flex justify-between items-center w-full px-4 py-2 text-white text-base font-semibold border-b"
                             onClick={() =>
                               setActiveCategory(
                                 activeCategory === type ? null : type
@@ -422,7 +438,7 @@ function Navbar() {
                             {groupedCategories[type].map((category) => (
                               <li
                                 key={category.category_id}
-                                className="px-4 py-2">
+                                className="text-xs px-4 py-2 text-white">
                                 <Link
                                   to={`/categoryData?categoryId=${
                                     category.category_id
@@ -447,7 +463,7 @@ function Navbar() {
 
             {/* Search Bar */}
             <div
-              className={`lg:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
+              className={`lg:hidden absolute w-full bg-black shadow-lg transition-all duration-300 ease-in-out ${
                 searchBarOpen
                   ? "opacity-100 top-[100%] visible"
                   : "opacity-0 -top-full invisible"
@@ -464,12 +480,12 @@ function Navbar() {
                 {showDropdown && (
                   <ul
                     ref={dropdownRef}
-                    className="suggestion-item absolute bg-white border rounded-lg mt-2 w-full z-10">
+                    className="suggestion-item absolute bg-black border rounded-lg mt-2 w-full z-10">
                     {suggestions.map((suggestion) => (
                       <li
                         key={suggestion.id}
                         onClick={() => handleSuggestionClick(suggestion)}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        className="px-4 py-2 hover:bg-gray-100 text-white cursor-pointer">
                         {suggestion.title}
                       </li>
                     ))}

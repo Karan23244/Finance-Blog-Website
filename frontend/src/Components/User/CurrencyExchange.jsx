@@ -43,7 +43,7 @@ const CurrencyConverterAndChart = () => {
     <div id="currency" className="max-w-7xl mx-auto p-4">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
         {/* Currency Converter Section */}
-        <div className="w-full  flex flex-col justify-between">
+        <div className="w-full flex flex-col justify-between">
           <h1 className="text-[#FF822E] text-3xl font-semibold pb-4">
             Currency Convertor
           </h1>
@@ -54,7 +54,7 @@ const CurrencyConverterAndChart = () => {
           </p>
           <div className="p-8 pt-12 rounded-lg shadow-lg w-full mb-8">
             <div className="flex flex-col gap-8 lg:gap-6">
-              <div className="flex gap-6">
+              <div className="flex gap-6 items-center">
                 <div className="w-full">
                   <label className="block text-sm font-semibold mb-2">
                     Amount:
@@ -63,7 +63,7 @@ const CurrencyConverterAndChart = () => {
                     type="number"
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
-                    className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
+                    className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black"
                   />
                 </div>
 
@@ -80,7 +80,7 @@ const CurrencyConverterAndChart = () => {
                     <select
                       value={baseCurrency}
                       onChange={(e) => setBaseCurrency(e.target.value)}
-                      className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
+                      className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black">
                       {currencies.map((currency) => (
                         <option key={currency} value={currency}>
                           {currency}
@@ -90,7 +90,9 @@ const CurrencyConverterAndChart = () => {
                   </div>
                 </div>
 
-                <FaExchangeAlt className="text-2xl text-gray-500" />
+                <div>
+                  <img src="/swap.png" alt="swap" height={100} width={100} />
+                </div>
 
                 <div className="w-1/2">
                   <label className="block text-sm font-semibold mb-2">
@@ -105,7 +107,7 @@ const CurrencyConverterAndChart = () => {
                     <select
                       value={targetCurrency}
                       onChange={(e) => setTargetCurrency(e.target.value)}
-                      className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
+                      className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black">
                       {currencies.map((currency) => (
                         <option key={currency} value={currency}>
                           {currency}
@@ -128,15 +130,14 @@ const CurrencyConverterAndChart = () => {
         </div>
 
         {/* Chart Section */}
-        <div className="w-full lg:w-1/3 flex flex-col justify-between">
+        <div className="w-full lg:w-2/5 flex flex-col justify-between">
           <iframe
             title="fx-chart"
             src={iframeSrc}
             width="100%"
-            height="400px"
             frameBorder="0"
             allowtransparency="false"
-            className="rounded-md shadow-lg"></iframe>
+            className="lg:h-[400px] h-[600px]"></iframe>
         </div>
       </div>
     </div>

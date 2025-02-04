@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
-const TradingViewWidget = ({ defaultSearch = "AAPL" }) => {
+const TradingViewWidget = ({ defaultSearch = "BSE:NIFTY50ADD" }) => {
+  // Default search changed to "NIFTY50"
   const widgetContainerRef = useRef(null);
 
   useEffect(() => {
@@ -52,7 +53,7 @@ const TradingViewWidget = ({ defaultSearch = "AAPL" }) => {
   return (
     <div
       id="widget-container"
-      className="w-full h-[700px] rounded-lg shadow-lg">
+      className="w-full lg:h-[700px] h-[500px] rounded-lg shadow-lg">
       <div
         id="tradingview_widget"
         ref={widgetContainerRef}

@@ -1,27 +1,27 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Footer() {
-  // const location = useLocation();
-  // const navigate = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  // const handleLogoClick = (e) => {
-  //   e.preventDefault();
-  //   if (location.pathname === "/") {
-  //     // Refresh the page if the user is already on the home page
-  //     window.location.reload();
-  //   } else {
-  //     // Navigate to the home page
-  //     navigate("/");
-  //   }
-  // };
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      // Refresh the page if the user is already on the home page
+      window.location.reload();
+    } else {
+      // Navigate to the home page
+      navigate("/");
+    }
+  };
   return (
     <footer className="text-white bg-black border-t border-gray-700">
       <div className="w-full max-w-screen-xl mx-auto p-3">
         <div className="flex lg:flex-row flex-col gap-4 justify-between">
           {/* Logo Section */}
           <div className="flex flex-col items-center">
-            <div className="flex items-center space-x-3 mb-4 cursor-pointer">
+            <div className="flex items-center space-x-3 mb-4 cursor-pointer" onClick={handleLogoClick}>
               <img
                 src="/logo.png"
                 alt="Logo"
@@ -46,32 +46,32 @@ function Footer() {
             <div className="text-center">
               <ul className="grid lg:grid-cols-4 grid-cols-2 gap-2 items-center text-sm font-medium justify-between lg:divide-x-2">
                 <li>
-                  <a
+                  <Link
                     to="/privacy_policy"
                     className="hover:underline lg:text-lg text-sm text-white mx-4 py-2 lg:font-semibold">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     to="/terms_and_condition"
                     className="hover:underline lg:text-lg text-sm text-white  mx-4 py-2 lg:font-semibold">
                     Terms & Conditions
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     to="/disclaimer"
                     className="hover:underline lg:text-lg text-sm text-white  mx-4 py-2 lg:font-semibold">
                     Disclaimer
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     to="/about_us"
                     className="hover:underline lg:text-lg text-sm text-white  mx-4 py-2 lg:font-semibold">
                     About Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

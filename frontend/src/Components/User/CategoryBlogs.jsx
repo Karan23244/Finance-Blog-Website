@@ -9,69 +9,69 @@ const CategoryPosts = () => {
   const { posts, loading, error, categoryName, categoryType } =
     usePostsByCategory();
   // Function to fetch SEO data based on category name
-  const getSeoDetails = (category) => {
-    const seoData = {
-      "Smart Home Technology": {
-        title: "Elevate Your Home with Smart Technology | Homimprovement",
-        description:
-          "Homimprovement offers cutting-edge smart home technology to elevate your lifestyle. Discover automation, security, and energy-saving solutions today!",
-        keywords:
-          "Smart Home Technology,Home Automation,Smart Home Solutions,Energy Efficiency,Home Security Systems,Smart Devices,IoT Home Technology,Home Improvement,Smart Living,Home Tech Innovations",
-      },
-      "DIY Home Projects": {
-        title: "Homimprovement: Easy DIY Home Projects to Enhance Your Home",
-        description:
-          "Join Homimprovement for innovative DIY home projects. From simple crafts to major renovations, find inspiration and tips to enhance your home!",
-        keywords:
-          "DIY Home Projects,Home Improvement Ideas,Creative Home Renovations,Easy DIY Crafts,Home Decor Projects,Step-by-Step DIY Guides,Home Improvement Tips,DIY Crafts for Beginners,Home Makeover Ideas,Sustainable DIY Projects",
-      },
-      "Interior Design Trends": {
-        title: "Homimprovement: Your Guide to Modern Interior Design Trends",
-        description:
-          "Stay updated with the latest interior design trends at Homimprovement. Find inspiration and tips to create your dream home today!",
-        keywords:
-          "Interior Design Trends,Modern Home Decor,Home Improvement Ideas,Interior Design Inspiration,Latest Design Styles,Home Decor Tips,Contemporary Interior Design,Stylish Home Makeovers,Interior Design Ideas,Home Renovation Trends",
-      },
-      "How to ?": {
-        title: "Home Improvement Made Easy: Step-by-Step Guides",
-        description:
-          "Discover practical home improvement tips to enhance your living space. Transform your home with our easy-to-follow guides!",
-        keywords:
-          "Home Improvement,Home Renovation Tips,Home Maintenance,Outdoor Improvement,Home Decor Ideas",
-      },
-      Best: {
-        title: "Best Home Improvement Ideas for Every Space | Homimprovement",
-        description:
-          "Explore the best home improvement solutions, DIY tips, and renovation ideas for every space in your house. Homimprovement has you covered!",
-        keywords:
-          "Best home improvement ideas,Best home upgrades,Best budget home products, Best home improvement tips, Best home improvement projects, Best tools for DIY home improvement, Best home upgrades for resale value, Best home renovation ideas, Best living room decor upgrades, Best seasonal home maintenance tips",
-      },
-      VS: {
-        title: "Expert Tips and Comparisons for Home Improvement Versus",
-        description:
-          "Uncover the best home improvement strategies with Versus. Get expert comparisons and tips to elevate your living space today!",
-        keywords:
-          "Home Improvement Versus, Product Versus, Traditional vs Modern Homes, DIY vs Professional Home Improvement, Renovation vs Remodeling, Interior Design vs Interior Decoration, Smart Home vs Regular Home",
-      },
-      Reviews: {
-        title: "Discover Top Home Improvement Reviews at Homimprovement",
-        description:
-          "Looking for reliable home improvement reviews? Homimprovement provides expert insights to help you choose the right products for your home.",
-        keywords:
-          "Home improvement reviews,Product reviews,Home improvement products,DIY home improvement,Home renovation reviews,Best home improvement tools,Home improvement tips,Expert product reviews,Home improvement advice,Reliable home improvement insights",
-      },
-    };
+  // const getSeoDetails = (category) => {
+  //   const seoData = {
+  //     "Smart Home Technology": {
+  //       title: "Elevate Your Home with Smart Technology | Homimprovement",
+  //       description:
+  //         "Homimprovement offers cutting-edge smart home technology to elevate your lifestyle. Discover automation, security, and energy-saving solutions today!",
+  //       keywords:
+  //         "Smart Home Technology,Home Automation,Smart Home Solutions,Energy Efficiency,Home Security Systems,Smart Devices,IoT Home Technology,Home Improvement,Smart Living,Home Tech Innovations",
+  //     },
+  //     "DIY Home Projects": {
+  //       title: "Homimprovement: Easy DIY Home Projects to Enhance Your Home",
+  //       description:
+  //         "Join Homimprovement for innovative DIY home projects. From simple crafts to major renovations, find inspiration and tips to enhance your home!",
+  //       keywords:
+  //         "DIY Home Projects,Home Improvement Ideas,Creative Home Renovations,Easy DIY Crafts,Home Decor Projects,Step-by-Step DIY Guides,Home Improvement Tips,DIY Crafts for Beginners,Home Makeover Ideas,Sustainable DIY Projects",
+  //     },
+  //     "Interior Design Trends": {
+  //       title: "Homimprovement: Your Guide to Modern Interior Design Trends",
+  //       description:
+  //         "Stay updated with the latest interior design trends at Homimprovement. Find inspiration and tips to create your dream home today!",
+  //       keywords:
+  //         "Interior Design Trends,Modern Home Decor,Home Improvement Ideas,Interior Design Inspiration,Latest Design Styles,Home Decor Tips,Contemporary Interior Design,Stylish Home Makeovers,Interior Design Ideas,Home Renovation Trends",
+  //     },
+  //     "How to ?": {
+  //       title: "Home Improvement Made Easy: Step-by-Step Guides",
+  //       description:
+  //         "Discover practical home improvement tips to enhance your living space. Transform your home with our easy-to-follow guides!",
+  //       keywords:
+  //         "Home Improvement,Home Renovation Tips,Home Maintenance,Outdoor Improvement,Home Decor Ideas",
+  //     },
+  //     Best: {
+  //       title: "Best Home Improvement Ideas for Every Space | Homimprovement",
+  //       description:
+  //         "Explore the best home improvement solutions, DIY tips, and renovation ideas for every space in your house. Homimprovement has you covered!",
+  //       keywords:
+  //         "Best home improvement ideas,Best home upgrades,Best budget home products, Best home improvement tips, Best home improvement projects, Best tools for DIY home improvement, Best home upgrades for resale value, Best home renovation ideas, Best living room decor upgrades, Best seasonal home maintenance tips",
+  //     },
+  //     VS: {
+  //       title: "Expert Tips and Comparisons for Home Improvement Versus",
+  //       description:
+  //         "Uncover the best home improvement strategies with Versus. Get expert comparisons and tips to elevate your living space today!",
+  //       keywords:
+  //         "Home Improvement Versus, Product Versus, Traditional vs Modern Homes, DIY vs Professional Home Improvement, Renovation vs Remodeling, Interior Design vs Interior Decoration, Smart Home vs Regular Home",
+  //     },
+  //     Reviews: {
+  //       title: "Discover Top Home Improvement Reviews at Homimprovement",
+  //       description:
+  //         "Looking for reliable home improvement reviews? Homimprovement provides expert insights to help you choose the right products for your home.",
+  //       keywords:
+  //         "Home improvement reviews,Product reviews,Home improvement products,DIY home improvement,Home renovation reviews,Best home improvement tools,Home improvement tips,Expert product reviews,Home improvement advice,Reliable home improvement insights",
+  //     },
+  //   };
 
-    return (
-      seoData[category] || {
-        title: "Homimprovement | Home Improvement Blog",
-        description:
-          "Explore a wide range of home improvement ideas and trends.",
-        keywords: "Home Improvement, DIY, Interior Design, Smart Technology",
-      }
-    );
-  };
-  const { title, description, keywords } = getSeoDetails(categoryName);
+  //   return (
+  //     seoData[category] || {
+  //       title: "Homimprovement | Home Improvement Blog",
+  //       description:
+  //         "Explore a wide range of home improvement ideas and trends.",
+  //       keywords: "Home Improvement, DIY, Interior Design, Smart Technology",
+  //     }
+  //   );
+  // };
+  // const { title, description, keywords } = getSeoDetails(categoryName);
   if (loading)
     return <div className="text-gray-500 text-center h-screen">Loading...</div>;
   if (error)
@@ -377,7 +377,7 @@ const CategoryPosts = () => {
   return (
     <>
       {/* React Helmet for SEO */}
-      <Helmet>
+      {/* <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -386,7 +386,7 @@ const CategoryPosts = () => {
         <meta property="og:type" content="Category Blogs" />
         <meta property="og:url" content={`${import.meta.env.VITE_API_URL}`} />
         <link rel="canonical" href={`${import.meta.env.VITE_API_URL}`} />
-      </Helmet>
+      </Helmet> */}
       {categoryType === "Personal Finance" && <PersonalFinanceUI />}
       {categoryType === "Investment and Wealth Growth" && <InvestmentUI />}
       {categoryType === "Risk Management" && <RiskManagmentUI />}

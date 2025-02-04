@@ -3,7 +3,10 @@ import { FaChevronLeft, FaChevronRight, FaUserCircle } from "react-icons/fa";
 import TradingWIdget from "./TradingWIdget";
 import CurrencyExchange from "./CurrencyExchange";
 import { Link } from "react-router-dom";
-import CalculatorPage from "./Calculator/CalculatorPage";
+import { calculateResult } from "./Calculator/calculatorLogic";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+
 const userHome = () => {
   const [posts, setPosts] = useState([]);
   const [groupedData, setGroupedData] = useState({
@@ -15,13 +18,33 @@ const userHome = () => {
     {
       id: "sip",
       name: "SIP Calculator",
-      description: "Calculate SIP future value.",
+      description:
+        "Plan your SIP investments carefully and learn how the power of intelligent compounding can transform modest monthly contributions into a sizable fortune over time.",
       inputs: [
-        { label: "Monthly Investment (₹)", key: "investment", type: "number", default: 5000, max: 1000000 },
-        { label: "Expected Return Rate (%)", key: "rate", type: "number", default: 12, max: 30 },
-        { label: "Investment Duration (Years)", key: "time", type: "number", default: 10, max: 40 },
+        {
+          label: "Monthly Investment (₹)",
+          key: "investment",
+          type: "number",
+          default: 5000,
+          max: 1000000,
+        },
+        {
+          label: "Expected Return Rate (%)",
+          key: "rate",
+          type: "number",
+          default: 12,
+          max: 30,
+        },
+        {
+          label: "Investment Duration (Years)",
+          key: "time",
+          type: "number",
+          default: 10,
+          max: 40,
+        },
       ],
       output: "Future Value (₹)",
+      showGraph: true,
     },
   ];
   const [imagePreloaded, setImagePreloaded] = useState(false);
@@ -97,7 +120,7 @@ const userHome = () => {
             Market Highlights
           </h1>
           {/* Default search symbol can be passed as a prop */}
-          <TradingWIdget defaultSearch="BTCUSD" />
+          <TradingWIdget />
         </div>
       </div>
       <MoneyInsights data={groupedData["Personal Finance"]} />
@@ -106,11 +129,13 @@ const userHome = () => {
         {/* Default width updated to max-w-7xl */}
         <div className="w-full max-w-7xl mx-auto p-6">
           {/* Default search symbol can be passed as a prop */}
-          <CalculatorPage calculator={calculators[0]} />
+          <CalculatorSection calculator={calculators[0]} />
           <div className="flex justify-center mt-8">
-            <button className="bg-gray-200 text-black text-lg border font-semibold py-3 px-8 rounded-full transition hover:bg-[#E67322] hover:text-white focus:ring-2 focus:ring-[#FF822E] focus:outline-none">
-              Calculators
-            </button>
+            <Link to="/calculator">
+              <button className="bg-gray-200 text-black text-lg border font-semibold py-3 px-8 rounded-full transition hover:bg-[#E67322] hover:text-white focus:ring-2 focus:ring-[#FF822E] focus:outline-none">
+                Calculators
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -163,7 +188,7 @@ const Hero = () => {
             </a>
           </div>
           <div className="bg-black bg-opacity-80 p-3 rounded-xl shadow-md ">
-            <a href="/calculator">
+            <Link to="/calculator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -181,7 +206,7 @@ const Hero = () => {
                 <path d="M23.76,21.35l2.32,1.34-.54.33-1.45.83c-.18.11-.33.13-.33-.15Z" />
                 <path d="M12,8.88a1.81,1.81,0,0,1-1.31-1.17A.56.56,0,0,1,11,6.94c.3-.11.56,0,.72.38a1.06,1.06,0,0,0,1.57.34.35.35,0,0,0-.05-.58,2.36,2.36,0,0,0-.59-.24c-.28-.09-.58-.12-.85-.23a1.39,1.39,0,0,1-1-1.29,1.47,1.47,0,0,1,.88-1.48c.19-.1.36-.15.38-.43A.46.46,0,0,1,12.61,3a.48.48,0,0,1,.5.42c0,.22.14.29.32.36a1.74,1.74,0,0,1,.9.89.55.55,0,1,1-1,.5.82.82,0,0,0-1.14-.39.59.59,0,0,0-.29.4.5.5,0,0,0,.29.39,5.57,5.57,0,0,0,.85.23,1.84,1.84,0,0,1,1.27.88,1.45,1.45,0,0,1-.86,2.09c-.19.07-.35.11-.38.38a.47.47,0,0,1-.53.39.52.52,0,0,1-.51-.43A1.56,1.56,0,0,1,12,8.88Z" />
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="bg-black bg-opacity-80 p-3 rounded-xl shadow-md">
             <a href="#Market">
@@ -228,9 +253,7 @@ const TrendingNow = ({ posts }) => {
   return (
     <div className="w-full flex flex-col items-center p-6">
       <div className="relative w-full max-w-7xl">
-        <h1 className="text-[#FF822E] text-3xl font-semibold p-4">
-          Trending Now
-        </h1>
+        <h1 className="text-[#FF822E] text-3xl font-bold p-4">Trending Now</h1>
 
         {/* Left Button */}
         <button
@@ -253,7 +276,7 @@ const TrendingNow = ({ posts }) => {
             {posts.map((blog) => (
               <div
                 key={blog.id}
-                className={`w-full md:w-1/${visibleCards} flex-shrink-0 px-6 lg:px-4`}>
+                className={`w-full md:w-1/${visibleCards} flex-shrink-0 items-stretch px-6 lg:px-4`}>
                 <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
                   <Link
                     to={`/${createSlug(
@@ -321,9 +344,7 @@ const MoneyInsights = ({ data }) => {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-[#FF822E] text-3xl font-semibold mb-6">
-        Money Insights
-      </h1>
+      <h1 className="text-[#FF822E] text-3xl font-bold mb-6">Money Insights</h1>
       {topBlogs?.length === 0 ? (
         <p className="text-gray-500 text-center h-screen">
           No matching blog posts found.
@@ -400,11 +421,11 @@ const MoneyInsights = ({ data }) => {
                     />
                   </Link>
                 </div>
-                <div className="p-4 flex-1 flex flex-col justify-between flex-grow">
+                <div className="lg:p-4 flex-1 flex flex-col justify-between flex-grow">
                   <h2 className="text-lg font-bold text-gray-800">
                     {blog.title}
                   </h2>
-                  <div className="flex items-center justify-between mt-2">
+                  <div className="flex flex-col items-start gap-2 justify-between mt-2">
                     <div className="flex items-center gap-2">
                       <FaUserCircle size={20} />
                       <p className="text-sm font-semibold text-gray-700">
@@ -437,9 +458,7 @@ const TopStrategies = ({ data }) => {
   const topBlogs = data.slice(0, 6);
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-[#FF822E] text-3xl font-semibold mb-6">
-        Top Strategies
-      </h1>
+      <h1 className="text-[#FF822E] text-3xl font-bold mb-6">Top Strategies</h1>
       {topBlogs?.length === 0 ? (
         <p className="text-gray-500 text-center h-screen">
           No matching blog posts found.
@@ -576,7 +595,7 @@ const RiskManagement = ({ data }) => {
     <>
       <div className="w-full flex flex-col items-center p-6">
         <div className="relative w-full max-w-7xl">
-          <h1 className="text-[#FF822E] text-3xl font-semibold p-4">
+          <h1 className="text-[#FF822E] text-3xl font-bold p-4">
             Risk Management
           </h1>
           <div>
@@ -665,6 +684,168 @@ const RiskManagement = ({ data }) => {
         </div>
       </div>
     </>
+  );
+};
+const CalculatorSection = ({ calculator }) => {
+  const defaultInputs = calculator.inputs.reduce((acc, input) => {
+    acc[input.key] = input.default || 0;
+    return acc;
+  }, {});
+
+  // Initialize default values
+  const [inputs, setInputs] = useState(defaultInputs);
+  const [result, setResult] = useState(null);
+  const [chartData, setChartData] = useState(null);
+  console.log(chartData);
+  const calculateAndUpdate = (currentInputs) => {
+    const res = calculateResult(calculator.id, currentInputs);
+
+    const investedAmount =
+      calculator.id === "sip"
+        ? currentInputs.investment * currentInputs.time * 12
+        : currentInputs.investment;
+    const returnAmount = res - investedAmount;
+
+    const data = {
+      labels: ["Invested Amount", "Return Amount"],
+      datasets: [
+        {
+          data: [investedAmount, returnAmount],
+          backgroundColor: ["#FF6F1F", "#8C8C8C"],
+          hoverBackgroundColor: ["#FF6F1F", "#8C8C8C"],
+          borderColor: "#ffffff",
+          borderWidth: 2,
+        },
+      ],
+    };
+
+    setResult(res);
+    setChartData(data);
+  };
+
+  useEffect(() => {
+    calculateAndUpdate(inputs);
+  }, [inputs]);
+
+  const handleInputChange = (key, value) => {
+    const inputConfig = calculator.inputs.find((input) => input.key === key);
+    console.log(inputConfig);
+    const maxValue = inputConfig?.max || 100;
+
+    // Apply min/max limits dynamically
+    value = Math.max(0, Math.min(maxValue, value));
+    setInputs((prev) => ({ ...prev, [key]: value }));
+  };
+
+  return (
+    <div className="p-6 bg-[#E8E8E8] mx-auto max-w-screen-xl rounded-lg shadow-lg flex flex-col lg:flex-row items-center gap-8">
+      <div className="flex-1 w-full">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+          {calculator.name}
+        </h2>
+        <p className="text-gray-600 mb-6">{calculator.description}</p>
+
+        <div className="grid gap-6 mb-4">
+          {calculator.inputs.map((input) => (
+            <div key={input.key} className="flex flex-col">
+              <div className="flex flex-row justify-between items-center">
+                <label className="text-md font-medium mb-1">
+                  {input.label}
+                </label>
+                <input
+                  type="number"
+                  value={inputs[input.key]}
+                  onChange={(e) =>
+                    handleInputChange(input.key, Number(e.target.value))
+                  }
+                  className="mb-2 w-42 p-2 border border-[#FF822E] rounded-md shadow-sm focus:outline-none focus:ring-0"
+                  placeholder="Enter value"
+                />
+              </div>
+              <div>
+                <input
+                  type="range"
+                  min={0}
+                  max={input.max}
+                  value={inputs[input.key]}
+                  onChange={(e) =>
+                    handleInputChange(input.key, Number(e.target.value))
+                  }
+                  className="w-full cursor-pointer appearance-[#FF822E] h-1 border-none rounded-lg focus:outline-none focus:ring-0 accent-[#FF822E]"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {result !== null && (
+          <div className="flex flex-row justify-between items-center mt-6 py-2 px-8 bg-[#FFBA8C] rounded-lg">
+            <div>
+              <h4 className="text-xl font-semibold mb-2 text-black">
+                Calculation Result
+              </h4>
+            </div>
+            <div>
+              <p className="text-xl text-white">
+                {calculator.output}: ₹{result.toLocaleString()}
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+      {calculator.showGraph && (
+        <>
+          {chartData && (
+            <div className="flex-1 w-full max-w-sm bg-white border p-4 rounded-xl">
+              <h4 className="text-lg font-semibold mb-4 text-gray-800">
+                Breakdown
+              </h4>
+              <div className="h-64">
+                <Doughnut
+                  data={chartData}
+                  options={{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: {
+                        position: "bottom",
+                        labels: {
+                          font: { size: 12 },
+                          color: "#4B5563",
+                        },
+                      },
+                      tooltip: {
+                        callbacks: {
+                          label: (tooltipItem) => {
+                            const value = tooltipItem.raw;
+                            const total = tooltipItem.dataset.data.reduce(
+                              (a, b) => a + b,
+                              0
+                            );
+                            const percentage = ((value / total) * 100).toFixed(
+                              2
+                            );
+                            return `${
+                              tooltipItem.label
+                            }: ₹${value.toLocaleString()} (${percentage}%)`;
+                          },
+                        },
+                      },
+                      title: {
+                        display: true,
+                        text: "Invested Amount vs Return Amount",
+                        font: { size: 14 },
+                        color: "#1F2937",
+                      },
+                    },
+                  }}
+                />
+              </div>
+            </div>
+          )}
+        </>
+      )}
+    </div>
   );
 };
 // Helper function to create slug
