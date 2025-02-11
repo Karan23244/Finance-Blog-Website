@@ -53,23 +53,19 @@ const CalculatorPage = ({ calculator, goBack }) => {
 
   return (
     <>
-      <div className="mx-auto max-w-screen-xl py-10">
-        {/* Back Button */}
-        {/* <button
-          onClick={goBack}
-          className="mb-6 text-black hover:text-[#FF822E] transition-all">
-          &lt; Back
-        </button> */}
+      <div className="mx-auto max-w-screen-xl py-10 px-2">
         <button
           onClick={goBack}
           className="mb-6 px-4 py-2 bg-[#FF822E] text-white rounded-lg hover:shadow-md transition-all">
           Back
         </button>
         <div className="border-l-4 border-[#FF822E] px-5">
-          <h2 className="text-2xl font-semibold mb-2 text-gray-800">
+          <h2 className="lg:text-2xl text-lg font-semibold mb-2 text-gray-800">
             {calculator.name}
           </h2>
-          <p className="text-gray-600 mb-6">{calculator.description}</p>
+          <p className="text-gray-600 mb-6 text-sm lg:text-base">
+            {calculator.description}
+          </p>
         </div>
 
         <div className="p-6 my-12 bg-[#E8E8E8] rounded-lg shadow-lg flex flex-col lg:flex-row items-center gap-8">
@@ -77,8 +73,8 @@ const CalculatorPage = ({ calculator, goBack }) => {
             <div className="grid gap-6 mb-4">
               {calculator.inputs.map((input) => (
                 <div key={input.key} className="flex flex-col">
-                  <div className="flex flex-row justify-between items-center">
-                    <label className="text-md font-medium mb-1">
+                  <div className="flex flex-row justify-between sm:gap-2 items-center">
+                    <label className="lg:text-md text-sm font-medium mb-1">
                       {input.label}
                     </label>
                     <input
@@ -87,7 +83,7 @@ const CalculatorPage = ({ calculator, goBack }) => {
                       onChange={(e) =>
                         handleInputChange(input.key, Number(e.target.value))
                       }
-                      className="mb-2 w-42 p-2 border border-[#FF822E] rounded-md shadow-sm focus:outline-none focus:ring-0"
+                      className="mb-2 lg:w-42 p-2 border border-[#FF822E] rounded-md shadow-sm focus:outline-none focus:ring-0"
                       placeholder="Enter value"
                     />
                   </div>
@@ -108,7 +104,7 @@ const CalculatorPage = ({ calculator, goBack }) => {
             </div>
 
             {result !== null && (
-              <div className="flex lg:flex-row flex-col justify-between items-center mt-6 py-2 px-8 bg-[#FFBA8C] rounded-lg">
+              <div className="flex lg:flex-row flex-col justify-between lg:items-center mt-6 py-2 px-8 bg-[#FFBA8C] rounded-lg">
                 <div>
                   <h4 className="text-xl font-semibold text-black">
                     Calculation Result

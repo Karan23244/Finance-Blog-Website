@@ -316,7 +316,7 @@ const CategoryPosts = () => {
       </div>
 
       {/* Posts Section */}
-      <div className="lg:mx-[10%] h-screen mx-[2%]">
+      <div className="lg:mx-[10%] mx-[3%] my-[5%] lg:my-[2%]">
         {posts && posts.length > 0 && (
           <>
             {/* Remaining Posts Section */}
@@ -361,7 +361,7 @@ const CategoryPosts = () => {
                         to={`/${createSlug(
                           post?.category_names[0]
                         )}/${createSlug(post?.Custom_url)}`}
-                        className="text-white border border-white py-2 rounded-lg px-8 bg-[#FF822E] mt-2 inline-block">
+                        className="text-white border border-white py-2 rounded-lg lg:px-8 px-4 bg-[#FF822E] mt-2 inline-block">
                         Read More...
                       </Link>
                     </div>

@@ -26,6 +26,7 @@ const FullPost = () => {
           { withCredentials: true }
         );
         setPost(response.data.data);
+        console.log(response);
       } catch (err) {
         console.error("Error fetching post:", err);
         setError("Unable to load the post. Please try again later.");
@@ -130,7 +131,7 @@ const FullPost = () => {
           href={`${import.meta.env.VITE_API_URL}/${postSlug}`}
         />
       </Helmet>
-      <div className="mx-[5%]">
+      <div className="mx-[5%] my-[20%] lg:my-[3%]">
         <div className="w-full md:p-8 flex flex-col justify-evenly">
           <div className="flex flex-col justify-center">
             <h1 className="lg:text-5xl text-xl font-semibold text-black mb-4">
@@ -163,7 +164,7 @@ const FullPost = () => {
           {/* Main Layout */}
           <div className="flex">
             {/* Blog Content */}
-            <main className="w-full lg:w-3/4">
+            <main className="w-full lg:w-3/4 pr-8">
               <div
                 className="custom-html text-gray-700 leading-relaxed mb-8"
                 dangerouslySetInnerHTML={{ __html: updatedContent }}

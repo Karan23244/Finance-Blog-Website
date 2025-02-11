@@ -25,7 +25,7 @@ exports.subscribeUser = (req, res) => {
 
       const htmlTemplate = `
         <div style="text-align: center; font-family: Arial, sans-serif;">
-            <img src="https://raw.githubusercontent.com/Karan23244/Image/refs/heads/main/Thankyou%20Card_11zon.webp" alt="Thank You" style="width: 100%; max-width: 600px; margin-top: 20px;" />
+            <img src="https://raw.githubusercontent.com/Karan23244/Image/refs/heads/main/TFA%20Thankyou%20Card%201.webp" alt="Thank You" style="width: 100%; max-width: 600px; margin-top: 20px;" />
         </div>
       `;
 

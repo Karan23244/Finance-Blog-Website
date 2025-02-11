@@ -8,8 +8,7 @@ const InputField = ({ label, type, value, onChange, tooltip }) => {
         {tooltip && (
           <span
             className="ml-2 text-blue-500 cursor-pointer"
-            data-tip={tooltip}
-          >
+            data-tip={tooltip}>
             ℹ️
           </span>
         )}

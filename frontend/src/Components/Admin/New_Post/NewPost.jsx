@@ -504,7 +504,7 @@ const ScheduleDate = ({ postDetails, setPostDetails, startDate }) => {
 };
 
 const CategorySelector = memo(({ categories, postDetails, setPostDetails }) => {
-  console.log(postDetails.category);
+  // console.log(postDetails.category);
 
   // Filter categories by type
   const personalCategories = categories.filter(

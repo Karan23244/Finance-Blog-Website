@@ -164,15 +164,16 @@ function Navbar() {
     debouncedSearch(query); // Trigger debounced search
   };
   const handleSuggestionClick = (suggestion) => {
+    console.log(suggestion);
+    navigate(
+      `/${createSlug(suggestion?.categories[0]?.category_name)}/${createSlug(
+        suggestion?.Custom_url
+      )}`
+    );
     setSearchQuery(""); // Clear search input
     setSuggestions([]); // Clear suggestions
     setShowDropdown(false); // Close dropdown
     setSearchBarOpen(false);
-    navigate(
-      `/${createSlug(suggestion?.category_names[0])}/${createSlug(
-        suggestion?.Custom_url
-      )}`
-    );
   };
 
   return (
@@ -438,7 +439,7 @@ function Navbar() {
                             {groupedCategories[type].map((category) => (
                               <li
                                 key={category.category_id}
-                                className="text-xs px-4 py-2 text-white">
+                                className="text-base px-4 py-2 text-white">
                                 <Link
                                   to={`/categoryData?categoryId=${
                                     category.category_id

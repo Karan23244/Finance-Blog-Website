@@ -17,7 +17,8 @@ app.use(express.json());
 const corsOptions = {
   origin: (origin, callback) => {
     const allowedOrigins = [
-      "http://localhost:5173",
+      "https://trustfinancialadvisory.com",
+      "http://localhost:5173"
     ];
 
     // Allow requests from allowed origins

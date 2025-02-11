@@ -99,7 +99,7 @@ export const calculateResult = (id, inputs) => {
         tax = 12500 + (taxableIncome - 500000) * 0.2;
       else tax = 112500 + (taxableIncome - 1000000) * 0.3;
       return tax.toFixed(2);
-      
+
     case "interestRateComparison":
       const flatInterest =
         (inputs.principal * inputs.flatRate * inputs.time) / 100;
@@ -107,7 +107,11 @@ export const calculateResult = (id, inputs) => {
 
       const reducingRate = inputs.reducingRate / 100 / 12;
       const interestRateComparisontenureMonths = inputs.time * 12;
-      const reducingEMI = (inputs.principal * reducingRate * (1 + reducingRate) ** interestRateComparisontenureMonths) / ((1 + reducingRate) ** interestRateComparisontenureMonths - 1);
+      const reducingEMI =
+        (inputs.principal *
+          reducingRate *
+          (1 + reducingRate) ** interestRateComparisontenureMonths) /
+        ((1 + reducingRate) ** interestRateComparisontenureMonths - 1);
 
       return `Flat EMI: ₹${flatEMI.toFixed(
         2
@@ -122,7 +126,8 @@ export const calculateResult = (id, inputs) => {
       return (inputs.tradeValue / inputs.leverage).toFixed(2);
 
     case "inflation":
-      const inflationfutureValue = inputs.currentAmount * (1 + inputs.inflationRate / 100) ** inputs.time;
+      const inflationfutureValue =
+        inputs.currentAmount * (1 + inputs.inflationRate / 100) ** inputs.time;
       return inflationfutureValue.toFixed(2);
 
     case "stockAverage":

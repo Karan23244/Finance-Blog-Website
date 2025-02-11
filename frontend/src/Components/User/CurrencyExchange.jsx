@@ -48,13 +48,14 @@ const CurrencyConverterAndChart = () => {
             Currency Convertor
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor
-            minim. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
-            tempor minim.
+            Simplify your currency exchange process with instant rate updates
+            and accurate conversions, making global transactions easier,
+            smarter, and more efficient for travelers, businesses, and financial
+            professionals worldwide.
           </p>
           <div className="p-8 pt-12 rounded-lg shadow-lg w-full mb-8">
             <div className="flex flex-col gap-8 lg:gap-6">
-              <div className="flex gap-6 items-center">
+              <div className="flex flex-col lg:flex-row gap-6 items-center">
                 <div className="w-full">
                   <label className="block text-sm font-semibold mb-2">
                     Amount:
@@ -67,7 +68,7 @@ const CurrencyConverterAndChart = () => {
                   />
                 </div>
 
-                <div className="w-1/2">
+                <div className="lg:w-1/2 w-full">
                   <label className="block text-sm font-semibold mb-2">
                     From:
                   </label>
@@ -94,7 +95,7 @@ const CurrencyConverterAndChart = () => {
                   <img src="/swap.png" alt="swap" height={100} width={100} />
                 </div>
 
-                <div className="w-1/2">
+                <div className="lg:w-1/2 w-full">
                   <label className="block text-sm font-semibold mb-2">
                     To:
                   </label>

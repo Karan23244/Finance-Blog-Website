@@ -157,11 +157,11 @@ const Hero = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-6 w-full">
         {/* Left Section: Text */}
         <div className="text-white w-full lg:ml-[10%] lg:w-[50%] text-center lg:px-10 lg:text-left">
-          <h1 className="text-3xl lg:text-3xl font-bold mb-6 leading-tight">
+          <h1 className="text-xl lg:text-2xl font-bold leading-tight">
             Guiding you through every stage of life with strategic financial
             planning and investment solutions
           </h1>
-          <p className="text-base lg:text-lg leading-relaxed">
+          <p className="text-sm lg:text-base leading-relaxed">
             Trust Financial Advisory is here to guide you through the
             complexities of financial planning. We provide customized solutions
             focused on building wealth, protecting assets, and planning for the
@@ -314,8 +314,12 @@ const TrendingNow = ({ posts }) => {
                         })}
                       </time>
                     </div>
-                    <h2 className="text-lg font-bold my-2">{blog.title}</h2>
-                    <p className="text-sm">{blog.seoDescription}</p>
+                    <h2 className="text-lg font-bold my-2 line-clamp-2">
+                      {blog.title}
+                    </h2>
+                    <p className="text-sm line-clamp-3">
+                      {blog.seoDescription}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -390,8 +394,11 @@ const MoneyInsights = ({ data }) => {
                     })}
                   </time>
                 </div>
-                <h2 className="text-xl font-bold mt-4 text-gray-800">
+                <h2 className="text-xl font-bold mt-4 text-gray-800 line-clamp-2">
                   {topBlogs[0].title}
+                </h2>
+                <h2 className="text-base text-gray-800 line-clamp-2">
+                  {topBlogs[0].seoDescription}
                 </h2>
               </div>
             </div>
@@ -422,10 +429,13 @@ const MoneyInsights = ({ data }) => {
                   </Link>
                 </div>
                 <div className="lg:p-4 flex-1 flex flex-col justify-between flex-grow">
-                  <h2 className="text-lg font-bold text-gray-800">
+                  <h2 className="text-lg font-bold text-gray-800 line-clamp-2">
                     {blog.title}
                   </h2>
-                  <div className="flex flex-col items-start gap-2 justify-between mt-2">
+                  <h2 className="text-base text-gray-800 line-clamp-2">
+                    {blog.seoDescription}
+                  </h2>
+                  <div className="flex flex-col lg:flex-row items-start gap-2 justify-between mt-2">
                     <div className="flex items-center gap-2">
                       <FaUserCircle size={20} />
                       <p className="text-sm font-semibold text-gray-700">
@@ -506,10 +516,12 @@ const TopStrategies = ({ data }) => {
                         })}
                       </time>
                     </div>
-                    <h2 className="text-xl font-bold mt-4 text-gray-800">
+                    <h2 className="text-xl font-bold mt-4 text-gray-800 line-clamp-2">
                       {blog.title}
                     </h2>
-                    <p className="text-sm">{blog.seoDescription}</p>
+                    <p className="text-sm line-clamp-2">
+                      {blog.seoDescription}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -559,7 +571,7 @@ const TopStrategies = ({ data }) => {
                       })}
                     </time>
                   </div>
-                  <h2 className="text-lg font-bold text-gray-800 mt-2">
+                  <h2 className="text-lg font-bold text-gray-800 mt-2 line-clamp-2">
                     {blog.title}
                   </h2>
                 </div>
@@ -631,10 +643,10 @@ const RiskManagement = ({ data }) => {
                         <div className="flex flex-col items-stretch shadow-md rounded-lg hover:shadow-2xl hover:border-b-4 border-transparent hover:border-[#FF822E] p-4 h-full">
                           {/* Title & Description */}
                           <div className="flex-grow">
-                            <h2 className="text-lg font-bold mb-2 text-gray-800">
+                            <h2 className="text-lg font-bold mb-2 text-gray-800 line-clamp-2">
                               {blog.title}
                             </h2>
-                            <p className="text-sm text-gray-600 mb-4">
+                            <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                               {blog.seoDescription}
                             </p>
                           </div>
@@ -779,7 +791,7 @@ const CalculatorSection = ({ calculator }) => {
         </div>
 
         {result !== null && (
-          <div className="flex flex-row justify-between items-center mt-6 py-2 px-8 bg-[#FFBA8C] rounded-lg">
+          <div className="flex lg:flex-row flex-col justify-between lg:items-center mt-6 py-2 px-8 bg-[#FFBA8C] rounded-lg">
             <div>
               <h4 className="text-xl font-semibold mb-2 text-black">
                 Calculation Result
