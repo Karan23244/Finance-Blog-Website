@@ -14,12 +14,10 @@ const Subscribe = () => {
         `${import.meta.env.VITE_API_URL}/api/subscribe`,
         { email }
       );
-      console.log(email)
       setMessage(response.data.message);
       setStatus("success");
       setEmail(""); // Clear the input field
     } catch (error) {
-      console.log(error)
       setMessage(error.response?.data?.message || "Something went wrong");
       setStatus("error");
     }

@@ -56,7 +56,6 @@ function Navbar() {
         const response = await axios.get(
           `${import.meta.env.VITE_API_URL}/api/categories`
         );
-        console.log(response);
         setCategories(response.data.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -164,7 +163,6 @@ function Navbar() {
     debouncedSearch(query); // Trigger debounced search
   };
   const handleSuggestionClick = (suggestion) => {
-    console.log(suggestion);
     navigate(
       `/${createSlug(suggestion?.categories[0]?.category_name)}/${createSlug(
         suggestion?.Custom_url

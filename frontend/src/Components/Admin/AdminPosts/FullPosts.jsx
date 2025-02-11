@@ -26,7 +26,6 @@ const FullPost = () => {
           { withCredentials: true }
         );
         setPost(response.data.data);
-        console.log(response);
       } catch (err) {
         console.error("Error fetching post:", err);
         setError("Unable to load the post. Please try again later.");

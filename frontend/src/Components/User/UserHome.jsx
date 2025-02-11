@@ -48,7 +48,6 @@ const userHome = () => {
     },
   ];
   const [imagePreloaded, setImagePreloaded] = useState(false);
-  console.log(posts);
   //preload Image
   const preloadLCPImage = (url) => {
     const link = document.createElement("link");
@@ -66,12 +65,10 @@ const userHome = () => {
             `${import.meta.env.VITE_API_URL}/api/posts`
           );
           const responseData = await response.json();
-          console.log("API Response:", responseData);
           const filteredPosts = responseData.data.filter(
             (post) => post.blog_type === "published"
           );
           setPosts(filteredPosts);
-          console.log(response);
           // Classify posts by category_type
           const categorized = filteredPosts.reduce(
             (acc, post) => {
@@ -108,7 +105,6 @@ const userHome = () => {
       setImagePreloaded(true); // Mark the image as preloaded
     }
   }, [posts, imagePreloaded]);
-  console.log(groupedData);
   return (
     <>
       <Hero />
@@ -708,7 +704,6 @@ const CalculatorSection = ({ calculator }) => {
   const [inputs, setInputs] = useState(defaultInputs);
   const [result, setResult] = useState(null);
   const [chartData, setChartData] = useState(null);
-  console.log(chartData);
   const calculateAndUpdate = (currentInputs) => {
     const res = calculateResult(calculator.id, currentInputs);
 
@@ -741,7 +736,6 @@ const CalculatorSection = ({ calculator }) => {
 
   const handleInputChange = (key, value) => {
     const inputConfig = calculator.inputs.find((input) => input.key === key);
-    console.log(inputConfig);
     const maxValue = inputConfig?.max || 100;
 
     // Apply min/max limits dynamically
@@ -761,7 +755,7 @@ const CalculatorSection = ({ calculator }) => {
           {calculator.inputs.map((input) => (
             <div key={input.key} className="flex flex-col">
               <div className="flex flex-row justify-between items-center">
-                <label className="text-md font-medium mb-1">
+                <label className="lg:text-lg text-xs font-medium mb-1">
                   {input.label}
                 </label>
                 <input

@@ -504,8 +504,6 @@ const ScheduleDate = ({ postDetails, setPostDetails, startDate }) => {
 };
 
 const CategorySelector = memo(({ categories, postDetails, setPostDetails }) => {
-  // console.log(postDetails.category);
-
   // Filter categories by type
   const personalCategories = categories.filter(
     (cat) => cat.category_type === "Personal Finance"
@@ -518,7 +516,6 @@ const CategorySelector = memo(({ categories, postDetails, setPostDetails }) => {
   );
 
   const handleCategoryChange = (type, selectedCategoryId) => {
-    console.log(selectedCategoryId, type);
     setPostDetails((prev) => {
       const updatedCategory = [...(prev.category || [])];
 
