@@ -47,15 +47,6 @@ const userHome = () => {
       showGraph: true,
     },
   ];
-  const [imagePreloaded, setImagePreloaded] = useState(false);
-  //preload Image
-  const preloadLCPImage = (url) => {
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.as = "image";
-    link.href = url;
-    document.head.appendChild(link);
-  };
   useEffect(() => {
     if (posts.length === 0) {
       // Prevent fetching if posts already exist
@@ -97,14 +88,12 @@ const userHome = () => {
   }, [posts]); // Adding posts and topReads as dependencies
 
   useEffect(() => {
-    if (posts && posts[0]?.featured_image && !imagePreloaded) {
+    if (posts) {
       const imageUrl = `${import.meta.env.VITE_API_URL}/${
         posts[0]?.featured_image
       }`;
-      preloadLCPImage(imageUrl);
-      setImagePreloaded(true); // Mark the image as preloaded
     }
-  }, [posts, imagePreloaded]);
+  }, [posts]);
   return (
     <>
       <Hero />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,lazy } from "react";
 import axios from "axios";
 
 const Subscribe = () => {
@@ -28,7 +28,7 @@ const Subscribe = () => {
       <div className="max-w-full flex flex-col lg:flex-row justify-between items-center lg:gap-16 gap-4">
         {/* Left section */}
         <div className="lg:w-1/2 flex justify-center">
-          <img src="/subscribe.png" alt="subscribe" height={200} width={200} />
+          <img src="/subscribe.png" alt="subscribe" height={200} width={200} loading={lazy}/>
         </div>
 
         {/* Right section */}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy } from "react";
 import axios from "axios";
 import { FaExchangeAlt } from "react-icons/fa";
 
@@ -92,7 +92,7 @@ const CurrencyConverterAndChart = () => {
                 </div>
 
                 <div>
-                  <img src="/swap.png" alt="swap" height={100} width={100} />
+                  <img src="/swap.png" alt="swap" height={100} width={100} loading={lazy}/>
                 </div>
 
                 <div className="lg:w-1/2 w-full">

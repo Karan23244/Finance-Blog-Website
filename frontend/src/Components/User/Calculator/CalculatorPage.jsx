@@ -50,7 +50,7 @@ const CalculatorPage = ({ calculator, goBack }) => {
     value = Math.max(0, Math.min(maxValue, value));
     setInputs((prev) => ({ ...prev, [key]: value }));
   };
-
+  console.log(calculator.form);
   return (
     <>
       <div className="mx-auto max-w-screen-xl py-10 px-2">
@@ -167,7 +167,7 @@ const CalculatorPage = ({ calculator, goBack }) => {
             </div>
           )}
         </div>
-
+        <div>{calculator.form && <calculator.form />}</div>
         <div>
           <div
             className="custom-html my-8"

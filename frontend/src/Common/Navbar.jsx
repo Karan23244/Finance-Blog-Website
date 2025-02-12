@@ -185,9 +185,10 @@ function Navbar() {
                   <img
                     src="/logo.png"
                     alt="Logo"
-                    width={80}
-                    height={80}
+                    width="120"
+                    height="80"
                     loading="lazy"
+                    className="w-[120px] h-[80px]"
                   />
                 </Link>
               </div>
