@@ -3,9 +3,11 @@ import { calculateResult } from "./calculatorLogic";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import "../../Admin/New_Post/styles.css";
+import { useLocation } from "react-router-dom";
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 const CalculatorPage = ({ calculator, goBack }) => {
+  const { pathname } = useLocation();
   const defaultInputs = calculator.inputs.reduce((acc, input) => {
     acc[input.key] = input.default || 0;
     return acc;
@@ -43,7 +45,9 @@ const CalculatorPage = ({ calculator, goBack }) => {
   useEffect(() => {
     calculateAndUpdate(inputs);
   }, [inputs]);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const handleInputChange = (key, value) => {
     const inputConfig = calculator.inputs.find((input) => input.key === key);
     const maxValue = inputConfig?.max || 100;
@@ -167,7 +171,7 @@ const CalculatorPage = ({ calculator, goBack }) => {
             </div>
           )}
         </div>
-        <div>{calculator.form && <calculator.form />}</div>
+        <div id="#form">{calculator.form && <calculator.form />}</div>
         <div>
           <div
             className="custom-html my-8"

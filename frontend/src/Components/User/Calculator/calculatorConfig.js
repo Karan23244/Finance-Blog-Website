@@ -911,7 +911,6 @@ export const calculators = [
     ],
     output: "Monthly EMI (₹)",
     showGraph: false,
-    form: Home,
     html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's auto loan EMI calculator! This calculator is made to help you determine your monthly auto loan payments. Understanding your monthly EMI can simplify your budgeting and financial management process. This calculator can assist you in your journey to buying that perfect car, whether new or old.</span></p>
 <p>&nbsp;</p>
 <p><strong>The Car Loan EMI Calculator's Objective</strong></p>
@@ -1008,6 +1007,7 @@ export const calculators = [
     ],
     output: "Monthly EMI (₹)",
     showGraph: false,
+    form: Home,
     html: `<p><span style="font-weight: 400;">Welcome to the Home Loan EMI Calculator from Trust Financial Advisory! Knowing your financial obligations is crucial if you intend to purchase your ideal home. You can manage your money and make future plans more easily by using our calculator to estimate your monthly payments.</span></p>
 <p><strong>EMI: What is it?</strong></p>
 <p>&nbsp;</p>
