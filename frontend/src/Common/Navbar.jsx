@@ -188,7 +188,7 @@ function Navbar() {
                     width="120"
                     height="80"
                     loading="lazy"
-                    className="w-[120px] h-[80px]"
+                    className="lg:w-[120px] lg:h-[80px] w-[80px] h-[60px]"
                   />
                 </Link>
               </div>
