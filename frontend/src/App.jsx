@@ -15,6 +15,7 @@ import CategoryBlogs from "./Components/User/CategoryBlogs";
 import CalculatorHome from "./Components/User/CalculatorHome";
 import Subscribe from "./Common/Subscribe";
 import Popup from "./Common/Popup";
+import Thankyou from "./Components/User/Form/Thankyou"
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./Common/ScrollToTop";
 // Lazy loading components for Admin
@@ -61,6 +62,7 @@ function App() {
             <Route path="/:category/:id_or_slug" element={<FullPostAdmin />} />
             <Route path="/categoryData" element={<CategoryBlogs />} />
             <Route path="/calculator" element={<CalculatorHome />} />
+            <Route path="/Thankyou" element={<Thankyou />} />
 
             {/* Admin Routes - Protected */}
             <Route

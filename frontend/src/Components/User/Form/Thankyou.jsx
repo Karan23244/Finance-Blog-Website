@@ -375,11 +375,6 @@ const handleOTPSuccess = async (e) => {
     <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
   </div>
 )}
-
-        {/* Header */}
-        <div className="bg-blue-900 text-white px-6 py-4  flex justify-between items-center">
-          <h1 className="text-base sm:text-lg font-semibold">Orbits work</h1>
-        </div>
         <div class="flex justify-center items-center px-4 py-12 lg:py-16 md:py-14">
         <div className="bg-white shadow-lg rounded-lg w-full max-w-6xl ">
 
@@ -399,13 +394,6 @@ const handleOTPSuccess = async (e) => {
      
       </div>
     </div>
-        {/* Tracker Section */}
-        <footer className="bg-blue-900 text-white px-4 sm:px-6 py-4 mt-auto">
-        <div className="text-center">
-          <p className="text-xs sm:text-sm font-medium">Orbits work</p>
-        </div>
-      
-      </footer>
         </div>
     </>
   );
