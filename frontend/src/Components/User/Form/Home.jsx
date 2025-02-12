@@ -8,7 +8,6 @@ function LoanForm() {
 
   useEffect(() => {
     initializeOTPless();
-    console.log("hello, this is from otpless");
   }, []);
   // In your React component
 
