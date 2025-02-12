@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { initializeOTPless, phoneAuth, verifyOTP } from "./otpless";
+import { initializeOTPless, phoneAuth, verifyOTP } from "./Otpless";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
