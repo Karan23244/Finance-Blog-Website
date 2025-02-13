@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="lg:mx-[13%] lg:my-[5%] mx-[2%] my-[1%]">
+    <div className="lg:mx-[13%] lg:my-[7%] mx-[2%] my-[1%]">
       <h1 className="lg:text-8xl text-xl font-bold text-[#FF822E] lg:mt-10 lg:mb-14 my-5">
         About Us
       </h1>

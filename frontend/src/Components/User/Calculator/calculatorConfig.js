@@ -1,6 +1,6 @@
-import Home from "../Form/Home"
+import Home from "../Form/Home";
 
-export const calculators = [
+const calculators = [
   {
     id: "sip",
     name: "SIP Calculator",
@@ -1568,3 +1568,4 @@ export const calculators = [
 <!-- Comments are visible in the HTML source only -->`,
   },
 ];
+export default calculators;

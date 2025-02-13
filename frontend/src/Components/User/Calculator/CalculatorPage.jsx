@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { calculateResult } from "./calculatorLogic";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import "../../Admin/New_Post/styles.css";
+import calculators from "./calculatorConfig";
 import { useLocation } from "react-router-dom";
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
-const CalculatorPage = ({ calculator, goBack }) => {
+const CalculatorPage = ({ goBack }) => {
+  const { calculatorName } = useParams();
+  const navigate = useNavigate();
+  // Convert the URL-friendly name back to its original format
+  const normalizedCalculatorName = calculatorName.replace(/-/g, " ");
+
+  // Fetch calculator details based on the normalized name
+  const calculator = calculators.find(
+    (c) => c.name === normalizedCalculatorName
+  );
   const { pathname } = useLocation();
   const defaultInputs = calculator.inputs.reduce((acc, input) => {
     acc[input.key] = input.default || 0;
@@ -54,12 +65,21 @@ const CalculatorPage = ({ calculator, goBack }) => {
     value = Math.max(0, Math.min(maxValue, value));
     setInputs((prev) => ({ ...prev, [key]: value }));
   };
-  console.log(calculator.form);
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <div className="mx-auto max-w-screen-xl py-10 px-2">
         <button
-          onClick={goBack}
+          onClick={() => navigate("/calculator")}
           className="mb-6 px-4 py-2 bg-[#FF822E] text-white rounded-lg hover:shadow-md transition-all">
           Back
         </button>
@@ -171,7 +191,8 @@ const CalculatorPage = ({ calculator, goBack }) => {
             </div>
           )}
         </div>
-        <div id="#form">{calculator.form && <calculator.form />}</div>
+        <div id="Form">
+          {calculator.form && <calculator.form />}</div>
         <div>
           <div
             className="custom-html my-8"

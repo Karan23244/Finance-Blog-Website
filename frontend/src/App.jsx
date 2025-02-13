@@ -18,6 +18,7 @@ import Popup from "./Common/Popup";
 import Thankyou from "./Components/User/Form/Thankyou"
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./Common/ScrollToTop";
+import CalculatorPage from "./Components/User/Calculator/CalculatorPage";
 // Lazy loading components for Admin
 const AdminLogin = React.lazy(() => import("./Components/Admin/AdminLogin"));
 const Admin = React.lazy(() => import("./Components/Admin/Admin"));
@@ -63,7 +64,7 @@ function App() {
             <Route path="/categoryData" element={<CategoryBlogs />} />
             <Route path="/calculator" element={<CalculatorHome />} />
             <Route path="/Thankyou" element={<Thankyou />} />
-
+            <Route path="/calculator/:calculatorName" element={<CalculatorPage />} />
             {/* Admin Routes - Protected */}
             <Route
               path="/admin/*"

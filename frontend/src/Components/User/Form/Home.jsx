@@ -371,7 +371,7 @@ function LoanForm() {
         )}
 
         {/* Header */}
-        <div className="">
+        <div  id="Form" className="">
           <h1 className="text-center text-base lg:text-xl font-semibold">
             Get home loans with low interest and flexible EMIs.
             <span className="text-orange-500"> Apply online today!</span>
