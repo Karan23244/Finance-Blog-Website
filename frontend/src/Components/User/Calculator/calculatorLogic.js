@@ -13,6 +13,19 @@ export const calculateResult = (id, inputs) => {
       const lumpRate = inputs.rate / 100;
       return (inputs.investment * (1 + lumpRate) ** inputs.time).toFixed(2);
 
+    case "swp":
+      const swpRate = inputs.rate / 100 / 12;
+      const swpMonths = inputs.duration * 12;
+      let remainingBalance = inputs.initialInvestment;
+
+      for (let i = 0; i < swpMonths; i++) {
+        remainingBalance = remainingBalance * (1 + swpRate) - inputs.withdrawal;
+        if (remainingBalance <= 0) {
+          return "0.00"; // Stops calculation when funds are depleted
+        }
+      }
+      return remainingBalance.toFixed(2);
+
     case "mutualFund":
       const mfRate = inputs.rate / 100;
       return (inputs.investment * (1 + mfRate) ** inputs.time).toFixed(2);

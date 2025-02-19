@@ -19,6 +19,7 @@ frontend/.cache/
 frontend/*.cache
 frontend/coverage/
 frontend/*.map
+frontend/public/sitemap.xml
 
 # Backend
 backend/uploads/

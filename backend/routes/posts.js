@@ -1,5 +1,5 @@
 const express = require("express");
-const {createPost, getAllPosts,getPostData, getEditPostData,deletePost,updatePost,getTopReadsAndEditorsChoice,getPostsByCategory } = require("../controller/postController");
+const {createPost, getAllPosts,getPostData, getEditPostData,deletePost,updatePost,getTopReadsAndEditorsChoice } = require("../controller/postController");
 const router = express.Router();
 const multer = require('multer');
 const path = require('path'); 
@@ -15,13 +15,25 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage });
-router.post('/', upload.single('featuredImage'), createPost); 
+router.post('/', 
+  upload.fields([
+    { name: 'featuredImage', maxCount: 1 }, 
+    { name: 'AdImage', maxCount: 1 }
+  ]), 
+  createPost
+);
 router.get("/", getAllPosts);
-router.get("/topReadsAndEditorsChoice", getTopReadsAndEditorsChoice);
-router.get("/:id_or_slug", getPostData);
+// router.get("/topReadsAndEditorsChoice", getTopReadsAndEditorsChoice);
+router.get("/:param2", getPostData);
 router.get("/editData/:id",getEditPostData)
 router.delete("/:id",deletePost)
-router.put('/:id', upload.single('featuredImage'), updatePost);
+router.put('/:id', 
+  upload.fields([
+    { name: 'featuredImage', maxCount: 1 }, 
+    { name: 'AdImage', maxCount: 1 }
+  ]), 
+  updatePost
+);
 
 
 

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { initializeOTPless, phoneAuth, verifyOTP } from "./Otpless";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate, Link } from "react-router-dom";
 function LoanForm() {
   const navigate = useNavigate();
 
@@ -371,7 +370,7 @@ function LoanForm() {
         )}
 
         {/* Header */}
-        <div  id="Form" className="">
+        <div id="Form" className="">
           <h1 className="text-center text-base lg:text-xl font-semibold">
             Get home loans with low interest and flexible EMIs.
             <span className="text-orange-500"> Apply online today!</span>
@@ -554,13 +553,11 @@ function LoanForm() {
                     I authorise Orbits work and its affiliates to contact me,
                     overriding my registration for DNC/NDNC, if any, and I have
                     understood and agree with the{" "}
-                    <span
-                      className="text-orange-500 underline cursor-pointer"
-                      onClick={() =>
-                        window.open("/Privacy policy.pdf", "_blank")
-                      }>
+                    <Link
+                      to="/privacy_policy"
+                      className="hover:underline text-orange-500">
                       Terms and Conditions
-                    </span>
+                    </Link>
                     .
                   </p>
                 </div>
@@ -634,13 +631,11 @@ function LoanForm() {
                         I authorise Orbits work and its affiliates to contact
                         me, overriding my registration for DNC/NDNC, if any, and
                         I have understood and agree with the{" "}
-                        <span
-                          className="text-orange-500 underline cursor-pointer"
-                          onClick={() =>
-                            window.open("/Privacy policy.pdf", "_blank")
-                          }>
+                        <Link
+                          to="/privacy_policy"
+                          className="hover:underline text-orange-500">
                           Terms and Conditions
-                        </span>
+                        </Link>
                         .
                       </span>
                     </label>
@@ -849,13 +844,11 @@ function LoanForm() {
                       I authorise Orbits work and its affiliates to contact me,
                       overriding my registration for DNC/NDNC, if any, and I
                       have understood and agree with the{" "}
-                      <span
-                        className="text-orange-500 underline cursor-pointer"
-                        onClick={() =>
-                          window.open("/Privacy policy.pdf", "_blank")
-                        }>
+                      <Link
+                        to="/privacy_policy"
+                        className="hover:underline text-orange-500">
                         Terms and Conditions
-                      </span>
+                      </Link>
                     </label>
                   </div>
 

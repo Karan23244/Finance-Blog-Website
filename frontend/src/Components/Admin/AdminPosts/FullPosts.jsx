@@ -6,7 +6,7 @@ import "../New_Post/styles.css";
 import usePageTracker from "../../../hooks/usePageTracker";
 const FullPost = () => {
   usePageTracker("blogs");
-  const { id_or_slug } = useParams();
+  const { param2 } = useParams();
   const [post, setPost] = useState(null);
   const [error, setError] = useState(null);
   const [toc, setToc] = useState([]);
@@ -22,7 +22,7 @@ const FullPost = () => {
     const fetchPost = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/posts/${id_or_slug}`,
+          `${import.meta.env.VITE_API_URL}/api/posts/${param2}`,
           { withCredentials: true }
         );
         setPost(response.data.data);
@@ -33,7 +33,7 @@ const FullPost = () => {
     };
 
     fetchPost();
-  }, [id_or_slug]);
+  }, [param2]);
 
   useEffect(() => {
     if (post) {
@@ -111,6 +111,10 @@ const FullPost = () => {
   const imageUrl = post.featured_image
     ? `${import.meta.env.VITE_API_URL}/${post.featured_image}`
     : "";
+  const adimageUrl = post.AdImage
+    ? `${import.meta.env.VITE_API_URL}/${post.AdImage}`
+    : "";
+  console.log(adimageUrl);
   const postSlug = createSlug(post.Custom_url);
   return (
     <>
@@ -130,7 +134,7 @@ const FullPost = () => {
           href={`${import.meta.env.VITE_API_URL}/${postSlug}`}
         />
       </Helmet>
-      <div className="mx-[5%] my-[20%] lg:my-[3%]">
+      <div className="mx-[2%] my-[20%] lg:my-[3%]">
         <div className="w-full md:p-8 flex flex-col justify-evenly">
           <div className="flex flex-col justify-center">
             <h1 className="lg:text-5xl text-xl font-semibold text-black mb-4">
@@ -161,17 +165,10 @@ const FullPost = () => {
 
         <div className="mx-auto px-4 lg:px-8">
           {/* Main Layout */}
-          <div className="flex">
-            {/* Blog Content */}
-            <main className="w-full lg:w-3/4 pr-8">
-              <div
-                className="custom-html text-gray-700 leading-relaxed mb-8"
-                dangerouslySetInnerHTML={{ __html: updatedContent }}
-              />
-            </main>
+          <div className="flex flex-col lg:flex-row">
             {/* Sidebar for Table of Contents */}
             <aside className="hidden lg:block w-1/4 pr-8 ">
-              <div className="sticky top-16 p-4 overflow-auto border-l-2 border-black h-screen">
+              <div className="sticky top-16 p-4 overflow-auto border-r-2 border-black h-screen">
                 <h2 className="text-3xl text-center font-semibold text-gray-900 mb-2">
                   Table of Contents
                 </h2>
@@ -206,6 +203,24 @@ const FullPost = () => {
                 </ul>
               </div>
             </aside>
+
+            {/* Blog Content */}
+            <main
+              className={`w-full ${post.AdImage ? "lg:w-3/5" : "lg:w-3/4"}`}>
+              <div
+                className="custom-html text-gray-700 leading-relaxed mb-8 pt-4"
+                dangerouslySetInnerHTML={{ __html: updatedContent }}
+              />
+            </main>
+            {post.AdImage && (
+              <aside className="lg:w-1/4">
+                <div className="sticky top-16 p-4 border m-4 overflow-auto lg:h-screen">
+                  <Link to={post.ad_url} target="_blank">
+                    <img src={adimageUrl} alt="ad" />
+                  </Link>
+                </div>
+              </aside>
+            )}
           </div>
         </div>
       </div>

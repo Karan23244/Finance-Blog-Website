@@ -305,7 +305,7 @@ function Navbar() {
                                   <li
                                     key={category.category_id}
                                     className="p-1 cursor-pointer transition-transform duration-200 ">
-                                    <Link
+                                    {/* <Link
                                       to={`/categoryData?categoryId=${
                                         category.category_id
                                       }&categoryName=${encodeURIComponent(
@@ -315,7 +315,16 @@ function Navbar() {
                                       )}`}
                                       className="block px-4 py-2 text-white hover:text-[#FF822E]">
                                       {category.category_name}
-                                    </Link>
+                                    </Link> */}
+                                    <Link
+                                  to={`/${category.category_type
+                                    .replace(/\s+/g, "-")
+                                    .toLowerCase()}/${category.category_name
+                                    .replace(/\s+/g, "-")
+                                    .toLowerCase()}`}
+                                  className="block px-4 py-2 hover:border-gray-600 text-white">
+                                  {category.category_name}
+                                </Link>
                                   </li>
                                 ))}
                               </ul>
@@ -439,7 +448,7 @@ function Navbar() {
                               <li
                                 key={category.category_id}
                                 className="text-base px-4 py-2 text-white">
-                                <Link
+                                {/* <Link
                                   to={`/categoryData?categoryId=${
                                     category.category_id
                                   }&categoryName=${encodeURIComponent(
@@ -448,6 +457,15 @@ function Navbar() {
                                     category.category_type
                                   )}`}
                                   className="block">
+                                  {category.category_name}
+                                </Link> */}
+                                 <Link
+                                  to={`/${category.category_type
+                                    .replace(/\s+/g, "-")
+                                    .toLowerCase()}/${category.category_name
+                                    .replace(/\s+/g, "-")
+                                    .toLowerCase()}`}
+                                  className="block px-4 py-2 hover:border-gray-600 text-white">
                                   {category.category_name}
                                 </Link>
                               </li>

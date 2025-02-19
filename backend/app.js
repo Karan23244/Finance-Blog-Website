@@ -39,7 +39,7 @@ app.use("/api/adminlogin", authRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/authors", authorRoutes);
 app.use("/api/posts", postRoutes);
-app.use("/api/categoryData", categoryDataRoutes);
+app.use("/api", categoryDataRoutes);
 app.use("/api/subscribe", subscribeRoutes);
 app.use("/api/track-page", trackingRoutes); // Attach tracking routes
 

@@ -182,6 +182,119 @@ const calculators = [
 <!-- Comments are visible in the HTML source only -->`,
   },
   {
+    id: "swp",
+    name: "SWP Calculator",
+    description:
+      "Plan your withdrawals strategically with the SWP calculator and ensure a steady income flow while maintaining investment growth over time.",
+    inputs: [
+      {
+        label: "Initial Investment (₹)",
+        key: "initialInvestment",
+        type: "number",
+        default: 500000,
+        max: 10000000,
+      },
+      {
+        label: "Withdrawal Amount (₹)",
+        key: "withdrawal",
+        type: "number",
+        default: 10000,
+        max: 100000,
+      },
+      {
+        label: "Expected Return Rate (%)",
+        key: "rate",
+        type: "number",
+        default: 10,
+        max: 30,
+      },
+      {
+        label: "Withdrawal Duration (Years)",
+        key: "duration",
+        type: "number",
+        default: 5,
+        max: 40,
+      },
+    ],
+    output: "Remaining Balance (₹)",
+    showGraph: false,
+    html:`<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s SWP Calculator! You&apos;re on the correct platform if you&apos;re interested in utilizing your investments to create a regular income stream. With our Systematic Withdrawal Plan (SWP) Calculator, you can calculate how much you can withdraw from your mutual fund investments on a routine basis while keeping the growth of your capital intact.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Systematic Withdrawal Plan (SWP)?</span></strong></p>
+<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investors can withdraw a fixed amount from their mutual fund investments on a monthly or quarterly basis through a Systematic Withdrawal Plan (SWP). This option provides a balanced method of managing investments and cash flow, which is ideal for individuals seeking a regular income while still enjoying the advantages of potential capital appreciation.</span></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our SWP Calculator?</span></strong></p>
+<ul>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Estimates:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Get instant calculations of your potential withdrawals without any hassle.</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter your investment amount, expected return rate, and withdrawal frequency to see your potential income.</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Helps you plan your withdrawals effectively to meet your financial goals.</span></p>
+  </li>
+</ul>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the SWP Calculator</span></strong></p>
+<ul>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Investment Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the total amount you have invested in the mutual fund.</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Expected Return Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the expected annual return rate of your investment (e.g., 8%).</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Select Withdrawal Frequency:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Choose how often you want to withdraw (monthly, quarterly, annually).</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view your estimated withdrawal amount and remaining investment balance.</span></p>
+  </li>
+</ul>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
+<ul>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹10,00,000</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expected Return Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;8% per annum</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Withdrawal Frequency:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Monthly</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Withdrawal Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹50,000</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Estimated Remaining Investment After 1 Year:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹8,00,000</span></p>
+  </li>
+</ul>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our SWP Calculator</span></strong></p>
+<ul>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Income Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand how much you can withdraw regularly without depleting your capital too quickly.</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Management:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Monitor the impact of withdrawals on your overall investment portfolio.</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Security:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Create a reliable income stream for retirement or other financial needs.</span></p>
+  </li>
+</ul>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
+<ul>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding SWP:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn more about how Systematic Withdrawal Plans work and their benefits.</span></p>
+  </li>
+  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various strategies for managing your investments effectively.</span></p>
+  </li>
+</ul>
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`
+  },
+  {
     id: "mutualFund",
     name: "Mutual Fund Calculator",
     description:
@@ -1053,7 +1166,7 @@ const calculators = [
   },
   {
     id: "stepUpSip",
-    name: "Step-up SIP Calculator",
+    name: "Step Up SIP Calculator",
     description:
       "Discover how raising your SIP contributions each year can greatly increase the long-term returns on your investments. ",
     inputs: [
@@ -1088,47 +1201,80 @@ const calculators = [
     ],
     output: "Future Value (₹)",
     showGraph: true,
-    html: `<p><span style="font-weight: 400;">Welcome to the Step-Up SIP Calculator by Trust Financial Advisory! You've reached the perfect place if you're eager to optimize your investment strategy. Think of our calculator as your own financial advisor, guiding you through the vision of your investment growth as you gradually increase your monthly investment. We're here to guide you at each step, whether you're starting or looking to raise the amount of your investments. Let's take a look together at the options for your financial future!</span></p>
-<p>&nbsp;</p>
-<p><strong>What is a Step-Up SIP?</strong></p>
-<p><span style="font-weight: 400;">Suppose you have a Step-Up SIP where you can gradually increase your investment amount periodically, usually once a year. What you're doing is actively trying to grow your wealth over time and not just keep pace with inflation. It's a smart way to ensure your money keeps pace with increasing expenses while enhancing your financial future.</span></p>
-<p>&nbsp;</p>
-<p><strong>Why Use Our Step-Up SIP Calculator?</strong></p>
+    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to the Step-Up SIP Calculator by Trust Financial Advisory! You&apos;ve reached the perfect place if you&apos;re eager to optimize your investment strategy. Think of our calculator as your own financial advisor, guiding you through the vision of your investment growth as you gradually increase your monthly investment. We&apos;re here to guide you at each step, whether you&apos;re starting or looking to raise the amount of your investments. Let&apos;s take a look together at the options for your financial future!</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Step-Up SIP?</span></strong></p>
+<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Suppose you have a Step-Up SIP where you can gradually increase your investment amount periodically, usually once a year. What you&apos;re doing is actively trying to grow your wealth over time and not just keep pace with inflation. It&apos;s a smart way to ensure your money keeps pace with increasing expenses while enhancing your financial future.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Step-Up SIP Calculator?</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Future Planning:</strong><span style="font-weight: 400;"> Visualize the future growth of your investments as you build up your contributions over time.</span></li>
-<li style="font-weight: 400;"><strong>User-Friendly Interface:</strong><span style="font-weight: 400;"> Take advantage of simple navigation that makes using the site effortless.</span></li>
-<li style="font-weight: 400;"><strong>Customisable Inputs:</strong><span style="font-weight: 400;"> Take control by adjusting your original investment, step-up rate, and investment duration to try out various scenarios that suit your needs.</span></li>
-<li style="font-weight: 400;"><strong>Financial Insights:</strong><span style="font-weight: 400;"> Make sure that you're on the right path towards achieving your financial goals by equipping yourself with the details you need to make sound decisions about your investment plan.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Future Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Visualize the future growth of your investments as you build up your contributions over time.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User-Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Take advantage of simple navigation that makes using the site effortless.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customisable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Take control by adjusting your original investment, step-up rate, and investment duration to try out various scenarios that suit your needs.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Insights:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Make sure that you&apos;re on the right path towards achieving your financial goals by equipping yourself with the details you need to make sound decisions about your investment plan.</span></p>
+    </li>
 </ul>
-<p><strong>How to Use the Step-Up SIP Estimator</strong></p>
-<p>&nbsp;</p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Step-Up SIP Estimator</span></strong></p>
+<p><br></p>
 <ul>
-<li style="font-weight: 400;"><strong>Enter Initial Investment Amount: </strong><span style="font-weight: 400;">First, enter the amount of initial investment that you plan to invest.</span></li>
-<li style="font-weight: 400;"><strong>Select Step-Up Percentage: </strong><span style="font-weight: 400;">Then, choose how much you wish to increase your SIP each year.</span></li>
-<li style="font-weight: 400;"><strong>Choose Investment Tenure: </strong><span style="font-weight: 400;">Enter the amount of years that you want to invest.</span></li>
-<li style="font-weight: 400;"><strong>Calculate: </strong><span style="font-weight: 400;">Finally, press the 'Calculate' button to see your projected returns and better understand the potential growth of your investment.</span></li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Enter Initial Investment Amount:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">First, enter the amount of initial investment that you plan to invest.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Select Step-Up Percentage:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Then, choose how much you wish to increase your SIP each year.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Choose Investment Tenure:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Enter the amount of years that you want to invest.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Calculate:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Finally, press the &apos;Calculate&apos; button to see your projected returns and better understand the potential growth of your investment.</span></p>
+    </li>
 </ul>
-<p><strong>For Example&nbsp;</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Initial Investment:</strong><span style="font-weight: 400;"> Let's say you want to start with a monthly investment of ₹10,000.</span></li>
-<li style="font-weight: 400;"><strong>Step-Up Percentage:</strong><span style="font-weight: 400;"> You intend to raise that sum by 10% annually.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Investment Tenure: Your investment is expected to be committed for a period of 15 years.</span></li>
-<li style="font-weight: 400;"><strong>Estimated Future Value:</strong><span style="font-weight: 400;"> Your investment may increase to a staggering ₹1,50,00,000 by the end of that time frame!</span></li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Initial Monthly Investment = ₹10,000</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Step-up Percentage = 10% per year (increases by 10% annually)</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Expected Return Rate = 12% per annum</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Investment Duration = 20 years</span></strong></p>
+    </li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Advantages</strong> <strong>of Using Our Step-Up SIP Calculator</strong></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">of Using Our Step-Up SIP Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Inflation Hedge:</strong><span style="font-weight: 400;"> You can actually keep pace with rising costs and maintain your buying power by increasing your contributions.</span></li>
-<li style="font-weight: 400;"><strong>Wealth Creation:</strong><span style="font-weight: 400;"> Discover how gradually increasing your investments can ultimately lead to far greater returns.</span></li>
-<li style="font-weight: 400;"><strong>Goal Attainment:</strong><span style="font-weight: 400;"> To keep you on course and achieve your goals, ensure that your investment plan aligns with your financial goals.</span></li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Inflation Hedge:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;You can actually keep pace with rising costs and maintain your buying power by increasing your contributions.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Wealth Creation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Discover how gradually increasing your investments can ultimately lead to far greater returns.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Goal Attainment:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To keep you on course and achieve your goals, ensure that your investment plan aligns with your financial goals.</span></p>
+    </li>
 </ul>
-<p><strong>Additional Resources</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>SIP vs. Lump Sum Investment:</strong><span style="font-weight: 400;"> In order to know which investment approach is suitable for you, invest some time in learning about the benefits and differences of each.</span></li>
-<li style="font-weight: 400;"><strong>Investment Planning Guide:</strong><span style="font-weight: 400;"> Discover a variety of investment opportunities and strategies that are tailored to your specific needs and goals.</span></li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">SIP vs. Lump Sum Investment:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;In order to know which investment approach is suitable for you, invest some time in learning about the benefits and differences of each.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Investment Planning Guide:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Discover a variety of investment opportunities and strategies that are tailored to your specific needs and goals.</span></p>
+    </li>
 </ul>
-<p><strong>Consult with an Expert:</strong><span style="font-weight: 400;"> Don't hold back from approaching our financial advisers for personalized investment advice that will help you go about your money path with confidence.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Consult with an Expert:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Don&apos;t hold back from approaching our financial advisers for personalized investment advice that will help you go about your money path with confidence.</span></p>`,
   },
   {
     id: "incomeTax",
@@ -1153,46 +1299,76 @@ const calculators = [
     ],
     output: "Tax Payable (₹)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Hello to Trust Financial Advisory's Income Tax Calculator! We know how the complexities of income tax could be a little intimidating. Because of this, our income tax calculator is designed to help simplify matters for you. It simplifies matters a great deal by helping you to estimate the tax you should pay based on your income as well as possible deductions.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is an Income Tax Calculator?</strong></p>
-<p><span style="font-weight: 400;">Depending on your overall income, deductions, and the tax slabs that are applicable to you, an income tax calculator is a handy instrument that helps you to approximate your income tax. You can make use of it in order to comprehend your tax obligations better, which will allow you to make sounder financial decisions.</span></p>
-<p>&nbsp;</p>
-<p><strong>Why Use Our Income Tax Calculator?</strong></p>
+    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Hello to Trust Financial Advisory&apos;s Income Tax Calculator! We know how the complexities of income tax could be a little intimidating. Because of this, our income tax calculator is designed to help simplify matters for you. It simplifies matters a great deal by helping you to estimate the tax you should pay based on your income as well as possible deductions.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is an Income Tax Calculator?</span></strong></p>
+<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Depending on your overall income, deductions, and the tax slabs that are applicable to you, an income tax calculator is a handy instrument that helps you to approximate your income tax. You can make use of it in order to comprehend your tax obligations better, which will allow you to make sounder financial decisions.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Income Tax Calculator?</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Quick and Precise:</strong><span style="font-weight: 400;"> Obtain the information you need right away by utilizing convenient, on-the-spot estimates of your tax burden.</span></li>
-<li style="font-weight: 400;"><strong>User-Friendly Interface:</strong><span style="font-weight: 400;"> You are able to navigate easily due to a design that ensures everything goes smoothly for you.</span></li>
-<li style="font-weight: 400;"><strong>Personalizable Inputs:</strong><span style="font-weight: 400;"> Simply plug in your own income, deductions, and other relevant information to see your individual tax calculations.</span></li>
-<li style="font-weight: 400;"><strong>Financial Planning:</strong><span style="font-weight: 400;"> To create a better financial future, utilize the insights of the calculator to make smart decisions on your savings and investments.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Quick and Precise:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Obtain the information you need right away by utilizing convenient, on-the-spot estimates of your tax burden.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">User-Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;You are able to navigate easily due to a design that ensures everything goes smoothly for you.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Personalizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Simply plug in your own income, deductions, and other relevant information to see your individual tax calculations.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Financial Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To create a better financial future, utilize the insights of the calculator to make smart decisions on your savings and investments.</span></p>
+    </li>
 </ul>
-<p><strong>How to Use the Income Tax Calculator</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Income Tax Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Enter Your Total Income:</strong><span style="font-weight: 400;"> First, enter all of your sources of income for the year.</span></li>
-<li style="font-weight: 400;"><strong>Input Deductions:</strong><span style="font-weight: 400;"> Then, fill in any deductions that you are entitled to under sections like 80C, 80D, and so on.</span></li>
-<li style="font-weight: 400;"><strong>Choose Tax Regime:</strong><span style="font-weight: 400;"> In order to tailor your calculations, choose either the old tax regime or, where available, the new tax regime.</span></li>
-<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> In order to view your estimated income tax and obtain a better understanding of your tax responsibilities, click the 'Calculate' button.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Your Total Income:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;First, enter all of your sources of income for the year.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Deductions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Then, fill in any deductions that you are entitled to under sections like 80C, 80D, and so on.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Choose Tax Regime:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;In order to tailor your calculations, choose either the old tax regime or, where available, the new tax regime.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;In order to view your estimated income tax and obtain a better understanding of your tax responsibilities, click the &apos;Calculate&apos; button.</span></p>
+    </li>
 </ul>
-<p><strong>For Example&nbsp;</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Total Income:</strong><span style="font-weight: 400;"> Let's say you make ₹10,000,000 a year.</span></li>
-<li style="font-weight: 400;"><strong>Deductions:</strong><span style="font-weight: 400;"> You have deductions of ₹1,50,000.</span></li>
-<li style="font-weight: 400;"><strong>Tax Regime:</strong><span style="font-weight: 400;"> For your calculations, you have opted for the new tax regime.</span></li>
-<li style="font-weight: 400;"><strong>Estimated Income Tax:</strong><span style="font-weight: 400;"> Your estimated income tax is ₹75,000 as per this information.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Income:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Let&apos;s say you make ₹10,000,000 a year.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Deductions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;You have deductions of ₹1,50,000.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Estimated Income Tax:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Your estimated income tax is ₹75,000 as per this information.</span></p>
+    </li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using Our Income Tax Calculator</strong></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Income Tax Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Tax Planning:</strong><span style="font-weight: 400;"> To effectively plan your investments, you must have a clear understanding of your tax liability.</span></li>
-<li style="font-weight: 400;"><strong>Maximise Deductions:</strong><span style="font-weight: 400;"> Learn about possible deductions that can lower your taxable income and result in financial savings.</span></li>
-<li style="font-weight: 400;"><strong>Stay Informed:</strong><span style="font-weight: 400;"> To stay compliant and maximise your financial strategies, stay informed about the most recent tax slabs and regulations.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Tax Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To effectively plan your investments, you must have a clear understanding of your tax liability.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Maximise Deductions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about possible deductions that can lower your taxable income and result in financial savings.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Stay Informed:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To stay compliant and maximise your financial strategies, stay informed about the most recent tax slabs and regulations.</span></p>
+    </li>
 </ul>
-<p><strong>Additional Resources</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Tax Planning Guide:</strong><span style="font-weight: 400;"> Discover a variety of strategies designed to minimize your tax burden and keep more of your hard-earned money.</span></li>
-<li style="font-weight: 400;"><strong>Understanding Tax Slabs:</strong><span style="font-weight: 400;"> To understand your tax obligations better, take a little time to learn about the different slabs of tax applicable to individual taxpayers.</span></li>
-<li style="font-weight: 400;"><strong>Expert Advice:</strong><span style="font-weight: 400;"> For personalized tax planning advice tailored to your specific situation and goals, feel free to reach out to our financial planners.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Tax Planning Guide:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Discover a variety of strategies designed to minimize your tax burden and keep more of your hard-earned money.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Tax Slabs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To understand your tax obligations better, take a little time to learn about the different slabs of tax applicable to individual taxpayers.</span></p>
+    </li>
 </ul>
-<!-- Comments are visible in the HTML source only -->`,
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Advice:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;For personalized tax planning advice tailored to your specific situation and goals, feel free to reach out to our financial planners.</span></p>`,
   },
   {
     id: "interestRateComparison",
@@ -1231,50 +1407,89 @@ const calculators = [
     ],
     output: "Comparison Results",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Welcome to the Flat vs. Decreasing Interest Rate Calculator by Trust Financial Advisory! Your financial future can be greatly influenced by the interest rate profile of your loan. By presenting the differences between flat and decreasing interest rates in a clear manner, our calculator is designed to help you make well-informed borrowing choices. In this way, you can choose the best option for your budgetary goals.</span></p>
-<p><strong>What are Flat and Reducing Interest Rates?</strong></p>
-<p><strong>Flat Interest Rate:</strong><span style="font-weight: 400;"> The flat interest rate approach calculates interest on the total principal amount for the duration of the loan. This means that your EMI remains constant, but during the loan period, you may end up paying more interest.</span></p>
-<p>&nbsp;</p>
-<p><strong>Reducing Interest Rate:</strong><span style="font-weight: 400;"> Here, interest is calculated on the amount borrowed, which decreases as you pay it back. In the long run, this reduces interest charges, which may lead to a reduced cost of the loan.</span></p>
-<p>&nbsp;</p>
-<p><strong>Why Use Our Calculator?</strong></p>
+    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to the Flat vs. Decreasing Interest Rate Calculator by Trust Financial Advisory! Your financial future can be greatly influenced by the interest rate profile of your loan. By presenting the differences between flat and decreasing interest rates in a clear manner, our calculator is designed to help you make well-informed borrowing choices. In this way, you can choose the best option for your budgetary goals.</span></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What are Flat and Reducing Interest Rates?</span></strong></p>
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Flat Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;The flat interest rate approach calculates interest on the total principal amount for the duration of the loan. This means that your EMI remains constant, but during the loan period, you may end up paying more interest.</span></p>
+<p><br></p>
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Reducing Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Here, interest is calculated on the amount borrowed, which decreases as you pay it back. In the long run, this reduces interest charges, which may lead to a reduced cost of the loan.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Calculator?</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Compare Costs:</strong><span style="font-weight: 400;"> Easily compare the total cost of loans under both interest rate structures.</span></li>
-<li style="font-weight: 400;"><strong>User -Friendly Interface:</strong><span style="font-weight: 400;"> Designed for easy navigation and a seamless experience.</span></li>
-<li style="font-weight: 400;"><strong>Customizable Inputs:</strong><span style="font-weight: 400;"> Enter your loan amount, tenure, and interest rates to see the differences in total payments.</span></li>
-<li style="font-weight: 400;"><strong>Informed Decisions:</strong><span style="font-weight: 400;"> Make better financial choices based on clear calculations.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Compare Costs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Easily compare the total cost of loans under both interest rate structures.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter your loan amount, tenure, and interest rates to see the differences in total payments.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Informed Decisions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Make better financial choices based on clear calculations.</span></p>
+    </li>
 </ul>
-<p><strong>How to Use the Flat vs. Reducing Interest Rate Calculator</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Flat vs. Reducing Interest Rate Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Enter Loan Amount:</strong><span style="font-weight: 400;"> Input the total amount you wish to borrow.</span></li>
-<li style="font-weight: 400;"><strong>Input Tenure:</strong><span style="font-weight: 400;"> Specify the duration of the loan in years or months.</span></li>
-<li style="font-weight: 400;"><strong>Enter Flat Interest Rate:</strong><span style="font-weight: 400;"> Input the flat interest rate offered by your lender.</span></li>
-<li style="font-weight: 400;"><strong>Enter Reducing Interest Rate:</strong><span style="font-weight: 400;"> Input the reducing interest rate offered by your lender.</span></li>
-<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Click on the 'Calculate' button to view a comparison of total payments under both interest rate structures.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Loan Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the total amount you wish to borrow.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Tenure:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Specify the duration of the loan in years or months.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Flat Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the flat interest rate offered by your lender.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Reducing Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the reducing interest rate offered by your lender.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view a comparison of total payments under both interest rate structures.</span></p>
+    </li>
 </ul>
-<p><strong>For Example&nbsp;</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Loan Amount:</strong><span style="font-weight: 400;"> ₹10,00,000</span></li>
-<li style="font-weight: 400;"><strong>Tenure:</strong><span style="font-weight: 400;"> 10 years</span></li>
-<li style="font-weight: 400;"><strong>Flat Interest Rate:</strong><span style="font-weight: 400;"> 10%</span></li>
-<li style="font-weight: 400;"><strong>Reducing Interest Rate:</strong><span style="font-weight: 400;"> 8%</span></li>
-<li style="font-weight: 400;"><strong>Total Payment (Flat Rate):</strong><span style="font-weight: 400;"> ₹12,00,000</span></li>
-<li style="font-weight: 400;"><strong>Total Payment (Reducing Rate):</strong><span style="font-weight: 400;"> ₹11,00,000</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Loan Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹10,00,000</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Flat Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10%</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Reducing Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;8%</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Tenure:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 years</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Total Payment (Flat Rate):</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹12,00,000</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Total Payment (Reducing Rate):</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹11,00,000</span></p>
+    </li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using Our Calculator</strong></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Cost Comparison:</strong><span style="font-weight: 400;"> Understand how different interest rate structures affect your total loan cost.</span></li>
-<li style="font-weight: 400;"><strong>Financial Clarity:</strong><span style="font-weight: 400;"> Gain insights into which option may be more beneficial for your financial situation.</span></li>
-<li style="font-weight: 400;"><strong>Empower Your Decisions:</strong><span style="font-weight: 400;"> Make informed choices about your loan options based on clear data.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Cost Comparison:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand how different interest rate structures affect your total loan cost.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Clarity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Gain insights into which option may be more beneficial for your financial situation.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Empower Your Decisions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Make informed choices about your loan options based on clear data.</span></p>
+    </li>
 </ul>
-<p><strong>Additional Resources</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Understanding Loan Types:</strong><span style="font-weight: 400;"> Learn about various types of loans and their interest structures.</span></li>
-<li style="font-weight: 400;"><strong>Loan Repayment Strategies:</strong><span style="font-weight: 400;"> Explore strategies to pay off your loans faster and save on interest.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Loan Types:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about various types of loans and their interest structures.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Loan Repayment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore strategies to pay off your loans faster and save on interest.</span></p>
+    </li>
 </ul>
-<p><strong>Expert Consultation:</strong><span style="font-weight: 400;"> Contact our financial advisors for personalized loan advice tailored to your needs.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized loan advice tailored to your needs.</span></p>`,
   },
   {
     id: "brokerage",
@@ -1306,46 +1521,84 @@ const calculators = [
     ],
     output: "Total Charges (₹)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Hello, Trust Financial Advisory Broking Calculator! You have arrived at the right place if you are curious to learn what it will take to purchase and sell securities. With our Broking Calculator, you can now make informed investments that support your financial goals through the estimation of your broking charges and additional costs of trading.</span></p>
-    <p><strong>What is a Brokerage Calculator?</strong></p>
-    <p><span style="font-weight: 400;">A Brokerage Calculator is a tool that allows you to calculate the total brokerage fees you will incur when buying or selling stocks, mutual funds, or other financial instruments. It helps you understand the impact of these fees on your overall investment returns.</span></p>
-    <p>&nbsp;</p>
-    <p><strong>Why Use Our Brokerage Calculator?</strong></p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Quick Estimates:</strong><span style="font-weight: 400;"> Get instant calculations of your brokerage fees without any hassle.</span></li>
-    <li style="font-weight: 400;"><strong>User -Friendly Interface:</strong><span style="font-weight: 400;"> Designed for easy navigation and a seamless experience.</span></li>
-    <li style="font-weight: 400;"><strong>Customizable Inputs:</strong><span style="font-weight: 400;"> Enter your trade amount, brokerage rate, and other relevant details to see your total costs.</span></li>
-    <li style="font-weight: 400;"><strong>Financial Clarity:</strong><span style="font-weight: 400;"> Helps you understand how brokerage fees affect your investment returns.</span></li>
-    </ul>
-    <p><strong>How to Use the Brokerage Calculator</strong></p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Enter Trade Amount:</strong><span style="font-weight: 400;"> Input the total value of the securities you wish to buy or sell.</span></li>
-    <li style="font-weight: 400;"><strong>Input Brokerage Rate:</strong><span style="font-weight: 400;"> Enter the brokerage fee percentage charged by your broker.</span></li>
-    <li style="font-weight: 400;"><strong>Include Other Charges:</strong><span style="font-weight: 400;"> If applicable, input any additional charges (like transaction fees, GST, etc.).</span></li>
-    <li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Click on the 'Calculate' button to view your total brokerage fees and net investment.</span></li>
-    </ul>
-    <p><strong>Example Calculation</strong></p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Trade Amount:</strong><span style="font-weight: 400;"> ₹1,00,000</span></li>
-    <li style="font-weight: 400;"><strong>Brokerage Rate:</strong><span style="font-weight: 400;"> 0.5%</span></li>
-    <li style="font-weight: 400;"><strong>Other Charges:</strong><span style="font-weight: 400;"> ₹500</span></li>
-    <li style="font-weight: 400;"><strong>Total Brokerage Fees:</strong><span style="font-weight: 400;"> ₹500</span></li>
-    <li style="font-weight: 400;"><strong>Net Investment After Fees:</strong><span style="font-weight: 400;"> ₹99,500</span></li>
-    </ul>
-    <p>&nbsp;</p>
-    <p><strong>Advantages of Using Our Brokerage Calculator</strong></p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Cost Awareness:</strong><span style="font-weight: 400;"> Understand the fees associated with your trades to make better investment decisions.</span></li>
-    <li style="font-weight: 400;"><strong>Investment Planning:</strong><span style="font-weight: 400;"> Factor in brokerage costs when planning your investment strategy.</span></li>
-    <li style="font-weight: 400;"><strong>Maximize Returns:</strong><span style="font-weight: 400;"> Identify ways to minimize brokerage fees and maximize your investment returns.</span></li>
-    </ul>
-    <p><strong>Additional Resources</strong></p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Understanding Brokerage Fees:</strong><span style="font-weight: 400;"> Learn about different types of brokerage fees and how they are calculated.</span></li>
-    <li style="font-weight: 400;"><strong>Investment Strategies:</strong><span style="font-weight: 400;"> Explore various investment strategies to enhance your portfolio.</span></li>
-    <li style="font-weight: 400;"><strong>Expert Consultation:</strong><span style="font-weight: 400;"> Contact our financial advisors for personalized investment advice tailored to your needs.</span></li>
-    </ul>
-    <!-- Comments are visible in the HTML source only -->`,
+    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Hello, Trust Financial Advisory Broking Calculator! You have arrived at the right place if you are curious to learn what it will take to purchase and sell securities. With our Broking Calculator, you can now make informed investments that support your financial goals through the estimation of your broking charges and additional costs of trading.</span></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Brokerage Calculator?</span></strong></p>
+<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">A Brokerage Calculator is a tool that allows you to calculate the total brokerage fees you will incur when buying or selling stocks, mutual funds, or other financial instruments. It helps you understand the impact of these fees on your overall investment returns.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Brokerage Calculator?</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Estimates:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Get instant calculations of your brokerage fees without any hassle.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter your trade amount, brokerage rate, and other relevant details to see your total costs.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Clarity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Helps you understand how brokerage fees affect your investment returns.</span></p>
+    </li>
+</ul>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Brokerage Calculator</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Trade Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the total value of the securities you wish to buy or sell.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Brokerage Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the brokerage fee percentage charged by your broker.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Include Other Charges:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;If applicable, input any additional charges (like transaction fees, GST, etc.).</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view your total brokerage fees and net investment.</span></p>
+    </li>
+</ul>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Transaction Amount:</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹1,00,000</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Brokerage Fee (0.5%):</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹500</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Taxes &amp; Other Charges (0.2%):&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">₹200</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Charges:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">₹700</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Cost of Transaction:</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹1,00,700</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Brokerage Calculator</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Cost Awareness:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand the fees associated with your trades to make better investment decisions.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Factor in brokerage costs when planning your investment strategy.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Maximize Returns:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Identify ways to minimize brokerage fees and maximize your investment returns.</span></p>
+    </li>
+</ul>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Brokerage Fees:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about different types of brokerage fees and how they are calculated.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various investment strategies to enhance your portfolio.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>
+    </li>
+</ul>
+`,
   },
   {
     id: "margin",
@@ -1370,45 +1623,81 @@ const calculators = [
     ],
     output: "Margin Required (₹)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's Margin Calculator! You've come to the right website if you'd like to learn how margin trading works and how much you can lend against your investments. By helping you project your margin requirements, our Margin Calculator allows you to make informed trading decisions that support your investment strategy.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is a Margin Calculator?</strong></p>
-<p><span style="font-weight: 400;">A useful aid to determining how much you can borrow from your broker to use in trading securities is a margin calculator. It helps you make more informed decisions when you trade on margin by helping you understand the relationship between your equity, margin requirements, and the total value of your investments.</span></p>
-<p>&nbsp;</p>
-<p><strong>Why Use Our Margin Calculator?</strong></p>
+    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Margin Calculator! You&apos;ve come to the right website if you&apos;d like to learn how margin trading works and how much you can lend against your investments. By helping you project your margin requirements, our Margin Calculator allows you to make informed trading decisions that support your investment strategy.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Margin Calculator?</span></strong></p>
+<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">A useful aid to determining how much you can borrow from your broker to use in trading securities is a margin calculator. It helps you make more informed decisions when you trade on margin by helping you understand the relationship between your equity, margin requirements, and the total value of your investments.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Margin Calculator?</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Quick Estimates:</strong><span style="font-weight: 400;"> To enable you to make decisions in a hurry, you can quickly get instant calculations of your margin requirements.</span></li>
-<li style="font-weight: 400;"><strong>User-Friendly Interface:</strong><span style="font-weight: 400;"> Leverage easy navigation and a design that ensures a seamless experience for all users.</span></li>
-<li style="font-weight: 400;"><strong>Customisable Inputs:</strong><span style="font-weight: 400;"> To see your borrowing limit according to your individual situation, input your investment amount, margin percentage, and other relevant data.</span></li>
-<li style="font-weight: 400;"><strong>Financial Clarity:</strong><span style="font-weight: 400;"> Discover more about how margin trading can enhance your investment opportunities and help you make smart trading choices.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Estimates:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To enable you to make decisions in a hurry, you can quickly get instant calculations of your margin requirements.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User-Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Leverage easy navigation and a design that ensures a seamless experience for all users.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customisable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To see your borrowing limit according to your individual situation, input your investment amount, margin percentage, and other relevant data.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Clarity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Discover more about how margin trading can enhance your investment opportunities and help you make smart trading choices.</span></p>
+    </li>
 </ul>
-<p><strong>How to Use the Margin Calculator</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Margin Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Enter Investment Amount:</strong><span style="font-weight: 400;"> Input the total value of the securities you wish to purchase.</span></li>
-<li style="font-weight: 400;"><strong>Input Margin Percentage:</strong><span style="font-weight: 400;"> Enter the margin percentage set by your broker (e.g., 50%).</span></li>
-<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Click on the 'Calculate' button to view your margin amount and the total equity required.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Investment Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the total value of the securities you wish to purchase.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Margin Percentage:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the margin percentage set by your broker (e.g., 50%).</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view your margin amount and the total equity required.</span></p>
+    </li>
 </ul>
-<p><strong>Example Calculation</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Investment Amount:</strong><span style="font-weight: 400;"> ₹1,00,000</span></li>
-<li style="font-weight: 400;"><strong>Margin Percentage:</strong><span style="font-weight: 400;"> 50%</span></li>
-<li style="font-weight: 400;"><strong>Margin Amount:</strong><span style="font-weight: 400;"> ₹50,000</span></li>
-<li style="font-weight: 400;"><strong>Equity Required:</strong><span style="font-weight: 400;"> ₹50,000</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Trade Value:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">₹50,000</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Leverage Factor:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">10x</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Margin Required:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">₹5,000</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Exposure:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">₹50,000</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Potential Profit/Loss (5% Move):</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&plusmn; ₹2,500</span></p>
+    </li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using Our Margin Calculator</strong></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Margin Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Understand Leverage:</strong><span style="font-weight: 400;"> Learn how margin trading can increase your buying power and potential returns.</span></li>
-<li style="font-weight: 400;"><strong>Risk Assessment:</strong><span style="font-weight: 400;"> Evaluate the risks associated with margin trading and make informed decisions.</span></li>
-<li style="font-weight: 400;"><strong>Investment Planning:</strong><span style="font-weight: 400;"> Factor in margin requirements when planning your investment strategy.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understand Leverage:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn how margin trading can increase your buying power and potential returns.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Risk Assessment:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Evaluate the risks associated with margin trading and make informed decisions.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Factor in margin requirements when planning your investment strategy.</span></p>
+    </li>
 </ul>
-<p><strong>Additional Resources</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Understanding Margin Trading:</strong><span style="font-weight: 400;"> Learn about the basics of margin trading, including its benefits and risks.</span></li>
-<li style="font-weight: 400;"><strong>Investment Strategies:</strong><span style="font-weight: 400;"> Explore various investment strategies that can be enhanced through margin trading.</span></li>
-</ul>
-<p><strong>Expert Consultation:</strong><span style="font-weight: 400;"> Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Margin Trading:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about the basics of margin trading, including its benefits and risks.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various investment strategies that can be enhanced through margin trading.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>
+    </li>
+</ul>`,
   },
   {
     id: "inflation",
@@ -1440,45 +1729,78 @@ const calculators = [
     ],
     output: "Future Value (₹)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's Inflation Calculator! Proper financial planning involves an awareness of the impact of inflation on your investments and savings. Using our inflation calculator, you can calculate how inflation will reduce your money's purchasing power over the long term and make sound financial decisions.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is an Inflation Calculator?</strong></p>
-<p><span style="font-weight: 400;">One helpful tool that allows you to calculate the future value of your funds using a specified inflation rate is an inflation calculator. It enables you to make informed financial decisions to protect and grow your wealth by shedding light on how inflation slowly erodes purchasing power.</span></p>
-<p><strong>Why Use Our Inflation Calculator?</strong></p>
+    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Inflation Calculator! Proper financial planning involves an awareness of the impact of inflation on your investments and savings. Using our inflation calculator, you can calculate how inflation will reduce your money&apos;s purchasing power over the long term and make sound financial decisions.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is an Inflation Calculator?</span></strong></p>
+<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">One helpful tool that allows you to calculate the future value of your funds using a specified inflation rate is an inflation calculator. It enables you to make informed financial decisions to protect and grow your wealth by shedding light on how inflation slowly erodes purchasing power.</span></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Inflation Calculator?</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Quick Estimates:</strong><span style="font-weight: 400;"> Get instant calculations of future values adjusted for inflation.</span></li>
-<li style="font-weight: 400;"><strong>User -Friendly Interface:</strong><span style="font-weight: 400;"> Designed for easy navigation and a seamless experience.</span></li>
-<li style="font-weight: 400;"><strong>Customizable Inputs:</strong><span style="font-weight: 400;"> Enter your current amount, inflation rate, and time period to see the future value of your money.</span></li>
-<li style="font-weight: 400;"><strong>Financial Awareness:</strong><span style="font-weight: 400;"> Helps you understand the long-term effects of inflation on your savings and investments.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Estimates:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Get instant calculations of future values adjusted for inflation.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter your current amount, inflation rate, and time period to see the future value of your money.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Awareness:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Helps you understand the long-term effects of inflation on your savings and investments.</span></p>
+    </li>
 </ul>
-<p><strong>How to Use the Inflation Calculator</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Inflation Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Enter Current Amount:</strong><span style="font-weight: 400;"> Input the amount of money you want to evaluate.</span></li>
-<li style="font-weight: 400;"><strong>Input Inflation Rate:</strong><span style="font-weight: 400;"> Enter the expected annual inflation rate (e.g., 3%).</span></li>
-<li style="font-weight: 400;"><strong>Select Time Period:</strong><span style="font-weight: 400;"> Specify the number of years you want to project into the future.</span></li>
-<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Click on the 'Calculate' button to view the future value of your money adjusted for inflation.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Current Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the amount of money you want to evaluate.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Inflation Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the expected annual inflation rate (e.g., 3%).</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Select Time Period:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Specify the number of years you want to project into the future.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view the future value of your money adjusted for inflation.</span></p>
+    </li>
 </ul>
-<p><strong>Example Calculation</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Current Amount:</strong><span style="font-weight: 400;"> ₹1,00,000</span></li>
-<li style="font-weight: 400;"><strong>Inflation Rate:</strong><span style="font-weight: 400;"> 3% per annum</span></li>
-<li style="font-weight: 400;"><strong>Time Period:</strong><span style="font-weight: 400;"> 10 years</span></li>
-<li style="font-weight: 400;"><strong>Future Value:</strong><span style="font-weight: 400;"> ₹1,34,392 (This means that in 10 years, ₹1,00,000 will have the purchasing power equivalent to ₹1,34,392 today.)</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Current Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹1,00,000</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Inflation Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;3% per annum</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Time Period:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 years</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Future Value:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹1,34,392 (This means that in 10 years, ₹1,00,000 will have the purchasing power equivalent to ₹1,34,392 today.)</span></p>
+    </li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using Our Inflation Calculator</strong></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Inflation Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Purchasing Power Awareness:</strong><span style="font-weight: 400;"> Understand how inflation impacts your savings and investments over time.</span></li>
-<li style="font-weight: 400;"><strong>Financial Planning:</strong><span style="font-weight: 400;"> Factor in inflation when planning for future expenses, such as retirement or education.</span></li>
-<li style="font-weight: 400;"><strong>Investment Strategy:</strong><span style="font-weight: 400;"> Make informed decisions about investments that can potentially outpace inflation.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchasing Power Awareness:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand how inflation impacts your savings and investments over time.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Factor in inflation when planning for future expenses, such as retirement or education.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategy:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Make informed decisions about investments that can potentially outpace inflation.</span></p>
+    </li>
 </ul>
-<p><strong>Additional Resources</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Understanding Inflation:</strong><span style="font-weight: 400;"> Learn about the causes and effects of inflation on the economy and personal finances.</span></li>
-<li style="font-weight: 400;"><strong>Investment Strategies Against Inflation:</strong><span style="font-weight: 400;"> Explore various investment options that can help protect your wealth from inflation.</span></li>
-<li style="font-weight: 400;"><strong>Expert Consultation:</strong><span style="font-weight: 400;"> Contact our financial advisors for personalized advice tailored to your financial goals.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Inflation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about the causes and effects of inflation on the economy and personal finances.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies Against Inflation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various investment options that can help protect your wealth from inflation.</span></p>
+    </li>
 </ul>
-<!-- Comments are visible in the HTML source only -->`,
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`,
   },
   {
     id: "stockAverage",
@@ -1517,55 +1839,92 @@ const calculators = [
     ],
     output: "Average Price per Share (₹)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's Stock Average Calculator! While investing in stocks can be profitable, it is only by knowing your average cost per share that you can manage your portfolio effectively. To empower you to make informed investment choices that harmonize with your financial goals, our Stock Average Calculator is designed to help you calculate the average purchase price of a stock.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is a Stock Average Calculator?</strong></p>
-<p><span style="font-weight: 400;">A useful device that allows you to calculate the average value of your shares from multiple buys at different prices is a stock average calculator. This helps you make more informed investment choices by providing you with a clear idea of your overall investment in a given stock and computing your profit or loss when you sell.</span></p>
-<p>&nbsp;</p>
-<p><strong>Why Use Our Stock Average Calculator?</strong></p>
+    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Stock Average Calculator! While investing in stocks can be profitable, it is only by knowing your average cost per share that you can manage your portfolio effectively. To empower you to make informed investment choices that harmonize with your financial goals, our Stock Average Calculator is designed to help you calculate the average purchase price of a stock.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Stock Average Calculator?</span></strong></p>
+<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">A useful device that allows you to calculate the average value of your shares from multiple buys at different prices is a stock average calculator. This helps you make more informed investment choices by providing you with a clear idea of your overall investment in a given stock and computing your profit or loss when you sell.</span></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Stock Average Calculator?</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Quick Calculations:</strong><span style="font-weight: 400;"> Get instant calculations of your average cost per share without any hassle.</span></li>
-<li style="font-weight: 400;"><strong>User -Friendly Interface:</strong><span style="font-weight: 400;"> Designed for easy navigation and a seamless experience.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Customizable Inputs: Enter your purchase prices and quantities to see your average cost.</span></li>
-<li style="font-weight: 400;"><strong>Investment Clarity:</strong><span style="font-weight: 400;"> Helps you track your investments and make informed decisions about buying or selling.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Calculations:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Get instant calculations of your average cost per share without any hassle.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs: Enter your purchase prices and quantities to see your average cost.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Clarity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Helps you track your investments and make informed decisions about buying or selling.</span></p>
+    </li>
 </ul>
-<p><strong>How to Use the Stock Average Calculator</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Stock Average Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Enter Purchase Prices:</strong><span style="font-weight: 400;"> Input the price at which you bought the stock for each transaction.</span></li>
-<li style="font-weight: 400;"><strong>Input Quantities:</strong><span style="font-weight: 400;"> Enter the number of shares purchased at each price.</span></li>
-<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Click on the 'Calculate' button to view your average cost per share.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Purchase Prices:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the price at which you bought the stock for each transaction.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Quantities:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the number of shares purchased at each price.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view your average cost per share.</span></p>
+    </li>
 </ul>
-<p><strong>For Example&nbsp;</strong></p>
-<p><strong>Transaction 1</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 1</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Purchase Price:</strong><span style="font-weight: 400;"> ₹100</span></li>
-<li style="font-weight: 400;"><strong>Quantity:</strong><span style="font-weight: 400;"> 10 shares</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹100</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 shares</span></p>
+    </li>
 </ul>
-<p><strong>Transaction 2</strong></p>
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 2</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Purchase Price:</strong><span style="font-weight: 400;"> ₹120</span></li>
-<li style="font-weight: 400;"><strong>Quantity:</strong><span style="font-weight: 400;"> 5 shares</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹120</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;5 shares</span></p>
+    </li>
 </ul>
-<p><strong>Transaction 3</strong></p>
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 3</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Purchase Price:</strong><span style="font-weight: 400;"> ₹90</span></li>
-<li style="font-weight: 400;"><strong>Quantity:</strong><span style="font-weight: 400;"> 15 shares</span></li>
-<li style="font-weight: 400;"><strong>Average Cost per Share:</strong><span style="font-weight: 400;"> ₹102.50</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹90</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;15 shares</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Average Cost per Share:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹102.50</span></p>
+    </li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using Our Stock Average Calculator</strong></p>
+<p><br></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Stock Average Calculator</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Cost Management:</strong><span style="font-weight: 400;"> Understand your average cost to make better decisions about selling or holding your stocks.</span></li>
-<li style="font-weight: 400;"><strong>Profit and Loss Assessment:</strong><span style="font-weight: 400;"> Easily calculate your potential profit or loss based on the current market price.</span></li>
-<li style="font-weight: 400;"><strong>Investment Strategy:</strong><span style="font-weight: 400;"> Use the average cost to inform your investment strategy and portfolio management.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Cost Management:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand your average cost to make better decisions about selling or holding your stocks.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Profit and Loss Assessment:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Easily calculate your potential profit or loss based on the current market price.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategy:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Use the average cost to inform your investment strategy and portfolio management.</span></p>
+    </li>
 </ul>
-<p><strong>Additional Resources</strong></p>
+<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Understanding Stock Investments:</strong><span style="font-weight: 400;"> Learn about the basics of stock investing and how to build a diversified portfolio.</span></li>
-<li style="font-weight: 400;"><strong>Investment Strategies:</strong><span style="font-weight: 400;"> Explore various strategies for buying and selling stocks effectively.</span></li>
-<li style="font-weight: 400;"><strong>Expert Consultation:</strong><span style="font-weight: 400;"> Contact our financial advisors for personalized investment advice tailored to your needs.</span></li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Stock Investments:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about the basics of stock investing and how to build a diversified portfolio.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various strategies for buying and selling stocks effectively.</span></p>
+    </li>
 </ul>
-<!-- Comments are visible in the HTML source only -->`,
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>`,
   },
 ];
 export default calculators;

@@ -73,10 +73,14 @@ const CategoryPosts = () => {
   // };
   // const { title, description, keywords } = getSeoDetails(categoryName);
   if (loading)
-    return <div className="text-gray-500 text-center h-screen">Loading...</div>;
+    return (
+      <div className="text-gray-500 text-center h-screen lg:mt-[7%]">
+        Loading...
+      </div>
+    );
   if (error)
     return (
-      <div className="text-gray-500 text-center h-screen">
+      <div className="text-gray-500 text-center h-screen lg:mt-[7%]">
         Error: {error.message}
       </div>
     );
@@ -94,7 +98,7 @@ const CategoryPosts = () => {
           backgroundSize: "contain",
           backgroundAttachment: "fixed",
         }}>
-        <h1 className="lg:text-5xl text-xl font-semibold text-center text-white">
+        <h1 className="lg:text-5xl text-xl font-semibold text-center text-Black">
           {categoryName}
         </h1>
       </div>
@@ -310,7 +314,7 @@ const CategoryPosts = () => {
           backgroundSize: "contain",
           backgroundAttachment: "fixed",
         }}>
-        <h1 className="lg:text-5xl text-xl font-semibold text-center text-white">
+        <h1 className="lg:text-5xl text-xl font-semibold text-center text-black">
           {categoryName}
         </h1>
       </div>
@@ -388,7 +392,7 @@ const CategoryPosts = () => {
         <link rel="canonical" href={`${import.meta.env.VITE_API_URL}`} />
       </Helmet> */}
       {categoryType === "Personal Finance" && <PersonalFinanceUI />}
-      {categoryType === "Investment and Wealth Growth" && <InvestmentUI />}
+      {categoryType === "Investment And Wealth Growth" && <InvestmentUI />}
       {categoryType === "Risk Management" && <RiskManagmentUI />}
     </>
   );
