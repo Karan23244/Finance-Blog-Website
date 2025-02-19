@@ -24,6 +24,9 @@ const sendResponse = (res, statusCode, message, data = null) => {
 // Fetch posts by category
 exports.getPostsByCategory = (req, res) => {
   const { param1, param2 } = req.params;
+  console.log(param1,"param1");
+  console.log(param2,"param2");
+
   // Convert slugs back to normal text
   const formattedCategoryType = param1.replace(/-/g, " ");
   const formattedCategoryName = param2.replace(/-/g, " ");

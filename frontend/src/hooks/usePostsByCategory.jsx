@@ -24,6 +24,8 @@ const usePostsByCategory = () => {
         const response = await axios.get(
           `${import.meta.env.VITE_API_URL}/api/${param1}/${param2}`
         );
+        console.log(response);
+        console.log(`${import.meta.env.VITE_API_URL}/api/${param1}/${param2}`);
         setPosts(response.data.data);
       } catch (err) {
         setError(err);
