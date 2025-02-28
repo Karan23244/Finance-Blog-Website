@@ -1,31 +1,39 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
+import { HelmetProvider } from "react-helmet-async";
+
+// Common Components
 import Navbar from "./Common/Navbar";
 import Footer from "./Common/Footer";
 import ProtectedRoute from "./Common/ProtectedRoute";
 import PageNotFound from "./Common/PageNotFound";
 import Unauthorized from "./Common/Unauthorized";
-import UserHome from "./Components/User/UserHome";
 import Disclaimer from "./Common/Disclaimer";
 import Privacy_Policy from "./Common/Privacy_Policy";
 import About_us from "./Common/About_Us";
 import Terms_and_Condition from "./Common/Terms_and_Condition";
-import CategoryBlogs from "./Components/User/CategoryBlogs";
-import CalculatorHome from "./Components/User/CalculatorHome";
 import Subscribe from "./Common/Subscribe";
-import Popup from "./Common/Popup";
-import Thankyou from "./Components/User/Form/Thankyou"
-import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./Common/ScrollToTop";
-import CalculatorPage from "./Components/User/Calculator/CalculatorPage";
-import RouteHandler from './RouteHandler'
-// Lazy loading components for Admin
+import Popup from "./Common/Popup";
+
+// Lazy-loading User Components
+const UserHome = React.lazy(() => import("./Components/User/UserHome"));
+const CalculatorHome = React.lazy(() =>
+  import("./Components/User/CalculatorHome")
+);
+const CalculatorPage = React.lazy(() =>
+  import("./Components/User/Calculator/CalculatorPage")
+);
+const Thankyou = React.lazy(() => import("./Components/User/Form/Thankyou"));
+const RouteHandler = React.lazy(() => import("./RouteHandler"));
+
+// Lazy-loading Admin Components
 const AdminLogin = React.lazy(() => import("./Components/Admin/AdminLogin"));
 const Admin = React.lazy(() => import("./Components/Admin/Admin"));
 const FullPostAdmin = React.lazy(() =>
   import("./Components/Admin/AdminPosts/FullPosts")
-); // If different
+);
 const CategoriesTable = React.lazy(() =>
   import("./Components/Admin/Categories")
 );
@@ -35,15 +43,19 @@ const EditPost = React.lazy(() =>
 );
 
 function App() {
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  // Prevent unnecessary re-renders
+  const isAuthenticated = useSelector(
+    (state) => state.auth.isAuthenticated,
+    shallowEqual
+  );
 
   return (
     <HelmetProvider>
       <BrowserRouter>
         <Navbar />
-        <ScrollToTop/>
         <Popup />
-        <Suspense fallback={<div>Loading public content...</div>}>
+        <ScrollToTop />
+        <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
           <Routes>
             {/* Public Routes */}
             <Route
@@ -61,28 +73,28 @@ function App() {
               element={<Terms_and_Condition />}
             />
             <Route path="/About_us" element={<About_us />} />
-            <Route
-              path="/:param1/:param2"
-              element={<RouteHandler />}
-            />
-            {/* <Route path="/:category/:id_or_slug" element={<FullPostAdmin />} />
-            <Route path="/categoryData" element={<CategoryBlogs />} /> */}
+            <Route path="/:param1/:param2" element={<RouteHandler />} />
             <Route path="/calculator" element={<CalculatorHome />} />
             <Route path="/Thankyou" element={<Thankyou />} />
-            <Route path="/calculator/:calculatorName" element={<CalculatorPage />} />
-           
-            {/* Admin Routes - Protected */}
+            <Route
+              path="/calculator/:calculatorName"
+              element={<CalculatorPage />}
+            />
+
+            {/* Admin Routes (Protected) */}
             <Route
               path="/admin/*"
               element={
                 <ProtectedRoute>
-                  <Suspense fallback={<div>Loading admin section...</div>}>
+                  <Suspense
+                    fallback={
+                      <div className="loading-spinner">Loading Admin...</div>
+                    }>
                     <Routes>
                       <Route path="home" element={<Admin />} />
                       <Route path="category" element={<CategoriesTable />} />
                       <Route path="edit-post/:id" element={<EditPost />} />
                       <Route path="authors" element={<Authors />} />
-                      {/* Add admin-specific FullPost if necessary */}
                     </Routes>
                   </Suspense>
                 </ProtectedRoute>

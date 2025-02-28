@@ -9,6 +9,7 @@ const TradingViewWidget = ({ defaultSearch = "BSE:NIFTY50ADD" }) => {
     const script = document.createElement("script");
     script.src = "https://s3.tradingview.com/tv.js";
     script.async = true;
+    script.defer = true;
 
     script.onload = () => {
       if (window.TradingView) {

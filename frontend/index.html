@@ -5,25 +5,85 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Trust Financial Advisory: Your Guide to Personal Finance, investment and
-      market news!
+      Trust Financial Advisory: Your Guide to Personal Finance, Investment, and
+      Market News!
     </title>
-    <meta
-      name="description"
-      content="Trust Financial Advisory offers expert financial planning, investment advice, and risk management strategies. Achieve your financial goals with our trusted advisors." />
-    <meta
-      property="og:title"
-      content="Trust Financial Advisory: Your Guide to Personal Finance, investment and market news!" />
-    <meta
-      property="og:description"
-      content="Trust Financial Advisory offers expert financial planning, investment advice, and risk management strategies. Achieve your financial goals with our trusted advisors." />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://trustfinancialadvisory.com" />
-    <link rel="preload" as="image" href="/background.jpg" />
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Trust Finance Advisory",
+      "url": "https://trustfinancialadvisory.com/",
+      "logo": "https://trustfinancialadvisory.com/logo.png"
+    }
+    </script>
+
+    <!-- Breadcrumbs Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/", 
+      "@type": "BreadcrumbList", 
+      "itemListElement": [{
+        "@type": "ListItem", 
+        "position": 1, 
+        "name": "Financial Planning",
+        "item": "https://trustfinancialadvisory.com/personal-finance/financial-planning"  
+      },{
+        "@type": "ListItem", 
+        "position": 2, 
+        "name": "Debt Management",
+        "item": "https://trustfinancialadvisory.com/personal-finance/debt-management"  
+      },{
+        "@type": "ListItem", 
+        "position": 3, 
+        "name": "Educational Planning",
+        "item": "https://trustfinancialadvisory.com/personal-finance/education-planning"  
+      },{
+        "@type": "ListItem", 
+        "position": 4, 
+        "name": "Tax Advisory",
+        "item": "https://trustfinancialadvisory.com/personal-finance/tax-advisory"  
+      },{
+        "@type": "ListItem", 
+        "position": 5, 
+        "name": "Investment Strategies",
+        "item": "https://trustfinancialadvisory.com/investment-and-wealth-growth/investment-strategies"  
+      },{
+        "@type": "ListItem", 
+        "position": 6, 
+        "name": "Wealth Management",
+        "item": "https://trustfinancialadvisory.com/investment-and-wealth-growth/wealth-management"  
+      },{
+        "@type": "ListItem", 
+        "position": 7, 
+        "name": "Real Estate Investment",
+        "item": "https://trustfinancialadvisory.com/investment-and-wealth-growth/real-estate-investment"  
+      },{
+        "@type": "ListItem", 
+        "position": 8, 
+        "name": "Small Business Advisory",
+        "item": "https://trustfinancialadvisory.com/investment-and-wealth-growth/small-business-advisory"  
+      },{
+        "@type": "ListItem", 
+        "position": 9, 
+        "name": "Insurance Solutions",
+        "item": "https://trustfinancialadvisory.com/risk-management/insurance-solutions"  
+      },{
+        "@type": "ListItem", 
+        "position": 10, 
+        "name": "Retirement Planning",
+        "item": "https://trustfinancialadvisory.com/risk-management/retirement-planning"  
+      }]
+    }
+    </script>
+
     <script
       id="otpless-sdk"
       src="https://otpless.com/v4/headless.js"
       data-appid="Y8K57KYOQOA1HPXK3D6E"></script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -38,17 +98,17 @@
       })(window, document, "script", "dataLayer", "GTM-KRFFCTWT");
     </script>
     <!-- End Google Tag Manager -->
+
+    <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KRFFCTWT"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"></iframe
-    ></noscript>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRFFCTWT"
+        height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

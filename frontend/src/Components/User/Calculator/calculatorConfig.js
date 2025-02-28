@@ -91,6 +91,8 @@ const calculators = [
 <li style="font-weight: 400;"><span style="font-weight: 400;">Review and adjust your SIP amount or duration regularly based on your financial goals and current market conditions.</span></li>
 </ul>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"SIP Calculator | Plan Your Investment Smartly",
+seodescription:"New to SIP investing? Use our simple SIP Calculator to plan smart investments with accurate calculations. Grow your wealth with Trust Financial Advisory!",
   },
   {
     id: "lumpsum",
@@ -180,6 +182,8 @@ const calculators = [
 </ul>
 <p><strong>Diversification:</strong><span style="font-weight: 400;"> Try to distribute one-time investment in several different classes of assets. This strategy helps increase your probable returns and</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"Lumpsum Investment Calculator | Smart Financial Planning",
+seodescription:"Calculate returns on your one-time investment with our Lumpsum Return Calculator. Plan wisely and achieve your financial goals with Trust Financial Advisory.",
   },
   {
     id: "swp",
@@ -292,7 +296,9 @@ const calculators = [
       <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various strategies for managing your investments effectively.</span></p>
   </li>
 </ul>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`
+<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`,
+seotitle:"SWP Calculator | Retirement Planning Tool",
+seodescription:"Use the SWP Calculator to plan retirement withdrawals from mutual funds. Ensure a steady income stream and secure your finances for a stress-free future.",
   },
   {
     id: "mutualFund",
@@ -377,6 +383,8 @@ const calculators = [
 </ul>
 <p><strong>Monitoring:</strong><span style="font-weight: 400;"> It would be a very good idea to monitor your investments in mutual funds from time to time and fine-tune them in accordance with your financial objectives and the state of the prevailing market.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"Mutual Fund Calculator | Growth with Trust Financial Advisory",
+seodescription:"Use our Mutual Fund Calculator to maximize returns. Get accurate projections and grow your investments wisely with Trust Financial Advisory. Start smart investing today!",
   },
   {
     id: "ppf",
@@ -462,6 +470,8 @@ const calculators = [
 </ul>
 <p><strong>Diversification:</strong><span style="font-weight: 400;"> Even though PPF is a risk-free investment, one should diversify the portfolio with other investment choices to strike the right balance between risk and returns.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"PPF Interest Calculator | Plan Your Retirement Savings Now",
+seodescription:"Calculate your PPF returns with our easy-to-use PPF Calculator. Estimate savings growth, plan investments wisely, and secure your financial future today!",
   },
   {
     id: "epf",
@@ -564,6 +574,8 @@ const calculators = [
 </ul>
 <p><strong>Withdrawal Rules:</strong><span style="font-weight: 400;"> Know the rules for EPF withdrawal as it may influence your retirement planning. Generally, you can withdraw your EPF amount at the time of retirement or under specific conditions.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"EPF Calculator | Calculate PF Contributions & Interest",
+seodescription:"Use our free EPF calculator to estimate your Employee Provident Fund (EPF) savings. Get insights into your retirement savings and plan a secure future today.",
   },
   {
     id: "rd",
@@ -653,6 +665,8 @@ const calculators = [
 </ul>
 <p><strong>Tax Implications:</strong><span style="font-weight: 400;"> Interest earned on recurring deposits is taxable. So, be sure to factor in tax implications while planning your savings.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"Recurring Deposit Calculator | Calculate RD Returns Instantly",
+seodescription:"Quickly calculate your RD maturity amount and interest with our free Recurring Deposit (RD) Calculator. Plan your savings smartly and achieve your goals",
   },
   {
     id: "fd",
@@ -737,6 +751,8 @@ const calculators = [
 </ul>
 <p><strong>Interest growth:</strong><span style="font-weight: 400;"> Compounding Effect Compounds interest earned from fixed deposits can be compounded quarterly, semiannually, or annually to enhance their returns. See which one compounds the most often.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"Fixed Deposit (FD) Interest Calculator | Trust Financial Advisory",
+seodescription:"Easily calculate your FD maturity amount & interest with our online FD Calculator. Plan your investments wisely for smart financial decisions.",
   },
   {
     id: "nps",
@@ -833,6 +849,8 @@ const calculators = [
 </ul>
 <p><strong>Tax Benefits:</strong><span style="font-weight: 400;"> The NPS is a tax-efficient retirement savings option because contributions are deductible under Section 80CCD.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"National Pension System (NPS) Calculator | Trust Financial Advisory",
+seodescription:"Estimate your retirement savings with our NPS Calculator. Get accurate pension & annuity projections for a stress-free future. Plan today!",
   },
   {
     id: "retirement",
@@ -916,6 +934,8 @@ const calculators = [
 </ul>
 <p><span style="font-weight: 400;">With these great features, the Retirement Calculator is very powerful in supporting you on the way to comfortably retiring!</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"Retirement Savings Calculator | Trust Financial Advisory",
+seodescription:"Don't leave your future to chance! Use our Retirement Calculator for a clear roadmap to financial security. Start planning today!",
   },
   {
     id: "emi",
@@ -993,6 +1013,8 @@ const calculators = [
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Understand the above factors that can help in better decision making while you plan your loan and your whole financial strategy.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"Free EMI Calculator | Trust Financial Advisory",
+seodescription:"Get instant EMI calculations for home, car, and personal loans. Plan your finances better with Trust Financial Advisory’s smart loan calculator tool.",
   },
   {
     id: "carLoan",
@@ -1089,6 +1111,8 @@ const calculators = [
 </ul>
 <p><strong>Prepayment Options: </strong><span style="font-weight: 400;">Make use of your loan's prepayment options if possible. In this way, you can settle your loan faster and with less interest in total.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"Car Loan EMI Calculator | Monthly Car Loan Payments Instantly",
+seodescription:"Easily calculate your car loan EMI with our Car Loan EMI Calculator. Compare loan options, adjust amount, interest rate & tenure to find the best EMI for you.",
   },
   {
     id: "homeLoan",
@@ -1163,6 +1187,8 @@ const calculators = [
 <li style="font-weight: 400;"><span style="font-weight: 400;">For personalized advice tailored to your specific needs, contact our financial advisors for a professional consultation.</span></li>
 </ul>
 <!-- Comments are visible in the HTML source only -->`,
+seotitle:"Home Loan EMI Calculator | Trust Financial Advisory",
+seodescription:"Calculate your home loan EMI instantly with our free EMI calculator. Get accurate monthly estimates and plan your loan smartly with Trust Financial Advisory",
   },
   {
     id: "stepUpSip",
@@ -1275,6 +1301,8 @@ const calculators = [
     </li>
 </ul>
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Consult with an Expert:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Don&apos;t hold back from approaching our financial advisers for personalized investment advice that will help you go about your money path with confidence.</span></p>`,
+seotitle:"Step-Up SIP Calculator | Plan Your Future Investment",
+seodescription:"Plan your investments wisely with our Step-Up SIP Calculator. Analyze your financial growth with precise calculations. Try now on Trust Financial Advisory!",
   },
   {
     id: "incomeTax",
@@ -1369,6 +1397,8 @@ const calculators = [
     </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Advice:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;For personalized tax planning advice tailored to your specific situation and goals, feel free to reach out to our financial planners.</span></p>`,
+seotitle:"Income Tax Calculator | Accurate Tax Estimation online",
+seodescription:"Instantly calculate your income tax online. Estimate taxes, plan finances, and maximize savings with Trust Financial Advisory's Income Tax Calculator.",
   },
   {
     id: "interestRateComparison",
@@ -1490,6 +1520,8 @@ const calculators = [
     </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized loan advice tailored to your needs.</span></p>`,
+seotitle:"Loan Interest Rate Calculator | Flat vs. Reducing Rate Comparison",
+seodescription:"Confused about interest rates? Compare Flat vs. Reducing Interest Rates to see repayment differences and choose the best loan option for smart planning.",
   },
   {
     id: "brokerage",
@@ -1599,6 +1631,8 @@ const calculators = [
     </li>
 </ul>
 `,
+seotitle:"Brokerage Calculator for NSE, BSE & Options Trading",
+seodescription:"Calculate brokerage charges for stocks, futures, and options with our fast Brokerage Calculator. Get accurate costs for NSE, BSE, and derivatives trading.",
   },
   {
     id: "margin",
@@ -1698,6 +1732,8 @@ const calculators = [
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>
     </li>
 </ul>`,
+seotitle:"Forex & Stock Margin Calculator | Trust Financial Advisory",
+seodescription:"Calculate your margin for forex, stocks & more with our Margin Calculator. Trade confidently with precise calculations at Trust Financial Advisory.",
   },
   {
     id: "inflation",
@@ -1801,6 +1837,8 @@ const calculators = [
     </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`,
+seotitle:"Free Inflation Calculator | Track Inflation Over Time",
+seodescription:"Easily calculate inflation's impact with our Inflation Calculator. See how your money’s value changes over time. Get fast, accurate results for smart planning!",
   },
   {
     id: "stockAverage",
@@ -1925,6 +1963,8 @@ const calculators = [
     </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>`,
+seotitle:"Stock Average Calculator | Free Online Tool for Smart Traders",
+seodescription:"New to investing?  Easily calculate the average cost of your stocks with our Stock Average Calculator. No registration required—fast, accurate, and easy to use.",
   },
 ];
 export default calculators;

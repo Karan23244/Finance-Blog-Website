@@ -4,7 +4,6 @@ const path = require("path");
 const cron = require("node-cron");
 const moment = require("moment");
 const { parseStringPromise } = require("xml2js");
-
 // Helper function for sending responses
 const sendResponse = (res, statusCode, message, data = null) => {
   const response = { message };
@@ -68,10 +67,194 @@ cron.schedule("0,30 * * * *", () => {
     });
   });
 });
-//Dynamic Sitemap
+
 const baseUrl = "https://trustfinancialadvisory.com";
 const sitemapPath = path.join(__dirname, "../../frontend/public/sitemap.xml");
-// Creating Dynamic Sitemap
+
+// Define static URLs manually
+const staticUrls = [
+  {
+    loc: `${baseUrl}`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "1.0",
+  },
+  {
+    loc: `${baseUrl}/personal-finance/financial-planning`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/personal-finance/debt-management`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/personal-finance/education-planning`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/personal-finance/tax-advisory`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/investment-and-wealth-growth/investment-strategies`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/investment-and-wealth-growth/wealth-management`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/investment-and-wealth-growth/real-estate-investment`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/investment-and-wealth-growth/small-business-advisory`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/risk-management/insurance-solutions`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/risk-management/retirement-planning`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.8",
+  },
+  {
+    loc: `${baseUrl}/calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/SIP-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Lumpsum-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/SWP-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Mutual-Fund-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/PPF-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/EPF-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Recurring-Deposit-(RD)-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Fixed-Deposit-(FD)-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Retirement-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/EMI-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Car-Loan-EMI-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Home-Loan-EMI-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Step-Up-SIP-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Income-Tax-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Flat-vs-Reducing-Interest-Rate-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Brokerage-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Margin-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Inflation-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/calculator/Stock-Average-Calculator`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.7",
+  },
+  {
+    loc: `${baseUrl}/privacy_policy`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.6",
+  },
+  {
+    loc: `${baseUrl}/terms_and_condition`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.6",
+  },
+  {
+    loc: `${baseUrl}/disclaimer`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.6",
+  },
+  {
+    loc: `${baseUrl}/about_us`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.6",
+  },
+  {
+    loc: `${baseUrl}/unauthorized`,
+    lastmod: "2025-02-06T13:15:58+01:00",
+    priority: "0.6",
+  },
+];
+
 const generateSitemap = async () => {
   const query = `
     SELECT posts.Custom_url, posts.created_at, categories.category_name 
@@ -89,7 +272,6 @@ const generateSitemap = async () => {
 
     let existingUrls = [];
 
-    // Read the existing sitemap.xml if it exists
     if (fs.existsSync(sitemapPath)) {
       try {
         const existingData = fs.readFileSync(sitemapPath, "utf-8");
@@ -110,7 +292,7 @@ const generateSitemap = async () => {
       }
     }
 
-    // Generate new dynamic URLs from database
+    // Generate new URLs from the database
     const newUrls = results.map((post) => {
       const categorySlug = post.category_name
         .toLowerCase()
@@ -124,32 +306,27 @@ const generateSitemap = async () => {
       };
     });
 
-    // Separate static URLs from dynamic ones
-    const staticUrls = existingUrls.filter(
-      (url) => !url.loc.startsWith(baseUrl + "/")
-    );
-
-    // Merge dynamic URLs: update existing ones and remove outdated ones
+    // Keep existing dynamic URLs that are still in the database
     const finalDynamicUrls = existingUrls
       .filter((existing) =>
         newUrls.some((newUrl) => newUrl.loc === existing.loc)
-      ) // Keep existing if still valid
+      ) // Retain valid dynamic URLs
       .map(
         (existing) =>
           newUrls.find((newUrl) => newUrl.loc === existing.loc) || existing
-      ); // Update properties if needed
+      ); // Update lastmod
 
-    // Add new URLs that don’t exist in the file yet
+    // Add new dynamic URLs that are not in the existing sitemap
     newUrls.forEach((newUrl) => {
       if (!finalDynamicUrls.some((existing) => existing.loc === newUrl.loc)) {
         finalDynamicUrls.push(newUrl);
       }
     });
 
-    // Final list: Combine static and dynamic URLs
+    // **Fix: Keep static URLs**
     const finalUrls = [...staticUrls, ...finalDynamicUrls];
 
-    // Generate updated XML content
+    // Generate XML content
     let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>\n`;
     sitemapContent += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
@@ -157,8 +334,10 @@ const generateSitemap = async () => {
       sitemapContent += `  <url>\n`;
       sitemapContent += `    <loc>${url.loc}</loc>\n`;
       sitemapContent += `    <lastmod>${url.lastmod}</lastmod>\n`;
-      sitemapContent += `    <changefreq>${url.changefreq}</changefreq>\n`;
-      sitemapContent += `    <priority>${url.priority}</priority>\n`;
+      sitemapContent += `    <changefreq>${
+        url.changefreq || "weekly"
+      }</changefreq>\n`;
+      sitemapContent += `    <priority>${url.priority || "0.5"}</priority>\n`;
       sitemapContent += `  </url>\n`;
     });
 
@@ -169,6 +348,7 @@ const generateSitemap = async () => {
     console.log("Sitemap updated successfully!");
   });
 };
+
 // Create a new post
 exports.createPost = (req, res) => {
   const {
@@ -308,6 +488,7 @@ INSERT INTO post_views (post_id, view_date, views, user_id)
 VALUES (?, ?, 1, ?)
 ON DUPLICATE KEY UPDATE views = views + 1;
 `;
+    console.log(updateViewCountQuery);
     db.query(updateViewCountQuery, [postId, today, userId], (updateErr) => {
       if (updateErr) {
         return handleError(res, updateErr, "Error incrementing view count");

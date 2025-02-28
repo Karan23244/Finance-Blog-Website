@@ -183,7 +183,7 @@ function Navbar() {
               <div onClick={handleLogoClick} className="cursor-pointer">
                 <Link to="/">
                   <img
-                    src="/logo.png"
+                    src="/logo.webp"
                     alt="Logo"
                     width="120"
                     height="80"
@@ -193,9 +193,9 @@ function Navbar() {
                 </Link>
               </div>
               <div>
-                <h1 className="lg:text-lg text-[#FF822E] text-sm font-medium text-center">
+                <h2 className="lg:text-lg text-[#FF822E] text-sm font-medium text-center">
                   Trust Finance Advisory
-                </h1>
+                </h2>
               </div>
             </div>
 

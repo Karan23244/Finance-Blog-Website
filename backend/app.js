@@ -33,7 +33,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(cookieParser());
-
 // Define routes
 app.use("/api/adminlogin", authRoutes);
 app.use("/api/categories", categoryRoutes);

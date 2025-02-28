@@ -1,5 +1,6 @@
-User-agent: AdsBot-Google
-Allow: /
+User-agent: *  
+Disallow: /admin/  
+Disallow: /user-generated/  
+Allow: /  
 
-User-agent: *
-Disallow: /admin/
+Sitemap: https://trustfinancialadvisory.com/sitemap.xml

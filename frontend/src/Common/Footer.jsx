@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
   const location = useLocation();
@@ -21,27 +23,55 @@ function Footer() {
         <div className="flex lg:flex-row flex-col gap-4 justify-between">
           {/* Logo Section */}
           <div className="flex flex-col items-center">
-            <div className="flex items-center space-x-3 mb-4 cursor-pointer" onClick={handleLogoClick}>
+            <div
+              className="flex items-center space-x-3 mb-4 cursor-pointer"
+              onClick={handleLogoClick}>
               <img
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Logo"
                 width={120}
                 height={120}
                 loading="lazy"
               />
             </div>
-            <h1 className="lg:text-xl text-base font-bold text-center">
-            Trust <span className="text-[#FF822E]">Finance</span> Advisory
-            </h1>
+            <h2 className="lg:text-xl text-base font-bold text-center">
+              Trust <span className="text-[#FF822E]">Finance</span> Advisory
+            </h2>
           </div>
 
           <div className="lg:w-9/12 flex flex-col">
-            <div>
-              <h1 className="lg:text-lg text-sm text-white text-center">
-              Start building your financial future with expert guidance, personalized strategies, and smart decisions that set you on the path to lasting wealth and security
-                 
-              </h1>
+            <div className="flex flex-col lg:flex-row items-center justify-between rounded-lg shadow-lg">
+              {/* Text Section */}
+              <div className="lg:w-4/5 text-center lg:text-left">
+                <h2 className="lg:text-lg text-xs text-white font-semibold leading-relaxed">
+                  Start building your financial future with expert guidance,
+                  personalized strategies, and smart decisions that set you on
+                  the path to lasting wealth and security.
+                </h2>
+              </div>
+
+              {/* Social Media Icons Section */}
+              <div className="flex gap-8 mt-4 lg:mt-0">
+                <ul className="flex space-x-4">
+                  <li>
+                    <Link to={`https://www.facebook.com/trustfinancialadvisory`}>
+                      <FaFacebook className="text-white text-2xl hover:text-blue-500 transition-all duration-300 cursor-pointer" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`https://x.com/trustfinancial9`}>
+                      <FaXTwitter className="text-white text-2xl hover:text-blue-500 transition-all duration-300 cursor-pointer" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`https://www.instagram.com/trustfinancialadvisory/`}>
+                      <FaInstagram className="text-white text-2xl hover:text-blue-500 transition-all duration-300 cursor-pointer" />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
+
             <hr className="my-2 border-gray-500" />
             <div className="text-center">
               <ul className="grid lg:grid-cols-4 grid-cols-2 gap-2 items-center text-sm font-medium justify-between lg:divide-x-2">
@@ -77,10 +107,10 @@ function Footer() {
             </div>
             <hr className="my-2 border-gray-500" />
             <div className="lg:text-lg text-xs text-white text-center">
-              <h1>
+              <h2>
                 @ClickOrbitsPteLtd, 10 ANSON ROAD, #33-10, INTERNATIONAL PLAZA,
                 SINGAPORE (079903)
-              </h1>
+              </h2>
             </div>
           </div>
           {/* Footer as Section */}
@@ -92,7 +122,7 @@ function Footer() {
       {/* Footer Bottom Section */}
       <div className="text-center">
         <span className="block text-sm text-white py-2">
-          © 2024{" "}
+          © 2025{" "}
           <a to="/" className="hover:underline text-white">
             Trust Finance Advisory
           </a>

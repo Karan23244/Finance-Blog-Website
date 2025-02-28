@@ -6,6 +6,8 @@ import { Doughnut } from "react-chartjs-2";
 import "../../Admin/New_Post/styles.css";
 import calculators from "./calculatorConfig";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 const CalculatorPage = ({ goBack }) => {
@@ -75,8 +77,21 @@ const CalculatorPage = ({ goBack }) => {
     }
   }, [location]);
 
+  const currentUrl = window.location.href;
+
   return (
     <>
+    {/* React Helmet for SEO */}
+          <Helmet>
+            <title>{calculator.seotitle}</title>
+            <meta name="description" content={calculator.seodescription} />
+            <meta name="keywords" content="" />
+            <meta property="og:title" content={calculator.title} />
+            <meta property="og:description" content={calculator.description} />
+            <meta property="og:type" content="Calculator Page" />
+            <meta property="og:url" content={currentUrl} />
+            <link rel="canonical" href={currentUrl} />
+          </Helmet>
       <div className="mx-auto max-w-screen-xl py-10 px-2">
         <button
           onClick={() => navigate("/calculator")}
@@ -84,9 +99,9 @@ const CalculatorPage = ({ goBack }) => {
           Back
         </button>
         <div className="border-l-4 border-[#FF822E] px-5">
-          <h2 className="lg:text-2xl text-lg font-semibold mb-2 text-gray-800">
+          <h1 className="lg:text-2xl text-lg font-semibold mb-2 text-gray-800">
             {calculator.name}
-          </h2>
+          </h1>
           <p className="text-gray-600 mb-6 text-sm lg:text-base">
             {calculator.description}
           </p>
