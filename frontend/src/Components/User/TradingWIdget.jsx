@@ -52,14 +52,16 @@ const TradingViewWidget = ({ defaultSearch = "BSE:NIFTY50ADD" }) => {
   }, [defaultSearch]);
 
   return (
-    <div
-      id="widget-container"
-      className="w-full lg:h-[700px] h-[500px] rounded-lg shadow-lg">
+    <>
       <div
-        id="tradingview_widget"
-        ref={widgetContainerRef}
-        className="w-full h-full"></div>
-    </div>
+        id="widget-container"
+        className="w-full lg:h-[700px] h-[500px] rounded-lg shadow-lg">
+        <div
+          id="tradingview_widget"
+          ref={widgetContainerRef}
+          className="w-full h-full"></div>
+      </div>
+    </>
   );
 };
 

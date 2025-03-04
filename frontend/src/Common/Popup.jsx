@@ -56,19 +56,25 @@ const SubscribePopup = () => {
               <img
                 src="/logo.webp"
                 alt="Logo"
-                className="w-full h-auto"
-                loading="lazy"
+                className="w-52 h-36"
+                fetchpriority="high"
               />
             </div>
             <div className="flex flex-col gap-4 sm:gap-8 items-start text-center sm:text-left">
-              <h2 className="text-lg sm:text-xl pt-3 lg:text-2xl font-semibold">
+              <h2 className="text-lg sm:text-xl pt-3 lg:text-2xl font-semibold min-h-full">
                 Your Path to Smarter Financial Choices Starts Here
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600">
+              {/* <p className="text-sm sm:text-base lg:text-lg text-gray-600">
+                Start building your financial future with expert guidance,
+                personalized strategies, and smart decisions that set you on the
+                path to lasting wealth and security
+              </p> */}
+              <p className="text-gray-600 text-base sm:text-lg min-h-full">
                 Start building your financial future with expert guidance,
                 personalized strategies, and smart decisions that set you on the
                 path to lasting wealth and security
               </p>
+
               <form
                 onSubmit={handleSubmit}
                 className="flex flex-col sm:flex-row gap-4 w-full">

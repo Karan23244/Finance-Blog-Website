@@ -41,129 +41,133 @@ const CurrencyConverterAndChart = () => {
 
   // Get flag URL
   const getFlag = (currencyCode) => {
-    return `https://flagcdn.com/w40/${currencyCode.slice(0, 2).toLowerCase()}.png`;
+    return `https://flagcdn.com/w40/${currencyCode
+      .slice(0, 2)
+      .toLowerCase()}.png`;
   };
 
   return (
-    <div id="currency" className="max-w-7xl mx-auto p-4">
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
-        {/* Currency Converter Section */}
-        <div className="w-full flex flex-col justify-between">
-          <h2 className="text-[#FF822E] text-3xl font-semibold pb-4">
-            Currency Converter
-          </h2>
-          <p>
-            Simplify your currency exchange process with instant rate updates
-            and accurate conversions, making global transactions easier,
-            smarter, and more efficient.
-          </p>
-          <div className="p-8 pt-12 rounded-lg shadow-lg w-full mb-8">
-            <div className="flex flex-col gap-8 lg:gap-6">
-              <div className="flex flex-col lg:flex-row gap-6 items-center">
-                {/* Amount Input */}
-                <div className="w-full">
-                  <label className="block text-sm font-semibold mb-2">
-                    Amount:
-                  </label>
-                  <input
-                    type="number"
-                    value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
-                    className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black"
-                  />
-                </div>
-
-                {/* Base Currency Selector */}
-                <div className="lg:w-1/2 w-full">
-                  <label className="block text-sm font-semibold mb-2">
-                    From:
-                  </label>
-                  <div className="relative flex items-center">
-                    <img
-                      src={getFlag(baseCurrency)}
-                      alt={baseCurrency}
-                      className="w-8 h-8 mr-2 rounded-full"
-                      loading="lazy"
+    <>
+      <div id="currency" className="max-w-7xl mx-auto p-4">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
+          {/* Currency Converter Section */}
+          <div className="w-full flex flex-col justify-between">
+            <h2 className="text-[#FF822E] text-3xl font-semibold pb-4">
+              Currency Converter
+            </h2>
+            <p>
+              Simplify your currency exchange process with instant rate updates
+              and accurate conversions, making global transactions easier,
+              smarter, and more efficient.
+            </p>
+            <div className="p-8 pt-12 rounded-lg shadow-lg w-full mb-8">
+              <div className="flex flex-col gap-8 lg:gap-6">
+                <div className="flex flex-col lg:flex-row gap-6 items-center">
+                  {/* Amount Input */}
+                  <div className="w-full">
+                    <label className="block text-sm font-semibold mb-2">
+                      Amount:
+                    </label>
+                    <input
+                      type="number"
+                      value={amount}
+                      onChange={(e) => setAmount(e.target.value)}
+                      className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black"
                     />
-                    <select
-                      value={baseCurrency}
-                      onChange={(e) => setBaseCurrency(e.target.value)}
-                      className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black">
-                      {currencies.map((currency) => (
-                        <option key={currency} value={currency}>
-                          {currency}
-                        </option>
-                      ))}
-                    </select>
                   </div>
-                </div>
 
-                {/* Swap Icon */}
-                <div>
-                  <img
-                    src="/swap.webp"
-                    alt="swap"
-                    height={100}
-                    width={100}
-                    loading="lazy"
-                  />
-                </div>
+                  {/* Base Currency Selector */}
+                  <div className="lg:w-1/2 w-full">
+                    <label className="block text-sm font-semibold mb-2">
+                      From:
+                    </label>
+                    <div className="relative flex items-center">
+                      <img
+                        src={getFlag(baseCurrency)}
+                        alt={baseCurrency}
+                        className="w-8 h-8 mr-2 rounded-full"
+                        loading="lazy"
+                      />
+                      <select
+                        value={baseCurrency}
+                        onChange={(e) => setBaseCurrency(e.target.value)}
+                        className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black">
+                        {currencies.map((currency) => (
+                          <option key={currency} value={currency}>
+                            {currency}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
 
-                {/* Target Currency Selector */}
-                <div className="lg:w-1/2 w-full">
-                  <label className="block text-sm font-semibold mb-2">
-                    To:
-                  </label>
-                  <div className="relative flex items-center">
+                  {/* Swap Icon */}
+                  <div>
                     <img
-                      src={getFlag(targetCurrency)}
-                      alt={targetCurrency}
-                      className="w-8 h-8 mr-2 rounded-full"
+                      src="/swap.webp"
+                      alt="swap"
+                      height={100}
+                      width={100}
                       loading="lazy"
                     />
-                    <select
-                      value={targetCurrency}
-                      onChange={(e) => setTargetCurrency(e.target.value)}
-                      className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black">
-                      {currencies.map((currency) => (
-                        <option key={currency} value={currency}>
-                          {currency}
-                        </option>
-                      ))}
-                    </select>
+                  </div>
+
+                  {/* Target Currency Selector */}
+                  <div className="lg:w-1/2 w-full">
+                    <label className="block text-sm font-semibold mb-2">
+                      To:
+                    </label>
+                    <div className="relative flex items-center">
+                      <img
+                        src={getFlag(targetCurrency)}
+                        alt={targetCurrency}
+                        className="w-8 h-8 mr-2 rounded-full"
+                        loading="lazy"
+                      />
+                      <select
+                        value={targetCurrency}
+                        onChange={(e) => setTargetCurrency(e.target.value)}
+                        className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E] text-black">
+                        {currencies.map((currency) => (
+                          <option key={currency} value={currency}>
+                            {currency}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              {/* Converted Amount */}
+              {convertedAmount !== null && (
+                <div className="mt-6 text-right text-lg font-semibold">
+                  <p>
+                    {amount} {baseCurrency} = {convertedAmount} {targetCurrency}
+                  </p>
+                </div>
+              )}
             </div>
+          </div>
 
-            {/* Converted Amount */}
-            {convertedAmount !== null && (
-              <div className="mt-6 text-right text-lg font-semibold">
-                <p>
-                  {amount} {baseCurrency} = {convertedAmount} {targetCurrency}
-                </p>
-              </div>
+          {/* Currency Chart Section (Lazy Loaded) */}
+          <div className="w-full lg:w-2/5 flex flex-col justify-between">
+            {isIframeLoaded ? (
+              <iframe
+                title="fx-chart"
+                src={iframeSrc}
+                width="100%"
+                frameBorder="0"
+                allowtransparency="false"
+                className="lg:h-[400px] h-[600px]"
+              />
+            ) : (
+              <p className="text-center">Loading Chart...</p>
             )}
           </div>
         </div>
-
-        {/* Currency Chart Section (Lazy Loaded) */}
-        <div className="w-full lg:w-2/5 flex flex-col justify-between">
-          {isIframeLoaded ? (
-            <iframe
-              title="fx-chart"
-              src={iframeSrc}
-              width="100%"
-              frameBorder="0"
-              allowtransparency="false"
-              className="lg:h-[400px] h-[600px]"
-            />
-          ) : (
-            <p className="text-center">Loading Chart...</p>
-          )}
-        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React, { lazy, Suspense, useEffect, useState } from "react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { calculateResult } from "./calculatorLogic";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
 import "../../Admin/New_Post/styles.css";
 import calculators from "./calculatorConfig";
-import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-ChartJS.register(ArcElement, Tooltip, Legend, Title);
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+const DoughnutChart = lazy(() => import("react-chartjs-2").then(module => ({ default: module.Doughnut })));
 
 const CalculatorPage = ({ goBack }) => {
   const { calculatorName } = useParams();
@@ -163,7 +163,7 @@ const CalculatorPage = ({ goBack }) => {
                 Breakdown
               </h4>
               <div className="h-64">
-                <Doughnut
+                <DoughnutChart
                   data={chartData}
                   options={{
                     responsive: true,

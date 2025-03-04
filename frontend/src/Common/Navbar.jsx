@@ -187,7 +187,6 @@ function Navbar() {
                     alt="Logo"
                     width="120"
                     height="80"
-                    loading="lazy"
                     className="lg:w-[120px] lg:h-[80px] w-[80px] h-[60px]"
                   />
                 </Link>
@@ -261,9 +260,7 @@ function Navbar() {
               </button>
             </div>
             {/* Desktop Links */}
-            <div
-              className="lg:flex items-center hidden justify-end lg:w-[70%] lg:order-1 pr-3"
-              id="mobile-menu-2">
+            <div class="lg:flex items-center hidden justify-end lg:w-[70%] lg:order-1 pr-3 min-h-[50px]">
               <div className="flex flex-col items-center gap-5 text-black font-medium lg:flex-row">
                 {isAuthenticated ? (
                   <>

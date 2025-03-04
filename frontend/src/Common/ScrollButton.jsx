@@ -36,24 +36,26 @@ const ScrollButtons = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 flex flex-col items-center gap-3 z-10">
-      {/* Toggle between Scroll Up and Scroll Down */}
-      {showScrollDown ? (
-        <button
-          onClick={scrollToBottom}
-          className="bg-[#FF822E] text-white p-3 rounded-lg shadow-lg transition duration-300"
-          aria-label="Scroll to Bottom">
-          <FaArrowDown size={20} />
-        </button>
-      ) : (
-        <button
-          onClick={scrollToTop}
-          className="bg-[#FF822E] text-white p-3 rounded-lg shadow-lg transition duration-300"
-          aria-label="Scroll to Top">
-          <FaArrowUp size={20} />
-        </button>
-      )}
-    </div>
+    <>
+      <div className="fixed bottom-4 right-4 flex flex-col items-center gap-3 z-10">
+        {/* Toggle between Scroll Up and Scroll Down */}
+        {showScrollDown ? (
+          <button
+            onClick={scrollToBottom}
+            className="bg-[#FF822E] text-white p-3 rounded-lg shadow-lg transition duration-300"
+            aria-label="Scroll to Bottom">
+            <FaArrowDown size={20} />
+          </button>
+        ) : (
+          <button
+            onClick={scrollToTop}
+            className="bg-[#FF822E] text-white p-3 rounded-lg shadow-lg transition duration-300"
+            aria-label="Scroll to Top">
+            <FaArrowUp size={20} />
+          </button>
+        )}
+      </div>
+    </>
   );
 };
 

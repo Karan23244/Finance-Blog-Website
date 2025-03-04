@@ -1,13 +1,11 @@
 import React from "react";
 import usePostsByCategory from "../../hooks/usePostsByCategory";
 import { Link } from "react-router-dom";
-// import usePageTracker from "../../hooks/usePageTracker";
 import { Helmet } from "react-helmet-async";
 import { FaUserCircle, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import usePageTracker from "../../hooks/usePageTracker";
 
 const CategoryPosts = () => {
-  // usePageTracker("category");
   const {
     posts,
     loading,

@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useSelector, shallowEqual } from "react-redux";
 import { HelmetProvider } from "react-helmet-async";
+
 
 // Common Components
 import Navbar from "./Common/Navbar";
@@ -15,7 +16,7 @@ import About_us from "./Common/About_Us";
 import Terms_and_Condition from "./Common/Terms_and_Condition";
 import Subscribe from "./Common/Subscribe";
 import ScrollToTop from "./Common/ScrollToTop";
-import Popup from "./Common/Popup";
+const Popup = React.lazy(() => import("./Common/Popup"));
 
 // Lazy-loading User Components
 const UserHome = React.lazy(() => import("./Components/User/UserHome"));
@@ -51,7 +52,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <Router>
         <Navbar />
         <Popup />
         <ScrollToTop />
@@ -107,8 +108,8 @@ function App() {
         </Suspense>
         <Subscribe />
         <Footer />
-      </BrowserRouter>
-    </HelmetProvider>
+        </Router>
+        </HelmetProvider>
   );
 }
 
