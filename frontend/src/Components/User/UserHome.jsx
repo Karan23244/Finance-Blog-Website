@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useMemo,
-  useCallback,
-  memo,
-} from "react";
+import React, { useState, useEffect, useMemo, useCallback, memo } from "react";
 import { Link } from "react-router-dom";
 import { calculateResult } from "./Calculator/calculatorLogic";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
@@ -23,6 +17,8 @@ import MoneyInsights from "./MoneyInsights";
 const UserHome = () => {
   usePageTracker("home");
   const [posts, setPosts] = useState([]);
+  const [showMarket, setShowMarket] = useState(false);
+  const [showCurrencyExchange, setShowCurrencyExchange] = useState(false);
   const [groupedData, setGroupedData] = useState({
     "Personal Finance": [],
     "Investment and Wealth Growth": [],
@@ -105,6 +101,20 @@ const UserHome = () => {
     }
   }, [fetchPosts, posts.length]);
 
+  useEffect(() => {
+    const marketTimer = setTimeout(() => {
+      setShowMarket(true);
+    }, 5000);
+
+    const currencyTimer = setTimeout(() => {
+      setShowCurrencyExchange(true);
+    }, 5000);
+
+    return () => {
+      clearTimeout(marketTimer);
+      clearTimeout(currencyTimer);
+    };
+  }, []);
   return (
     <>
       {/* React Helmet for SEO */}
@@ -134,13 +144,19 @@ const UserHome = () => {
       </Helmet>
       <Hero />
       <TrendingNow posts={posts} />
-      <div id="Market" class="flex items-center justify-center min-h-[300px]">
-        <div className="w-full max-w-7xl mx-auto p-6">
-          <h2 className="text-3xl font-bold text-left mb-8 text-[#FF822E]">
-            Market Highlights
-          </h2>
-          <TradingWidget />
-        </div>
+      <div>
+        {showMarket && (
+          <div
+            id="Market"
+            className="flex items-center justify-center min-h-[300px]">
+            <div className="w-full max-w-7xl mx-auto p-6">
+              <h2 className="text-3xl font-bold text-left mb-8 text-[#FF822E]">
+                Market Highlights
+              </h2>
+              <TradingWidget />
+            </div>
+          </div>
+        )}
       </div>
       <MoneyInsights data={groupedData["Personal Finance"]} />
       <div className="flex items-center justify-center">
@@ -156,7 +172,7 @@ const UserHome = () => {
         </div>
       </div>
       <TopStrategies data={groupedData["Investment and Wealth Growth"]} />
-      <CurrencyExchange />
+      {showCurrencyExchange && <CurrencyExchange />}
       <RiskManagement data={groupedData["Risk Management"]} />
       <Content />
     </>
