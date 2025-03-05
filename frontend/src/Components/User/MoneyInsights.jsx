@@ -33,8 +33,9 @@ const MoneyInsights = memo(({ data }) => {
                         : "https://via.placeholder.com/300x200.png?text=No+Image"
                     }
                     alt={topBlogs[0].title}
-                    loading="lazy"
                     className="lg:h-[300px] h-[200px] rounded-xl w-full object-cover"
+                    loading="lazy"
+                    defer
                   />
                 </Link>
                 <div className="py-4 flex flex-col justify-between flex-grow">
@@ -57,9 +58,11 @@ const MoneyInsights = memo(({ data }) => {
                       })}
                     </time>
                   </div>
-                  <h2 className="text-xl font-bold mt-4 text-gray-800 line-clamp-2">
-                    {topBlogs[0].title}
-                  </h2>
+                  <div className="min-h-[50px]">
+                    <h2 className="text-xl font-bold mt-4 text-gray-800 line-clamp-2">
+                      {topBlogs[0].title}
+                    </h2>
+                  </div>
                   <h2 className="text-base text-gray-800 line-clamp-2">
                     {topBlogs[0].seoDescription}
                   </h2>
@@ -87,8 +90,9 @@ const MoneyInsights = memo(({ data }) => {
                             : "https://via.placeholder.com/300x200.png?text=No+Image"
                         }
                         alt={blog.title}
-                        loading="lazy"
                         className="lg:h-[200px] h-[150px] w-full rounded-xl object-cover"
+                        loading="lazy"
+                        defer
                       />
                     </Link>
                   </div>

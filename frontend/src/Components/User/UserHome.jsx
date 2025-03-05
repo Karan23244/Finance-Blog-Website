@@ -65,7 +65,9 @@ const UserHome = () => {
   // Fetch posts only if they are empty
   const fetchPosts = useCallback(async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/posts`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/posts`, {
+        cache: "force-cache", // Browser-level cache
+      });
       const responseData = await response.json();
       const filteredPosts = responseData.data.filter(
         (post) => post.blog_type === "published"

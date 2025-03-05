@@ -80,8 +80,9 @@ const RiskManagement = memo(({ data }) => {
                                   : "https://via.placeholder.com/300x200.png?text=No+Image"
                               }
                               alt={blog.title}
-                              loading="lazy"
                               className="h-36 w-full object-cover rounded-md"
+                              loading="lazy"
+                              defer
                             />
                           </div>
                           {/* Discover More Link */}
