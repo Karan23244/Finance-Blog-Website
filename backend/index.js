@@ -13,7 +13,7 @@ app.get("/sitemap.xml", (req, res) => {
     path.join("../frontend/public", "sitemap.xml")
   );
 });
-const port = process.env.PORT || 5500;
+const port = 5000;
 
 app.listen(port, () => {
   console.log(`Server running on ${port}`);

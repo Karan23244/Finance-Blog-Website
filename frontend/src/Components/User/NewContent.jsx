@@ -161,7 +161,7 @@ const Content = memo(() => {
 
             {/* Content */}
             <h3 className="lg:text-2xl text-lg font-semibold text-black mb-4 text-center">
-              Retirement Planning Insights
+              Join Our Community
             </h3>
             <p className="text-gray-700 leading-relaxed text-justify">
               We invite you to become part of our readers' community that is

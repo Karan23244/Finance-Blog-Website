@@ -7,7 +7,7 @@ const MoneyInsights = memo(({ data }) => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto p-6">
+      <div class="max-w-7xl mx-auto p-6 overflow-hidden">
         <h2 className="text-[#FF822E] text-3xl font-bold mb-6">
           Money Insights
         </h2>

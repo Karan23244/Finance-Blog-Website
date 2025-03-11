@@ -18,7 +18,8 @@ const corsOptions = {
   origin: (origin, callback) => {
     const allowedOrigins = [
       "https://trustfinancialadvisory.com",
-      "http://localhost:5173"
+      "http://localhost:5173",
+      "http://localhost:5174"
     ];
 
     // Allow requests from allowed origins

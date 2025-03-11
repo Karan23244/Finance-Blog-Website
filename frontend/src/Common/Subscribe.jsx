@@ -24,7 +24,7 @@ const Subscribe = () => {
   };
 
   return (
-    <div className="bg-[#FFBA8C8F] text-black py-2 min-h-[100px]">
+    <div class="bg-[#FFBA8C8F] text-black py-2 min-h-[120px] md:min-h-[100px]">
       <div className="max-w-full flex flex-col lg:flex-row justify-between items-center lg:gap-16 gap-4">
         {/* Left section */}
         <div className="lg:w-1/2 flex justify-center">

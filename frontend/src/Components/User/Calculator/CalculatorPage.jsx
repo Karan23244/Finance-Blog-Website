@@ -206,8 +206,6 @@ const CalculatorPage = ({ goBack }) => {
             </div>
           )}
         </div>
-        <div id="Form">
-          {calculator.form && <calculator.form />}</div>
         <div>
           <div
             className="custom-html my-8"

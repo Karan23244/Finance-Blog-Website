@@ -1,5 +1,3 @@
-import Home from "../Form/Home";
-
 const calculators = [
   {
     id: "sip",
@@ -1144,7 +1142,6 @@ seodescription:"Easily calculate your car loan EMI with our Car Loan EMI Calcula
     ],
     output: "Monthly EMI (₹)",
     showGraph: false,
-    form: Home,
     html: `<p><span style="font-weight: 400;">Welcome to the Home Loan EMI Calculator from Trust Financial Advisory! Knowing your financial obligations is crucial if you intend to purchase your ideal home. You can manage your money and make future plans more easily by using our calculator to estimate your monthly payments.</span></p>
 <p><strong>EMI: What is it?</strong></p>
 <p>&nbsp;</p>
