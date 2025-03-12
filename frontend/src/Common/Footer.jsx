@@ -19,7 +19,7 @@ function Footer() {
   };
   return (
     <>
-      <div className="text-white bg-black border-t border-gray-700 min-h-[100px] h-[500px] flex flex-col items-center justify-center">
+      <div className="text-white bg-black border-t border-gray-700 min-h-[100px] lg:h-[250px] h-[500px] flex flex-col items-center justify-center">
         <div className="w-full max-w-screen-xl mx-auto p-3">
           <div className="flex lg:flex-row flex-col gap-4 justify-between">
             {/* Logo Section */}
