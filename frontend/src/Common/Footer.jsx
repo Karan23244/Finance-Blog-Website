@@ -19,7 +19,7 @@ function Footer() {
   };
   return (
     <>
-      <footer class="text-white bg-black border-t border-gray-700 min-h-[100px]">
+      <div className="text-white bg-black border-t border-gray-700 min-h-[100px] h-[500px] flex flex-col items-center justify-center">
         <div className="w-full max-w-screen-xl mx-auto p-3">
           <div className="flex lg:flex-row flex-col gap-4 justify-between">
             {/* Logo Section */}
@@ -27,12 +27,7 @@ function Footer() {
               <div
                 className="flex items-center space-x-3 mb-4 cursor-pointer"
                 onClick={handleLogoClick}>
-                <img
-                  src="/logo.webp"
-                  alt="Logo"
-                  width={120}
-                  height={120}
-                />
+                <img src="/logo.webp" alt="Logo" width={120} height={120} />
               </div>
               <h2 className="lg:text-xl text-base font-bold text-center">
                 Trust <span className="text-[#FF822E]">Finance</span> Advisory
@@ -131,7 +126,7 @@ function Footer() {
             . All Rights Reserved.
           </span>
         </div>
-      </footer>
+      </div>
     </>
   );
 }

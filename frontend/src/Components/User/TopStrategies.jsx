@@ -37,9 +37,10 @@ const TopStrategies = memo(({ data }) => {
                             : "https://via.placeholder.com/300x200.png?text=No+Image"
                         }
                         alt={blog.title}
-                        className="lg:h-[350px] h-[200px] rounded-xl w-full object-cover"
+                        className="w-full rounded-xl object-cover aspect-[16/9] sm:h-[250px] h-[200px]"
+                        width="350"
+                        height="200"
                         loading="lazy"
-                        defer
                       />
                     </Link>
                     <div className="py-4 flex flex-col justify-between flex-grow">

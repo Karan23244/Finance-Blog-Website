@@ -26,7 +26,6 @@ const CalculatorHome = React.lazy(() =>
 const CalculatorPage = React.lazy(() =>
   import("./Components/User/Calculator/CalculatorPage")
 );
-const Thankyou = React.lazy(() => import("./Components/User/Form/Thankyou"));
 const RouteHandler = React.lazy(() => import("./RouteHandler"));
 
 // Lazy-loading Admin Components
@@ -76,7 +75,6 @@ function App() {
             <Route path="/About_us" element={<About_us />} />
             <Route path="/:param1/:param2" element={<RouteHandler />} />
             <Route path="/calculator" element={<CalculatorHome />} />
-            <Route path="/Thankyou" element={<Thankyou />} />
             <Route
               path="/calculator/:calculatorName"
               element={<CalculatorPage />}

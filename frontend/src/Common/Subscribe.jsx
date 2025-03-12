@@ -24,7 +24,7 @@ const Subscribe = () => {
   };
 
   return (
-    <div class="bg-[#FFBA8C8F] text-black py-2 min-h-[120px] md:min-h-[100px]">
+    <div className="bg-[#FFBA8C8F] text-black py-2 h-[500px] lg:h-[200px] flex items-center justify-center">
       <div className="max-w-full flex flex-col lg:flex-row justify-between items-center lg:gap-16 gap-4">
         {/* Left section */}
         <div className="lg:w-1/2 flex justify-center">
@@ -40,16 +40,20 @@ const Subscribe = () => {
         </div>
 
         {/* Right section */}
-        <div className="lg:w-1/2 flex flex-col gap-4 w-full px-6">
+        <div className="lg:w-1/2 flex flex-col gap-4 px-6">
           <div>
-            <h2 className="text-xl font-semibold leading-relaxed pb-2">
-              Your Path to Smarter Financial Choices Starts Here
-            </h2>
-            <p className="lg:text-lg text-sm text-justify">
-              Start building your financial future with expert guidance,
-              personalized strategies, and smart decisions that set you on the
-              path to lasting wealth and security.
-            </p>
+            <div>
+              <h2 className="text-xl font-semibold leading-relaxed pb-2">
+                Your Path to Smarter Financial Choices Starts Here
+              </h2>
+            </div>
+            <div>
+              <p className="lg:text-lg text-sm text-justify">
+                Start building your financial future with expert guidance,
+                personalized strategies, and smart decisions that set you on the
+                path to lasting wealth and security.
+              </p>
+            </div>
           </div>
           <div>
             <form

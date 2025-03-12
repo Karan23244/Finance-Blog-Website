@@ -10,7 +10,6 @@ const SubscribePopup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/api/subscribe`,
@@ -30,7 +29,6 @@ const SubscribePopup = () => {
       setShowPopup(true);
       setTimeout(() => setIsVisible(true), 10);
     }, 5000);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,71 +38,78 @@ const SubscribePopup = () => {
   };
 
   return (
-    <>
-      {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
-          <div
-            className={`bg-white rounded-lg shadow-lg p-6 max-w-sm sm:max-w-md lg:max-w-3xl w-full h-auto transition-transform duration-300 transform flex flex-col lg:flex-row justify-center items-center mx-auto gap-6 px-4 sm:px-8 ${
-              isVisible ? "scale-100 opacity-100" : "scale-90 opacity-0"
-            }`}>
-            <button
-              onClick={handleClose}
-              className="absolute top-1 right-4 lg:right-3 text-2xl sm:text-4xl font-medium text-gray-700 hover:text-gray-900 focus:outline-none">
-              &times;
-            </button>
-            <div className="w-32 sm:w-48 lg:w-60 flex-shrink-0">
-              <img
-                src="/logo.webp"
-                alt="Logo"
-                className="w-52 h-36"
-                fetchpriority="high"
-              />
-            </div>
-            <div className="flex flex-col gap-4 sm:gap-8 items-start text-center sm:text-left">
-              <h2 className="text-lg sm:text-xl pt-3 lg:text-2xl font-semibold min-h-full">
-                Your Path to Smarter Financial Choices Starts Here
-              </h2>
-              {/* <p className="text-sm sm:text-base lg:text-lg text-gray-600">
-                Start building your financial future with expert guidance,
-                personalized strategies, and smart decisions that set you on the
-                path to lasting wealth and security
-              </p> */}
-              <p className="text-gray-600 text-base sm:text-lg min-h-full">
-                Start building your financial future with expert guidance,
-                personalized strategies, and smart decisions that set you on the
-                path to lasting wealth and security
-              </p>
+    <div
+      className={`fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 transition-opacity duration-300 ${
+        showPopup
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+      }`}>
+      <div
+        className={`bg-white rounded-lg shadow-lg p-6 max-w-sm sm:max-w-md lg:max-w-3xl w-full transition-transform duration-300 transform flex flex-col lg:flex-row justify-center items-center mx-auto gap-6 px-4 sm:px-8 ${
+          isVisible ? "scale-100 opacity-100" : "scale-90 opacity-0"
+        }`}>
+        {/* Close Button */}
+        <button
+          onClick={handleClose}
+          className="absolute top-2 right-4 text-3xl text-gray-700 hover:text-gray-900 focus:outline-none">
+          &times;
+        </button>
 
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-4 w-full">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-2 text-white bg-black rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E]"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto bg-[#FF822E] text-white font-semibold px-6 py-2 rounded-md transition-all duration-300">
-                  Subscribe
-                </button>
-              </form>
-              {message && (
-                <p
-                  className={`mt-4 text-center ${
-                    status === "success" ? "text-green-500" : "text-red-500"
-                  }`}>
-                  {message}
-                </p>
-              )}
-            </div>
-          </div>
+        {/* Logo Image */}
+        <div className="flex-shrink-0">
+          <img
+            src="/logo.webp"
+            alt="Logo"
+            width="250" // Prevents CLS
+            height="150" // Prevents CLS
+            className="lg:w-[250px] w-[200px] h-[150px]"
+            fetchpriority="high"
+          />
         </div>
-      )}
-    </>
+
+        {/* Content Section */}
+        <div className="flex flex-col gap-4 sm:gap-8 items-start text-left">
+          <h2 className="text-lg lg:text-xl pt-3 font-semibold min-h-0">
+            Your Path to Smarter Financial Choices Starts Here
+          </h2>
+
+          <p className="text-gray-600 lg:text-lg text-base min-h-0">
+            Start building your financial future with expert guidance,
+            personalized strategies, and smart decisions that set you on the
+            path to lasting wealth and security.
+          </p>
+
+          {/* Subscription Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-4 w-full">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 text-white bg-black rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF822E]"
+              required
+            />
+            <button
+              type="submit"
+              className="w-full sm:w-auto bg-[#FF822E] text-white font-semibold px-6 py-2 rounded-md transition-all duration-300">
+              Subscribe
+            </button>
+          </form>
+
+          {/* Success/Error Message */}
+          {/* {message && (
+            <p
+              className={`mt-4 text-center ${
+                status === "success" ? "text-green-500" : "text-red-500"
+              }`}>
+              {message}
+            </p>
+          )} */}
+        </div>
+      </div>
+    </div>
   );
 };
 

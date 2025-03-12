@@ -1,12 +1,25 @@
-import React, { memo } from "react";
+import React, { memo,useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Hero = memo(() => {
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/background.webp";
+    img.onload = () => setBgLoaded(true);
+  }, []);
   return (
     <>
       <div
-        className="bg-cover bg-center bg-no-repeat flex items-center w-full h-[520px] transition-opacity duration-50 
-                   bg-[url('/background_mobile.webp')] lg:bg-[url('/background.webp')]">
+        className={`bg-cover bg-center bg-no-repeat flex items-center w-full h-[520px] transition-opacity duration-500 ${
+          bgLoaded ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          backgroundImage: `url(${
+            bgLoaded ? "/background.webp" : "/background_mobile.webp"
+          })`,
+        }}>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-6 w-full">
           {/* Text Content */}
           <div className="text-white w-full lg:ml-[10%] lg:w-[50%] text-center lg:px-10 lg:text-left">

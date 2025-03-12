@@ -7,7 +7,7 @@ const MoneyInsights = memo(({ data }) => {
 
   return (
     <>
-      <div class="max-w-7xl mx-auto p-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto p-6 overflow-hidden min-h-[200px]">
         <h2 className="text-[#FF822E] text-3xl font-bold mb-6">
           Money Insights
         </h2>
@@ -32,10 +32,11 @@ const MoneyInsights = memo(({ data }) => {
                           }`
                         : "https://via.placeholder.com/300x200.png?text=No+Image"
                     }
-                    alt={topBlogs[0].title}
-                    className="lg:h-[300px] h-[200px] rounded-xl w-full object-cover"
+                    alt={topBlogs[0]?.title}
+                    className="lg:h-[300px] h-[200px] w-full object-cover rounded-xl"
+                    width="400"
+                    height="300"
                     loading="lazy"
-                    defer
                   />
                 </Link>
                 <div className="py-4 flex flex-col justify-between flex-grow">
