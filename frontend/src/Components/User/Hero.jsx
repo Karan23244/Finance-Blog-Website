@@ -3,27 +3,35 @@ import { Link } from "react-router-dom";
 
 const Hero = memo(() => {
   const [bgLoaded, setBgLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const img = new Image();
-    img.src = "/background.webp";
+    img.src = isMobile ? "/background_mobile.webp" : "/background.webp";
     img.onload = () => setBgLoaded(true);
-  }, []);
+
+    // Listen for window resize to handle dynamic background switching
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMobile]);
   return (
     <>
-      <div
+       <div
         className={`bg-cover bg-center bg-no-repeat flex items-center w-full h-[520px] transition-opacity duration-500 ${
           bgLoaded ? "opacity-100" : "opacity-0"
         }`}
         style={{
           backgroundImage: `url(${
-            bgLoaded ? "/background.webp" : "/background_mobile.webp"
+            isMobile ? "/background_mobile.webp" : "/background.webp"
           })`,
         }}>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-6 w-full">
           {/* Text Content */}
           <div className="text-white w-full lg:ml-[10%] lg:w-[50%] text-center lg:px-10 lg:text-left">
-            <h2 className="text-xl lg:text-2xl font-bold leading-tight">
+            <h2 className="text-lg lg:text-2xl font-bold leading-tight">
               Guiding you through every stage of life with strategic financial
               planning and investment solutions
             </h2>

@@ -83,13 +83,13 @@ const Subscribe = () => {
     //   </div>
     // </div>
     <>
-      <div className="bg-[#FFBA8C8F] text-black py-10">
+      <div className="bg-[#FFBA8C8F] text-black py-10 min-h-[300px]">
         <div className="max-w-full px-4 flex flex-col lg:flex-row justify-between items-center lg:gap-16 gap-4">
           {/* Left section */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-relaxed">
-              Expert advice, actionable strategies and personalized financial
-              insights to help you make informed money decisions.
+              Expert advice, actionable strategies, and personalized financial
+              insights to help you make informed money decisions.
             </h2>
           </div>
 
@@ -112,14 +112,16 @@ const Subscribe = () => {
                 Subscribe
               </button>
             </form>
-            {message && (
-              <p
-                className={`mt-4 text-center text-sm ${
-                  status === "success" ? "text-green-500" : "text-red-500"
-                }`}>
-                {message}
-              </p>
-            )}
+            <div className="min-h-[40px]">
+              {message && (
+                <p
+                  className={`mt-4 text-center text-sm ${
+                    status === "success" ? "text-green-500" : "text-red-500"
+                  }`}>
+                  {message}
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
