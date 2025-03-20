@@ -37,8 +37,8 @@ const TopStrategies = memo(({ data }) => {
                             : "https://via.placeholder.com/300x200.png?text=No+Image"
                         }
                         alt={blog.title}
-                        className="w-full rounded-xl object-cover aspect-[16/9] sm:h-[250px] h-[200px]"
-                        width="350"
+                        className="w-full rounded-xl object-cover aspect-[16/9] lg:h-[350px] h-[200px]"
+                        width="450"
                         height="200"
                         loading="lazy"
                       />

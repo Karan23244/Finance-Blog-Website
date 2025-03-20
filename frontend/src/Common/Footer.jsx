@@ -28,11 +28,11 @@ function Footer() {
 
   return (
     <>
-      <div className="text-white bg-black min-h-[150px] flex flex-col items-center justify-center">
+      <div className="text-white bg-black flex flex-col min-h-[150px] items-center justify-center">
         {/* Placeholder while loading */}
         {!showFooter ? (
           <div className="w-full max-w-screen-xl mx-auto p-3">
-            <div className="animate-pulse min-h-[150px] w-full bg-gray-800 rounded-lg"></div>
+            <div className="animate-pulse w-full min-h-[150px] rounded-lg"></div>
           </div>
         ) : (
           <Suspense fallback={<div className="w-full h-40 bg-gray-800 animate-pulse"></div>}>
