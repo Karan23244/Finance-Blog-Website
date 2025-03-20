@@ -14,7 +14,8 @@ const CurrencyConverterAndChart = () => {
 
   // Fetch currency rates once
   useEffect(() => {
-    axios.get("https://api.exchangerate-api.com/v4/latest/USD")
+    axios
+      .get("https://api.exchangerate-api.com/v4/latest/USD")
       .then((response) => {
         setCurrencies(Object.keys(response.data.rates));
         setExchangeRates(response.data.rates);
@@ -36,7 +37,8 @@ const CurrencyConverterAndChart = () => {
   }, []);
 
   // Get flag URL
-  const getFlag = (currencyCode) => `https://flagcdn.com/w40/${currencyCode.slice(0, 2).toLowerCase()}.png`;
+  const getFlag = (currencyCode) =>
+    `https://flagcdn.com/w40/${currencyCode.slice(0, 2).toLowerCase()}.png`;
 
   // Convert currencies array to react-select format
   const currencyOptions = currencies.map((currency) => ({
@@ -57,20 +59,23 @@ const CurrencyConverterAndChart = () => {
   return (
     <div id="currency" className="max-w-7xl mx-auto p-4">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
-        
         {/* Currency Converter Section */}
         <div className="w-full">
-          <h2 className="text-[#FF822E] text-3xl font-semibold pb-4">Currency Converter</h2>
+          <h2 className="text-[#FF822E] text-3xl font-semibold pb-4">
+            Currency Converter
+          </h2>
           <p>
-            Simplify your currency exchange process with instant rate updates and accurate conversions.
+            Simplify your currency exchange process with instant rate updates
+            and accurate conversions.
           </p>
 
           <div className="p-8 pt-12 rounded-lg shadow-lg w-full">
             <div className="flex flex-col gap-6 lg:gap-6">
-              
               {/* Amount Input */}
               <div>
-                <label className="block text-sm font-semibold mb-2">Amount:</label>
+                <label className="block text-sm font-semibold mb-2">
+                  Amount:
+                </label>
                 <input
                   type="number"
                   value={amount}
@@ -81,13 +86,22 @@ const CurrencyConverterAndChart = () => {
 
               {/* Currency Selection */}
               <div className="flex flex-col lg:flex-row gap-6 items-center">
-                
                 {/* Base Currency */}
                 <div className="lg:w-1/2 w-full">
-                  <label className="block text-sm font-semibold mb-2">From:</label>
+                  <label className="block text-sm font-semibold mb-2">
+                    From:
+                  </label>
                   <div className="relative flex items-center">
-                    <img src={getFlag(baseCurrency)} alt={baseCurrency} className="w-8 h-8 mr-2 rounded-full" />
-                    <CurrencyDropdown value={baseCurrency} onChange={setBaseCurrency} />
+                    <img
+                      src={getFlag(baseCurrency)}
+                      alt={baseCurrency}
+                      // className="w-8 h-auto aspect-[40/27] mr-2 rounded-full"
+                      className="w-8 h-auto mr-2 rounded-full"
+                    />
+                    <CurrencyDropdown
+                      value={baseCurrency}
+                      onChange={setBaseCurrency}
+                    />
                   </div>
                 </div>
 
@@ -98,20 +112,31 @@ const CurrencyConverterAndChart = () => {
 
                 {/* Target Currency */}
                 <div className="lg:w-1/2 w-full">
-                  <label className="block text-sm font-semibold mb-2">To:</label>
+                  <label className="block text-sm font-semibold mb-2">
+                    To:
+                  </label>
                   <div className="relative flex items-center">
-                    <img src={getFlag(targetCurrency)} alt={targetCurrency} className="w-8 h-8 mr-2 rounded-full" />
-                    <CurrencyDropdown value={targetCurrency} onChange={setTargetCurrency} />
+                    <img
+                      src={getFlag(targetCurrency)}
+                      alt={targetCurrency}
+                      // className="w-8 h-auto aspect-[40/21] mr-2 rounded-full"
+                      className="w-8 h-auto mr-2 rounded-full"
+                    />
+                    <CurrencyDropdown
+                      value={targetCurrency}
+                      onChange={setTargetCurrency}
+                    />
                   </div>
                 </div>
-
               </div>
             </div>
 
             {/* Converted Amount */}
             {convertedAmount !== null && (
               <div className="mt-6 text-right text-lg font-semibold">
-                <p>{amount} {baseCurrency} = {convertedAmount} {targetCurrency}</p>
+                <p>
+                  {amount} {baseCurrency} = {convertedAmount} {targetCurrency}
+                </p>
               </div>
             )}
           </div>
@@ -130,7 +155,6 @@ const CurrencyConverterAndChart = () => {
             <p className="text-center">Loading Chart...</p>
           )}
         </div>
-
       </div>
     </div>
   );

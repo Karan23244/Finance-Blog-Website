@@ -32,6 +32,19 @@ const SubscribePopup = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Handle body scroll lock
+  useEffect(() => {
+    if (showPopup) {
+      document.body.classList.add("overflow-hidden"); // Disable scroll
+    } else {
+      document.body.classList.remove("overflow-hidden"); // Enable scroll
+    }
+
+    // Cleanup on component unmount
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [showPopup]);
   const handleClose = () => {
     setIsVisible(false);
     setTimeout(() => setShowPopup(false), 300);
@@ -60,9 +73,9 @@ const SubscribePopup = () => {
           <img
             src="/logo.webp"
             alt="Logo"
-            width="250" // Prevents CLS
-            height="150" // Prevents CLS
-            className="lg:w-[250px] w-[200px] h-[150px]"
+            width="300"
+            height="230"
+            class="w-[120px] h-auto aspect-[300/230]"
             fetchpriority="high"
           />
         </div>
@@ -93,7 +106,7 @@ const SubscribePopup = () => {
             />
             <button
               type="submit"
-              className="w-full sm:w-auto bg-[#FF822E] text-white font-semibold px-6 py-2 rounded-md transition-all duration-300">
+              className="w-full sm:w-auto bg-[#E65100] text-white font-semibold px-6 py-2 rounded-md transition-all duration-300">
               Subscribe
             </button>
           </form>

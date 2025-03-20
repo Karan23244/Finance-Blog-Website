@@ -157,7 +157,7 @@ const FullPost = () => {
               <img
                 src={imageUrl}
                 alt={post.title}
-                className="rounded-lg shadow-lg w-full h-[400px] mb-8"
+                className="rounded-lg shadow-lg w-full h-[400px] object-cover mb-8"
               />
             </div>
           </div>

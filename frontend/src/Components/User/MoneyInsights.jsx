@@ -7,46 +7,46 @@ const MoneyInsights = memo(({ data }) => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto p-6 overflow-hidden min-h-[200px]">
+      <div className="max-w-7xl mx-auto p-6 overflow-hidden h-auto min-h-[500px]">
         <h2 className="text-[#FF822E] text-3xl font-bold mb-6">
           Money Insights
         </h2>
         {topBlogs?.length === 0 ? (
-          <p className="text-gray-500 text-center h-screen">
-            No matching blog posts found.
-          </p>
+          <div className="min-h-[300px] flex items-center justify-center">
+            <p className="text-gray-500 text-center">Loading...</p>
+          </div>
         ) : (
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Left Side */}
             <div className="flex flex-col">
-              <div className="overflow-hidden h-full flex flex-col">
-                <Link
-                  to={`/${createSlug(
-                    topBlogs[0]?.categories[0].category_name
-                  )}/${createSlug(topBlogs[0]?.Custom_url)}`}>
-                  <img
-                    src={
-                      topBlogs[0]?.featured_image
-                        ? `${import.meta.env.VITE_API_URL}/${
-                            topBlogs[0]?.featured_image
-                          }`
-                        : "https://via.placeholder.com/300x200.png?text=No+Image"
-                    }
-                    alt={topBlogs[0]?.title}
-                    className="lg:h-[300px] h-[200px] w-full object-cover rounded-xl"
-                    width="400"
-                    height="300"
-                    loading="lazy"
-                  />
-                </Link>
-                <div className="py-4 flex flex-col justify-between flex-grow">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <FaUserCircle size={24} />
-                      <p className="text-sm font-semibold text-gray-700">
-                        {topBlogs[0].author_name}
-                      </p>
-                    </div>
+              <Link
+                to={`/${createSlug(
+                  topBlogs[0]?.categories[0].category_name
+                )}/${createSlug(topBlogs[0]?.Custom_url)}`}>
+                <img
+                  src={
+                    topBlogs[0]?.featured_image
+                      ? `${import.meta.env.VITE_API_URL}/${
+                          topBlogs[0]?.featured_image
+                        }`
+                      : "https://via.placeholder.com/300x200.png?text=No+Image"
+                  }
+                  alt={topBlogs[0]?.title}
+                  className="lg:h-[300px] h-[200px] w-full object-cover rounded-xl aspect-[4/3]"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </Link>
+              <div className="py-4 flex flex-col justify-between flex-grow">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <FaUserCircle size={24} />
+                    <p className="text-sm font-semibold text-gray-700">
+                      {topBlogs[0].author_name}
+                    </p>
+                  </div>
+                  <div>
                     <time
                       dateTime={topBlogs[0].date}
                       className="text-xs uppercase text-gray-400 font-semibold">
@@ -59,11 +59,13 @@ const MoneyInsights = memo(({ data }) => {
                       })}
                     </time>
                   </div>
-                  <div className="min-h-[50px]">
-                    <h2 className="text-xl font-bold mt-4 text-gray-800 line-clamp-2">
-                      {topBlogs[0].title}
-                    </h2>
-                  </div>
+                </div>
+                <div className="min-h-[50px]">
+                  <h2 className="text-xl font-bold mt-4 text-gray-800 line-clamp-2">
+                    {topBlogs[0].title}
+                  </h2>
+                </div>
+                <div>
                   <h2 className="text-base text-gray-800 line-clamp-2">
                     {topBlogs[0].seoDescription}
                   </h2>
@@ -91,9 +93,8 @@ const MoneyInsights = memo(({ data }) => {
                             : "https://via.placeholder.com/300x200.png?text=No+Image"
                         }
                         alt={blog.title}
-                        className="lg:h-[200px] h-[150px] w-full rounded-xl object-cover"
+                        className="lg:h-[200px] h-[150px] w-full rounded-xl object-cover aspect-[4/3]"
                         loading="lazy"
-                        defer
                       />
                     </Link>
                   </div>

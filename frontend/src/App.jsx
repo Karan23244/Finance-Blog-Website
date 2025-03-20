@@ -1,8 +1,12 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { useSelector, shallowEqual } from "react-redux";
 import { HelmetProvider } from "react-helmet-async";
-
 
 // Common Components
 import Navbar from "./Common/Navbar";
@@ -104,10 +108,10 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>
-        <Subscribe />
-        <Footer />
-        </Router>
-        </HelmetProvider>
+        <Subscribe/>
+        <Footer/>
+      </Router>
+    </HelmetProvider>
   );
 }
 

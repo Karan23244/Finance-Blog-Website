@@ -149,7 +149,7 @@ const UserHome = () => {
       </Helmet>
       <Hero />
       <TrendingNow posts={posts} />
-      <div>
+      <div className="lg:min-h-[800px] h-[600px]">
         {showMarket && (
           <div
             id="Market"
@@ -276,9 +276,9 @@ const CalculatorSection = memo(({ calculator }) => {
         {/* Calculation Result */}
         {result !== null && (
           <div className="flex lg:flex-row flex-col justify-between lg:items-center mt-6 py-2 px-8 bg-[#FFBA8C] rounded-lg transition-opacity duration-300 opacity-100">
-            <h4 className="text-xl font-semibold mb-2 text-black">
+            <h3 className="text-xl font-semibold mb-2 text-black">
               Calculation Result
-            </h4>
+            </h3>
             <p className="text-xl text-white">
               {calculator.output}: ₹{result.toLocaleString()}
             </p>
@@ -289,9 +289,9 @@ const CalculatorSection = memo(({ calculator }) => {
       {/* Right Section - Chart */}
       {calculator.showGraph && (
         <div className="flex-1 w-full max-w-sm bg-white border p-4 rounded-xl h-[300px]">
-          <h4 className="text-lg font-semibold mb-4 text-gray-800">
+          <h3 className="text-lg font-semibold mb-4 text-gray-800">
             Breakdown
-          </h4>
+          </h3>
           <div className="h-64">
             {chartData ? (
               <Doughnut
