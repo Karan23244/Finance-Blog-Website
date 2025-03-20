@@ -16,9 +16,8 @@ const RiskManagement = memo(({ data }) => {
   };
 
   const slideRight = () => {
-    // Prevent sliding beyond the last visible card
-    if (currentIndex < data.length - visibleCards) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
+    if (currentIndex < Math.min(data.length, 7) - visibleCards) {
+      setCurrentIndex((prev) => prev + 1);
     }
   };
 
@@ -55,7 +54,7 @@ const RiskManagement = memo(({ data }) => {
                         currentIndex * (window.innerWidth <= 640 ? 100 : 25)
                       }%)`,
                     }}>
-                    {data.slice(0, 6).map((blog) => (
+                    {data.slice(0, 7).map((blog) => (
                       <div
                         key={blog.id}
                         className="w-full md:w-1/4 flex-shrink-0 px-6 lg:px-4">

@@ -34,8 +34,9 @@ const TrendingNow = memo(({ posts }) => {
   };
 
   const slideRight = () => {
-    if (currentIndex < posts.length - visibleCards)
+    if (currentIndex < Math.min(posts.length, 7) - visibleCards) {
       setCurrentIndex((prev) => prev + 1);
+    }
   };
 
   return (
@@ -58,7 +59,7 @@ const TrendingNow = memo(({ posts }) => {
             style={{
               transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
             }}>
-            {posts.map((blog, index) => (
+            {posts.slice(0, 7).map((blog, index) => (
               <div
                 key={blog.id}
                 className={`w-full md:w-1/${visibleCards} flex-shrink-0 px-6 lg:px-4`}>
