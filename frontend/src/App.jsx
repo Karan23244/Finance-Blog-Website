@@ -108,8 +108,8 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>
-        <Subscribe/>
-        <Footer/>
+        {/* <Subscribe/> */}
+        <Footer />
       </Router>
     </HelmetProvider>
   );

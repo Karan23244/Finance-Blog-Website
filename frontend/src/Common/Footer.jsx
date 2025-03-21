@@ -35,7 +35,10 @@ function Footer() {
             <div className="animate-pulse w-full min-h-[150px] rounded-lg"></div>
           </div>
         ) : (
-          <Suspense fallback={<div className="w-full h-40 bg-gray-800 animate-pulse"></div>}>
+          <Suspense
+            fallback={
+              <div className="w-full h-40 bg-gray-800 animate-pulse"></div>
+            }>
             <div className="w-full max-w-screen-xl mx-auto p-3">
               <div className="flex lg:flex-row flex-col gap-4 justify-between">
                 {/* Logo Section */}
@@ -46,13 +49,14 @@ function Footer() {
                     <img
                       src="/logo.webp"
                       alt="Logo"
-                      width={120}
-                      height={120}
-                      loading="lazy"
+                      width="300"
+                      height="230"
+                      className="w-[120px] h-auto lg:w-[120px] lg:h-auto aspect-[300/230]"
                     />
                   </div>
                   <h2 className="lg:text-xl text-sm font-bold text-center">
-                    Trust <span className="text-[#FF822E]">Finance</span> Advisory
+                    Trust <span className="text-[#FF822E]">Finance</span>{" "}
+                    Advisory
                   </h2>
                 </div>
 
@@ -62,9 +66,9 @@ function Footer() {
                     {/* Text Section */}
                     <div className="lg:w-4/5 text-center lg:text-left">
                       <h2 className="lg:text-lg text-sm text-white lg:font-semibold font-medium leading-relaxed">
-                        Start building your financial future with expert guidance,
-                        personalized strategies, and smart decisions that set you on the
-                        path to lasting wealth and security.
+                        Start building your financial future with expert
+                        guidance, personalized strategies, and smart decisions
+                        that set you on the path to lasting wealth and security.
                       </h2>
                     </div>
 
@@ -72,7 +76,8 @@ function Footer() {
                     <div className="flex gap-8 mt-4 lg:mt-0 flex-shrink-0">
                       <ul className="flex space-x-4 flex-shrink-0">
                         <li>
-                          <Link to={`https://www.facebook.com/trustfinancialadvisory`}>
+                          <Link
+                            to={`https://www.facebook.com/trustfinancialadvisory`}>
                             <FaFacebook className="text-white text-2xl hover:text-blue-500 transition-all duration-300 cursor-pointer" />
                           </Link>
                         </li>
@@ -82,7 +87,8 @@ function Footer() {
                           </Link>
                         </li>
                         <li>
-                          <Link to={`https://www.instagram.com/trustfinancialadvisory/`}>
+                          <Link
+                            to={`https://www.instagram.com/trustfinancialadvisory/`}>
                             <FaInstagram className="text-white text-2xl hover:text-blue-500 transition-all duration-300 cursor-pointer" />
                           </Link>
                         </li>
@@ -131,8 +137,8 @@ function Footer() {
                   {/* Address Section */}
                   <div className="lg:text-lg text-xs text-white text-center">
                     <h2>
-                      @ClickOrbitsPteLtd, 10 ANSON ROAD, #33-10, INTERNATIONAL PLAZA,
-                      SINGAPORE (079903)
+                      @ClickOrbitsPteLtd, 10 ANSON ROAD, #33-10, INTERNATIONAL
+                      PLAZA, SINGAPORE (079903)
                     </h2>
                   </div>
                 </div>

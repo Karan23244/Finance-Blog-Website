@@ -1,4 +1,4 @@
-import React, { memo,useState,useEffect } from "react";
+import React, { memo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Hero = memo(() => {
@@ -19,13 +19,13 @@ const Hero = memo(() => {
   }, [isMobile]);
   return (
     <>
-       <div
-        className={`bg-cover bg-center bg-no-repeat flex items-center w-full h-[520px] transition-opacity duration-500 ${
+      <div
+        className={`bg-cover bg-center bg-no-repeat flex items-center w-full lg:h-[500px] h-[350px] transition-opacity duration-500 ${
           bgLoaded ? "opacity-100" : "opacity-0"
         }`}
         style={{
           backgroundImage: `url(${
-            isMobile ? "/background_mobile.webp" : "/background.webp"
+            isMobile ? "/background_plain.webp" : "/background.webp"
           })`,
         }}>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-6 w-full">

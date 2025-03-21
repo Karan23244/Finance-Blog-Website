@@ -378,10 +378,10 @@ const CategoryPosts = () => {
 
     return (
       seoData[category] || {
-        title: "Homimprovement | Home Improvement Blog",
+        title: "Finance Newsletter for Smart Investors | Trust financial advisory",
         description:
-          "Explore a wide range of home improvement ideas and trends.",
-        keywords: "Home Improvement, DIY, Interior Design, Smart Technology",
+          "Get exclusive insights from our finance newsletter! Discover global investment solutions, expert analysis, and proven wealth management strategies.",
+        keywords: "finance newsletter, global investment solutions, investment solutions, financial accounting advisory services",
       }
     );
   };
