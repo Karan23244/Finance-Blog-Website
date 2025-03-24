@@ -20,12 +20,12 @@ const Hero = memo(() => {
   return (
     <>
       <div
-        className={`bg-cover bg-center bg-no-repeat flex items-center w-full lg:h-[500px] h-[350px] transition-opacity duration-500 ${
+        className={`bg-cover bg-center bg-no-repeat flex items-center w-full h-[500px] transition-opacity duration-500 ${
           bgLoaded ? "opacity-100" : "opacity-0"
         }`}
         style={{
           backgroundImage: `url(${
-            isMobile ? "/background_plain.webp" : "/background.webp"
+            isMobile ? "/background_mobile.webp" : "/background.webp"
           })`,
         }}>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-6 w-full">

@@ -5,7 +5,7 @@ const Content = memo(() => {
   return (
     <>
       <div className="w-full flex flex-col items-center pt-6">
-        <div className="relative w-full max-w-7xl">
+        <div className="max-w-7xl">
           <div className="flex flex-col gap-8 px-4 lg:px-0 py-8">
             {/* Section 1 */}
             <div className="flex flex-col lg:flex-row items-center gap-6">
@@ -153,8 +153,8 @@ const Content = memo(() => {
             </div>
           </div>
         </div>
-        <div className="relative w-full max-w-7xl py-6">
-          <div className="relative flex flex-col p-5 bg-white rounded-lg shadow-lg">
+        <div className="max-w-7xl py-6">
+          <div className="flex flex-col p-5 bg-white rounded-lg shadow-lg">
             {/* Decorative Borders */}
             <div className="absolute top-0 right-0 w-20 h-20 border-t-4 border-r-4 border-orange-400 rounded-tr-lg"></div>
             <div className="absolute bottom-0 left-0 w-20 h-20 border-b-4 border-l-4 border-orange-400 rounded-bl-lg"></div>

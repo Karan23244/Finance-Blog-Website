@@ -378,10 +378,12 @@ const CategoryPosts = () => {
 
     return (
       seoData[category] || {
-        title: "Finance Newsletter for Smart Investors | Trust financial advisory",
+        title:
+          "Finance Newsletter for Smart Investors | Trust financial advisory",
         description:
           "Get exclusive insights from our finance newsletter! Discover global investment solutions, expert analysis, and proven wealth management strategies.",
-        keywords: "finance newsletter, global investment solutions, investment solutions, financial accounting advisory services",
+        keywords:
+          "finance newsletter, global investment solutions, investment solutions, financial accounting advisory services",
       }
     );
   };
@@ -415,16 +417,16 @@ const CategoryPosts = () => {
   const PersonalFinanceUI = () => (
     <>
       <div
-        className="w-full lg:h-[250px] h-[150px] flex flex-col items-center justify-center lg:gap-5 gap-3 py-5 lg:px-[10%] px-[2%]"
+        className="w-full lg:h-[250px] h-[250px] flex flex-col items-center justify-center lg:gap-5 gap-3 py-5 lg:px-[10%] px-[2%]"
         style={{
           backgroundImage: ` url('/financial.webp')`,
           backgroundSize: "contain",
           backgroundAttachment: "fixed",
         }}>
-        <h1 className="lg:text-5xl text-xl font-semibold text-center text-[#FF822E]">
+        <h1 className="lg:text-5xl text-lg font-semibold text-center text-[#FF822E]">
           {categoryName}
         </h1>
-        <p className="text-lg text-white text-justify space-y-4 leading-relaxed">
+        <p className="lg:text-lg text-xs text-white text-justify space-y-4 leading-relaxed">
           {shortDescription}
         </p>
       </div>
@@ -529,10 +531,10 @@ const CategoryPosts = () => {
     <>
       {/* Category Title Section */}
       <div className="w-full lg:h-[200px] h-[150px] bg-cover bg-center flex flex-col items-center justify-center lg:gap-5 gap-3 py-[7%] lg:px-[10%] px-[2%]">
-        <h1 className="lg:text-5xl text-xl font-semibold text-center text-[#FF822E]">
+        <h1 className="lg:text-5xl text-lg font-semibold text-center text-[#FF822E]">
           {categoryName}
         </h1>
-        <p className="text-lg text-black text-justify space-y-4 leading-relaxed">
+        <p className="lg:text-lg text-xs text-black text-justify space-y-4 leading-relaxed">
           {shortDescription}
         </p>
       </div>
@@ -696,10 +698,10 @@ const CategoryPosts = () => {
           backgroundSize: "contain",
           backgroundAttachment: "fixed",
         }}>
-        <h1 className="lg:text-5xl text-xl font-semibold text-center text-[#FF822E]">
+        <h1 className="lg:text-5xl text-lg: font-semibold text-center text-[#FF822E]">
           {categoryName}
         </h1>
-        <p className="text-lg text-white text-justify space-y-4 leading-relaxed">
+        <p className="lg:text-lg text-xs text-white text-justify space-y-4 leading-relaxed">
           {shortDescription}
         </p>
       </div>
