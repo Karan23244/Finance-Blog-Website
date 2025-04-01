@@ -109,7 +109,7 @@ function App() {
           </Routes>
         </Suspense>
         {/* <Subscribe/> */}
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </HelmetProvider>
   );

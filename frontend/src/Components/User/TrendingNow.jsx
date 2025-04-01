@@ -48,7 +48,7 @@ const MemoizedBlogCard = memo(({ blog, index }) => (
           }
           alt={blog.title}
           className="h-48 w-full object-cover aspect-[16/9]"
-          loading={index === 0 ? "eager" : "lazy"}
+         defer
         />
       </Link>
       <div className="p-4">
@@ -85,22 +85,6 @@ const TrendingNow = memo(({ posts }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleCards = window.innerWidth <= 640 ? 1 : 4;
 
-  // Get the first post's featured image for LCP
-  const firstPostImage = posts[0]?.featured_image
-    ? `${import.meta.env.VITE_API_URL}/${posts[0].featured_image}`
-    : "";
-
-  // Preload first image for LCP optimization using Helmet
-  const preloadImage = firstPostImage && (
-    <link
-      rel="preload"
-      as="image"
-      href={firstPostImage}
-      type="image/webp"
-      crossOrigin="anonymous"
-    />
-  );
-
   // Throttle slider transitions to reduce JS execution time
   const slideLeft = () => {
     requestAnimationFrame(() => {
@@ -118,9 +102,6 @@ const TrendingNow = memo(({ posts }) => {
 
   return (
     <>
-      {/* Helmet for Preloading */}
-      <Helmet>{preloadImage}</Helmet>
-
       <div className="w-full flex flex-col items-center p-6">
         <div className="relative w-full max-w-7xl">
           <h1 className="text-[#E65100] text-3xl font-bold p-4">

@@ -7,7 +7,8 @@ const Hero = memo(() => {
 
   useEffect(() => {
     const img = new Image();
-    img.src = isMobile ? "/background_mobile.webp" : "/background.webp";
+    img.src = isMobile ? "/back_mobile.webp" : "/background.avif";
+    img.fetchpriority = "high";
     img.onload = () => setBgLoaded(true);
 
     // Listen for window resize to handle dynamic background switching
@@ -25,7 +26,7 @@ const Hero = memo(() => {
         }`}
         style={{
           backgroundImage: `url(${
-            isMobile ? "/background_mobile.webp" : "/background.webp"
+            isMobile ? "/back_mobile.webp" : "/background.avif"
           })`,
         }}>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-6 w-full">
