@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { FaUserCircle, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import usePageTracker from "../../hooks/usePageTracker";
-
+import Footer from "../../Common/Footer";
+import Subscribe from "../../Common/Subscribe";
 const CategoryPosts = () => {
   const {
     posts,
@@ -809,6 +810,8 @@ const CategoryPosts = () => {
       {categoryType === "Personal Finance" && <PersonalFinanceUI />}
       {categoryType === "Investment And Wealth Growth" && <InvestmentUI />}
       {categoryType === "Risk Management" && <RiskManagmentUI />}
+      <Subscribe/>
+      <Footer />
     </>
   );
 };

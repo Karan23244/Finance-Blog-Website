@@ -14,6 +14,9 @@ import Hero from "./Hero";
 import Content from "./NewContent";
 import CurrencyExchange from "./CurrencyExchange";
 import MoneyInsights from "./MoneyInsights";
+import Footer from "../../Common/Footer";
+import Subscribe from "../../Common/Subscribe";
+
 const UserHome = () => {
   usePageTracker("home");
   const [posts, setPosts] = useState([]);
@@ -180,6 +183,8 @@ const UserHome = () => {
       {showCurrencyExchange && <CurrencyExchange />}
       <RiskManagement data={groupedData["Risk Management"]} />
       <Content />
+      <Subscribe/>
+      <Footer />
     </>
   );
 };

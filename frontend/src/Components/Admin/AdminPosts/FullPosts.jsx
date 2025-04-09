@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "../New_Post/styles.css";
 import usePageTracker from "../../../hooks/usePageTracker";
+import Footer from "../../../Common/Footer";
+import Subscribe from "../../../Common/Subscribe";
 const FullPost = () => {
   usePageTracker("blogs");
   const { param2 } = useParams();
@@ -224,6 +226,8 @@ const FullPost = () => {
           </div>
         </div>
       </div>
+      <Subscribe/>
+      <Footer />
     </>
   );
 };
