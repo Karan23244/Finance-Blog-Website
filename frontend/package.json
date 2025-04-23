@@ -43,6 +43,7 @@
     "react-select": "^5.10.1",
     "react-window": "^1.8.11",
     "sweetalert2": "^11.16.0",
+    "swiper": "^11.2.6",
     "uuid": "^11.1.0"
   },
   "devDependencies": {

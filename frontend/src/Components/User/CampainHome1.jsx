@@ -152,7 +152,7 @@ export default function CampaignCards() {
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           className="text-4xl font-bold text-center text-orange-800 mb-10">
-          Fast Financial Help Heading: Personal Financing
+          Personal Financing
         </motion.h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
@@ -218,31 +218,3 @@ export default function CampaignCards() {
     </>
   );
 }
-// const handleRedirect = (baseUrl) => {
-//   const userAgent = navigator.userAgent.toLowerCase();
-//   const isAndroid = /android/.test(userAgent);
-//   const isIOS = /iphone|ipad|ipod/.test(userAgent);
-
-//   const publisher_id = Math.floor(Math.random() * 9) + 1; // 1-digit
-//   const source = Math.floor(Math.random() * 90 + 10); // 2-digit
-//   const click_id = uuidv4(); // Unique click ID
-
-//   const gaid = "sample-gaid-1234567890"; // Replace with real tracking if needed
-//   const idfa = "sample-idfa-abcdef1234";
-
-//   let url = baseUrl
-//     .replace("{publisher_id}", publisher_id)
-//     .replace("{source}", source)
-//     .replace("{click_id}", click_id)
-//     .replace("{gaid}", gaid)
-//     .replace("{android_id}", gaid)
-//     .replace("{idfa}", idfa);
-//   console.log(
-//     "p" - publisher_id,
-//     "s" - source,
-//     "c" - click_id,
-//     "g" - gaid,
-//     "I" - idfa
-//   );
-//   window.location.href = url;
-// };

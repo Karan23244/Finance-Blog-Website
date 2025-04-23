@@ -25,26 +25,32 @@ const SubscribePopup = () => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-      setTimeout(() => setIsVisible(true), 10);
-    }, 5000);
-    return () => clearTimeout(timer);
+    const hasShownPopup = sessionStorage.getItem("hasShownPopup");
+
+    if (!hasShownPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        setTimeout(() => setIsVisible(true), 10);
+        sessionStorage.setItem("hasShownPopup", "true");
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   // Handle body scroll lock
   useEffect(() => {
     if (showPopup) {
-      document.body.classList.add("overflow-hidden"); // Disable scroll
+      document.body.classList.add("overflow-hidden");
     } else {
-      document.body.classList.remove("overflow-hidden"); // Enable scroll
+      document.body.classList.remove("overflow-hidden");
     }
 
-    // Cleanup on component unmount
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, [showPopup]);
+
   const handleClose = () => {
     setIsVisible(false);
     setTimeout(() => setShowPopup(false), 300);
@@ -75,7 +81,7 @@ const SubscribePopup = () => {
             alt="Logo"
             width="300"
             height="230"
-            class="w-[120px] h-auto aspect-[300/230]"
+            className="w-[120px] h-auto aspect-[300/230]"
             fetchpriority="high"
           />
         </div>
@@ -112,14 +118,14 @@ const SubscribePopup = () => {
           </form>
 
           {/* Success/Error Message */}
-          {/* {message && (
+          {message && (
             <p
               className={`mt-4 text-center ${
                 status === "success" ? "text-green-500" : "text-red-500"
               }`}>
               {message}
             </p>
-          )} */}
+          )}
         </div>
       </div>
     </div>
