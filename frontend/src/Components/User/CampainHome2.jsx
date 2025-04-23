@@ -130,8 +130,7 @@ export default function CampaignTable() {
       .replace("{idfa}", idfa);
 
     console.log("Final redirect URL:", formattedUrl);
-
-    window.location.href = formattedUrl;
+    window.open(formattedUrl, "_blank");
   };
   return (
     <>

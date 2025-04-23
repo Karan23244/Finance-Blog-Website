@@ -142,7 +142,7 @@ export default function CampaignCards() {
 
     console.log("Final redirect URL:", formattedUrl);
 
-    window.location.href = formattedUrl;
+    window.open(formattedUrl, '_blank');
   };
 
   return (
