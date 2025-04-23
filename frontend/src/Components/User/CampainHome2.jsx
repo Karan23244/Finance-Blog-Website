@@ -147,14 +147,14 @@ export default function CampaignTable() {
           <table className="min-w-full bg-white shadow-md rounded-xl overflow-hidden">
             <thead className="bg-orange-100 text-orange-700 text-left">
               <tr>
-                <th className="py-3 px-6 text-sm font-semibold">
+                <th className="py-3 px-6 text-lg font-semibold">
                   Quick Financial Solution
                 </th>
-                <th className="py-3 px-6 text-sm font-semibold w-[250px]">
+                <th className="py-3 px-6 text-lg font-semibold w-[250px]">
                   Key Features
                 </th>
-                <th className="py-3 px-6 text-sm font-semibold">Highlight</th>
-                <th className="py-3 px-6 text-sm font-semibold">Action</th>
+                <th className="py-3 px-6 text-lg font-semibold">Highlight</th>
+                <th className="py-3 px-6 text-lg font-semibold">Action</th>
               </tr>
             </thead>
             <tbody>
