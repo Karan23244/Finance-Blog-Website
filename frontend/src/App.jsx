@@ -20,6 +20,8 @@ import About_us from "./Common/About_Us";
 import Terms_and_Condition from "./Common/Terms_and_Condition";
 import Subscribe from "./Common/Subscribe";
 import ScrollToTop from "./Common/ScrollToTop";
+import CampainHome1 from "./Components/User/CampainHome1"
+import CampainHome2 from "./Components/User/CampainHome2"
 const Popup = React.lazy(() => import("./Common/Popup"));
 
 // Lazy-loading User Components
@@ -72,6 +74,8 @@ function App() {
             <Route path="/unauthorized" element={<Unauthorized />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/privacy_policy" element={<Privacy_Policy />} />
+            <Route path="/fast-financial-help" element={<CampainHome1 />} />
+            {/* <Route path="/campainhome2" element={<CampainHome2 />} /> */}
             <Route
               path="/terms_and_condition"
               element={<Terms_and_Condition />}

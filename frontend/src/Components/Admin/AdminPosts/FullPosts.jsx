@@ -96,7 +96,7 @@ const FullPost = () => {
   };
 
   if (error) {
-    return <p className="text-center text-red-600 h-screen">{error}</p>;
+    return <p className="text-center text-red-600 h-screen">{error}</p>
   }
 
   if (!post) {

@@ -44,6 +44,14 @@ const Hero = memo(() => {
               planning, we help you navigate your financial journey with
               confidence.
             </p>
+            {/* Button below content */}
+            <div className="flex justify-center lg:justify-start mt-6">
+              <Link to="/fast-financial-help">
+                <button className="bg-white text-orange-500 font-semibold py-2 px-6 rounded-xl shadow-md transition duration-300">
+                  Fast Financial Help
+                </button>
+              </Link>
+            </div>
           </div>
 
           {/* Icons Section */}
