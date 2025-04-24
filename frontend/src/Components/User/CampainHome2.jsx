@@ -138,10 +138,16 @@ export default function CampaignTable() {
         <motion.h1
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-4xl font-bold text-center text-orange-800 mb-10">
+          className="text-4xl font-bold text-center text-orange-800 mb-4">
           Personal Financing
         </motion.h1>
-
+        <motion.h1
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="text-2xl font-bold text-center text-orange-800 mb-10">
+          Consider consolidating loans to simplify your payments and reduce
+          interest costs.
+        </motion.h1>
         <div className="overflow-x-auto max-w-7xl mx-auto">
           <table className="min-w-full bg-white shadow-md rounded-xl overflow-hidden">
             <thead className="bg-orange-100 text-orange-700 text-left">
@@ -184,11 +190,12 @@ export default function CampaignTable() {
                   </td>
                   <td className="py-4 px-6">
                     <motion.button
+                      id="urgent-financial-needs"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-orange-600 text-white px-5 py-2 rounded-full text-base shadow hover:bg-orange-700 transition"
+                      className="bg-orange-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-orange-700 transition relative z-10"
                       onClick={() => handleRedirect(item.url)}>
-                      Apply
+                      Apply Now
                     </motion.button>
                   </td>
                 </motion.tr>

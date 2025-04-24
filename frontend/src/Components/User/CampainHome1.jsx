@@ -142,7 +142,7 @@ export default function CampaignCards() {
 
     console.log("Final redirect URL:", formattedUrl);
 
-    window.open(formattedUrl, '_blank');
+    window.open(formattedUrl, "_blank");
   };
 
   return (
@@ -151,8 +151,15 @@ export default function CampaignCards() {
         <motion.h1
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-4xl font-bold text-center text-orange-800 mb-10">
+          className="text-4xl font-bold text-center text-orange-800 mb-4">
           Personal Financing
+        </motion.h1>
+        <motion.h1
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="text-2xl font-bold text-center text-orange-800 mb-10">
+          Consider consolidating loans to simplify your payments and reduce
+          interest costs.
         </motion.h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
@@ -203,6 +210,7 @@ export default function CampaignCards() {
               </p>
 
               <motion.button
+                id="fast-financial-help"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-orange-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-orange-700 transition relative z-10"
