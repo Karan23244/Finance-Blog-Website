@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 const campaigns = [
   {
     name: "FatakPay",
+    id: "fatakpay",
     logo: "/Fatak.png", // Add your actual image path
     description:
       "FatakPay offers quick online personal loans for immediate financial assistance.",
@@ -23,6 +24,7 @@ const campaigns = [
   },
   {
     name: "mPokket",
+    id: "mpokket",
     logo: "/Mpokket.png",
     description:
       "mPokket is a popular instant loan app in India, providing easy access to urgent loans.",
@@ -38,6 +40,7 @@ const campaigns = [
   },
   {
     name: "Bharat Loan",
+    id: "bharat",
     logo: "/Bharat.png",
     description:
       "BharatLoan offers a reliable source for quick online personal loans to meet urgent financial needs.",
@@ -53,6 +56,7 @@ const campaigns = [
   },
   {
     name: "Rupee112",
+    id: "rupee112",
     logo: "/Rupee112.png",
     description:
       "Rupee112 offers quick personal loans up to ₹1 lakh for salaried individuals needing instant cash.",
@@ -68,6 +72,7 @@ const campaigns = [
   },
   {
     name: "LendingPlate",
+    id: "lendingplate",
     logo: "/LendingPlate.png",
     description:
       "LendingPlate is an instant personal loan platform designed to seamlessly fulfill your urgent financial needs.",
@@ -78,6 +83,7 @@ const campaigns = [
   },
   {
     name: "Olyv",
+    id: "olyv",
     logo: "/Olyv.png",
     description:
       "Olyv is your one-stop app for fast, easy personal loans without any obligations—anytime, anywhere.",
@@ -93,6 +99,7 @@ const campaigns = [
   },
   {
     name: "Zype",
+    id: "zype",
     logo: "/Zype.png",
     description:
       "Zype is the top instant loan app in India, offering personal loans tailored to your needs.",

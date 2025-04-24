@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 const campaigns = [
   {
     name: "FatakPay",
+    id: "fatakpay",
     logo: "/Fatak.png", // Add your actual image path
     description:
       "FatakPay provides fast, frictionless online personal loans, giving users access to immediate financial assistance. Apply today!",
@@ -23,6 +24,7 @@ const campaigns = [
   },
   {
     name: "mPokket",
+    id: "mpokket",
     logo: "/Mpokket.png",
     description:
       "mPokket is a well-known instant loan app in India that will give you an easy access to instant loans for all your urgent requirements. If you need instant loan then it's an answer to your all financial needs.",
@@ -39,6 +41,7 @@ const campaigns = [
   },
   {
     name: "Bharat Loan",
+    id: "bharat",
     logo: "/Bharat.png",
     description:
       "With BharatLoan, you can find a trusted source of quick online personal loans to help you get through your urgent financial needs in a hassle-free manner.",
@@ -55,6 +58,7 @@ const campaigns = [
   },
   {
     name: "Rupee112",
+    id: "rupee112",
     logo: "/Rupee112.png",
     description:
       "Rupee112 provides up to ₹1 lakh quick personal loans to salaried individuals requiring instant cash.",
@@ -71,6 +75,7 @@ const campaigns = [
   },
   {
     name: "LendingPlate",
+    id: "lendingplate",
     logo: "/LendingPlate.png",
     description:
       "LendingPlate, an instant personal loan platform, is meant to fulfil your urgent requirements seamlessly.",
@@ -87,6 +92,7 @@ const campaigns = [
   },
   {
     name: "Olyv",
+    id: "olyv",
     logo: "/Olyv.png",
     description:
       "Olyv, your one-stop instant personal loan app that offers you fast, easy loans without any obligations — anytime, anywhere.",
@@ -103,6 +109,7 @@ const campaigns = [
   },
   {
     name: "Zype",
+    id: "zype",
     logo: "/Zype.png",
     description:
       "Zype, the leading instant loan app in India Instant Personal loan on your condition at your point in time.",
@@ -210,7 +217,7 @@ export default function CampaignCards() {
               </p>
 
               <motion.button
-                id="fast-financial-help"
+                id={item.id}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-orange-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-orange-700 transition relative z-10"
