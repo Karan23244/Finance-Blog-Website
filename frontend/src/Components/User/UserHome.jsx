@@ -18,7 +18,7 @@ import Footer from "../../Common/Footer";
 import Subscribe from "../../Common/Subscribe";
 
 const UserHome = () => {
-  usePageTracker("home");
+  // usePageTracker("home");
   const [posts, setPosts] = useState([]);
   const [showMarket, setShowMarket] = useState(false);
   const [showCurrencyExchange, setShowCurrencyExchange] = useState(false);

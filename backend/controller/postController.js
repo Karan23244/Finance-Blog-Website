@@ -461,15 +461,11 @@ exports.getAllPosts = (req, res) => {
 exports.getPostData = (req, res) => {
   // Ensure the rawId is the full string from the URL (e.g., 'beginner-friendly-diy-home-improvement-project')
   const rawId = req.params.param2.replace(/-/g, " "); // Remove hyphens from the URL ID
-  const userId = req.cookies.userId;
-  if (!userId) {
-    return res.status(400).json({ message: "User ID is required" });
-  }
+  const userId = req.cookies.userId || null; // Set userId to null if not provided
   // Fetch the post ID from the 'posts' table using the rawId (Custom_url)
   const fetchPostIdQuery = `
     SELECT id FROM posts WHERE Custom_url = ?
   `;
-
   db.query(fetchPostIdQuery, [rawId], (fetchErr, fetchResults) => {
     if (fetchErr) {
       return handleError(res, fetchErr, "Error fetching post ID");

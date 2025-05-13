@@ -17,7 +17,7 @@ const CategoryPosts = () => {
     currentPage,
     fetchPosts,
   } = usePostsByCategory();
-  usePageTracker("category");
+  // usePageTracker("category");
   // Function to fetch SEO data based on category name
   const getSeoDetails = (category) => {
     const seoData = {

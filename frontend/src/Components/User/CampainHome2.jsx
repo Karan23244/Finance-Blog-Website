@@ -195,9 +195,9 @@ export default function CampaignTable() {
                   <td className="py-4 px-6 italic text-orange-600 font-medium">
                     {item.highlight}
                   </td>
-                  <td className="py-4 px-6">
+                  <td className="py-4 px-6">""
                     <motion.button
-                      id="urgent-financial-needs"
+                      id={item.id}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="bg-orange-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-orange-700 transition relative z-10"

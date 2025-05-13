@@ -260,7 +260,7 @@ function Navbar() {
               </button>
             </div>
             {/* Desktop Links */}
-            <div class="lg:flex items-center hidden justify-end lg:w-[70%] lg:order-1 pr-3 min-h-[50px]">
+            <div className="lg:flex items-center hidden justify-end lg:w-[70%] lg:order-1 pr-3 min-h-[50px]">
               <div className="flex flex-col items-center gap-5 text-black font-medium lg:flex-row">
                 {isAuthenticated ? (
                   <>
