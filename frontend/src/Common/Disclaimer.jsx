@@ -1,5 +1,6 @@
 import React from "react";
-
+import Footer from "./Footer";
+import Subscribe from "./Subscribe";
 const Disclaimer = () => {
   return (
     <>
@@ -94,6 +95,8 @@ const Disclaimer = () => {
           <strong>Email:</strong> info@trustfinancialadvisory.com
         </p>
       </div>
+      <Subscribe />
+      <Footer />
     </>
   );
 };

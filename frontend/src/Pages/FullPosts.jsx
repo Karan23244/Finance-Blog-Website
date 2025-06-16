@@ -1,48 +1,42 @@
-import React, { useEffect, useState, useRef } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "../New_Post/styles.css";
-import usePageTracker from "../../../hooks/usePageTracker";
-import Footer from "../../../Common/Footer";
-import Subscribe from "../../../Common/Subscribe";
+import usePageTracker from "../hooks/usePageTracker";
+import Footer from "../Common/Footer";
+import Subscribe from "../Common/Subscribe";
 const FullPost = () => {
   // usePageTracker("blogs");
-  const { param2 } = useParams();
+  const { param3 } = useParams();
   const [post, setPost] = useState(null);
-  const [error, setError] = useState(null);
   const [toc, setToc] = useState([]);
   const [activeSection, setActiveSection] = useState("");
   const [updatedContent, setUpdatedContent] = useState(null);
-  const fetchedRef = useRef(false);
-  useEffect(() => {
-    if (fetchedRef.current) return;
-    fetchedRef.current = true;
-    setPost(null);
-    setError(null);
 
+  useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/posts/${param2}`,
-          { withCredentials: true }
+        const response = await fetch(
+          `http://cms.trustfinancialadvisory.com/wp-json/wp/v2/posts?slug=${param3}&_embed`
         );
-        setPost(response.data.data);
-      } catch (err) {
-        console.error("Error fetching post:", err);
-        setError("Unable to load the post. Please try again later.");
+        const data = await response.json();
+        setPost(data[0]);
+        // setLoading(false);
+      } catch (error) {
+        console.error("Error fetching post:", error);
+        // setLoading(false);
       }
     };
 
     fetchPost();
-  }, [param2]);
+  }, [param3]);
 
   useEffect(() => {
     if (post) {
       // Generate TOC and add IDs to headings
       const parser = new DOMParser();
       const contentDocument = parser.parseFromString(
-        decodeHtml(post.content || ""),
+        decodeHtml(post.content.rendered || ""),
         "text/html"
       );
       const headings = Array.from(contentDocument.querySelectorAll("h2, h3"));
@@ -95,33 +89,33 @@ const FullPost = () => {
     }
   };
 
-if (!post) {
-  return (
-    <div className="mx-[2%] my-[20%] lg:my-[3%]">
-      <div className="w-full md:p-8 flex flex-col justify-evenly">
-        <div className="flex flex-col justify-center">
-          <SkeletonText width="70%" height="2.5rem" className="mb-4" />
-          <div className="flex items-center gap-4 mb-4">
-            <SkeletonText width="20%" />
-            <SkeletonText width="10%" />
-            <SkeletonText width="30%" />
+  if (!post) {
+    return (
+      <div className="mx-[2%] my-[20%] lg:my-[3%]">
+        <div className="w-full md:p-8 flex flex-col justify-evenly">
+          <div className="flex flex-col justify-center">
+            <SkeletonText width="70%" height="2.5rem" className="mb-4" />
+            <div className="flex items-center gap-4 mb-4">
+              <SkeletonText width="20%" />
+              <SkeletonText width="10%" />
+              <SkeletonText width="30%" />
+            </div>
+            <SkeletonImage />
           </div>
-          <SkeletonImage />
         </div>
-      </div>
 
-      <div className="mx-auto px-4 lg:px-8">
-        <div className="flex flex-col lg:flex-row">
-          <SkeletonTOC />
-          <main className="w-full lg:w-3/4">
-            <SkeletonContent />
-          </main>
-          <SkeletonAd />
+        <div className="mx-auto px-4 lg:px-8">
+          <div className="flex flex-col lg:flex-row">
+            <SkeletonTOC />
+            <main className="w-full lg:w-3/4">
+              <SkeletonContent />
+            </main>
+            <SkeletonAd />
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
   const createSlug = (title) => {
     if (typeof title !== "string") return "";
     return title
@@ -136,7 +130,7 @@ if (!post) {
   const adimageUrl = post.AdImage
     ? `${import.meta.env.VITE_API_URL}/${post.AdImage}`
     : "";
-const currentUrl = window.location.href;
+  const currentUrl = window.location.href;
 
   return (
     <>
@@ -147,39 +141,40 @@ const currentUrl = window.location.href;
         <meta property="og:description" content={post.seoDescription || ""} />
         <meta property="og:image" content={imageUrl} />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content={`${currentUrl}`}
-        />
-        <link
-          rel="canonical"
-          href={`${currentUrl}`}
-        />
+        <meta property="og:url" content={`${currentUrl}`} />
+        <link rel="canonical" href={`${currentUrl}`} />
       </Helmet>
       <div className="mx-[2%] my-[20%] lg:my-[3%]">
         <div className="w-full md:p-8 flex flex-col justify-evenly">
           <div className="flex flex-col justify-center">
-            <h1 className="lg:text-5xl text-xl font-semibold text-black mb-4">
-              {post.title || "Untitled"}
-            </h1>
+            <h1
+              className="text-3xl font-bold mb-4"
+              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+            />
             <div className="flex items-center text-gray-600 text-lg gap-4 mb-4">
-              <p>By {post.author_name || "Unknown Author"}</p>
+              <div className="text-sm text-black font-semibold">
+                By {post._embedded.author?.[0]?.name}
+              </div>
               <span>|</span>
-              <p>
-                {new Date(
-                  post.scheduleDate || post.created_at
-                ).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </p>
+              <div>
+                <p>
+                  <time
+                    dateTime={post.date}
+                    className="text-sm text-black font-semibold">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </p>
+              </div>
             </div>
             <div>
               <img
-                src={imageUrl}
-                alt={post.title}
-                className="rounded-lg shadow-lg w-full h-[400px] object-cover mb-8"
+                src={post._embedded["wp:featuredmedia"]?.[0]?.source_url}
+                alt={post.title.rendered}
+                className="mb-6 rounded-xl object-cover max-h-[400px] w-full"
               />
             </div>
           </div>
@@ -231,7 +226,7 @@ const currentUrl = window.location.href;
               className={`w-full ${post.AdImage ? "lg:w-3/5" : "lg:w-3/4"}`}>
               <div
                 className="custom-html text-gray-700 leading-relaxed mb-8 pt-4"
-                dangerouslySetInnerHTML={{ __html: updatedContent }}
+                dangerouslySetInnerHTML={{ __html: post.content.rendered }}
               />
             </main>
             {post.AdImage && (
@@ -246,7 +241,7 @@ const currentUrl = window.location.href;
           </div>
         </div>
       </div>
-      <Subscribe/>
+      <Subscribe />
       <Footer />
     </>
   );
@@ -254,16 +249,20 @@ const currentUrl = window.location.href;
 
 export default FullPost;
 
-
-const SkeletonText = ({ width = "100%", height = "1.25rem", className = "" }) => (
+const SkeletonText = ({
+  width = "100%",
+  height = "1.25rem",
+  className = "",
+}) => (
   <div
     className={`bg-gray-300 animate-pulse rounded ${className}`}
-    style={{ width, height }}
-  ></div>
+    style={{ width, height }}></div>
 );
 
 const SkeletonImage = ({ height = "400px" }) => (
-  <div className="w-full rounded-lg bg-gray-300 animate-pulse mb-8" style={{ height }}></div>
+  <div
+    className="w-full rounded-lg bg-gray-300 animate-pulse mb-8"
+    style={{ height }}></div>
 );
 
 const SkeletonTOC = () => (

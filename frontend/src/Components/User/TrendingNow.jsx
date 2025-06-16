@@ -21,64 +21,58 @@ const RightButton = memo(({ slideRight }) => (
     <FaChevronRight />
   </button>
 ));
-// Function to create slugs
-const createSlug = (title) => {
-  if (typeof title !== "string") return "";
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-");
-};
 // Memoize individual blog cards
-const MemoizedBlogCard = memo(({ blog, index }) => (
-  <div
-    key={blog.id}
-    className={`w-full md:w-1/4 flex-shrink-0 px-6 lg:px-4`}>
-    <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
-      <Link
-        to={`/${createSlug(
-          blog?.categories[0]?.category_name
-        )}/${createSlug(blog?.Custom_url)}`}>
-        <img
-          src={
-            blog.featured_image
-              ? `${import.meta.env.VITE_API_URL}/${blog.featured_image}`
-              : "/placeholder.webp"
-          }
-          alt={blog.title}
-          className="h-48 w-full object-cover aspect-[16/9]"
-         defer
-        />
-      </Link>
-      <div className="p-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <FaUserCircle size={20} />
-            <p className="text-sm font-semibold text-gray-700">
-              {blog.author_name}
-            </p>
+
+const MemoizedBlogCard = memo(({ blog, index }) => {
+  return (
+    <div key={blog.id} className="w-full md:w-1/4 flex-shrink-0 px-6 lg:px-4">
+      <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
+        <Link to={generateBlogUrl(blog)}>
+          <img
+            src={blog._embedded["wp:featuredmedia"]?.[0]?.source_url}
+            alt={
+              blog._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+              blog.title.rendered
+            }
+            className="h-48 w-full object-cover aspect-[16/9]"
+            loading="lazy"
+          />
+        </Link>
+        <div className="p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <img
+                src={blog._embedded.author?.[0]?.avatar_urls?.["48"]}
+                alt={blog._embedded.author?.[0]?.name}
+                className="w-6 h-6 rounded-full"
+              />
+              <p className="text-sm font-semibold text-gray-700">
+                {blog._embedded.author?.[0]?.name}
+              </p>
+            </div>
+            <time
+              dateTime={blog.date}
+              className="text-xs text-gray-400 font-semibold">
+              {new Date(blog.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
           </div>
-          <time
-            dateTime={blog.date}
-            className="text-xs text-gray-400 font-semibold">
-            {new Date(
-              blog.scheduleDate || blog.created_at
-            ).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
+          <h2
+            className="text-lg font-bold my-2 line-clamp-2"
+            dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
+          />
+          <p
+            className="text-sm line-clamp-3"
+            dangerouslySetInnerHTML={{ __html: blog.excerpt.rendered }}
+          />
         </div>
-        <h2 className="text-lg font-bold my-2 line-clamp-2">
-          {blog.title}
-        </h2>
-        <p className="text-sm line-clamp-3">{blog.seoDescription}</p>
       </div>
     </div>
-  </div>
-));
+  );
+});
 
 // Main Component
 const TrendingNow = memo(({ posts }) => {
@@ -133,7 +127,16 @@ const TrendingNow = memo(({ posts }) => {
     </>
   );
 });
+function generateBlogUrl(blog) {
+  const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
+  const fullLink = term?.link || "";
+  const pathParts = fullLink.split("/").filter(Boolean);
 
+  const mainCategorySlug =
+    pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "uncategorized";
+  const assignedCategorySlug = term?.slug || "uncategorized";
+  const postSlug = blog?.slug || "post";
 
-
+  return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
+}
 export default TrendingNow;

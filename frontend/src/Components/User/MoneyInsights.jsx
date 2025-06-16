@@ -19,19 +19,15 @@ const MoneyInsights = memo(({ data }) => {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Left Side */}
             <div className="flex flex-col">
-              <Link
-                to={`/${createSlug(
-                  topBlogs[0]?.categories[0].category_name
-                )}/${createSlug(topBlogs[0]?.Custom_url)}`}>
+              <Link to={generateBlogUrl(topBlogs[0])}>
                 <img
                   src={
-                    topBlogs[0]?.featured_image
-                      ? `${import.meta.env.VITE_API_URL}/${
-                          topBlogs[0]?.featured_image
-                        }`
-                      : "https://via.placeholder.com/300x200.png?text=No+Image"
+                    topBlogs[0]._embedded["wp:featuredmedia"]?.[0]?.source_url
                   }
-                  alt={topBlogs[0]?.title}
+                  alt={
+                    topBlogs[0]._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                    topBlogs[0].title.rendered
+                  }
                   className="lg:h-[300px] h-[200px] w-full object-cover rounded-xl aspect-[4/3]"
                   width="400"
                   height="300"
@@ -41,18 +37,22 @@ const MoneyInsights = memo(({ data }) => {
               <div className="py-4 flex flex-col justify-between flex-grow">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <FaUserCircle size={24} />
+                    <img
+                      src={
+                        topBlogs[0]._embedded.author?.[0]?.avatar_urls?.["48"]
+                      }
+                      alt={topBlogs[0]._embedded.author?.[0]?.name}
+                      className="w-6 h-6 rounded-full"
+                    />
                     <p className="text-sm font-semibold text-gray-700">
-                      {topBlogs[0].author_name}
+                      {topBlogs[0]._embedded.author?.[0]?.name}
                     </p>
                   </div>
                   <div>
                     <time
                       dateTime={topBlogs[0].date}
-                      className="text-xs uppercase text-gray-400 font-semibold">
-                      {new Date(
-                        topBlogs[0].scheduleDate || topBlogs[0].created_at
-                      ).toLocaleDateString("en-US", {
+                      className="text-xs text-gray-400 font-semibold">
+                      {new Date(topBlogs[0].date).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
@@ -61,18 +61,21 @@ const MoneyInsights = memo(({ data }) => {
                   </div>
                 </div>
                 <div className="min-h-[50px]">
-                  <h2 className="text-xl font-bold mt-4 text-gray-800 line-clamp-2">
-                    {topBlogs[0].title}
-                  </h2>
-                </div>
-                <div>
-                  <h2 className="text-base text-gray-800 line-clamp-2">
-                    {topBlogs[0].seoDescription}
-                  </h2>
+                  <h2
+                    className="text-lg font-bold my-2 line-clamp-2"
+                    dangerouslySetInnerHTML={{
+                      __html: topBlogs[0].title.rendered,
+                    }}
+                  />
+                  <p
+                    className="text-sm line-clamp-3"
+                    dangerouslySetInnerHTML={{
+                      __html: topBlogs[0].excerpt.rendered,
+                    }}
+                  />
                 </div>
               </div>
             </div>
-
             {/* Right Side */}
             <div className="flex flex-col gap-6">
               {topBlogs.slice(1).map((blog) => (
@@ -80,44 +83,50 @@ const MoneyInsights = memo(({ data }) => {
                   key={blog.id}
                   className="overflow-hidden flex flex-row gap-4">
                   <div className="flex-1">
-                    <Link
-                      to={`/${createSlug(
-                        blog?.categories[0].category_name
-                      )}/${createSlug(blog?.Custom_url)}`}>
+                    <Link to={generateBlogUrl(blog)}>
                       <img
                         src={
-                          blog?.featured_image
-                            ? `${import.meta.env.VITE_API_URL}/${
-                                blog?.featured_image
-                              }`
-                            : "https://via.placeholder.com/300x200.png?text=No+Image"
+                          blog._embedded["wp:featuredmedia"]?.[0]?.source_url ||
+                          "https://via.placeholder.com/300x200.png?text=No+Image"
                         }
-                        alt={blog.title}
+                        alt={
+                          blog._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                          blog.title.rendered
+                        }
                         className="lg:h-[200px] h-[150px] w-full rounded-xl object-cover aspect-[4/3]"
                         loading="lazy"
                       />
                     </Link>
                   </div>
                   <div className="lg:p-4 flex-1 flex flex-col justify-between flex-grow">
-                    <h2 className="text-lg font-bold text-gray-800 line-clamp-2">
-                      {blog.title}
-                    </h2>
-                    <h2 className="text-base text-gray-800 line-clamp-2">
-                      {blog.seoDescription}
-                    </h2>
+                    <h2
+                      className="text-lg font-bold text-gray-800 line-clamp-2"
+                      dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
+                    />
+                    <p
+                      className="text-sm text-gray-700 line-clamp-2"
+                      dangerouslySetInnerHTML={{
+                        __html: blog.excerpt.rendered,
+                      }}
+                    />
                     <div className="flex flex-col lg:flex-row items-start gap-2 justify-between mt-2">
                       <div className="flex items-center gap-2">
-                        <FaUserCircle size={20} />
+                        <img
+                          src={
+                            blog._embedded.author?.[0]?.avatar_urls?.["48"] ||
+                            "https://via.placeholder.com/48"
+                          }
+                          alt={blog._embedded.author?.[0]?.name}
+                          className="w-6 h-6 rounded-full"
+                        />
                         <p className="text-sm font-semibold text-gray-700">
-                          {blog.author_name}
+                          {blog._embedded.author?.[0]?.name}
                         </p>
                       </div>
                       <time
                         dateTime={blog.date}
-                        className="text-xs uppercase text-gray-400 font-semibold">
-                        {new Date(
-                          blog.scheduleDate || blog.created_at
-                        ).toLocaleDateString("en-US", {
+                        className="text-xs text-gray-400 font-semibold">
+                        {new Date(blog.date).toLocaleDateString("en-US", {
                           year: "numeric",
                           month: "long",
                           day: "numeric",
@@ -134,18 +143,17 @@ const MoneyInsights = memo(({ data }) => {
     </>
   );
 });
-//code for creating slug
+function generateBlogUrl(blog) {
+  const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
+  const fullLink = term?.link || "";
+  const pathParts = fullLink.split("/").filter(Boolean);
 
-const createSlug = (title) => {
-  // Check if the title is not null and is a string before processing
-  if (typeof title !== "string") {
-    return ""; // Return an empty string or handle the case as needed
-  }
+  const mainCategorySlug =
+    pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "uncategorized";
+  const assignedCategorySlug = term?.slug || "uncategorized";
+  const postSlug = blog?.slug || "post";
 
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "") // Remove special characters
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
-};
+  return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
+}
+
 export default MoneyInsights;

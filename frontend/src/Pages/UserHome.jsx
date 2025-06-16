@@ -1,22 +1,27 @@
 import React, { useState, useEffect, useMemo, useCallback, memo } from "react";
 import { Link } from "react-router-dom";
-import { calculateResult } from "./Calculator/calculatorLogic";
+import { calculateResult } from "../Components/User/Calculator/calculatorLogic";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Helmet } from "react-helmet-async";
 ChartJS.register(ArcElement, Tooltip, Legend);
 import { Doughnut } from "react-chartjs-2";
-import usePageTracker from "../../hooks/usePageTracker";
-import TrendingNow from "./TrendingNow";
-import TradingWidget from "./TradingWIdget";
-import TopStrategies from "./TopStrategies";
-import RiskManagement from "./RiskManagement";
-import Hero from "./Hero";
-import Content from "./NewContent";
-import CurrencyExchange from "./CurrencyExchange";
-import MoneyInsights from "./MoneyInsights";
-import Footer from "../../Common/Footer";
-import Subscribe from "../../Common/Subscribe";
-
+import usePageTracker from "../hooks/usePageTracker";
+import TrendingNow from "../Components/User/TrendingNow";
+import TradingWidget from "../Components/User/TradingWIdget";
+import TopStrategies from "../Components/User/TopStrategies";
+import RiskManagement from "../Components/User/RiskManagement";
+import Hero from "../Components/User/Hero";
+import Content from "../Components/User/NewContent";
+import CurrencyExchange from "../Components/User/CurrencyExchange";
+import MoneyInsights from "../Components/User/MoneyInsights";
+import Footer from "../Common/Footer";
+import Subscribe from "../Common/Subscribe";
+import {
+  fetchLatestPosts,
+  fetchPersonalFinancePosts,
+  fetchInvestmentPosts,
+  fetchRiskManagementPosts,
+} from "../Apis/Wordpress";
 const UserHome = () => {
   // usePageTracker("home");
   const [posts, setPosts] = useState([]);
@@ -64,50 +69,32 @@ const UserHome = () => {
     ],
     []
   );
-
-  // Fetch posts only if they are empty
-  const fetchPosts = useCallback(async () => {
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/posts`,
-        {
-          cache: "force-cache", // Browser-level cache
-        }
-      );
-      const responseData = await response.json();
-      const filteredPosts = responseData.data.filter(
-        (post) => post.blog_type === "published"
-      );
-
-      setPosts(filteredPosts);
-
-      // Categorize posts
-      const categorized = filteredPosts.reduce(
-        (acc, post) => {
-          const categoryType =
-            post.categories[0]?.category_type || "Uncategorized";
-          if (!acc[categoryType]) acc[categoryType] = [];
-          acc[categoryType].push(post);
-          return acc;
-        },
-        {
-          "Personal Finance": [],
-          "Investment and Wealth Growth": [],
-          "Risk Management": [],
-        }
-      );
-
-      setGroupedData(categorized);
-    } catch (error) {
-      console.error("Error fetching posts:", error);
-    }
-  }, []);
-
   useEffect(() => {
-    if (posts.length === 0) {
-      fetchPosts();
-    }
-  }, [fetchPosts, posts.length]);
+    const fetchData = async () => {
+      try {
+        // Fetch posts
+        const latest = await fetchLatestPosts();
+        const personalfinancepost = await fetchPersonalFinancePosts({});
+        const investmentposts = await fetchInvestmentPosts({});
+        const riskmanagementpost = await   fetchRiskManagementPosts({});
+
+        // Optionally store latest posts somewhere if needed
+        setPosts(latest);
+
+        // Update grouped data
+        setGroupedData((prev) => ({
+          ...prev,
+          "Personal Finance": personalfinancepost,
+          "Investment and Wealth Growth": investmentposts,
+          "Risk Management": riskmanagementpost,
+        }));
+      } catch (err) {
+        console.error("Error fetching WordPress data:", err);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const marketTimer = setTimeout(() => {
@@ -123,6 +110,7 @@ const UserHome = () => {
       clearTimeout(currencyTimer);
     };
   }, []);
+  console.log("Posts:", posts);
   return (
     <>
       {/* React Helmet for SEO */}
@@ -182,8 +170,8 @@ const UserHome = () => {
       <TopStrategies data={groupedData["Investment and Wealth Growth"]} />
       {showCurrencyExchange && <CurrencyExchange />}
       <RiskManagement data={groupedData["Risk Management"]} />
-      <Content />
-      <Subscribe/>
+      {/* <Content /> */}
+      <Subscribe />
       <Footer />
     </>
   );
@@ -293,7 +281,7 @@ const CalculatorSection = memo(({ calculator }) => {
 
       {/* Right Section - Chart */}
       {calculator.showGraph && (
-        <div className="flex-1 w-full max-w-sm bg-white border p-4 rounded-xl h-[300px]">
+        <div className="flex-1 w-full max-w-sm bg-white border p-4 rounded-xl h-[400px]">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">
             Breakdown
           </h3>

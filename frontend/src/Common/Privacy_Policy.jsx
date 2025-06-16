@@ -1,5 +1,6 @@
 import React from "react";
-
+import Footer from "./Footer";
+import Subscribe from "./Subscribe";
 const PrivacyPolicy = () => {
   return (
     <>
@@ -456,6 +457,8 @@ const PrivacyPolicy = () => {
           Trust Financial Advisory Email: info@trustfinancialadvisory.com
         </p>
       </div>
+      <Subscribe />
+      <Footer />
     </>
   );
 };

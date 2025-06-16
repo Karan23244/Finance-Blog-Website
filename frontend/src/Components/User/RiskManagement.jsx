@@ -58,27 +58,33 @@ const RiskManagement = memo(({ data }) => {
                       <div
                         key={blog.id}
                         className="w-full md:w-1/4 flex-shrink-0 px-6 lg:px-4">
-                        <div className="flex flex-col items-stretch shadow-md rounded-lg hover:shadow-2xl hover:border-b-4 border-transparent hover:border-[#FF822E] p-4 h-full">
+                        <div className="flex flex-col rounded-lg hover:border-b-4 border-transparent hover:border-[#FF822E] p-4 h-full">
                           {/* Title & Description */}
                           <div className="flex-grow">
-                            <h2 className="text-lg font-bold mb-2 text-gray-800 line-clamp-2">
-                              {blog.title}
-                            </h2>
-                            <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                              {blog.seoDescription}
-                            </p>
+                            <h2
+                              className="text-lg font-bold my-2 line-clamp-2"
+                              dangerouslySetInnerHTML={{
+                                __html: blog.title.rendered,
+                              }}
+                            />
+                            <p
+                              className="text-sm line-clamp-2"
+                              dangerouslySetInnerHTML={{
+                                __html: blog.excerpt.rendered,
+                              }}
+                            />
                           </div>
                           {/* Image */}
                           <div className="mb-4">
                             <img
                               src={
-                                blog?.featured_image
-                                  ? `${import.meta.env.VITE_API_URL}/${
-                                      blog?.featured_image
-                                    }`
-                                  : "https://via.placeholder.com/300x200.png?text=No+Image"
+                                blog._embedded["wp:featuredmedia"]?.[0]
+                                  ?.source_url
                               }
-                              alt={blog.title}
+                              alt={
+                                blog._embedded["wp:featuredmedia"]?.[0]
+                                  ?.alt_text || blog.title.rendered
+                              }
                               className="h-36 w-full object-cover rounded-md"
                               loading="lazy"
                               defer
@@ -86,12 +92,9 @@ const RiskManagement = memo(({ data }) => {
                           </div>
                           {/* Discover More Link */}
                           <div>
-                            <Link
-                              to={`/${createSlug(
-                                blog?.categories[0]?.category_name
-                              )}/${createSlug(blog?.Custom_url)}`}
-                              className="text-black font-semibold hover:text-[#FF822E]">
-                              Discover More
+                            <Link to={generateBlogUrl(blog)}
+                              className="text-black font-semibold
+                              hover:text-[#FF822E]"> Discover More
                             </Link>
                           </div>
                         </div>
@@ -119,19 +122,17 @@ const RiskManagement = memo(({ data }) => {
   );
 });
 
-//code for creating slug
+function generateBlogUrl(blog) {
+  const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
+  const fullLink = term?.link || "";
+  const pathParts = fullLink.split("/").filter(Boolean);
 
-const createSlug = (title) => {
-  // Check if the title is not null and is a string before processing
-  if (typeof title !== "string") {
-    return ""; // Return an empty string or handle the case as needed
-  }
+  const mainCategorySlug =
+    pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "uncategorized";
+  const assignedCategorySlug = term?.slug || "uncategorized";
+  const postSlug = blog?.slug || "post";
 
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "") // Remove special characters
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
-};
+  return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
+}
 
 export default RiskManagement;

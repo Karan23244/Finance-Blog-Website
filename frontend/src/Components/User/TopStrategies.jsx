@@ -24,19 +24,15 @@ const TopStrategies = memo(({ data }) => {
               {topBlogs.slice(0, 2).map((blog) => (
                 <div key={blog.id} className="flex-1 flex flex-col">
                   <div className="overflow-hidden h-full flex flex-col">
-                    <Link
-                      to={`/${createSlug(
-                        blog?.categories[0].category_name
-                      )}/${createSlug(blog?.Custom_url)}`}>
+                    <Link to={generateBlogUrl(blog)}>
                       <img
                         src={
-                          blog?.featured_image
-                            ? `${import.meta.env.VITE_API_URL}/${
-                                blog?.featured_image
-                              }`
-                            : "https://via.placeholder.com/300x200.png?text=No+Image"
+                          blog._embedded["wp:featuredmedia"]?.[0]?.source_url
                         }
-                        alt={blog.title}
+                        alt={
+                          blog._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                          blog.title.rendered
+                        }
                         className="w-full rounded-xl object-cover aspect-[16/9] lg:h-[350px] h-[200px]"
                         width="450"
                         height="200"
@@ -46,29 +42,39 @@ const TopStrategies = memo(({ data }) => {
                     <div className="py-4 flex flex-col justify-between flex-grow">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <FaUserCircle size={24} />
+                          <img
+                            src={
+                              blog._embedded.author?.[0]?.avatar_urls?.["48"]
+                            }
+                            alt={blog._embedded.author?.[0]?.name}
+                            className="w-6 h-6 rounded-full"
+                          />
                           <p className="text-sm font-semibold text-gray-700">
-                            {blog.author_name}
+                            {blog._embedded.author?.[0]?.name}
                           </p>
                         </div>
                         <time
-                          dateTime={blog.scheduleDate || blog.created_at}
-                          className="text-xs uppercase text-gray-400 font-semibold">
-                          {new Date(
-                            blog.scheduleDate || blog.created_at
-                          ).toLocaleDateString("en-US", {
+                          dateTime={blog.date}
+                          className="text-xs text-gray-400 font-semibold">
+                          {new Date(blog.date).toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",
                             day: "numeric",
                           })}
                         </time>
                       </div>
-                      <h2 className="text-xl font-bold mt-4 text-gray-800 line-clamp-2">
-                        {blog.title}
-                      </h2>
-                      <p className="text-sm line-clamp-2">
-                        {blog.seoDescription}
-                      </p>
+                      <h2
+                        className="text-lg font-bold my-2 line-clamp-2"
+                        dangerouslySetInnerHTML={{
+                          __html: blog.title.rendered,
+                        }}
+                      />
+                      <p
+                        className="text-sm line-clamp-2"
+                        dangerouslySetInnerHTML={{
+                          __html: blog.excerpt.rendered,
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -81,19 +87,15 @@ const TopStrategies = memo(({ data }) => {
                   key={blog.id}
                   className="overflow-hidden flex flex-row gap-4 pb-4 border-b border-gray-300">
                   <div className="flex-shrink-0 w-1/3">
-                    <Link
-                      to={`/${createSlug(
-                        blog?.categories[0].category_name
-                      )}/${createSlug(blog?.Custom_url)}`}>
+                    <Link to={generateBlogUrl(blog)}>
                       <img
                         src={
-                          blog?.featured_image
-                            ? `${import.meta.env.VITE_API_URL}/${
-                                blog?.featured_image
-                              }`
-                            : "https://via.placeholder.com/300x200.png?text=No+Image"
+                          blog._embedded["wp:featuredmedia"]?.[0]?.source_url
                         }
-                        alt={blog.title}
+                        alt={
+                          blog._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                          blog.title.rendered
+                        }
                         loading="lazy"
                         className="h-[100px] w-full rounded-xl object-cover"
                       />
@@ -102,26 +104,29 @@ const TopStrategies = memo(({ data }) => {
                   <div className="flex-1 flex flex-col justify-between">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <FaUserCircle size={20} />
+                        <img
+                          src={blog._embedded.author?.[0]?.avatar_urls?.["48"]}
+                          alt={blog._embedded.author?.[0]?.name}
+                          className="w-6 h-6 rounded-full"
+                        />
                         <p className="text-sm font-semibold text-gray-700">
-                          {blog.author_name}
+                          {blog._embedded.author?.[0]?.name}
                         </p>
                       </div>
                       <time
-                        dateTime={blog.scheduleDate || blog.created_at}
-                        className="text-xs uppercase text-gray-400 font-semibold">
-                        {new Date(
-                          blog.scheduleDate || blog.created_at
-                        ).toLocaleDateString("en-US", {
+                        dateTime={blog.date}
+                        className="text-xs text-gray-400 font-semibold">
+                        {new Date(blog.date).toLocaleDateString("en-US", {
                           year: "numeric",
                           month: "long",
                           day: "numeric",
                         })}
                       </time>
                     </div>
-                    <h2 className="text-lg font-bold text-gray-800 mt-2 line-clamp-2">
-                      {blog.title}
-                    </h2>
+                    <h2
+                      className="text-lg font-bold my-2 line-clamp-2"
+                      dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
+                    />
                   </div>
                 </div>
               ))}
@@ -135,17 +140,17 @@ const TopStrategies = memo(({ data }) => {
 
 //code for creating slug
 
-const createSlug = (title) => {
-  // Check if the title is not null and is a string before processing
-  if (typeof title !== "string") {
-    return ""; // Return an empty string or handle the case as needed
-  }
+function generateBlogUrl(blog) {
+  const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
+  const fullLink = term?.link || "";
+  const pathParts = fullLink.split("/").filter(Boolean);
 
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "") // Remove special characters
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
-};
+  const mainCategorySlug =
+    pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "uncategorized";
+  const assignedCategorySlug = term?.slug || "uncategorized";
+  const postSlug = blog?.slug || "post";
+
+  return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
+}
 
 export default TopStrategies;

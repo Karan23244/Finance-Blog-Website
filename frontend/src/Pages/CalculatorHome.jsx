@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Calculator from './Calculator/Calculator';
-import CalculatorPage from './Calculator/CalculatorPage';
+import Calculator from '../Components/User/Calculator/Calculator';
+import CalculatorPage from '../Components/User/Calculator/CalculatorPage';
 
 function CalculatorHome() {
   // Define the state and setter for the selected calculator
