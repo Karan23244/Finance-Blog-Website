@@ -9,7 +9,7 @@ const formatCategory = (str) => {
     .join(" ");
 };
 
-const BASE_URL = "http://cms.trustfinancialadvisory.com/wp-json/wp/v2";
+const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
 
 const usePostsByCategory = () => {
   const [posts, setPosts] = useState([]);

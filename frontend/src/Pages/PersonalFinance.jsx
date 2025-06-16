@@ -14,7 +14,7 @@ function generateBlogUrl(blog) {
 
   return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }
-const BASE_URL = "http://cms.trustfinancialadvisory.com/wp-json/wp/v2";
+const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
 
 export default function Personalfinance() {
   const [groupedPosts, setGroupedPosts] = useState([]);

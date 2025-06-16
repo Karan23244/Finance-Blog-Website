@@ -17,7 +17,7 @@ const FullPost = () => {
     const fetchPost = async () => {
       try {
         const response = await fetch(
-          `http://cms.trustfinancialadvisory.com/wp-json/wp/v2/posts?slug=${param3}&_embed`
+          `https://cms.trustfinancialadvisory.com/wp-json/wp/v2/posts?slug=${param3}&_embed`
         );
         const data = await response.json();
         setPost(data[0]);
