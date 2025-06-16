@@ -136,7 +136,6 @@ export default function CampaignTable() {
       .replace("{android_id}", gaid)
       .replace("{idfa}", idfa);
 
-    console.log("Final redirect URL:", formattedUrl);
     window.open(formattedUrl, "_blank");
   };
   return (

@@ -25,23 +25,6 @@ export default function Personalfinance() {
     },
     { name: "Debt Management", link: "/personal-finance/debt-management" },
   ];
-
-  //   const filteredPosts = posts.filter(
-  //     (post) =>
-  //       post.blog_type === "published" &&
-  //       post.categories.some((category) =>
-  //         categoryFilter.some((filter) => filter.name === category.category_name)
-  //       )
-  //   );
-
-  // const groupedPosts = categoryFilter.map((category) => ({
-  //   category,
-  //   posts: filteredPosts.filter((post) =>
-  //     post.categories?.some((cat) => cat.category_name === category.name)
-  //   ),
-  // }));
-
-  console.log("groupedpost", groupedPosts);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -49,7 +32,6 @@ export default function Personalfinance() {
         const mainCatRes = await axios.get(
           `${BASE_URL}/categories?slug=personal-finance`
         );
-        console.log(mainCatRes);
         const mainCategory = mainCatRes.data[0];
 
         if (!mainCategory) return;
@@ -58,7 +40,6 @@ export default function Personalfinance() {
         const subCatRes = await axios.get(
           `${BASE_URL}/categories?parent=${mainCategory.id}`
         );
-        console.log(subCatRes);
         const subCategories = subCatRes.data;
 
         // Step 3: Fetch posts under each subcategory

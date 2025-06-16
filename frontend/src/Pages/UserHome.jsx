@@ -110,7 +110,6 @@ const UserHome = () => {
       clearTimeout(currencyTimer);
     };
   }, []);
-  console.log("Posts:", posts);
   return (
     <>
       {/* React Helmet for SEO */}
