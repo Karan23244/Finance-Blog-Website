@@ -123,7 +123,7 @@ const MoneyInsights = memo(({ data }) => {
             </div>
             {/* Right Side */}
             <div className="flex flex-col gap-6">
-              {posts.slice(1).map((blog) => (
+              {posts.slice(1,3).map((blog) => (
                 <div
                   key={blog.id}
                   className="overflow-hidden flex flex-row gap-4">
