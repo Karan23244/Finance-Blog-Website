@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "../Common/Footer";
+import Subscribe from "../Common/Subscribe";
+import { Helmet } from "react-helmet-async";
 
 function generateBlogUrl(blog) {
   const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
@@ -15,6 +18,7 @@ function generateBlogUrl(blog) {
   return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }
 const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
+const currentUrl = window.location.href;
 
 export default function Investment() {
   const [groupedPosts, setGroupedPosts] = useState([]);
@@ -62,6 +66,27 @@ export default function Investment() {
 
   return (
     <>
+      <Helmet>
+        <title>Grow Your Wealth: Investment Strategies & Guidance</title>
+        <meta
+          name="description"
+          content="Discover expert strategies for investment and wealth growth. Unlock your financial potential with our insights and tools tailored for success."
+        />
+        <meta
+          name="keywords"
+          content="investment strategies, wealth creation, personal finance, how to invest, start investing, make money investing, secure financial future, achieve financial goals, grow your money, investment opportunities"/>
+        <meta
+          property="og:title"
+          content="Grow Your Wealth: Investment Strategies & Guidance"
+        />
+        <meta
+          property="og:description"
+          content="Discover expert strategies for investment and wealth growth. Unlock your financial potential with our insights and tools tailored for success."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${currentUrl}`} />
+        <link rel="canonical" href={`${currentUrl}`} />
+      </Helmet>
       <div className="relative w-full h-[350px] lg:h-[400px] overflow-hidden">
         <img
           src="/Investment.webp"
@@ -121,6 +146,8 @@ export default function Investment() {
           </div>
         ))}
       </div>
+      <Subscribe />
+      <Footer />
     </>
   );
 }

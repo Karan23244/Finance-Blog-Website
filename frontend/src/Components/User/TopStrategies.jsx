@@ -1,19 +1,66 @@
-import React, { memo } from "react";
+import React, { memo,useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { FaUserCircle } from "react-icons/fa";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const TopStrategies = memo(({ data }) => {
-  const topBlogs = data.slice(0, 6);
+const TopStrategies = memo(() => {
+  const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
+    const [data, setData] = useState([]);
+  
+  const fetchData = async () => {
+    try {
+      // Step 1: Fetch the main category by slug
+      const mainCatRes = await axios.get(
+        `${BASE_URL}/categories?slug=investment-and-wealth-growth`
+      );
+      const mainCategory = mainCatRes.data[0];
+      if (!mainCategory) return [];
+
+      // Step 2: Fetch subcategories of the main category
+      const subCatRes = await axios.get(
+        `${BASE_URL}/categories?parent=${mainCategory.id}`
+      );
+      const subCategories = subCatRes.data;
+
+      // Step 3: Combine main category + subcategory IDs
+      const allCategoryIds = [
+        mainCategory.id,
+        ...subCategories.map((cat) => cat.id),
+      ];
+
+      // Step 4: Fetch posts from all these categories
+      const postsRes = await axios.get(
+        `${BASE_URL}/posts?categories=${allCategoryIds.join(
+          ","
+        )}&_embed&orderby=date&order=desc&per_page=7`
+      );
+
+      // Final: Set or return latest 7 posts
+      const latestPosts = postsRes.data;
+      return latestPosts;
+    } catch (error) {
+      console.error("Error fetching posts with subcategories:", error);
+      return [];
+    }
+  };
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const result = await fetchData();
+      setData(result);
+    };
+
+    getPosts();
+  }, []);
   return (
     <>
       <div className="max-w-7xl mx-auto p-6">
         <h2 className="text-[#FF822E] text-3xl font-bold mb-6">
           Top Strategies
         </h2>
-        {topBlogs?.length === 0 ? (
+        {data?.length === 0 ? (
           <p className="text-gray-500 text-center h-screen">
             No matching blog posts found.
           </p>
@@ -21,7 +68,7 @@ const TopStrategies = memo(({ data }) => {
           <div className="grid lg:grid-cols-[70%_30%] gap-8">
             {/* Left Side */}
             <div className="flex flex-col lg:flex-row gap-6">
-              {topBlogs.slice(0, 2).map((blog) => (
+              {data.slice(0, 2).map((blog) => (
                 <div key={blog.id} className="flex-1 flex flex-col">
                   <div className="overflow-hidden h-full flex flex-col">
                     <Link to={generateBlogUrl(blog)}>
@@ -82,7 +129,7 @@ const TopStrategies = memo(({ data }) => {
             </div>
             {/* Right Side */}
             <div className="flex flex-col gap-6">
-              {topBlogs.slice(2).map((blog) => (
+              {data.slice(2).map((blog) => (
                 <div
                   key={blog.id}
                   className="overflow-hidden flex flex-row gap-4 pb-4 border-b border-gray-300">

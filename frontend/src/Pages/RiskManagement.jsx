@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Subscribe from "../Common/Subscribe";
+import Footer from "../Common/Footer";
+import { Helmet } from "react-helmet-async";
 
 function generateBlogUrl(blog) {
   const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
@@ -59,9 +62,29 @@ export default function RiskManagement() {
 
     fetchData();
   }, []);
+  const currentUrl = window.location.href;
+
 
   return (
     <>
+      <Helmet>
+        <title> Protect Your Investments with Risk Management Solutions</title>
+        <meta
+          name="description"
+          content="Enhance your organization's resilience with our comprehensive risk management insights. Explore tools and techniques to navigate uncertainties confidently."
+        />
+        <meta
+          property="og:title"
+          content="Protect Your Investments with Risk Management Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Enhance your organization's resilience with our comprehensive risk management insights. Explore tools and techniques to navigate uncertainties confidently."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${currentUrl}`} />
+        <link rel="canonical" href={`${currentUrl}`} />
+      </Helmet>
       <div className="relative w-full h-[350px] lg:h-[400px] overflow-hidden">
         <img
           src="/Riskmanagement.webp"
@@ -116,6 +139,8 @@ export default function RiskManagement() {
           </div>
         ))}
       </div>
+      <Subscribe />
+      <Footer />
     </>
   );
 }

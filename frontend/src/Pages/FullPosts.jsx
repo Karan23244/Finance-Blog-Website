@@ -116,30 +116,50 @@ const FullPost = () => {
       </div>
     );
   }
-  const createSlug = (title) => {
-    if (typeof title !== "string") return "";
-    return title
-      .toLowerCase()
-      .trim()
-      .replace(/[^\w\s-]/g, "")
-      .replace(/\s+/g, "-");
-  };
-  const imageUrl = post.featured_image
-    ? `${import.meta.env.VITE_API_URL}/${post.featured_image}`
-    : "";
-  const adimageUrl = post.AdImage
-    ? `${import.meta.env.VITE_API_URL}/${post.AdImage}`
-    : "";
+  // const createSlug = (title) => {
+  //   if (typeof title !== "string") return "";
+  //   return title
+  //     .toLowerCase()
+  //     .trim()
+  //     .replace(/[^\w\s-]/g, "")
+  //     .replace(/\s+/g, "-");
+  // };
+  // const imageUrl = post.featured_image
+  //   ? `${import.meta.env.VITE_API_URL}/${post.featured_image}`
+  //   : "";
+  // const adimageUrl = post.AdImage
+  //   ? `${import.meta.env.VITE_API_URL}/${post.AdImage}`
+  //   : "";
   const currentUrl = window.location.href;
 
   return (
     <>
       <Helmet>
-        <title>{post.seoTitle || "Blog Post"}</title>
-        <meta name="description" content={post.seoDescription || ""} />
-        <meta property="og:title" content={post.seoTitle || "Blog Post"} />
-        <meta property="og:description" content={post.seoDescription || ""} />
-        <meta property="og:image" content={imageUrl} />
+        <title>{post.title.rendered || "Blog Post"}</title>
+        <meta
+          name="description"
+          content={
+            post.excerpt.rendered
+              ? post.excerpt.rendered.replace(/<[^>]+>/g, "").slice(0, 120)
+              : ""
+          }
+        />
+        <meta
+          property="og:title"
+          content={post.title.rendered || "Blog Post"}
+        />
+        <meta
+          property="og:description"
+          content={
+            post.excerpt.rendered
+              ? post.excerpt.rendered.replace(/<[^>]+>/g, "").slice(0, 120)
+              : ""
+          }
+        />
+        <meta
+          property="og:image"
+          content={post._embedded["wp:featuredmedia"]?.[0]?.source_url}
+        />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${currentUrl}`} />
         <link rel="canonical" href={`${currentUrl}`} />
@@ -229,7 +249,7 @@ const FullPost = () => {
                 dangerouslySetInnerHTML={{ __html: post.content.rendered }}
               />
             </main>
-            {post.AdImage && (
+            {/* {post.AdImage && (
               <aside className="lg:w-1/4">
                 <div className="sticky top-16 p-4 border m-4 overflow-auto lg:h-screen">
                   <Link to={post.ad_url} target="_blank">
@@ -237,7 +257,7 @@ const FullPost = () => {
                   </Link>
                 </div>
               </aside>
-            )}
+            )} */}
           </div>
         </div>
       </div>

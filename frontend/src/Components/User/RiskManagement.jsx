@@ -1,9 +1,57 @@
-import React, { useState, memo } from "react";
+import React, { useState,useEffect, memo } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const RiskManagement = memo(({ data }) => {
+const RiskManagement = memo(() => {
+  const [posts, setPosts] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
+  const fetchData = async () => {
+    try {
+      // Step 1: Fetch the main category by slug
+      const mainCatRes = await axios.get(
+        `${BASE_URL}/categories?slug=risk-management`
+      );
+      const mainCategory = mainCatRes.data[0];
+      if (!mainCategory) return [];
+
+      // Step 2: Fetch subcategories of the main category
+      const subCatRes = await axios.get(
+        `${BASE_URL}/categories?parent=${mainCategory.id}`
+      );
+      const subCategories = subCatRes.data;
+
+      // Step 3: Combine main category + subcategory IDs
+      const allCategoryIds = [
+        mainCategory.id,
+        ...subCategories.map((cat) => cat.id),
+      ];
+
+      // Step 4: Fetch posts from all these categories
+      const postsRes = await axios.get(
+        `${BASE_URL}/posts?categories=${allCategoryIds.join(
+          ","
+        )}&_embed&orderby=date&order=desc&per_page=7`
+      );
+
+      // Final: Set or return latest 7 posts
+      const latestPosts = postsRes.data;
+      return latestPosts;
+    } catch (error) {
+      console.error("Error fetching posts with subcategories:", error);
+      return [];
+    }
+  };
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const result = await fetchData();
+      setPosts(result);
+    };
+
+    getPosts();
+  }, []);
 
   // Calculate the number of visible cards based on screen size
   const visibleCards = window.innerWidth <= 640 ? 1 : 4;
@@ -39,7 +87,7 @@ const RiskManagement = memo(({ data }) => {
               aria-label="Slide Left">
               <FaChevronLeft />
             </button>
-            {data?.length === 0 ? (
+            {posts?.length === 0 ? (
               <p className="text-gray-500 text-center h-screen">
                 No matching blog posts found.
               </p>
@@ -54,7 +102,7 @@ const RiskManagement = memo(({ data }) => {
                         currentIndex * (window.innerWidth <= 640 ? 100 : 25)
                       }%)`,
                     }}>
-                    {data.slice(0, 7).map((blog) => (
+                    {posts.slice(0, 7).map((blog) => (
                       <div
                         key={blog.id}
                         className="w-full md:w-1/4 flex-shrink-0 px-6 lg:px-4">
@@ -92,9 +140,12 @@ const RiskManagement = memo(({ data }) => {
                           </div>
                           {/* Discover More Link */}
                           <div>
-                            <Link to={generateBlogUrl(blog)}
+                            <Link
+                              to={generateBlogUrl(blog)}
                               className="text-black font-semibold
-                              hover:text-[#FF822E]"> Discover More
+                              hover:text-[#FF822E]">
+                              {" "}
+                              Discover More
                             </Link>
                           </div>
                         </div>
@@ -108,10 +159,10 @@ const RiskManagement = memo(({ data }) => {
             <button
               onClick={slideRight}
               className={`absolute right-[-20px] lg:right-[-50px] top-1/2 transform -translate-y-1/2 bg-[#FF822E] text-white p-3 rounded-xl shadow-md hover:scale-105 transition z-10 ${
-                currentIndex >= data.length - visibleCards &&
+                currentIndex >= posts.length - visibleCards &&
                 "opacity-50 cursor-not-allowed"
               }`}
-              disabled={currentIndex >= data.length - visibleCards}
+              disabled={currentIndex >= posts.length - visibleCards}
               aria-label="Slide Right">
               <FaChevronRight />
             </button>

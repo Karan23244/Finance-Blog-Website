@@ -16,23 +16,12 @@ import CurrencyExchange from "../Components/User/CurrencyExchange";
 import MoneyInsights from "../Components/User/MoneyInsights";
 import Footer from "../Common/Footer";
 import Subscribe from "../Common/Subscribe";
-import {
-  fetchLatestPosts,
-  fetchPersonalFinancePosts,
-  fetchInvestmentPosts,
-  fetchRiskManagementPosts,
-} from "../Apis/Wordpress";
+import { fetchLatestPosts } from "../Apis/Wordpress";
 const UserHome = () => {
   // usePageTracker("home");
   const [posts, setPosts] = useState([]);
   const [showMarket, setShowMarket] = useState(false);
   const [showCurrencyExchange, setShowCurrencyExchange] = useState(false);
-  const [groupedData, setGroupedData] = useState({
-    "Personal Finance": [],
-    "Investment and Wealth Growth": [],
-    "Risk Management": [],
-  });
-
   const calculators = useMemo(
     () => [
       {
@@ -74,20 +63,9 @@ const UserHome = () => {
       try {
         // Fetch posts
         const latest = await fetchLatestPosts();
-        const personalfinancepost = await fetchPersonalFinancePosts({});
-        const investmentposts = await fetchInvestmentPosts({});
-        const riskmanagementpost = await   fetchRiskManagementPosts({});
 
         // Optionally store latest posts somewhere if needed
         setPosts(latest);
-
-        // Update grouped data
-        setGroupedData((prev) => ({
-          ...prev,
-          "Personal Finance": personalfinancepost,
-          "Investment and Wealth Growth": investmentposts,
-          "Risk Management": riskmanagementpost,
-        }));
       } catch (err) {
         console.error("Error fetching WordPress data:", err);
       }
@@ -153,7 +131,7 @@ const UserHome = () => {
           </div>
         )}
       </div>
-      <MoneyInsights data={groupedData["Personal Finance"]} />
+      <MoneyInsights />
       <div className="flex items-center justify-center">
         <div className="w-full max-w-7xl mx-auto p-6">
           <CalculatorSection calculator={calculators[0]} />
@@ -166,9 +144,9 @@ const UserHome = () => {
           </div>
         </div>
       </div>
-      <TopStrategies data={groupedData["Investment and Wealth Growth"]} />
+      <TopStrategies />
       {showCurrencyExchange && <CurrencyExchange />}
-      <RiskManagement data={groupedData["Risk Management"]} />
+      <RiskManagement />
       {/* <Content /> */}
       <Subscribe />
       <Footer />

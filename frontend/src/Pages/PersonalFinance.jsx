@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "../Common/Footer";
+import Subscribe from "../Common/Subscribe";
+import { Helmet } from "react-helmet-async";
 
 function generateBlogUrl(blog) {
   const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
@@ -15,6 +18,7 @@ function generateBlogUrl(blog) {
   return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }
 const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
+const currentUrl = window.location.href;
 
 export default function Personalfinance() {
   const [groupedPosts, setGroupedPosts] = useState([]);
@@ -69,6 +73,24 @@ export default function Personalfinance() {
 
   return (
     <>
+      <Helmet>
+        <title>Your Guide to Personal Finance - Build Financial Wellness</title>
+        <meta
+          name="description"
+          content="Discover essential strategies for managing your personal finances. Learn how to budget effectively and grow your wealth with our expert advice."
+        />
+        <meta
+          property="og:title"
+          content="Your Guide to Personal Finance - Build Financial Wellness"
+        />
+        <meta
+          property="og:description"
+          content="Discover essential strategies for managing your personal finances. Learn how to budget effectively and grow your wealth with our expert advice."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${currentUrl}`} />
+        <link rel="canonical" href={`${currentUrl}`} />
+      </Helmet>
       <div className="relative w-full h-[350px] lg:h-[400px] overflow-hidden">
         <img
           src="/Personal.webp"
@@ -127,6 +149,8 @@ export default function Personalfinance() {
           </div>
         ))}
       </div>
+      <Subscribe />
+      <Footer />
     </>
   );
 }
