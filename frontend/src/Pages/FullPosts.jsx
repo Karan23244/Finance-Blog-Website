@@ -164,20 +164,62 @@ const FullPost = () => {
         <meta property="og:url" content={`${currentUrl}`} />
         <link rel="canonical" href={`${currentUrl}`} />
       </Helmet>
-      <div className="mx-[2%] my-[20%] lg:my-[3%]">
-        <div className="w-full md:p-8 flex flex-col justify-evenly">
-          <div className="flex flex-col justify-center">
-            <h1
-              className="text-3xl font-bold mb-4"
-              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-            />
-            <div className="flex items-center text-gray-600 text-lg gap-4 mb-4">
-              <div className="text-sm text-black font-semibold">
+      <div className="mx-auto px-4 lg:px-8 pt-16">
+        {/* Main Layout */}
+        <div className="flex flex-col lg:flex-row">
+          {/* Sidebar for Table of Contents */}
+          <aside className="hidden lg:block w-1/4 pr-8 ">
+            <div className="sticky top-16 p-4 overflow-auto border-r-2 border-black h-screen">
+              <h2 className="text-3xl text-center font-semibold text-gray-900 mb-2">
+                Table of Contents
+              </h2>
+              <hr className="w-[60%] h-1 rounded-lg mx-auto bg-black mb-4" />
+              <ul className="space-y-3">
+                {toc.map((item) => (
+                  <li
+                    key={item.id}
+                    className={`padding-${
+                      item.level === "h2"
+                        ? "4"
+                        : item.level === "h3"
+                        ? "8"
+                        : "0"
+                    }
+                      ${
+                        activeSection === item.id
+                          ? "font-bold text-blue-600"
+                          : "text-gray-800"
+                      }`}>
+                    <a
+                      href={`#${item.id}`}
+                      className="hover:text-blue-800 hover:underline text-lg font-medium"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleTOCClick(item.id);
+                      }}>
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+
+          {/* Blog Content */}
+          <main className="lg:w-3/5">
+            <div className="mb-6">
+              <h1
+                className="text-3xl font-bold mb-4"
+                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              />
+            </div>
+
+            <div className="flex items-center gap-6 mb-8 text-gray-600">
+              <p className="font-semibold text-lg hover:text-indigo-600 transition-colors cursor-default">
                 By {post._embedded.author?.[0]?.name}
-              </div>
-              <span>|</span>
-              <div>
-                <p>
+              </p>
+              <div className="border-l-2 border-gray-300 pl-4">
+                <p className="font-medium text-lg">
                   <time
                     dateTime={post.date}
                     className="text-sm text-black font-semibold">
@@ -190,66 +232,25 @@ const FullPost = () => {
                 </p>
               </div>
             </div>
-            <div>
+
+            <div className="mb-8 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 src={post._embedded["wp:featuredmedia"]?.[0]?.source_url}
                 alt={post.title.rendered}
-                className="mb-6 rounded-xl object-cover max-h-[400px] w-full"
+                width={600}
+                height={400}
+                className="object-cover w-full h-auto"
+                loading="lazy"
               />
             </div>
-          </div>
-        </div>
 
-        <div className="mx-auto px-4 lg:px-8">
-          {/* Main Layout */}
-          <div className="flex flex-col lg:flex-row">
-            {/* Sidebar for Table of Contents */}
-            <aside className="hidden lg:block w-1/4 pr-8 ">
-              <div className="sticky top-16 p-4 overflow-auto border-r-2 border-black h-screen">
-                <h2 className="text-3xl text-center font-semibold text-gray-900 mb-2">
-                  Table of Contents
-                </h2>
-                <hr className="w-[60%] h-1 rounded-lg mx-auto bg-black mb-4" />
-                <ul className="space-y-3">
-                  {toc.map((item) => (
-                    <li
-                      key={item.id}
-                      className={`padding-${
-                        item.level === "h2"
-                          ? "4"
-                          : item.level === "h3"
-                          ? "8"
-                          : "0"
-                      }
-                      ${
-                        activeSection === item.id
-                          ? "font-bold text-blue-600"
-                          : "text-gray-800"
-                      }`}>
-                      <a
-                        href={`#${item.id}`}
-                        className="hover:text-blue-800 hover:underline text-lg font-medium"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleTOCClick(item.id);
-                        }}>
-                        {item.text}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </aside>
+            <div
+              className="custom-html text-gray-700 leading-relaxed mb-8 pt-4"
+              dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+            />
+          </main>
 
-            {/* Blog Content */}
-            <main
-              className={`w-full ${post.AdImage ? "lg:w-3/5" : "lg:w-3/4"}`}>
-              <div
-                className="custom-html text-gray-700 leading-relaxed mb-8 pt-4"
-                dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-              />
-            </main>
-            {/* {post.AdImage && (
+          {/* {post.AdImage && (
               <aside className="lg:w-1/4">
                 <div className="sticky top-16 p-4 border m-4 overflow-auto lg:h-screen">
                   <Link to={post.ad_url} target="_blank">
@@ -258,7 +259,6 @@ const FullPost = () => {
                 </div>
               </aside>
             )} */}
-          </div>
         </div>
       </div>
       <Subscribe />
