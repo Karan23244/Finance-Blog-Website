@@ -53,7 +53,7 @@ const MoneyInsights = memo(({ data }) => {
 
     getPosts();
   }, []);
-  console.log("MoneyInsights data:",posts);
+  console.log("MoneyInsights data:", posts);
   return (
     <>
       <div className="max-w-7xl mx-auto p-6 overflow-hidden h-auto min-h-[500px]">
@@ -123,7 +123,7 @@ const MoneyInsights = memo(({ data }) => {
             </div>
             {/* Right Side */}
             <div className="flex flex-col gap-6">
-              {posts.slice(1,3).map((blog) => (
+              {posts.slice(1, 3).map((blog) => (
                 <div
                   key={blog.id}
                   className="overflow-hidden flex flex-row gap-4">
@@ -189,14 +189,24 @@ const MoneyInsights = memo(({ data }) => {
   );
 });
 function generateBlogUrl(blog) {
-  const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
-  const fullLink = term?.link || "";
-  const pathParts = fullLink.split("/").filter(Boolean);
-
-  const mainCategorySlug =
-    pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "uncategorized";
-  const assignedCategorySlug = term?.slug || "uncategorized";
+  const terms = blog?._embedded?.["wp:term"]?.[0] || [];
   const postSlug = blog?.slug || "post";
+
+  if (terms.length < 2) {
+    // Fallback if only one or zero categories exist
+    const fallbackSlug = terms[0]?.slug || "uncategorized";
+    return `/${fallbackSlug}/${postSlug}`;
+  }
+
+  // Sort categories so that the parent (shorter link) comes first
+  const sortedTerms = [...terms].sort((a, b) => {
+    const aDepth = (a.link.match(/\//g) || []).length;
+    const bDepth = (b.link.match(/\//g) || []).length;
+    return aDepth - bDepth;
+  });
+
+  const mainCategorySlug = sortedTerms[0]?.slug || "uncategorized";
+  const assignedCategorySlug = sortedTerms[1]?.slug || "uncategorized";
 
   return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }

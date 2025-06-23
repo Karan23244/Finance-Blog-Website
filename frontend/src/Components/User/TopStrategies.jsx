@@ -1,5 +1,6 @@
-import React, { memo,useState,useEffect } from "react";
+import React, { memo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { FaUserCircle } from "react-icons/fa";
 
@@ -7,8 +8,8 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const TopStrategies = memo(() => {
   const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
-    const [data, setData] = useState([]);
-  
+  const [data, setData] = useState([]);
+
   const fetchData = async () => {
     try {
       // Step 1: Fetch the main category by slug
@@ -188,14 +189,24 @@ const TopStrategies = memo(() => {
 //code for creating slug
 
 function generateBlogUrl(blog) {
-  const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
-  const fullLink = term?.link || "";
-  const pathParts = fullLink.split("/").filter(Boolean);
-
-  const mainCategorySlug =
-    pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "uncategorized";
-  const assignedCategorySlug = term?.slug || "uncategorized";
+  const terms = blog?._embedded?.["wp:term"]?.[0] || [];
   const postSlug = blog?.slug || "post";
+
+  if (terms.length < 2) {
+    // Fallback if only one or zero categories exist
+    const fallbackSlug = terms[0]?.slug || "uncategorized";
+    return `/${fallbackSlug}/${postSlug}`;
+  }
+
+  // Sort categories so that the parent (shorter link) comes first
+  const sortedTerms = [...terms].sort((a, b) => {
+    const aDepth = (a.link.match(/\//g) || []).length;
+    const bDepth = (b.link.match(/\//g) || []).length;
+    return aDepth - bDepth;
+  });
+
+  const mainCategorySlug = sortedTerms[0]?.slug || "uncategorized";
+  const assignedCategorySlug = sortedTerms[1]?.slug || "uncategorized";
 
   return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }

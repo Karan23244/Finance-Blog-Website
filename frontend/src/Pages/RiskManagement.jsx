@@ -6,14 +6,24 @@ import Footer from "../Common/Footer";
 import { Helmet } from "react-helmet-async";
 
 function generateBlogUrl(blog) {
-  const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
-  const fullLink = term?.link || "";
-  const pathParts = fullLink.split("/").filter(Boolean);
-
-  const mainCategorySlug =
-    pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "uncategorized";
-  const assignedCategorySlug = term?.slug || "uncategorized";
+  const terms = blog?._embedded?.["wp:term"]?.[0] || [];
   const postSlug = blog?.slug || "post";
+
+  if (terms.length < 2) {
+    // Fallback if only one or zero categories exist
+    const fallbackSlug = terms[0]?.slug || "uncategorized";
+    return `/${fallbackSlug}/${postSlug}`;
+  }
+
+  // Sort categories so that the parent (shorter link) comes first
+  const sortedTerms = [...terms].sort((a, b) => {
+    const aDepth = (a.link.match(/\//g) || []).length;
+    const bDepth = (b.link.match(/\//g) || []).length;
+    return aDepth - bDepth;
+  });
+
+  const mainCategorySlug = sortedTerms[0]?.slug || "uncategorized";
+  const assignedCategorySlug = sortedTerms[1]?.slug || "uncategorized";
 
   return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }
@@ -63,7 +73,6 @@ export default function RiskManagement() {
     fetchData();
   }, []);
   const currentUrl = window.location.href;
-
 
   return (
     <>

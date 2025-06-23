@@ -1,7 +1,7 @@
 import usePostsByCategory from "../hooks/usePostsByCategory";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import {FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Footer from "../Common/Footer";
 import Subscribe from "../Common/Subscribe";
 const CategoryPosts = () => {
@@ -514,7 +514,8 @@ const CategoryPosts = () => {
                           __html: post.excerpt.rendered,
                         }}
                       />
-                      <Link to={generateBlogUrl(post)}
+                      <Link
+                        to={generateBlogUrl(post)}
                         className="text-white border border-white py-2
                         rounded-lg lg:px-8 px-4 bg-[#FF822E] mt-2 inline-block">
                         Read More...
@@ -576,14 +577,24 @@ const CategoryPosts = () => {
 };
 
 function generateBlogUrl(blog) {
-  const term = blog?._embedded?.["wp:term"]?.[0]?.[0];
-  const fullLink = term?.link || "";
-  const pathParts = fullLink.split("/").filter(Boolean);
-
-  const mainCategorySlug =
-    pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "uncategorized";
-  const assignedCategorySlug = term?.slug || "uncategorized";
+  const terms = blog?._embedded?.["wp:term"]?.[0] || [];
   const postSlug = blog?.slug || "post";
+
+  if (terms.length < 2) {
+    // Fallback if only one or zero categories exist
+    const fallbackSlug = terms[0]?.slug || "uncategorized";
+    return `/${fallbackSlug}/${postSlug}`;
+  }
+
+  // Sort categories so that the parent (shorter link) comes first
+  const sortedTerms = [...terms].sort((a, b) => {
+    const aDepth = (a.link.match(/\//g) || []).length;
+    const bDepth = (b.link.match(/\//g) || []).length;
+    return aDepth - bDepth;
+  });
+
+  const mainCategorySlug = sortedTerms[0]?.slug || "uncategorized";
+  const assignedCategorySlug = sortedTerms[1]?.slug || "uncategorized";
 
   return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }
