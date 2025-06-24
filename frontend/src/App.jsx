@@ -48,12 +48,7 @@ function App() {
         <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
           <Routes>
             {/* Public Routes */}
-            <Route
-              path="/"
-              element={
-                isAuthenticated ? <Navigate to="/admin/home" /> : <UserHome />
-              }
-            />
+            <Route path="/" element={<UserHome/>} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/privacy_policy" element={<Privacy_Policy />} />
             <Route path="/fast-financial-help" element={<CampainHome1 />} />
@@ -71,7 +66,10 @@ function App() {
             <Route path="/calculator" element={<CalculatorHome />} />
             <Route path="/risk-management" element={<RiskManagement />} />
             <Route path="/personal-finance" element={<Personalfinance />} />
-            <Route path="/investment-and-wealth-growth" element={<Investment />} />
+            <Route
+              path="/investment-and-wealth-growth"
+              element={<Investment />}
+            />
             <Route
               path="/calculator/:calculatorName"
               element={<CalculatorPage />}

@@ -29,7 +29,7 @@ const Subscribe = () => {
         <div className="max-w-full px-4 flex flex-col lg:flex-row justify-between items-center lg:gap-16 gap-4">
           {/* Left section */}
           <div className="lg:w-1/2 w-full text-center lg:text-left ">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-relaxed">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium leading-relaxed">
               Expert advice, actionable strategies, and personalized financial
               insights to help you make informed money decisions.
             </h2>
