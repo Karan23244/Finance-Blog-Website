@@ -2,18 +2,14 @@ import React, { memo } from "react";
 import { Link } from "react-router-dom";
 
 const Hero = memo(() => {
-  const isMobile = window.innerWidth < 768;
-
   return (
     <div className="relative w-full h-[500px] flex items-center overflow-hidden">
       {/* LCP image visible and preloadable */}
       <picture>
-        <source srcSet="/background.avif" media="(min-width: 768px)" />
         <img
-          src="/back_mobile.webp"
+          src="/background.avif"
           alt="Hero Background"
           fetchpriority="high"
-          decoding="async"
           loading="eager"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         />
@@ -29,11 +25,10 @@ const Hero = memo(() => {
           </h2>
           <p className="text-sm lg:text-base leading-relaxed mt-2">
             Trust Financial Advisory is here to guide you through the
-            complexities of financial planning. We provide customized
-            solutions focused on building wealth, protecting assets, and
-            planning for the future. With personalized advice and strategic
-            planning, we help you navigate your financial journey with
-            confidence.
+            complexities of financial planning. We provide customized solutions
+            focused on building wealth, protecting assets, and planning for the
+            future. With personalized advice and strategic planning, we help you
+            navigate your financial journey with confidence.
           </p>
 
           {/* Buttons */}

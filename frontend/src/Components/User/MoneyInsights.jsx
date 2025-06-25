@@ -53,7 +53,6 @@ const MoneyInsights = memo(({ data }) => {
 
     getPosts();
   }, []);
-  console.log("MoneyInsights data:", posts);
   return (
     <>
       <div className="max-w-7xl mx-auto p-6 overflow-hidden h-auto min-h-[500px]">

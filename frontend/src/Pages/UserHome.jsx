@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useMemo, useCallback, memo } from "react";
 import { Link } from "react-router-dom";
 import { calculateResult } from "../Components/User/Calculator/calculatorLogic";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Helmet } from "react-helmet-async";
-ChartJS.register(ArcElement, Tooltip, Legend);
-import { Doughnut } from "react-chartjs-2";
 import usePageTracker from "../hooks/usePageTracker";
+import { Doughnut } from "react-chartjs-2";
 import TrendingNow from "../Components/User/TrendingNow";
 import TradingWidget from "../Components/User/TradingWIdget";
 import TopStrategies from "../Components/User/TopStrategies";
@@ -17,6 +15,7 @@ import MoneyInsights from "../Components/User/MoneyInsights";
 import Footer from "../Common/Footer";
 import Subscribe from "../Common/Subscribe";
 import { fetchLatestPosts } from "../Apis/Wordpress";
+
 const UserHome = () => {
   // usePageTracker("home");
   const [posts, setPosts] = useState([]);
@@ -58,6 +57,28 @@ const UserHome = () => {
     ],
     []
   );
+  useEffect(() => {
+    const chartContainer = document.getElementById("chart-container");
+    if (!chartContainer) return;
+
+    const observer = new IntersectionObserver(
+      async ([entry]) => {
+        if (entry.isIntersecting) {
+          const { Chart, ArcElement, Tooltip, Legend } = await import(
+            "chart.js"
+          );
+          Chart.register(ArcElement, Tooltip, Legend);
+          observer.disconnect(); // load only once
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(chartContainer);
+
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -132,7 +153,7 @@ const UserHome = () => {
         )}
       </div>
       <MoneyInsights />
-      <div className="flex items-center justify-center">
+      <div id="chart-container" className="flex items-center justify-center">
         <div className="w-full max-w-7xl mx-auto p-6">
           <CalculatorSection calculator={calculators[0]} />
           <div className="flex justify-center mt-8">
@@ -155,6 +176,14 @@ const UserHome = () => {
 };
 
 const CalculatorSection = memo(({ calculator }) => {
+  useEffect(() => {
+    const registerChart = async () => {
+      const { Chart, ArcElement, Tooltip, Legend } = await import("chart.js");
+      Chart.register(ArcElement, Tooltip, Legend);
+    };
+    registerChart();
+  }, []);
+
   const defaultInputs = useMemo(() => {
     return calculator.inputs.reduce((acc, input) => {
       acc[input.key] = input.default || 0;

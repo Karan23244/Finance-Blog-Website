@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,Suspense } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "../Components/Admin/New_Post/styles.css";
 import usePageTracker from "../hooks/usePageTracker";
-import Footer from "../Common/Footer";
-import Subscribe from "../Common/Subscribe";
+const Subscribe = React.lazy(() => import("../Common/Subscribe"));
+const Footer = React.lazy(() => import("../Common/Footer"));
 const FullPost = () => {
   // usePageTracker("blogs");
   const { param3 } = useParams();
@@ -248,9 +248,6 @@ const FullPost = () => {
                 width={600}
                 height={400}
                 className="object-cover w-full h-auto"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
               />
             </div>
 
@@ -271,8 +268,10 @@ const FullPost = () => {
             )} */}
         </div>
       </div>
-      <Subscribe />
-      <Footer />
+      <Suspense fallback={<div />}>
+        <Subscribe />
+        <Footer />
+      </Suspense>
     </>
   );
 };
