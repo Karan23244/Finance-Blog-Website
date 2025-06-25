@@ -3,32 +3,35 @@ import { Link } from "react-router-dom";
 
 const Hero = memo(() => {
   const [bgLoaded, setBgLoaded] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const isMobile = window.innerWidth < 768; // No hydration mismatch
 
   useEffect(() => {
     const img = new Image();
     img.src = isMobile ? "/back_mobile.webp" : "/background.avif";
     img.fetchpriority = "high";
     img.onload = () => setBgLoaded(true);
-
-    // Listen for window resize to handle dynamic background switching
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, [isMobile]);
+
   return (
     <>
+      {/* Preload hidden image for faster LCP */}
+      <img
+        src={isMobile ? "/back_mobile.webp" : "/background.avif"}
+        alt="Preloading Hero Background"
+        fetchpriority="high"
+        decoding="async"
+        loading="eager"
+        style={{ display: "none" }}
+      />
+
       <div
         className={`bg-cover bg-center bg-no-repeat flex items-center w-full h-[500px] transition-opacity duration-500 ${
           bgLoaded ? "opacity-100" : "opacity-0"
         }`}
         style={{
-          backgroundImage: `url(${
-            isMobile ? "/back_mobile.webp" : "/background.avif"
-          })`,
-        }}>
+          backgroundImage: `url(${isMobile ? "/back_mobile.webp" : "/background.avif"})`,
+        }}
+      >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-6 w-full">
           {/* Text Content */}
           <div className="text-white w-full lg:ml-[10%] lg:w-[50%] text-center lg:px-10 lg:text-left">
@@ -44,6 +47,7 @@ const Hero = memo(() => {
               planning, we help you navigate your financial journey with
               confidence.
             </p>
+
             {/* Button below content */}
             <div className="flex lg:flex-row flex-col gap-4 justify-center lg:justify-start mt-6">
               <Link to="/fast-financial-help">

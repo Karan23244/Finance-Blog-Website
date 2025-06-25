@@ -240,7 +240,9 @@ const FullPost = () => {
                 width={600}
                 height={400}
                 className="object-cover w-full h-auto"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
 
