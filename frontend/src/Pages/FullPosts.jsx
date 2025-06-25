@@ -163,6 +163,14 @@ const FullPost = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${currentUrl}`} />
         <link rel="canonical" href={`${currentUrl}`} />
+        {post._embedded["wp:featuredmedia"]?.[0]?.source_url && (
+          <link
+            rel="preload"
+            as="image"
+            href={post._embedded["wp:featuredmedia"][0].source_url}
+            fetchpriority="high"
+          />
+        )}
       </Helmet>
       <div className="mx-auto px-4 lg:px-8 pt-16">
         {/* Main Layout */}
