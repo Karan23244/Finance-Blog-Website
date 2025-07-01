@@ -22,7 +22,6 @@ import CategoryBlogs from "./Pages/CategoryBlogs";
 import RiskManagement from "./Pages/RiskManagement";
 import Personalfinance from "./Pages/PersonalFinance";
 import Investment from "./Pages/Investment";
-
 const Popup = React.lazy(() => import("./Common/Popup"));
 
 // Lazy-loading User Components
@@ -48,7 +47,7 @@ function App() {
         <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
           <Routes>
             {/* Public Routes */}
-            <Route path="/" element={<UserHome/>} />
+            <Route path="/" element={<UserHome />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/privacy_policy" element={<Privacy_Policy />} />
             <Route path="/fast-financial-help" element={<CampainHome1 />} />

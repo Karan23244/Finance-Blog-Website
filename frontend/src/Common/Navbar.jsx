@@ -613,25 +613,39 @@ function Navbar() {
         setSearchBarOpen(false);
       }
     };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
+    document.addEventListener("click", handler); // changed from mousedown to click
+    return () => document.removeEventListener("click", handler);
   }, []);
 
   const debouncedSearch = useCallback(
-    debounce((q) => {
-      if (q.trim()) {
-        const hits = posts.filter((p) =>
-          p.title.rendered.toLowerCase().includes(q.toLowerCase())
+    debounce(async (query) => {
+      if (!query.trim()) {
+        setSuggestions([]);
+        setShowDropdown(false);
+        return;
+      }
+
+      try {
+        const response = await axios.get(
+          `https://cms.trustfinancialadvisory.com/wp-json/wp/v2/posts?search=${encodeURIComponent(
+            query
+          )}&_embed&per_page=30`
         );
-        setSuggestions(hits.slice(0, 6));
-        setShowDropdown(hits.length > 0);
+
+        const matchedPosts = response.data.filter((post) =>
+          post.title.rendered.toLowerCase().includes(query.toLowerCase())
+        );
+
+        setSuggestions(matchedPosts.slice(0, 6)); // show top 6 title matches only
+        setShowDropdown(matchedPosts.length > 0);
         setSearchBarOpen(true);
-      } else {
+      } catch (error) {
+        console.error("Error fetching search results:", error);
         setSuggestions([]);
         setShowDropdown(false);
       }
     }, 300),
-    [posts]
+    []
   );
 
   const handleSearchChange = (e) => {
@@ -640,8 +654,10 @@ function Navbar() {
   };
 
   const handleSuggestionClick = (s) => {
-    const catSlug = s._embedded?.["wp:term"]?.[0]?.[0]?.slug || "uncategorized";
-    navigate(`/${catSlug}/${s.slug}`);
+    console.log(s);
+    const blogUrl = generateBlogUrl(s);
+    navigate(blogUrl);
+
     setSearchQuery("");
     setSuggestions([]);
     setShowDropdown(false);
@@ -656,11 +672,6 @@ function Navbar() {
   const toggleSearchBar = () => {
     if (isMenuOpen) setIsMenuOpen(false);
     setSearchBarOpen((s) => !s);
-  };
-
-  const handleLogout = () => {
-    dispatch(logout());
-    navigate("/");
   };
 
   const handleLogoClick = (e) => {
@@ -758,21 +769,31 @@ function Navbar() {
                       value={searchQuery}
                       onChange={handleSearchChange}
                       placeholder="Search blogs..."
-                      className="border rounded-lg px-4 py-2 focus:ring-amber-400"
+                      className="border rounded-lg px-4 py-2 w-[300px] focus:ring-amber-400"
                     />
                     {showDropdown && (
                       <ul
                         ref={dropdownRef}
-                        className="absolute bg-white border shadow-lg mt-2 w-full z-50">
-                        {suggestions.map((sug) => (
-                          <li
-                            key={sug.id}
-                            className="px-4 py-2 flex justify-between hover:bg-gray-100 cursor-pointer"
-                            onClick={() => handleSuggestionClick(sug)}>
-                            <span>{sug.title.rendered}</span>
-                            <span>→</span>
+                        className="absolute left-0 bg-white border shadow-xl mt-2 max-w-[300px] z-50 rounded-md">
+                        {suggestions.length > 0 ? (
+                          suggestions.map((sug) => (
+                            <li
+                              key={sug.id}
+                              className="relative group px-4 py-3 flex justify-between items-center gap-2 text-sm text-gray-800 hover:bg-gray-100 hover:border-l-4 cursor-pointer hover:border-orange-500 hover:pr-6 transition-all duration-200 "
+                              onClick={() => handleSuggestionClick(sug)}>
+                              <span className="">
+                                {sug.title.rendered}
+                              </span>
+                              <span className="text-gray-400 group-hover:text-orange-500">
+                                →
+                              </span>
+                            </li>
+                          ))
+                        ) : (
+                          <li className="px-4 py-3 text-gray-400">
+                            No results found
                           </li>
-                        ))}
+                        )}
                       </ul>
                     )}
                   </li>
@@ -859,6 +880,30 @@ function Navbar() {
       <ScrollButtons />
     </>
   );
+}
+//code for creating slug
+
+function generateBlogUrl(blog) {
+  const terms = blog?._embedded?.["wp:term"]?.[0] || [];
+  const postSlug = blog?.slug || "post";
+
+  if (terms.length < 2) {
+    // Fallback if only one or zero categories exist
+    const fallbackSlug = terms[0]?.slug || "uncategorized";
+    return `/${fallbackSlug}/${postSlug}`;
+  }
+
+  // Sort categories so that the parent (shorter link) comes first
+  const sortedTerms = [...terms].sort((a, b) => {
+    const aDepth = (a.link.match(/\//g) || []).length;
+    const bDepth = (b.link.match(/\//g) || []).length;
+    return aDepth - bDepth;
+  });
+
+  const mainCategorySlug = sortedTerms[0]?.slug || "uncategorized";
+  const assignedCategorySlug = sortedTerms[1]?.slug || "uncategorized";
+
+  return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }
 
 export default Navbar;

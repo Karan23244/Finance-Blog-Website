@@ -118,7 +118,7 @@ const TopStrategies = memo(() => {
                         }}
                       />
                       <p
-                        className="text-sm line-clamp-2"
+                        className="text-sm line-clamp-3"
                         dangerouslySetInnerHTML={{
                           __html: blog.excerpt.rendered,
                         }}
@@ -130,7 +130,7 @@ const TopStrategies = memo(() => {
             </div>
             {/* Right Side */}
             <div className="flex flex-col gap-6">
-              {data.slice(2).map((blog) => (
+              {data.slice(2, 6).map((blog) => (
                 <div
                   key={blog.id}
                   className="overflow-hidden flex flex-row gap-4 pb-4 border-b border-gray-300">
