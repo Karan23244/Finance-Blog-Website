@@ -138,7 +138,7 @@ export default function RiskManagement() {
               )}
 
               <div className="flex justify-center mt-3 mb-6">
-                <button className="bg-[#E0E0E0] text-sm md:text-lg px-6 py-2 text-black border-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-[#00008B] hover:text-white">
+                <button className="bg-[#E0E0E0] text-sm md:text-lg px-6 py-2 text-black border-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-[#FF822E] hover:text-white">
                   <a href={category.link} className="block">
                     See More
                   </a>
@@ -186,7 +186,7 @@ const HorizontalBlogCard = ({ post }) => {
             __html: post.excerpt.rendered,
           }}
         />
-        <span className="inline-block w-fit px-5 py-2 mt-2 border border-[#DEDEFF] hover:bg-indigo-700 text-black hover:text-white rounded-full font-medium transition duration-300">
+        <span className="inline-block w-fit px-5 py-2 mt-2 border border-[#DEDEFF] hover:bg-[#FF822E] text-black hover:text-white rounded-full font-medium transition duration-300">
           Read More...
         </span>
       </div>

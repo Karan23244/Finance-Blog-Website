@@ -113,6 +113,38 @@ const CategoryPosts = () => {
         shortDescription:
           "Trust resources, financial advice resources for your retirement prep So it brings us back to understanding retirement preparation, and our mission is to help you. Retirement planning — a pivotal part of financial planning — means having money to live the way you wish. The reason we’re trying to give you this information and tools to make informed decisions about your retirement savings and income streams — but we should first warn you that there’s no right answer to those questions.",
       },
+      "Market Insights & Economic Outlook": {
+        title: "Navigating Market News: Expert Analysis for Investors",
+        description:
+          "Stay informed with Trust Finance Advisory's daily market updates and expert analysis. Discover how global trends can enhance your investments and wealth growth.",
+        keywords: "",
+        shortDescription:
+          "Stay ahead with Trust Finance Advisory's daily market updates, expert economic analysis, and global financial insights. Understand how key trends impact your investments and wealth growth.",
+      },
+      "Investment & Wealth Growth": {
+        title: "Elevate Your Wealth with Proven Strategies",
+        description:
+          "Elevate your investment game with Trust Finance Advisory. Get the latest news, effective strategies for wealth growth, and updates on real estate and small business finance.",
+        keywords: "",
+        shortDescription:
+          "Discover the latest investment news, strategic approaches to wealth growth, and key updates on real estate and small business finance from Trust Finance Advisory. Grow your portfolio smarter.",
+      },
+      "Personal Finance & Financial Planning": {
+        title: "Mastering Personal Finance: Your Path to Wealth",
+        description:
+          "Master your financial future with Trust Finance Advisory. Access vital personal finance news, practical debt management tips, education planning, and tax advisory updates.",
+        keywords: "",
+        shortDescription:
+          "Get essential personal finance news, practical tips for debt management, education planning, and critical tax advisory updates from Trust Finance Advisory. Master your financial future.",
+      },
+      "Risk Management & Protection": {
+        title:
+          "Unlocking Financial Security: The Importance of Estate Planning",
+        description: "Get the latest news on insurance, retirement planning, and cybersecurity to navigate financial risks effectively.",
+        keywords: "",
+        shortDescription:
+          "Navigate financial risks confidently with Trust Finance Advisory's news on comprehensive insurance solutions, strategic retirement planning, and vital cybersecurity alerts. Protect your assets and secure your future.",
+      },
     };
 
     return (
@@ -554,6 +586,121 @@ const CategoryPosts = () => {
       </div>
     </>
   );
+  const News = () => (
+    <>
+      {/* Category Title Section */}
+      <div
+        className="w-full lg:h-[200px] h-[150px] flex items-center flex-col justify-center lg:gap-5 gap-3 py-[7%] lg:px-[10%] px-[2%]"
+        style={{
+          backgroundImage: ` url('/risk.webp')`,
+          backgroundSize: "contain",
+          backgroundAttachment: "fixed",
+        }}>
+        <h1 className="lg:text-5xl text-lg: font-semibold text-center text-[#FF822E]">
+          {categoryName}
+        </h1>
+        <p className="lg:text-lg text-xs text-white text-justify space-y-4 leading-relaxed">
+          {shortDescription}
+        </p>
+      </div>
+
+      {/* Posts Section */}
+      <div className="lg:mx-[10%] mx-[3%] my-[5%] lg:my-[2%]">
+        {posts && posts.length > 0 && (
+          <>
+            {/* Remaining Posts Section */}
+            <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-6 gap-2 lg:mt-8 pb-8">
+              {posts.map((post) => (
+                <>
+                  <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
+                    <img
+                      src={
+                        post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
+                        "https://via.placeholder.com/300x200.png?text=No+Image"
+                      }
+                      alt={
+                        post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                        post.title.rendered
+                      }
+                      className="h-[250px] w-full object-cover"
+                    />
+                    <div className="p-4">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <img
+                            src={
+                              post._embedded.author?.[0]?.avatar_urls?.["48"] ||
+                              "https://via.placeholder.com/48"
+                            }
+                            alt={post._embedded.author?.[0]?.name}
+                            className="w-6 h-6 rounded-full"
+                          />
+                          <p className="text-sm font-semibold text-gray-700">
+                            {post._embedded.author?.[0]?.name}
+                          </p>
+                        </div>
+                        <time
+                          dateTime={post.date}
+                          className="text-xs text-gray-400 font-semibold">
+                          {new Date(post.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </time>
+                      </div>
+                      <h2
+                        className="text-lg font-bold text-gray-800 line-clamp-2"
+                        dangerouslySetInnerHTML={{
+                          __html: post.title.rendered,
+                        }}
+                      />
+                      <p
+                        className="text-sm text-gray-700 line-clamp-2"
+                        dangerouslySetInnerHTML={{
+                          __html: post.excerpt.rendered,
+                        }}
+                      />
+                      <Link
+                        to={generateBlogUrl(post)}
+                        className="text-white border border-white py-2
+                        rounded-lg lg:px-8 px-4 bg-[#FF822E] mt-2 inline-block">
+                        Read More...
+                      </Link>
+                    </div>
+                  </div>
+                </>
+              ))}
+            </div>
+          </>
+        )}
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center mt-6 space-x-3">
+            <button
+              disabled={currentPage === 1}
+              onClick={() => fetchPosts(currentPage - 1)}
+              className="flex items-center gap-2 px-4 py-2 text-white bg-[#FF822E] hover:bg-[#ff6b00] rounded-full shadow-md transition-all duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
+              <FaChevronLeft className="text-lg" />
+              Prev
+            </button>
+
+            <span className="px-4 py-2 text-lg font-semibold text-gray-800 bg-gray-100 rounded-lg shadow-md">
+              Page {currentPage} of {totalPages}
+            </span>
+
+            <button
+              disabled={currentPage === totalPages}
+              onClick={() => fetchPosts(currentPage + 1)}
+              className="flex items-center gap-2 px-4 py-2 text-white bg-[#FF822E] hover:bg-[#ff6b00] rounded-full shadow-md transition-all duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
+              Next
+              <FaChevronRight className="text-lg" />
+            </button>
+          </div>
+        )}
+      </div>
+    </>
+  );
   return (
     <>
       {/* React Helmet for SEO */}
@@ -570,6 +717,7 @@ const CategoryPosts = () => {
       {categoryType === "Personal Finance" && <PersonalFinanceUI />}
       {categoryType === "Investment And Wealth Growth" && <InvestmentUI />}
       {categoryType === "Risk Management" && <RiskManagmentUI />}
+      {categoryType === "News" && <News />}
       <Subscribe />
       <Footer />
     </>

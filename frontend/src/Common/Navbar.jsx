@@ -736,8 +736,8 @@ function Navbar() {
             </div>
             {/* Desktop Menu */}
             //{" "}
-            <div className="lg:flex items-center hidden justify-end lg:w-[70%] lg:order-1 pr-3 min-h-[50px]">
-              <ul className="flex items-center space-x-20 font-medium">
+            <div className="lg:flex items-center hidden justify-end lg:w-[80%] lg:order-1 pr-3 min-h-[50px]">
+              <ul className="flex items-center space-x-14 font-medium">
                 <>
                   {groupedCategories.map((mainCat) => (
                     <li className="relative group" key={mainCat.id}>
@@ -769,7 +769,7 @@ function Navbar() {
                       value={searchQuery}
                       onChange={handleSearchChange}
                       placeholder="Search blogs..."
-                      className="border rounded-lg px-4 py-2 w-[300px] focus:ring-amber-400"
+                      className="border rounded-lg px-4 py-2 w-[250px] focus:ring-amber-400"
                     />
                     {showDropdown && (
                       <ul
@@ -781,9 +781,7 @@ function Navbar() {
                               key={sug.id}
                               className="relative group px-4 py-3 flex justify-between items-center gap-2 text-sm text-gray-800 hover:bg-gray-100 hover:border-l-4 cursor-pointer hover:border-orange-500 hover:pr-6 transition-all duration-200 "
                               onClick={() => handleSuggestionClick(sug)}>
-                              <span className="">
-                                {sug.title.rendered}
-                              </span>
+                              <span className="">{sug.title.rendered}</span>
                               <span className="text-gray-400 group-hover:text-orange-500">
                                 →
                               </span>

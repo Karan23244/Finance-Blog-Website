@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Footer from "../Common/Footer";
 import Subscribe from "../Common/Subscribe";
+import Footer from "../Common/Footer";
 import { Helmet } from "react-helmet-async";
 
 function generateBlogUrl(blog) {
@@ -28,23 +28,15 @@ function generateBlogUrl(blog) {
   return `/${mainCategorySlug}/${assignedCategorySlug}/${postSlug}`;
 }
 const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
-const currentUrl = window.location.href;
 
-export default function Personalfinance() {
+export default function News() {
   const [groupedPosts, setGroupedPosts] = useState([]);
-  const categoryFilter = [
-    {
-      name: "Financial Planning",
-      link: "/personal-finance/financial-planning",
-    },
-    { name: "Debt Management", link: "/personal-finance/debt-management" },
-  ];
   useEffect(() => {
     const fetchData = async () => {
       try {
         // Step 1: Fetch the "Personal Finance" main category
         const mainCatRes = await axios.get(
-          `${BASE_URL}/categories?slug=personal-finance`
+          `${BASE_URL}/categories?slug=news` // Changed slug to "risk-management"
         );
         const mainCategory = mainCatRes.data[0];
 
@@ -65,7 +57,7 @@ export default function Personalfinance() {
             return {
               category: {
                 name: subCat.name,
-                link: `/personal-finance/${subCat.slug}`,
+                link: `/news/${subCat.slug}`,
               },
               posts: postsRes.data,
             };
@@ -80,22 +72,23 @@ export default function Personalfinance() {
 
     fetchData();
   }, []);
+  const currentUrl = window.location.href;
 
   return (
     <>
       <Helmet>
-        <title>Your Guide to Personal Finance - Build Financial Wellness</title>
+        <title> The Future of News: Trends to Watch</title>
         <meta
           name="description"
-          content="Discover essential strategies for managing your personal finances. Learn how to budget effectively and grow your wealth with our expert advice."
+          content="Stay informed with the latest news updates from around the world. Our comprehensive coverage keeps you connected to current events and trending stories."
         />
         <meta
           property="og:title"
-          content="Your Guide to Personal Finance - Build Financial Wellness"
+          content="The Future of News: Trends to Watch"
         />
         <meta
           property="og:description"
-          content="Discover essential strategies for managing your personal finances. Learn how to budget effectively and grow your wealth with our expert advice."
+          content="Stay informed with the latest news updates from around the world. Our comprehensive coverage keeps you connected to current events and trending stories."
         />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${currentUrl}`} />
@@ -103,26 +96,19 @@ export default function Personalfinance() {
       </Helmet>
       <div className="relative w-full h-[350px] lg:h-[400px] overflow-hidden">
         <img
-          src="/Personal.webp"
-          alt="Personal Background"
+          src="/news.webp"
+          alt="News Background"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="relative z-10 flex flex-col justify-center gap-3 py-5 px-[2%] lg:px-[10%] h-full text-white bg-black/40">
-          <h1 className="lg:text-5xl text-xl font-semibold">
-            Personal Finances
-          </h1>
+          <h1 className="lg:text-5xl text-xl font-semibold">News</h1>
           <p className="lg:text-base text-xs leading-relaxed">
-            To secure your future, safe money management is required. Personal
-            Budgeting - Our goal at Trust Finance Advisory is to make wise
-            financial decisions. Learn how Financial Planning can help you set
-            goals and create a budget. Use Debt Management to pay off loans and
-            improve your credit. Put money into your child's future by using
-            "Education Planning." Advice from Tax Advisory on how to save money
-            and properly file returns.
+            Get the latest updates from Trust Finance Advisory. Discover our
+            latest news, expert insights, company announcements, and how we
+            empower your financial journey
           </p>
         </div>
       </div>
-
       <div className="lg:space-y-10 lg:px-8 my-4 mx-4">
         {groupedPosts.map(({ category, posts }, index) => (
           <div

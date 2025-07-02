@@ -14,6 +14,7 @@ import CurrencyExchange from "../Components/User/CurrencyExchange";
 import MoneyInsights from "../Components/User/MoneyInsights";
 import Footer from "../Common/Footer";
 import Subscribe from "../Common/Subscribe";
+import NewsList from "../Components/User/NewsList";
 import { fetchLatestPosts } from "../Apis/Wordpress";
 
 const UserHome = () => {
@@ -138,6 +139,7 @@ const UserHome = () => {
       </Helmet>
       <Hero />
       <TrendingNow posts={posts} />
+      <NewsList/>
       <div className="lg:min-h-[800px] h-[600px]">
         {showMarket && (
           <div

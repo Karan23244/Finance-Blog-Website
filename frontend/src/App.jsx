@@ -22,6 +22,7 @@ import CategoryBlogs from "./Pages/CategoryBlogs";
 import RiskManagement from "./Pages/RiskManagement";
 import Personalfinance from "./Pages/PersonalFinance";
 import Investment from "./Pages/Investment";
+import News from "./Pages/News";
 const Popup = React.lazy(() => import("./Common/Popup"));
 
 // Lazy-loading User Components
@@ -65,6 +66,7 @@ function App() {
             <Route path="/calculator" element={<CalculatorHome />} />
             <Route path="/risk-management" element={<RiskManagement />} />
             <Route path="/personal-finance" element={<Personalfinance />} />
+            <Route path="/news" element={<News />} />
             <Route
               path="/investment-and-wealth-growth"
               element={<Investment />}
