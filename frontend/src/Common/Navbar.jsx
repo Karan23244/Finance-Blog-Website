@@ -600,7 +600,13 @@ function Navbar() {
     const main = categories.filter((c) => c.parent === 0);
     const sub = categories.filter((c) => c.parent !== 0);
 
-    return main.map((m) => ({
+    // Move 'news' category to the end
+    const sortedMain = [
+      ...main.filter((c) => c.name.toLowerCase() !== "news"),
+      ...main.filter((c) => c.name.toLowerCase() === "news"),
+    ];
+
+    return sortedMain.map((m) => ({
       ...m,
       subcategories: sub.filter((s) => s.parent === m.id),
     }));
@@ -737,7 +743,7 @@ function Navbar() {
             {/* Desktop Menu */}
             //{" "}
             <div className="lg:flex items-center hidden justify-end lg:w-[80%] lg:order-1 pr-3 min-h-[50px]">
-              <ul className="flex items-center space-x-14 font-medium">
+              <ul className="flex items-center gap-12 font-medium">
                 <>
                   {groupedCategories.map((mainCat) => (
                     <li className="relative group" key={mainCat.id}>
