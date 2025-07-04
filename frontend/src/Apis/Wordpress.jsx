@@ -7,7 +7,7 @@ export const fetchCategories = async (limit = 7) => {
   const res = await axios.get(`${BASE_URL}/categories?per_page=100`);
   return res.data;
 };
-export const fetchLatestPosts = async (limit = 7) => {
+export const fetchLatestPosts = async (limit = 20) => {
   const res = await axios.get(
     `${BASE_URL}/posts?_embed&per_page=${limit}&orderby=date&order=desc`
   );

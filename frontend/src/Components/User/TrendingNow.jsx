@@ -114,9 +114,15 @@ const TrendingNow = memo(({ posts }) => {
                   currentIndex * (100 / visibleCards)
                 }%)`,
               }}>
-              {posts.slice(0, 7).map((blog, index) => (
-                <MemoizedBlogCard key={blog.id} blog={blog} index={index} />
-              ))}
+              {posts
+                .filter((blog) => {
+                  const terms = blog?._embedded?.["wp:term"]?.[0] || [];
+                  return !terms.some((term) => term.slug === "news");
+                })
+                .slice(0, 7)
+                .map((blog, index) => (
+                  <MemoizedBlogCard key={blog.id} blog={blog} index={index} />
+                ))}
             </div>
           </div>
 

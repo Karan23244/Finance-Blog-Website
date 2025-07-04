@@ -1,17 +1,16 @@
 // src/NewsList.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 function NewsList() {
+  const navigate = useNavigate();
   const BASE_URL = "https://cms.trustfinancialadvisory.com/wp-json/wp/v2";
   const [data, setData] = useState([]);
 
   const fetchData = async () => {
     try {
       // Step 1: Fetch the main category by slug
-      const mainCatRes = await axios.get(
-        `${BASE_URL}/categories?slug=news`
-      );
+      const mainCatRes = await axios.get(`${BASE_URL}/categories?slug=news`);
       const mainCategory = mainCatRes.data[0];
       if (!mainCategory) return [];
 
@@ -55,15 +54,13 @@ function NewsList() {
   return (
     <div className="w-full flex flex-col items-center p-6">
       <div className="relative w-full max-w-7xl">
-        <h1 className="text-[#E65100] text-3xl font-bold p-4">
-          Financial News
-        </h1>
+        <h1 className="text-[#E65100] text-3xl font-bold p-4">News</h1>
         <div className="grid lg:grid-cols-4 grid-cols-1  gap-6 p-4">
           {data.slice(0, 4).map((blog, idx) => (
             <div
               key={idx}
               onClick={() =>
-                navigate(generateBlogUrl(blog), { state: { article } })
+                navigate(generateBlogUrl(blog))
               }
               className="cursor-pointer bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
               <img
@@ -72,7 +69,7 @@ function NewsList() {
                   blog._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
                   blog.title.rendered
                 }
-                className="w-full rounded-xl object-cover aspect-[16/9] lg:h-[350px] h-[200px]"
+                className="w-full rounded-xl object-cover aspect-[16/9] lg:h-[250px] h-[200px]"
                 width="450"
                 height="200"
                 loading="lazy"
