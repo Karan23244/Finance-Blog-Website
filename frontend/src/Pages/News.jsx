@@ -156,7 +156,7 @@ const HorizontalBlogCard = ({ post }) => {
     <Link
       to={generateBlogUrl(post)}
       className="flex flex-col lg:flex-row bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-      <div className="w-full lg:w-1/3 h-48 lg:h-auto">
+      <div className="w-full lg:w-1/2 h-48 lg:h-auto">
         <img
           src={
             post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
@@ -172,7 +172,7 @@ const HorizontalBlogCard = ({ post }) => {
           loading="lazy"
         />
       </div>
-      <div className="p-4 flex flex-col items-start justify-start gap-2 w-full lg:w-2/3">
+      <div className="p-4 flex flex-col items-start justify-start gap-2 w-full lg:w-1/2">
         <h2
           className="text-lg font-bold text-gray-800 line-clamp-2"
           dangerouslySetInnerHTML={{ __html: post.title.rendered }}
