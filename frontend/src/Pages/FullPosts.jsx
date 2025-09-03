@@ -1,4 +1,4 @@
-import React, { useEffect, useState,Suspense } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "../Components/Admin/New_Post/styles.css";
@@ -30,6 +30,28 @@ const FullPost = () => {
 
     fetchPost();
   }, [param3]);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-100px 0px -60% 0px", // triggers when heading is in view
+        threshold: 0.1,
+      }
+    );
+
+    const sections = document.querySelectorAll("h2, h3");
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, [updatedContent]);
 
   useEffect(() => {
     if (post) {
@@ -39,7 +61,7 @@ const FullPost = () => {
         decodeHtml(post.content.rendered || ""),
         "text/html"
       );
-      const headings = Array.from(contentDocument.querySelectorAll("h2, h3"));
+      const headings = Array.from(contentDocument.querySelectorAll("h2"));
       const tocData = headings.map((heading, index) => {
         const id = `heading-${index}`;
         heading.id = id; // Assign ID to each heading
@@ -82,10 +104,10 @@ const FullPost = () => {
   const handleTOCClick = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 80, // Adjust for header or padding
-        behavior: "smooth",
-      });
+      const yOffset = -80; // height of sticky navbar
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
@@ -172,35 +194,35 @@ const FullPost = () => {
           />
         )}
       </Helmet>
-      <div className="mx-auto px-4 lg:px-8 pt-16">
+      <div className="mx-auto px-4 lg:px-8 ">
         {/* Main Layout */}
         <div className="flex flex-col lg:flex-row">
           {/* Sidebar for Table of Contents */}
-          <aside className="hidden lg:block w-1/4 pr-8 ">
-            <div className="sticky top-16 p-4 overflow-auto border-r-2 border-black h-screen">
-              <h2 className="text-3xl text-center font-semibold text-gray-900 mb-2">
+          <aside className="hidden lg:block w-1/4 pr-8">
+            <div className="sticky top-20 flex flex-col h-[calc(100vh-5rem)] border-r-2 border-black">
+              <h2 className="text-2xl text-center font-semibold text-gray-900 mb-2 mt-10">
                 Table of Contents
               </h2>
               <hr className="w-[60%] h-1 rounded-lg mx-auto bg-black mb-4" />
-              <ul className="space-y-3">
+              {/* scrollable list */}
+              <ul className="space-y-3 overflow-y-auto pr-2">
                 {toc.map((item) => (
                   <li
                     key={item.id}
-                    className={`padding-${
+                    className={`ml-${
                       item.level === "h2"
-                        ? "4"
+                        ? "2"
                         : item.level === "h3"
-                        ? "8"
+                        ? "6"
                         : "0"
-                    }
-                      ${
-                        activeSection === item.id
-                          ? "font-bold text-blue-600"
-                          : "text-gray-800"
-                      }`}>
+                    } ${
+                      activeSection === item.id
+                        ? "font-bold text-blue-600"
+                        : "text-gray-800"
+                    }`}>
                     <a
                       href={`#${item.id}`}
-                      className="hover:text-blue-800 hover:underline text-lg font-medium"
+                      className="hover:text-blue-800 hover:underline text-lg font-medium block"
                       onClick={(e) => {
                         e.preventDefault();
                         handleTOCClick(item.id);
@@ -217,7 +239,7 @@ const FullPost = () => {
           <main className="lg:w-3/5">
             <div className="mb-6">
               <h1
-                className="text-3xl font-bold mb-4"
+                className="text-3xl font-bold mb-4 mt-10"
                 dangerouslySetInnerHTML={{ __html: post.title.rendered }}
               />
             </div>
@@ -253,7 +275,9 @@ const FullPost = () => {
 
             <div
               className="custom-html text-gray-700 leading-relaxed mb-8 pt-4"
-              dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+              dangerouslySetInnerHTML={{
+                __html: updatedContent || post.content.rendered,
+              }}
             />
           </main>
 

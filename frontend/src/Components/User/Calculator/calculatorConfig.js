@@ -6,11 +6,11 @@ const calculators = [
       "Plan your SIP investments carefully and learn how the power of intelligent compounding can transform modest monthly contributions into a sizable fortune over time.",
     inputs: [
       {
-        label: "Monthly Investment (₹)",
+        label: "Monthly Investment ($)",
         key: "investment",
         type: "number",
         default: 5000,
-        max: 1000000,
+        max: 100000,
       },
       {
         label: "Expected Return Rate (%)",
@@ -27,7 +27,7 @@ const calculators = [
         max: 40,
       },
     ],
-    output: "Future Value (₹)",
+    output: "Future Value ($)",
     showGraph: true,
     html: `<p><span style="font-weight: 400;">Welcome to the SIP Calculator by Trust Financial Advisory! We made this for you to make your financial journey management much easier with the help of Systematic Investment Plans, or SIPs. This will let you see how much money has grown in time, irrespective of whether you have been investing for years or just beginning. We look forward to guiding you toward wise choices that will bring about your financial success!</span></p>
 <p class="demoTitle">&nbsp;</p>
@@ -49,12 +49,12 @@ const calculators = [
 <p class="demoTitle">&nbsp;</p>
 <p><strong>For Example&nbsp;</strong></p>
 <p class="demoTitle">&nbsp;</p>
-<p><strong>Assumptions:</strong><span style="font-weight: 400;"> You have chosen an investment of ₹5,000 a month for ten years in a mutual fund that you believe will return 12% per annum.</span></p>
+<p><strong>Assumptions:</strong><span style="font-weight: 400;"> You have chosen an investment of $5,000 a month for ten years in a mutual fund that you believe will return 12% per annum.</span></p>
 <p class="demoTitle">&nbsp;</p>
 <p><span style="font-weight: 400;">Brief Description of Your Strategy:</span></p>
 <p class="demoTitle">&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;</span><strong>Amount each month:</strong><span style="font-weight: 400;"> ₹5,000.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;</span><strong>Amount each month:</strong><span style="font-weight: 400;"> $5,000.</span></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;</span><strong>Number of months:</strong><span style="font-weight: 400;"> 120 months or 10 years.</span></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;</span><strong>Expected Rate of Return:</strong><span style="font-weight: 400;"> 12% Annually</span></li>
 </ul>
@@ -63,11 +63,11 @@ const calculators = [
 <p class="demoTitle">&nbsp;</p>
 <p><strong>Using the SIP Calculator will yield some interesting numbers:</strong></p>
 <p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">The investment was worth ₹5,00,000, which amounts to ₹5,000 per month for 120 months.</span></p>
+<p><span style="font-weight: 400;">The investment was worth $5,00,000, which amounts to $5,000 per month for 120 months.</span></p>
 <p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">Estimated future value amounts to around ₹10,50,000.&nbsp;</span></p>
+<p><span style="font-weight: 400;">Estimated future value amounts to around $10,50,000.&nbsp;</span></p>
 <p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">This would mean that if you save ₹5,000 every month for ten years, the money added may be more than ₹10 lakh! Primarily, growth or appreciation will come because of compounding, which allows the returns to earn returns on the initial investment and returns over time.</span></p>
+<p><span style="font-weight: 400;">This would mean that if you save $5,000 every month for ten years, the money added may be more than $10 lakh! Primarily, growth or appreciation will come because of compounding, which allows the returns to earn returns on the initial investment and returns over time.</span></p>
 <p class="demoTitle">&nbsp;</p>
 <p><strong>Advantages of Using the SIP Calculator</strong></p>
 <p class="demoTitle">&nbsp;</p>
@@ -89,8 +89,9 @@ const calculators = [
 <li style="font-weight: 400;"><span style="font-weight: 400;">Review and adjust your SIP amount or duration regularly based on your financial goals and current market conditions.</span></li>
 </ul>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"SIP Calculator | Plan Your Investment Smartly",
-seodescription:"New to SIP investing? Use our simple SIP Calculator to plan smart investments with accurate calculations. Grow your wealth with Trust Financial Advisory!",
+    seotitle: "SIP Calculator | Plan Your Investment Smartly",
+    seodescription:
+      "New to SIP investing? Use our simple SIP Calculator to plan smart investments with accurate calculations. Grow your wealth with Trust Financial Advisory!",
   },
   {
     id: "lumpsum",
@@ -99,7 +100,7 @@ seodescription:"New to SIP investing? Use our simple SIP Calculator to plan smar
       "Find out how much your one-time investment will be worth in the future and use mutual fund compounding to increase your returns.",
     inputs: [
       {
-        label: "Investment Amount (₹)",
+        label: "Investment Amount ($)",
         key: "investment",
         type: "number",
         default: 5000,
@@ -120,7 +121,7 @@ seodescription:"New to SIP investing? Use our simple SIP Calculator to plan smar
         max: 40,
       },
     ],
-    output: "Future Value (₹)",
+    output: "Future Value ($)",
     showGraph: true,
     html: `<p><span style="font-weight: 400;">Hello from the Trust Financial Advisory Lumpsum Calculator. One can use this to analyze the return on a lump sum mutual fund or any alternative investment. One could eventually see savings for your child's education or retirement in the future.</span></p>
 <p>&nbsp;</p>
@@ -146,19 +147,19 @@ seodescription:"New to SIP investing? Use our simple SIP Calculator to plan smar
 <p>&nbsp;</p>
 <p><strong>For Example&nbsp;</strong></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Assume that you have invested ₹1,00,000 in a mutual fund which is likely to fetch an annual rate of return of 10% over the next five years.</span></p>
+<p><span style="font-weight: 400;">Assume that you have invested $1,00,000 in a mutual fund which is likely to fetch an annual rate of return of 10% over the next five years.</span></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><strong>Amount Invested:</strong><span style="font-weight: 400;"> ₹1,00,000</span></li>
+<li style="font-weight: 400;"><strong>Amount Invested:</strong><span style="font-weight: 400;"> $1,00,000</span></li>
 <li style="font-weight: 400;"><strong>Investment Tenure:</strong><span style="font-weight: 400;"> Five Years</span></li>
 <li style="font-weight: 400;"><strong>Expected Return Rate:</strong><span style="font-weight: 400;"> 10% per annum</span></li>
 </ul>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">With the Lumpsum Calculator you will get:</span></p>
 <p>&nbsp;</p>
-<p><strong>Approx Future Value:</strong><span style="font-weight: 400;"> ₹1,61,051</span></p>
+<p><strong>Approx Future Value:</strong><span style="font-weight: 400;"> $1,61,051</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">So with compounding, your investment of ₹1,00,000 today will double and more to over ₹1.61 lakh in just 5 years!</span></p>
+<p><span style="font-weight: 400;">So with compounding, your investment of $1,00,000 today will double and more to over $1.61 lakh in just 5 years!</span></p>
 <p><br /><br /><br /></p>
 <p><strong>Advantages of Using the Lumpsum Calculator</strong></p>
 <p>&nbsp;</p>
@@ -180,8 +181,9 @@ seodescription:"New to SIP investing? Use our simple SIP Calculator to plan smar
 </ul>
 <p><strong>Diversification:</strong><span style="font-weight: 400;"> Try to distribute one-time investment in several different classes of assets. This strategy helps increase your probable returns and</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"Lumpsum Investment Calculator | Smart Financial Planning",
-seodescription:"Calculate returns on your one-time investment with our Lumpsum Return Calculator. Plan wisely and achieve your financial goals with Trust Financial Advisory.",
+    seotitle: "Lumpsum Investment Calculator | Smart Financial Planning",
+    seodescription:
+      "Calculate returns on your one-time investment with our Lumpsum Return Calculator. Plan wisely and achieve your financial goals with Trust Financial Advisory.",
   },
   {
     id: "swp",
@@ -190,14 +192,14 @@ seodescription:"Calculate returns on your one-time investment with our Lumpsum R
       "Plan your withdrawals strategically with the SWP calculator and ensure a steady income flow while maintaining investment growth over time.",
     inputs: [
       {
-        label: "Initial Investment (₹)",
+        label: "Initial Investment ($)",
         key: "initialInvestment",
         type: "number",
         default: 500000,
         max: 10000000,
       },
       {
-        label: "Withdrawal Amount (₹)",
+        label: "Withdrawal Amount ($)",
         key: "withdrawal",
         type: "number",
         default: 10000,
@@ -218,9 +220,9 @@ seodescription:"Calculate returns on your one-time investment with our Lumpsum R
         max: 40,
       },
     ],
-    output: "Remaining Balance (₹)",
+    output: "Remaining Balance ($)",
     showGraph: false,
-    html:`<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s SWP Calculator! You&apos;re on the correct platform if you&apos;re interested in utilizing your investments to create a regular income stream. With our Systematic Withdrawal Plan (SWP) Calculator, you can calculate how much you can withdraw from your mutual fund investments on a routine basis while keeping the growth of your capital intact.</span></p>
+    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s SWP Calculator! You&apos;re on the correct platform if you&apos;re interested in utilizing your investments to create a regular income stream. With our Systematic Withdrawal Plan (SWP) Calculator, you can calculate how much you can withdraw from your mutual fund investments on a routine basis while keeping the growth of your capital intact.</span></p>
 <p><br></p>
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Systematic Withdrawal Plan (SWP)?</span></strong></p>
 <p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investors can withdraw a fixed amount from their mutual fund investments on a monthly or quarterly basis through a Systematic Withdrawal Plan (SWP). This option provides a balanced method of managing investments and cash flow, which is ideal for individuals seeking a regular income while still enjoying the advantages of potential capital appreciation.</span></p>
@@ -257,7 +259,7 @@ seodescription:"Calculate returns on your one-time investment with our Lumpsum R
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
 <ul>
   <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹10,00,000</span></p>
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$10,00,000</span></p>
   </li>
   <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
       <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expected Return Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;8% per annum</span></p>
@@ -266,10 +268,10 @@ seodescription:"Calculate returns on your one-time investment with our Lumpsum R
       <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Withdrawal Frequency:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Monthly</span></p>
   </li>
   <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Withdrawal Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹50,000</span></p>
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Withdrawal Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$50,000</span></p>
   </li>
   <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Estimated Remaining Investment After 1 Year:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹8,00,000</span></p>
+      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Estimated Remaining Investment After 1 Year:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$8,00,000</span></p>
   </li>
 </ul>
 <p><br></p>
@@ -295,8 +297,9 @@ seodescription:"Calculate returns on your one-time investment with our Lumpsum R
   </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`,
-seotitle:"SWP Calculator | Retirement Planning Tool",
-seodescription:"Use the SWP Calculator to plan retirement withdrawals from mutual funds. Ensure a steady income stream and secure your finances for a stress-free future.",
+    seotitle: "SWP Calculator | Retirement Planning Tool",
+    seodescription:
+      "Use the SWP Calculator to plan retirement withdrawals from mutual funds. Ensure a steady income stream and secure your finances for a stress-free future.",
   },
   {
     id: "mutualFund",
@@ -305,7 +308,7 @@ seodescription:"Use the SWP Calculator to plan retirement withdrawals from mutua
       "To reach your financial objectives faster, estimate your mutual fund returns with ease and make wise investment choices.",
     inputs: [
       {
-        label: "Investment Amount (₹)",
+        label: "Investment Amount ($)",
         key: "investment",
         type: "number",
         default: 5000,
@@ -326,7 +329,7 @@ seodescription:"Use the SWP Calculator to plan retirement withdrawals from mutua
         max: 40,
       },
     ],
-    output: "Maturity Value (₹)",
+    output: "Maturity Value ($)",
     showGraph: true,
     html: `<p><span style="font-weight: 400;">Salutations from Trust Financial Advisory, the Mutual Fund Calculator. This important tool has been created to help people understand how much their money will generate returns in their mutual fund investments. In light of making smart investment decisions, our mutual fund calculator provides beneficial knowledge. With respect to your personal financial planning, you can research and expand your planning.</span></p>
 <p>&nbsp;</p>
@@ -348,19 +351,19 @@ seodescription:"Use the SWP Calculator to plan retirement withdrawals from mutua
 <p><br /><br /><br /></p>
 <p><strong>For Example&nbsp;</strong></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Suppose one decides to invest ₹50,000 annually for ten years in a mutual fund one expects returns of 12% per annum.</span></p>
+<p><span style="font-weight: 400;">Suppose one decides to invest $50,000 annually for ten years in a mutual fund one expects returns of 12% per annum.</span></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><strong>Annual investible amount:</strong><span style="font-weight: 400;"> ₹50,000</span></li>
+<li style="font-weight: 400;"><strong>Annual investible amount:</strong><span style="font-weight: 400;"> $50,000</span></li>
 <li style="font-weight: 400;"><strong>Number of years:</strong><span style="font-weight: 400;"> 10 years</span></li>
 <li style="font-weight: 400;"><strong>Expected rate of return annually:</strong><span style="font-weight: 400;"> 12%</span></li>
 </ul>
 <p>&nbsp;</p>
 <p><strong>Using the Mutual Fund Calculator, one would find</strong></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Cumulative investment is the product of annual investment and number of years, which turns out to be ₹5,00,000, the product of ₹50,000 and ten years.</span></p>
+<p><span style="font-weight: 400;">Cumulative investment is the product of annual investment and number of years, which turns out to be $5,00,000, the product of $50,000 and ten years.</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">The approximate calculated future value is around ₹11,60,000.</span></p>
+<p><span style="font-weight: 400;">The approximate calculated future value is around $11,60,000.</span></p>
 <p><span style="font-weight: 400;">This implies a sum of 50,000 as annual investment can be reached to over 11.6 lakh by the end of a decade with compound interest.</span></p>
 <p>&nbsp;</p>
 <p><strong>Advantages of Using the Mutual Fund Calculator</strong></p>
@@ -381,8 +384,9 @@ seodescription:"Use the SWP Calculator to plan retirement withdrawals from mutua
 </ul>
 <p><strong>Monitoring:</strong><span style="font-weight: 400;"> It would be a very good idea to monitor your investments in mutual funds from time to time and fine-tune them in accordance with your financial objectives and the state of the prevailing market.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"Mutual Fund Calculator | Growth with Trust Financial Advisory",
-seodescription:"Use our Mutual Fund Calculator to maximize returns. Get accurate projections and grow your investments wisely with Trust Financial Advisory. Start smart investing today!",
+    seotitle: "Mutual Fund Calculator | Growth with Trust Financial Advisory",
+    seodescription:
+      "Use our Mutual Fund Calculator to maximize returns. Get accurate projections and grow your investments wisely with Trust Financial Advisory. Start smart investing today!",
   },
   {
     id: "ppf",
@@ -391,7 +395,7 @@ seodescription:"Use our Mutual Fund Calculator to maximize returns. Get accurate
       "By carefully planning your savings and calculating the returns on your Public Provident Fund, you can safeguard your future. ",
     inputs: [
       {
-        label: "Yearly Investment (₹)",
+        label: "Yearly Investment ($)",
         key: "investment",
         type: "number",
         default: 5000,
@@ -411,7 +415,7 @@ seodescription:"Use our Mutual Fund Calculator to maximize returns. Get accurate
         max: 30,
       },
     ],
-    output: "Maturity Value (₹)",
+    output: "Maturity Value ($)",
     showGraph: true,
     html: `<p><span style="font-weight: 400;">Hello, With its highly advantageous PPF Calculator, Trust Financial Advisory has made it easy to understand the potential returns generated with investments in the Public Provident Fund. Our PPF Calculator helps you with required information about saving funds securely, planning retirement, and paying for your child's education, among others, thereby giving you informed decisions regarding your financial goals.</span></p>
 <p>&nbsp;</p>
@@ -434,19 +438,19 @@ seodescription:"Use our Mutual Fund Calculator to maximize returns. Get accurate
 <p><strong>For Example&nbsp;</strong></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Invest ₹5,000 a month at 7.1% for 15 years in a PPF account.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Monthly investment: ₹5,000&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invest $5,000 a month at 7.1% for 15 years in a PPF account.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Monthly investment: $5,000&nbsp;</span></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">Investment tenure: 15 years (180 months) 7.1% is the rate of return on an annual basis.&nbsp;</span></li>
 </ul>
 <p>&nbsp;</p>
 <p><strong>Results from PPF Calculator:</strong></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Total Investment: ₹9,000,000&nbsp;</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Approx. Estimated Future Value: ~₹17,000,000&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Total Investment: $9,000,000&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Approx. Estimated Future Value: ~$17,000,000&nbsp;</span></li>
 </ul>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">₹5,000 will be approximately ₹17 lakh in 15 years if it's deposited every month.</span></p>
+<p><span style="font-weight: 400;">$5,000 will be approximately $17 lakh in 15 years if it's deposited every month.</span></p>
 <p>&nbsp;</p>
 <p><strong>Advantages of Using the PPF Calculator</strong></p>
 <p>&nbsp;</p>
@@ -468,8 +472,9 @@ seodescription:"Use our Mutual Fund Calculator to maximize returns. Get accurate
 </ul>
 <p><strong>Diversification:</strong><span style="font-weight: 400;"> Even though PPF is a risk-free investment, one should diversify the portfolio with other investment choices to strike the right balance between risk and returns.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"PPF Interest Calculator | Plan Your Retirement Savings Now",
-seodescription:"Calculate your PPF returns with our easy-to-use PPF Calculator. Estimate savings growth, plan investments wisely, and secure your financial future today!",
+    seotitle: "PPF Interest Calculator | Plan Your Retirement Savings Now",
+    seodescription:
+      "Calculate your PPF returns with our easy-to-use PPF Calculator. Estimate savings growth, plan investments wisely, and secure your financial future today!",
   },
   {
     id: "epf",
@@ -478,7 +483,7 @@ seodescription:"Calculate your PPF returns with our easy-to-use PPF Calculator. 
       "Keep track of your future corpus and contributions to the Employee Provident Fund to guarantee a comfortable retirement.",
     inputs: [
       {
-        label: "Monthly Basic Salary (₹)",
+        label: "Monthly Basic Salary ($)",
         key: "basicSalary",
         type: "number",
         default: 50000,
@@ -513,7 +518,7 @@ seodescription:"Calculate your PPF returns with our easy-to-use PPF Calculator. 
         max: 40,
       },
     ],
-    output: "EPF Corpus (₹)",
+    output: "EPF Corpus ($)",
     showGraph: false,
     html: `<p><span style="font-weight: 400;">We are happy to introduce you to the EPF Calculator from Trust Financial Advisory. This is one of the vital tools that helps assess possible returns on investments into the Employees Provident Fund (EPF). The EPF Calculator will provide you with invaluable information to make informed decisions for your money, be it to retire or get a better feel for your savings.</span></p>
 <p>&nbsp;</p>
@@ -536,22 +541,22 @@ seodescription:"Calculate your PPF returns with our easy-to-use PPF Calculator. 
 <p>&nbsp;</p>
 <p><strong>For Example&nbsp;</strong></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Suppose you opt for a monthly deposit of ₹5,000 in your EPF account, and your employer also deposits an amount of ₹5,000. You will deposit it for 20 years. The annual interest rate expected is 8.5%.</span></p>
+<p><span style="font-weight: 400;">Suppose you opt for a monthly deposit of $5,000 in your EPF account, and your employer also deposits an amount of $5,000. You will deposit it for 20 years. The annual interest rate expected is 8.5%.</span></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><strong>Monthly contribution by Employee:</strong><span style="font-weight: 400;"> ₹5,000</span></li>
-<li style="font-weight: 400;"><strong>Monthly contribution by Employer</strong><span style="font-weight: 400;">: ₹5,000</span></li>
+<li style="font-weight: 400;"><strong>Monthly contribution by Employee:</strong><span style="font-weight: 400;"> $5,000</span></li>
+<li style="font-weight: 400;"><strong>Monthly contribution by Employer</strong><span style="font-weight: 400;">: $5,000</span></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">Annual interest rate is 8.5%.</span></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">It lasts for 20 years, or 240 months.</span></li>
 </ul>
 <p>&nbsp;</p>
 <p><strong>Using the EPF Calculator, you would find that:</strong></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">The cumulative contribution amounted to ₹24,00,000 (calculated as ₹10,000 multiplied by 240 months).</span></p>
+<p><span style="font-weight: 400;">The cumulative contribution amounted to $24,00,000 (calculated as $10,000 multiplied by 240 months).</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Estimated Future Value: Approximately ₹1,00,00,000</span></p>
+<p><span style="font-weight: 400;">Estimated Future Value: Approximately $1,00,00,000</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">This would mean with the power of compound interest, you would save roughly an amount of ₹ 1 crore in your EPF by paying ₹ 10,000 a month for 20 years-your contribution plus your employer's.</span></p>
+<p><span style="font-weight: 400;">This would mean with the power of compound interest, you would save roughly an amount of $ 1 crore in your EPF by paying $ 10,000 a month for 20 years-your contribution plus your employer's.</span></p>
 <p>&nbsp;</p>
 <p><strong>Advantages of Using the EPF Calculator</strong></p>
 <p>&nbsp;</p>
@@ -572,8 +577,9 @@ seodescription:"Calculate your PPF returns with our easy-to-use PPF Calculator. 
 </ul>
 <p><strong>Withdrawal Rules:</strong><span style="font-weight: 400;"> Know the rules for EPF withdrawal as it may influence your retirement planning. Generally, you can withdraw your EPF amount at the time of retirement or under specific conditions.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"EPF Calculator | Calculate PF Contributions & Interest",
-seodescription:"Use our free EPF calculator to estimate your Employee Provident Fund (EPF) savings. Get insights into your retirement savings and plan a secure future today.",
+    seotitle: "EPF Calculator | Calculate PF Contributions & Interest",
+    seodescription:
+      "Use our free EPF calculator to estimate your Employee Provident Fund (EPF) savings. Get insights into your retirement savings and plan a secure future today.",
   },
   {
     id: "rd",
@@ -582,7 +588,7 @@ seodescription:"Use our free EPF calculator to estimate your Employee Provident 
       "Observe how gradual interest earnings from modest, regular deposits can grow into a sizeable sum. ",
     inputs: [
       {
-        label: "Monthly Deposit (₹)",
+        label: "Monthly Deposit ($)",
         key: "investment",
         type: "number",
         default: 50000,
@@ -603,7 +609,7 @@ seodescription:"Use our free EPF calculator to estimate your Employee Provident 
         max: 10,
       },
     ],
-    output: "Maturity Value (₹)",
+    output: "Maturity Value ($)",
     showGraph: true,
     html: `<p><span style="font-weight: 400;">Welcome to the Recurring Deposit Calculator by Trust Financial Advisory. It is a highly important tool which will help you look over the returns on investments that would be generated through recurring deposits.&nbsp;</span></p>
 <p>&nbsp;</p>
@@ -627,21 +633,21 @@ seodescription:"Use our free EPF calculator to estimate your Employee Provident 
 <p>&nbsp;</p>
 <p><strong>For Example&nbsp;</strong></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Assuming the saver saves ₹5,000 per month to a recurring deposit account for five years, then the annual interest rate would be 7%.</span></p>
+<p><span style="font-weight: 400;">Assuming the saver saves $5,000 per month to a recurring deposit account for five years, then the annual interest rate would be 7%.</span></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><strong>Periodic deposit:</strong><span style="font-weight: 400;"> ₹5,000.</span></li>
+<li style="font-weight: 400;"><strong>Periodic deposit:</strong><span style="font-weight: 400;"> $5,000.</span></li>
 <li style="font-weight: 400;"><strong>Annual interest rate:</strong><span style="font-weight: 400;"> 7%</span></li>
 <li style="font-weight: 400;"><strong>Investment Period:</strong><span style="font-weight: 400;"> 5 Years (60 Months)</span></li>
 </ul>
 <p>&nbsp;</p>
 <p><strong>Using the RD Calculator, you would find that:</strong></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Total investment is ₹3,00,000 (₹5,000 x 60 months).</span></p>
+<p><span style="font-weight: 400;">Total investment is $3,00,000 ($5,000 x 60 months).</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Future value estimated at about ₹3,48,000.</span></p>
+<p><span style="font-weight: 400;">Future value estimated at about $3,48,000.</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">That will mean with the addition of compound interest, you can grow your investment up to about ₹3.48 lakh if you add a monthly deposit of ₹5,000 for five years.</span></p>
+<p><span style="font-weight: 400;">That will mean with the addition of compound interest, you can grow your investment up to about $3.48 lakh if you add a monthly deposit of $5,000 for five years.</span></p>
 <p><br /><br /><br /></p>
 <p><strong>Advantages of Using the RD Calculator</strong></p>
 <p>&nbsp;</p>
@@ -663,8 +669,9 @@ seodescription:"Use our free EPF calculator to estimate your Employee Provident 
 </ul>
 <p><strong>Tax Implications:</strong><span style="font-weight: 400;"> Interest earned on recurring deposits is taxable. So, be sure to factor in tax implications while planning your savings.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"Recurring Deposit Calculator | Calculate RD Returns Instantly",
-seodescription:"Quickly calculate your RD maturity amount and interest with our free Recurring Deposit (RD) Calculator. Plan your savings smartly and achieve your goals",
+    seotitle: "Recurring Deposit Calculator | Calculate RD Returns Instantly",
+    seodescription:
+      "Quickly calculate your RD maturity amount and interest with our free Recurring Deposit (RD) Calculator. Plan your savings smartly and achieve your goals",
   },
   {
     id: "fd",
@@ -673,7 +680,7 @@ seodescription:"Quickly calculate your RD maturity amount and interest with our 
       "To effectively maximise returns, figure out the interest and maturity value of your fixed deposit investment.",
     inputs: [
       {
-        label: "Deposit Amount (₹)",
+        label: "Deposit Amount ($)",
         key: "investment",
         type: "number",
         default: 50000,
@@ -694,7 +701,7 @@ seodescription:"Quickly calculate your RD maturity amount and interest with our 
         max: 10,
       },
     ],
-    output: "Maturity Value (₹)",
+    output: "Maturity Value ($)",
     showGraph: true,
     html: `<p><span style="font-weight: 400;">Welcome to the Trust Financial Advisory Fixed Deposit Calculator! The free, easy-to-use calculator helps you discover the returns you could get from fixed deposits. The FD calculator offered here will allow all sorts of people, from beginners to professionals, to find out what your probable return will be, so you make the best financial decisions possible.</span></p>
 <p>&nbsp;</p>
@@ -727,10 +734,10 @@ seodescription:"Quickly calculate your RD maturity amount and interest with our 
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Using the FD Calculator, you would input these values, and upon clicking "Calculate," you would find:</span></p>
 <p>&nbsp;</p>
-<p><strong>Maturity Amount:</strong><span style="font-weight: 400;"> ₹11,576.25</span></p>
-<p><strong>Total Interest Earned:</strong><span style="font-weight: 400;"> ₹1,576.25</span></p>
+<p><strong>Maturity Amount:</strong><span style="font-weight: 400;"> $11,576.25</span></p>
+<p><strong>Total Interest Earned:</strong><span style="font-weight: 400;"> $1,576.25</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">This means that after 3 years, your initial investment of $10,000 will grow to ₹11,576.25, earning you a total interest of ₹1,576.25.</span></p>
+<p><span style="font-weight: 400;">This means that after 3 years, your initial investment of $10,000 will grow to $11,576.25, earning you a total interest of $1,576.25.</span></p>
 <p>&nbsp;</p>
 <p><strong>Advantages of Using the FD Calculator</strong></p>
 <p>&nbsp;</p>
@@ -749,8 +756,10 @@ seodescription:"Quickly calculate your RD maturity amount and interest with our 
 </ul>
 <p><strong>Interest growth:</strong><span style="font-weight: 400;"> Compounding Effect Compounds interest earned from fixed deposits can be compounded quarterly, semiannually, or annually to enhance their returns. See which one compounds the most often.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"Fixed Deposit (FD) Interest Calculator | Trust Financial Advisory",
-seodescription:"Easily calculate your FD maturity amount & interest with our online FD Calculator. Plan your investments wisely for smart financial decisions.",
+    seotitle:
+      "Fixed Deposit (FD) Interest Calculator | Trust Financial Advisory",
+    seodescription:
+      "Easily calculate your FD maturity amount & interest with our online FD Calculator. Plan your investments wisely for smart financial decisions.",
   },
   {
     id: "nps",
@@ -759,7 +768,7 @@ seodescription:"Easily calculate your FD maturity amount & interest with our onl
       "Estimate your monthly pension and total corpus under the National Pension System to make an informed retirement plan.",
     inputs: [
       {
-        label: "Monthly Contribution (₹)",
+        label: "Monthly Contribution ($)",
         key: "investment",
         type: "number",
         default: 5000,
@@ -787,7 +796,7 @@ seodescription:"Easily calculate your FD maturity amount & interest with our onl
         max: 10,
       },
     ],
-    output: "Corpus & Pension (₹)",
+    output: "Corpus & Pension ($)",
     showGraph: false,
     html: `<p><span style="font-weight: 400;">We are pleased to introduce you to the National Pension System (NPS) Calculator by Trust Financial Advisory. Be it the time when you first joined your workplace or at the final mile of retiring, this simple calculator would help you in estimating the retirement corpus under the NPS scheme so that you can confidently plan for your financial future.</span></p>
 <p>&nbsp;</p>
@@ -811,7 +820,7 @@ seodescription:"Easily calculate your FD maturity amount & interest with our onl
 <p><span style="font-weight: 400;">Now, let us consider an example wherein you desire to compute the corpus for retirement, using the following values,</span></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><strong>Contribution per Month:</strong><span style="font-weight: 400;"> ₹500</span></li>
+<li style="font-weight: 400;"><strong>Contribution per Month:</strong><span style="font-weight: 400;"> $500</span></li>
 <li style="font-weight: 400;"><strong>Expected Rate of Return:</strong><span style="font-weight: 400;"> 9% per year</span></li>
 <li style="font-weight: 400;"><strong>Period of Investment:</strong><span style="font-weight: 400;"> 30 Years</span></li>
 </ul>
@@ -821,11 +830,11 @@ seodescription:"Easily calculate your FD maturity amount & interest with our onl
 <p><span style="font-weight: 400;">It will be about $1,200,000. This is an estimated retirement corpus.</span></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><strong>Total Contributions:</strong><span style="font-weight: 400;"> ₹180,000</span></li>
-<li style="font-weight: 400;"><strong>Total Interest:</strong><span style="font-weight: 400;"> ₹1,020,000</span></li>
+<li style="font-weight: 400;"><strong>Total Contributions:</strong><span style="font-weight: 400;"> $180,000</span></li>
+<li style="font-weight: 400;"><strong>Total Interest:</strong><span style="font-weight: 400;"> $1,020,000</span></li>
 </ul>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">This means you could have an amount of around ₹1,200,000 with a total interest of $1,020,000 from 30 years of monthly contributions of ₹500.</span></p>
+<p><span style="font-weight: 400;">This means you could have an amount of around $1,200,000 with a total interest of $1,020,000 from 30 years of monthly contributions of $500.</span></p>
 <p><br /><br /></p>
 <p><strong>Advantages of Using the NPS Calculator</strong></p>
 <p>&nbsp;</p>
@@ -847,8 +856,10 @@ seodescription:"Easily calculate your FD maturity amount & interest with our onl
 </ul>
 <p><strong>Tax Benefits:</strong><span style="font-weight: 400;"> The NPS is a tax-efficient retirement savings option because contributions are deductible under Section 80CCD.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"National Pension System (NPS) Calculator | Trust Financial Advisory",
-seodescription:"Estimate your retirement savings with our NPS Calculator. Get accurate pension & annuity projections for a stress-free future. Plan today!",
+    seotitle:
+      "National Pension System (NPS) Calculator | Trust Financial Advisory",
+    seodescription:
+      "Estimate your retirement savings with our NPS Calculator. Get accurate pension & annuity projections for a stress-free future. Plan today!",
   },
   {
     id: "retirement",
@@ -857,7 +868,7 @@ seodescription:"Estimate your retirement savings with our NPS Calculator. Get ac
       "Find out how much you need to save now for a financially independent and stress-free retirement.",
     inputs: [
       {
-        label: "Monthly Expenses (₹)",
+        label: "Monthly Expenses ($)",
         key: "expenses",
         type: "number",
         default: 30000,
@@ -892,7 +903,7 @@ seodescription:"Estimate your retirement savings with our NPS Calculator. Get ac
         max: 15,
       },
     ],
-    output: "Retirement Corpus (₹)",
+    output: "Retirement Corpus ($)",
     showGraph: false,
     html: `<p><span style="font-weight: 400;">Trust Financial Advisory retirement calculator: Next biggest decision that you make during the whole course of your life comes regarding your retirement. Use the retirement calculator below to understand exactly how much money you are likely to require for the post- retirement years to spend in order to enjoy and then what you have to save each month in that respect.</span></p>
 <p>&nbsp;</p>
@@ -915,13 +926,13 @@ seodescription:"Estimate your retirement savings with our NPS Calculator. Get ac
 <li style="font-weight: 400;"><strong>Age now:</strong><span style="font-weight: 400;"> 30</span></li>
 <li style="font-weight: 400;"><strong>Age to retire:</strong><span style="font-weight: 400;"> 65</span></li>
 <li style="font-weight: 400;"><strong>Expected age of life:</strong><span style="font-weight: 400;"> 85</span></li>
-<li style="font-weight: 400;"><strong>Money currently saved:</strong><span style="font-weight: 400;"> ₹50,000</span></li>
-<li style="font-weight: 400;"><strong>Amount deposited monthly:</strong><span style="font-weight: 400;"> ₹500</span></li>
+<li style="font-weight: 400;"><strong>Money currently saved:</strong><span style="font-weight: 400;"> $50,000</span></li>
+<li style="font-weight: 400;"><strong>Amount deposited monthly:</strong><span style="font-weight: 400;"> $500</span></li>
 <li style="font-weight: 400;"><strong>Desired annual interest rate:</strong><span style="font-weight: 400;"> 6%</span></li>
 </ul>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">You can put in the above data and it will tell you how much money you will save by your age of 65 and for how long the amount saved would sustain you as long as you live.</span></p>
-<p><span style="font-weight: 400;">Let's just take this case where you are saving ₹500 per month and earning a 6% return. Then, when you retire, you might have your savings around ₹15,00,000. This will help you predict if the savings strategy you are following is good enough to take you through the lifestyle you desire during retirement. It is an excellent means of reviewing your strategy and implementing the right one.</span></p>
+<p><span style="font-weight: 400;">Let's just take this case where you are saving $500 per month and earning a 6% return. Then, when you retire, you might have your savings around $15,00,000. This will help you predict if the savings strategy you are following is good enough to take you through the lifestyle you desire during retirement. It is an excellent means of reviewing your strategy and implementing the right one.</span></p>
 <p><strong>Key Insights</strong></p>
 <ul>
 <li style="font-weight: 400;"><strong>Personalized Projections:</strong><span style="font-weight: 400;"> The calculator will provide you with a customized view of your specific financial situation to project how prepared you are for retirement.</span></li>
@@ -932,8 +943,9 @@ seodescription:"Estimate your retirement savings with our NPS Calculator. Get ac
 </ul>
 <p><span style="font-weight: 400;">With these great features, the Retirement Calculator is very powerful in supporting you on the way to comfortably retiring!</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"Retirement Savings Calculator | Trust Financial Advisory",
-seodescription:"Don't leave your future to chance! Use our Retirement Calculator for a clear roadmap to financial security. Start planning today!",
+    seotitle: "Retirement Savings Calculator | Trust Financial Advisory",
+    seodescription:
+      "Don't leave your future to chance! Use our Retirement Calculator for a clear roadmap to financial security. Start planning today!",
   },
   {
     id: "emi",
@@ -942,7 +954,7 @@ seodescription:"Don't leave your future to chance! Use our Retirement Calculator
       "To prevent financial stress, quickly calculate your loan EMI and improve your monthly budget.",
     inputs: [
       {
-        label: "Loan Amount (₹)",
+        label: "Loan Amount ($)",
         key: "principal",
         type: "number",
         default: 1000000,
@@ -963,7 +975,7 @@ seodescription:"Don't leave your future to chance! Use our Retirement Calculator
         max: 30,
       },
     ],
-    output: "Monthly EMI (₹)",
+    output: "Monthly EMI ($)",
     showGraph: false,
     html: `<p><strong>What is an EMI Calculator?</strong></p>
 <p><span style="font-weight: 400;">EMI is short for Equated Monthly Instalment, and in easy words, it is the amount you are supposed to pay every month if you borrow any amount of loan. Whether purchasing a home or purchasing a car on credit, getting an EMI is very necessary for smart planning. It's a great means of budgeting and ensuring preparedness for commitment, based on your funds.</span></p>
@@ -1011,8 +1023,9 @@ seodescription:"Don't leave your future to chance! Use our Retirement Calculator
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Understand the above factors that can help in better decision making while you plan your loan and your whole financial strategy.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"Free EMI Calculator | Trust Financial Advisory",
-seodescription:"Get instant EMI calculations for home, car, and personal loans. Plan your finances better with Trust Financial Advisory’s smart loan calculator tool.",
+    seotitle: "Free EMI Calculator | Trust Financial Advisory",
+    seodescription:
+      "Get instant EMI calculations for home, car, and personal loans. Plan your finances better with Trust Financial Advisory’s smart loan calculator tool.",
   },
   {
     id: "carLoan",
@@ -1021,7 +1034,7 @@ seodescription:"Get instant EMI calculations for home, car, and personal loans. 
       "Drive the car of your dreams without worrying about money by being aware of your monthly auto loan payments in advance.",
     inputs: [
       {
-        label: "Car Loan Amount (₹)",
+        label: "Car Loan Amount ($)",
         key: "principal",
         type: "number",
         default: 500000,
@@ -1042,7 +1055,7 @@ seodescription:"Get instant EMI calculations for home, car, and personal loans. 
         max: 7,
       },
     ],
-    output: "Monthly EMI (₹)",
+    output: "Monthly EMI ($)",
     showGraph: false,
     html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's auto loan EMI calculator! This calculator is made to help you determine your monthly auto loan payments. Understanding your monthly EMI can simplify your budgeting and financial management process. This calculator can assist you in your journey to buying that perfect car, whether new or old.</span></p>
 <p>&nbsp;</p>
@@ -1109,8 +1122,9 @@ seodescription:"Get instant EMI calculations for home, car, and personal loans. 
 </ul>
 <p><strong>Prepayment Options: </strong><span style="font-weight: 400;">Make use of your loan's prepayment options if possible. In this way, you can settle your loan faster and with less interest in total.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"Car Loan EMI Calculator | Monthly Car Loan Payments Instantly",
-seodescription:"Easily calculate your car loan EMI with our Car Loan EMI Calculator. Compare loan options, adjust amount, interest rate & tenure to find the best EMI for you.",
+    seotitle: "Car Loan EMI Calculator | Monthly Car Loan Payments Instantly",
+    seodescription:
+      "Easily calculate your car loan EMI with our Car Loan EMI Calculator. Compare loan options, adjust amount, interest rate & tenure to find the best EMI for you.",
   },
   {
     id: "homeLoan",
@@ -1119,7 +1133,7 @@ seodescription:"Easily calculate your car loan EMI with our Car Loan EMI Calcula
       "To purchase your ideal home with confidence, calculate your home loan's interest outflow, EMI, and repayment schedule. ",
     inputs: [
       {
-        label: "Home Loan Amount (₹)",
+        label: "Home Loan Amount ($)",
         key: "principal",
         type: "number",
         default: 3000000,
@@ -1140,7 +1154,7 @@ seodescription:"Easily calculate your car loan EMI with our Car Loan EMI Calcula
         max: 30,
       },
     ],
-    output: "Monthly EMI (₹)",
+    output: "Monthly EMI ($)",
     showGraph: false,
     html: `<p><span style="font-weight: 400;">Welcome to the Home Loan EMI Calculator from Trust Financial Advisory! Knowing your financial obligations is crucial if you intend to purchase your ideal home. You can manage your money and make future plans more easily by using our calculator to estimate your monthly payments.</span></p>
 <p><strong>EMI: What is it?</strong></p>
@@ -1165,12 +1179,12 @@ seodescription:"Easily calculate your car loan EMI with our Car Loan EMI Calcula
 </ul>
 <p><strong>For Example&nbsp;</strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Size of Loan:</strong><span style="font-weight: 400;"> ₹50,000,000</span></li>
+<li style="font-weight: 400;"><strong>Size of Loan:</strong><span style="font-weight: 400;"> $50,000,000</span></li>
 <li style="font-weight: 400;"><strong>Interest Rate:</strong><span style="font-weight: 400;"> 8% per annum</span></li>
 <li style="font-weight: 400;"><strong>loan term:</strong><span style="font-weight: 400;"> 20 years</span></li>
-<li style="font-weight: 400;"><strong>Monthly EMI:</strong><span style="font-weight: 400;"> ₹42,000.</span></li>
+<li style="font-weight: 400;"><strong>Monthly EMI:</strong><span style="font-weight: 400;"> $42,000.</span></li>
 </ul>
-<p><span style="font-weight: 400;">Based on this example, your EMI would be approximated at ₹42,000 if you have a loan amount of ₹50,000,000 for 20 years and an interest rate of 8%.</span></p>
+<p><span style="font-weight: 400;">Based on this example, your EMI would be approximated at $42,000 if you have a loan amount of $50,000,000 for 20 years and an interest rate of 8%.</span></p>
 <p><strong>Advantages of Using Our EMI Calculator</strong></p>
 <ul>
 <li style="font-weight: 400;"><span style="font-weight: 400;">Creating a budget aids in figuring out how much you can afford to borrow.</span></li>
@@ -1184,8 +1198,9 @@ seodescription:"Easily calculate your car loan EMI with our Car Loan EMI Calcula
 <li style="font-weight: 400;"><span style="font-weight: 400;">For personalized advice tailored to your specific needs, contact our financial advisors for a professional consultation.</span></li>
 </ul>
 <!-- Comments are visible in the HTML source only -->`,
-seotitle:"Home Loan EMI Calculator | Trust Financial Advisory",
-seodescription:"Calculate your home loan EMI instantly with our free EMI calculator. Get accurate monthly estimates and plan your loan smartly with Trust Financial Advisory",
+    seotitle: "Home Loan EMI Calculator | Trust Financial Advisory",
+    seodescription:
+      "Calculate your home loan EMI instantly with our free EMI calculator. Get accurate monthly estimates and plan your loan smartly with Trust Financial Advisory",
   },
   {
     id: "stepUpSip",
@@ -1194,7 +1209,7 @@ seodescription:"Calculate your home loan EMI instantly with our free EMI calcula
       "Discover how raising your SIP contributions each year can greatly increase the long-term returns on your investments. ",
     inputs: [
       {
-        label: "Initial Monthly Investment (₹)",
+        label: "Initial Monthly Investment ($)",
         key: "initialInvestment",
         type: "number",
         default: 5000,
@@ -1222,7 +1237,7 @@ seodescription:"Calculate your home loan EMI instantly with our free EMI calcula
         max: 30,
       },
     ],
-    output: "Future Value (₹)",
+    output: "Future Value ($)",
     showGraph: true,
     html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to the Step-Up SIP Calculator by Trust Financial Advisory! You&apos;ve reached the perfect place if you&apos;re eager to optimize your investment strategy. Think of our calculator as your own financial advisor, guiding you through the vision of your investment growth as you gradually increase your monthly investment. We&apos;re here to guide you at each step, whether you&apos;re starting or looking to raise the amount of your investments. Let&apos;s take a look together at the options for your financial future!</span></p>
 <p><br></p>
@@ -1263,7 +1278,7 @@ seodescription:"Calculate your home loan EMI instantly with our free EMI calcula
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
 <ul>
     <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Initial Monthly Investment = ₹10,000</span></strong></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Initial Monthly Investment = $10,000</span></strong></p>
     </li>
     <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
         <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Step-up Percentage = 10% per year (increases by 10% annually)</span></strong></p>
@@ -1298,8 +1313,9 @@ seodescription:"Calculate your home loan EMI instantly with our free EMI calcula
     </li>
 </ul>
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Consult with an Expert:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Don&apos;t hold back from approaching our financial advisers for personalized investment advice that will help you go about your money path with confidence.</span></p>`,
-seotitle:"Step-Up SIP Calculator | Plan Your Future Investment",
-seodescription:"Plan your investments wisely with our Step-Up SIP Calculator. Analyze your financial growth with precise calculations. Try now on Trust Financial Advisory!",
+    seotitle: "Step-Up SIP Calculator | Plan Your Future Investment",
+    seodescription:
+      "Plan your investments wisely with our Step-Up SIP Calculator. Analyze your financial growth with precise calculations. Try now on Trust Financial Advisory!",
   },
   {
     id: "incomeTax",
@@ -1308,21 +1324,21 @@ seodescription:"Plan your investments wisely with our Step-Up SIP Calculator. An
       "Quickly calculate your tax liability and make financial plans to save more effectively and legally.",
     inputs: [
       {
-        label: "Annual Income (₹)",
+        label: "Annual Income ($)",
         key: "income",
         type: "number",
         default: 600000,
         max: 50000000,
       },
       {
-        label: "Deductions (₹)",
+        label: "Deductions ($)",
         key: "deductions",
         type: "number",
         default: 150000,
         max: 500000,
       },
     ],
-    output: "Tax Payable (₹)",
+    output: "Tax Payable ($)",
     showGraph: false,
     html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Hello to Trust Financial Advisory&apos;s Income Tax Calculator! We know how the complexities of income tax could be a little intimidating. Because of this, our income tax calculator is designed to help simplify matters for you. It simplifies matters a great deal by helping you to estimate the tax you should pay based on your income as well as possible deductions.</span></p>
 <p><br></p>
@@ -1362,13 +1378,13 @@ seodescription:"Plan your investments wisely with our Step-Up SIP Calculator. An
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
 <ul>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Income:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Let&apos;s say you make ₹10,000,000 a year.</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Income:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Let&apos;s say you make $10,000,000 a year.</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Deductions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;You have deductions of ₹1,50,000.</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Deductions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;You have deductions of $1,50,000.</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Estimated Income Tax:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Your estimated income tax is ₹75,000 as per this information.</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Estimated Income Tax:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Your estimated income tax is $75,000 as per this information.</span></p>
     </li>
 </ul>
 <p><br></p>
@@ -1394,8 +1410,9 @@ seodescription:"Plan your investments wisely with our Step-Up SIP Calculator. An
     </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Advice:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;For personalized tax planning advice tailored to your specific situation and goals, feel free to reach out to our financial planners.</span></p>`,
-seotitle:"Income Tax Calculator | Accurate Tax Estimation online",
-seodescription:"Instantly calculate your income tax online. Estimate taxes, plan finances, and maximize savings with Trust Financial Advisory's Income Tax Calculator.",
+    seotitle: "Income Tax Calculator | Accurate Tax Estimation online",
+    seodescription:
+      "Instantly calculate your income tax online. Estimate taxes, plan finances, and maximize savings with Trust Financial Advisory's Income Tax Calculator.",
   },
   {
     id: "interestRateComparison",
@@ -1404,7 +1421,7 @@ seodescription:"Instantly calculate your income tax online. Estimate taxes, plan
       "For greater savings, compare the various loan interest rates and select the most economical repayment plan.",
     inputs: [
       {
-        label: "Loan Amount (₹)",
+        label: "Loan Amount ($)",
         key: "principal",
         type: "number",
         default: 1000000,
@@ -1476,7 +1493,7 @@ seodescription:"Instantly calculate your income tax online. Estimate taxes, plan
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
 <ul>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Loan Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹10,00,000</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Loan Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$10,00,000</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Flat Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10%</span></p>
@@ -1488,10 +1505,10 @@ seodescription:"Instantly calculate your income tax online. Estimate taxes, plan
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Tenure:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 years</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Total Payment (Flat Rate):</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹12,00,000</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Total Payment (Flat Rate):</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$12,00,000</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Total Payment (Reducing Rate):</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹11,00,000</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Total Payment (Reducing Rate):</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$11,00,000</span></p>
     </li>
 </ul>
 <p><br></p>
@@ -1517,8 +1534,10 @@ seodescription:"Instantly calculate your income tax online. Estimate taxes, plan
     </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized loan advice tailored to your needs.</span></p>`,
-seotitle:"Loan Interest Rate Calculator | Flat vs. Reducing Rate Comparison",
-seodescription:"Confused about interest rates? Compare Flat vs. Reducing Interest Rates to see repayment differences and choose the best loan option for smart planning.",
+    seotitle:
+      "Loan Interest Rate Calculator | Flat vs. Reducing Rate Comparison",
+    seodescription:
+      "Confused about interest rates? Compare Flat vs. Reducing Interest Rates to see repayment differences and choose the best loan option for smart planning.",
   },
   {
     id: "brokerage",
@@ -1527,7 +1546,7 @@ seodescription:"Confused about interest rates? Compare Flat vs. Reducing Interes
       "Optimise your stock investments by learning the precise amount of broking fees you pay on your trades.",
     inputs: [
       {
-        label: "Transaction Amount (₹)",
+        label: "Transaction Amount ($)",
         key: "transactionAmount",
         type: "number",
         default: 100000,
@@ -1548,7 +1567,7 @@ seodescription:"Confused about interest rates? Compare Flat vs. Reducing Interes
         max: 1,
       },
     ],
-    output: "Total Charges (₹)",
+    output: "Total Charges ($)",
     showGraph: false,
     html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Hello, Trust Financial Advisory Broking Calculator! You have arrived at the right place if you are curious to learn what it will take to purchase and sell securities. With our Broking Calculator, you can now make informed investments that support your financial goals through the estimation of your broking charges and additional costs of trading.</span></p>
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Brokerage Calculator?</span></strong></p>
@@ -1587,19 +1606,19 @@ seodescription:"Confused about interest rates? Compare Flat vs. Reducing Interes
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
 <ul>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Transaction Amount:</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹1,00,000</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Transaction Amount:</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$1,00,000</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Brokerage Fee (0.5%):</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹500</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Brokerage Fee (0.5%):</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$500</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Taxes &amp; Other Charges (0.2%):&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">₹200</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Taxes &amp; Other Charges (0.2%):&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">$200</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Charges:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">₹700</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Charges:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">$700</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Cost of Transaction:</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹1,00,700</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Cost of Transaction:</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$1,00,700</span></p>
     </li>
 </ul>
 <p><br></p>
@@ -1628,8 +1647,9 @@ seodescription:"Confused about interest rates? Compare Flat vs. Reducing Interes
     </li>
 </ul>
 `,
-seotitle:"Brokerage Calculator for NSE, BSE & Options Trading",
-seodescription:"Calculate brokerage charges for stocks, futures, and options with our fast Brokerage Calculator. Get accurate costs for NSE, BSE, and derivatives trading.",
+    seotitle: "Brokerage Calculator for NSE, BSE & Options Trading",
+    seodescription:
+      "Calculate brokerage charges for stocks, futures, and options with our fast Brokerage Calculator. Get accurate costs for NSE, BSE, and derivatives trading.",
   },
   {
     id: "margin",
@@ -1638,7 +1658,7 @@ seodescription:"Calculate brokerage charges for stocks, futures, and options wit
       "Determine the margin needed to trade stocks, then carefully manage your investments to optimise profits.",
     inputs: [
       {
-        label: "Trade Value (₹)",
+        label: "Trade Value ($)",
         key: "tradeValue",
         type: "number",
         default: 100000,
@@ -1652,7 +1672,7 @@ seodescription:"Calculate brokerage charges for stocks, futures, and options wit
         max: 20,
       },
     ],
-    output: "Margin Required (₹)",
+    output: "Margin Required ($)",
     showGraph: false,
     html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Margin Calculator! You&apos;ve come to the right website if you&apos;d like to learn how margin trading works and how much you can lend against your investments. By helping you project your margin requirements, our Margin Calculator allows you to make informed trading decisions that support your investment strategy.</span></p>
 <p><br></p>
@@ -1689,19 +1709,19 @@ seodescription:"Calculate brokerage charges for stocks, futures, and options wit
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
 <ul>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Trade Value:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">₹50,000</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Trade Value:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">$50,000</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
         <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Leverage Factor:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">10x</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Margin Required:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">₹5,000</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Margin Required:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">$5,000</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Exposure:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">₹50,000</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Exposure:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">$50,000</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Potential Profit/Loss (5% Move):</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&plusmn; ₹2,500</span></p>
+        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Potential Profit/Loss (5% Move):</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&plusmn; $2,500</span></p>
     </li>
 </ul>
 <p><br></p>
@@ -1729,8 +1749,9 @@ seodescription:"Calculate brokerage charges for stocks, futures, and options wit
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>
     </li>
 </ul>`,
-seotitle:"Forex & Stock Margin Calculator | Trust Financial Advisory",
-seodescription:"Calculate your margin for forex, stocks & more with our Margin Calculator. Trade confidently with precise calculations at Trust Financial Advisory.",
+    seotitle: "Forex & Stock Margin Calculator | Trust Financial Advisory",
+    seodescription:
+      "Calculate your margin for forex, stocks & more with our Margin Calculator. Trade confidently with precise calculations at Trust Financial Advisory.",
   },
   {
     id: "inflation",
@@ -1739,7 +1760,7 @@ seodescription:"Calculate your margin for forex, stocks & more with our Margin C
       "Examine how inflation will impact the future worth of your money and modify your savings plan as necessary.",
     inputs: [
       {
-        label: "Current Amount (₹)",
+        label: "Current Amount ($)",
         key: "currentAmount",
         type: "number",
         default: 100000,
@@ -1760,7 +1781,7 @@ seodescription:"Calculate your margin for forex, stocks & more with our Margin C
         max: 50,
       },
     ],
-    output: "Future Value (₹)",
+    output: "Future Value ($)",
     showGraph: false,
     html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Inflation Calculator! Proper financial planning involves an awareness of the impact of inflation on your investments and savings. Using our inflation calculator, you can calculate how inflation will reduce your money&apos;s purchasing power over the long term and make sound financial decisions.</span></p>
 <p><br></p>
@@ -1799,7 +1820,7 @@ seodescription:"Calculate your margin for forex, stocks & more with our Margin C
 <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
 <ul>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Current Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹1,00,000</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Current Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$1,00,000</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Inflation Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;3% per annum</span></p>
@@ -1808,7 +1829,7 @@ seodescription:"Calculate your margin for forex, stocks & more with our Margin C
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Time Period:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 years</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Future Value:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹1,34,392 (This means that in 10 years, ₹1,00,000 will have the purchasing power equivalent to ₹1,34,392 today.)</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Future Value:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$1,34,392 (This means that in 10 years, $1,00,000 will have the purchasing power equivalent to $1,34,392 today.)</span></p>
     </li>
 </ul>
 <p><br></p>
@@ -1834,8 +1855,9 @@ seodescription:"Calculate your margin for forex, stocks & more with our Margin C
     </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`,
-seotitle:"Free Inflation Calculator | Track Inflation Over Time",
-seodescription:"Easily calculate inflation's impact with our Inflation Calculator. See how your money’s value changes over time. Get fast, accurate results for smart planning!",
+    seotitle: "Free Inflation Calculator | Track Inflation Over Time",
+    seodescription:
+      "Easily calculate inflation's impact with our Inflation Calculator. See how your money’s value changes over time. Get fast, accurate results for smart planning!",
   },
   {
     id: "stockAverage",
@@ -1851,7 +1873,7 @@ seodescription:"Easily calculate inflation's impact with our Inflation Calculato
         max: 1000,
       },
       {
-        label: "Price per Share (₹)",
+        label: "Price per Share ($)",
         key: "price1",
         type: "number",
         default: 500,
@@ -1865,14 +1887,14 @@ seodescription:"Easily calculate inflation's impact with our Inflation Calculato
         max: 1000,
       },
       {
-        label: "Price per Share (₹)",
+        label: "Price per Share ($)",
         key: "price2",
         type: "number",
         default: 500,
         max: 10000,
       },
     ],
-    output: "Average Price per Share (₹)",
+    output: "Average Price per Share ($)",
     showGraph: false,
     html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Stock Average Calculator! While investing in stocks can be profitable, it is only by knowing your average cost per share that you can manage your portfolio effectively. To empower you to make informed investment choices that harmonize with your financial goals, our Stock Average Calculator is designed to help you calculate the average purchase price of a stock.</span></p>
 <p><br></p>
@@ -1910,7 +1932,7 @@ seodescription:"Easily calculate inflation's impact with our Inflation Calculato
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 1</span></strong></p>
 <ul>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹100</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$100</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 shares</span></p>
@@ -1919,7 +1941,7 @@ seodescription:"Easily calculate inflation's impact with our Inflation Calculato
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 2</span></strong></p>
 <ul>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹120</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$120</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;5 shares</span></p>
@@ -1928,13 +1950,13 @@ seodescription:"Easily calculate inflation's impact with our Inflation Calculato
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 3</span></strong></p>
 <ul>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹90</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$90</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
         <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;15 shares</span></p>
     </li>
     <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Average Cost per Share:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;₹102.50</span></p>
+        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Average Cost per Share:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$102.50</span></p>
     </li>
 </ul>
 <p><br></p>
@@ -1960,8 +1982,9 @@ seodescription:"Easily calculate inflation's impact with our Inflation Calculato
     </li>
 </ul>
 <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>`,
-seotitle:"Stock Average Calculator | Free Online Tool for Smart Traders",
-seodescription:"New to investing?  Easily calculate the average cost of your stocks with our Stock Average Calculator. No registration required—fast, accurate, and easy to use.",
+    seotitle: "Stock Average Calculator | Free Online Tool for Smart Traders",
+    seodescription:
+      "New to investing?  Easily calculate the average cost of your stocks with our Stock Average Calculator. No registration required—fast, accurate, and easy to use.",
   },
 ];
 export default calculators;

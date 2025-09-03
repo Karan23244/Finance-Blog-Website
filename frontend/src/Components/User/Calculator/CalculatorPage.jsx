@@ -151,7 +151,7 @@ const CalculatorPage = ({ goBack }) => {
                 </div>
                 <div>
                   <p className="text-xl text-white">
-                    {calculator.output}: ₹{result.toLocaleString()}
+                    {calculator.output}: ${result.toLocaleString()}
                   </p>
                 </div>
               </div>
@@ -189,7 +189,7 @@ const CalculatorPage = ({ goBack }) => {
                             );
                             return `${
                               tooltipItem.label
-                            }: ₹${value.toLocaleString()} (${percentage}%)`;
+                            }: $${value.toLocaleString()} (${percentage}%)`;
                           },
                         },
                       },

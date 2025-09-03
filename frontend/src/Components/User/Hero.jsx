@@ -30,20 +30,6 @@ const Hero = memo(() => {
             future. With personalized advice and strategic planning, we help you
             navigate your financial journey with confidence.
           </p>
-
-          {/* Buttons */}
-          <div className="flex lg:flex-row flex-col gap-4 justify-center lg:justify-start mt-6">
-            <Link to="/fast-financial-help">
-              <button className="bg-white text-orange-500 font-semibold py-2 px-6 rounded-xl shadow-md transition duration-300">
-                Fast Financial Help
-              </button>
-            </Link>
-            <Link to="/urgent-financial-needs">
-              <button className="bg-white text-orange-500 font-semibold py-2 px-6 rounded-xl shadow-md transition duration-300">
-                Urgent Financial Needs
-              </button>
-            </Link>
-          </div>
         </div>
 
         {/* Icons Section */}

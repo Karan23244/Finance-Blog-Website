@@ -31,11 +31,11 @@ const UserHome = () => {
           "Plan your SIP investments carefully and learn how the power of intelligent compounding can transform modest monthly contributions into a sizable fortune over time.",
         inputs: [
           {
-            label: "Monthly Investment (₹)",
+            label: "Monthly Investment ($)",
             key: "investment",
             type: "number",
-            default: 5000,
-            max: 1000000,
+            default: 500,
+            max: 100000,
           },
           {
             label: "Expected Return Rate (%)",
@@ -52,7 +52,7 @@ const UserHome = () => {
             max: 40,
           },
         ],
-        output: "Future Value (₹)",
+        output: "Future Value ($)",
         showGraph: true,
       },
     ],
@@ -281,7 +281,7 @@ const CalculatorSection = memo(({ calculator }) => {
               Calculation Result
             </h3>
             <p className="text-xl text-white">
-              {calculator.output}: ₹{result.toLocaleString()}
+              {calculator.output}: ${result.toLocaleString()}
             </p>
           </div>
         )}
@@ -316,7 +316,7 @@ const CalculatorSection = memo(({ calculator }) => {
                           const percentage = ((value / total) * 100).toFixed(2);
                           return `${
                             tooltipItem.label
-                          }: ₹${value.toLocaleString()} (${percentage}%)`;
+                          }: $${value.toLocaleString()} (${percentage}%)`;
                         },
                       },
                     },

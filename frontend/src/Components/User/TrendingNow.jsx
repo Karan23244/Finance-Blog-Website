@@ -26,8 +26,8 @@ const RightButton = memo(({ slideRight }) => (
 const MemoizedBlogCard = memo(({ blog, index }) => {
   return (
     <div key={blog.id} className="w-full md:w-1/4 flex-shrink-0 px-6 lg:px-4">
-      <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
-        <Link to={generateBlogUrl(blog)}>
+      <Link to={generateBlogUrl(blog)}>
+        <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
           <img
             src={blog._embedded["wp:featuredmedia"]?.[0]?.source_url}
             alt={
@@ -37,39 +37,40 @@ const MemoizedBlogCard = memo(({ blog, index }) => {
             className="h-48 w-full object-cover aspect-[16/9]"
             loading="lazy"
           />
-        </Link>
-        <div className="p-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <img
-                src={blog._embedded.author?.[0]?.avatar_urls?.["48"]}
-                alt={blog._embedded.author?.[0]?.name}
-                className="w-6 h-6 rounded-full"
-              />
-              <p className="text-sm font-semibold text-gray-700">
-                {blog._embedded.author?.[0]?.name}
-              </p>
+
+          <div className="p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <img
+                  src={blog._embedded.author?.[0]?.avatar_urls?.["48"]}
+                  alt={blog._embedded.author?.[0]?.name}
+                  className="w-6 h-6 rounded-full"
+                />
+                <p className="text-sm font-semibold text-gray-700">
+                  {blog._embedded.author?.[0]?.name}
+                </p>
+              </div>
+              <time
+                dateTime={blog.date}
+                className="text-xs text-gray-400 font-semibold">
+                {new Date(blog.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
             </div>
-            <time
-              dateTime={blog.date}
-              className="text-xs text-gray-400 font-semibold">
-              {new Date(blog.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
+            <h2
+              className="text-lg font-bold my-2 line-clamp-2"
+              dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
+            />
+            <p
+              className="text-sm line-clamp-3"
+              dangerouslySetInnerHTML={{ __html: blog.excerpt.rendered }}
+            />
           </div>
-          <h2
-            className="text-lg font-bold my-2 line-clamp-2"
-            dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
-          />
-          <p
-            className="text-sm line-clamp-3"
-            dangerouslySetInnerHTML={{ __html: blog.excerpt.rendered }}
-          />
         </div>
-      </div>
+      </Link>
     </div>
   );
 });

@@ -107,49 +107,51 @@ const RiskManagement = memo(() => {
                       <div
                         key={blog.id}
                         className="w-full md:w-1/4 flex-shrink-0 px-6 lg:px-4">
-                        <div className="flex flex-col rounded-lg hover:border-b-4 border-transparent hover:border-[#FF822E] p-4 h-full">
-                          {/* Title & Description */}
-                          <div className="flex-grow">
-                            <h2
-                              className="text-lg font-bold my-2 line-clamp-2"
-                              dangerouslySetInnerHTML={{
-                                __html: blog.title.rendered,
-                              }}
-                            />
-                            <p
-                              className="text-sm line-clamp-2"
-                              dangerouslySetInnerHTML={{
-                                __html: blog.excerpt.rendered,
-                              }}
-                            />
-                          </div>
-                          {/* Image */}
-                          <div className="mb-4">
-                            <img
-                              src={
-                                blog._embedded["wp:featuredmedia"]?.[0]
-                                  ?.source_url
-                              }
-                              alt={
-                                blog._embedded["wp:featuredmedia"]?.[0]
-                                  ?.alt_text || blog.title.rendered
-                              }
-                              className="h-36 w-full object-cover rounded-md"
-                              loading="lazy"
-                              defer
-                            />
-                          </div>
-                          {/* Discover More Link */}
-                          <div>
-                            <Link
-                              to={generateBlogUrl(blog)}
-                              className="text-black font-semibold
+                        <Link to={generateBlogUrl(blog)}>
+                          <div className="flex flex-col rounded-lg hover:border-b-4 border-transparent hover:border-[#FF822E] p-4 h-full">
+                            {/* Title & Description */}
+                            <div className="flex-grow">
+                              <h2
+                                className="text-lg font-bold my-2 line-clamp-2"
+                                dangerouslySetInnerHTML={{
+                                  __html: blog.title.rendered,
+                                }}
+                              />
+                              <p
+                                className="text-sm line-clamp-2"
+                                dangerouslySetInnerHTML={{
+                                  __html: blog.excerpt.rendered,
+                                }}
+                              />
+                            </div>
+                            {/* Image */}
+                            <div className="mb-4">
+                              <img
+                                src={
+                                  blog._embedded["wp:featuredmedia"]?.[0]
+                                    ?.source_url
+                                }
+                                alt={
+                                  blog._embedded["wp:featuredmedia"]?.[0]
+                                    ?.alt_text || blog.title.rendered
+                                }
+                                className="h-36 w-full object-cover rounded-md"
+                                loading="lazy"
+                                defer
+                              />
+                            </div>
+                            {/* Discover More Link */}
+                            <div>
+                              <Link
+                                to={generateBlogUrl(blog)}
+                                className="text-black font-semibold
                               hover:text-[#FF822E]">
-                              {" "}
-                              Discover More
-                            </Link>
+                                {" "}
+                                Discover More
+                              </Link>
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </div>
                     ))}
                   </div>

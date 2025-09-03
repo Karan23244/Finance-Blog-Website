@@ -140,7 +140,8 @@ const CategoryPosts = () => {
       "Risk Management & Protection": {
         title:
           "Unlocking Financial Security: The Importance of Estate Planning",
-        description: "Get the latest news on insurance, retirement planning, and cybersecurity to navigate financial risks effectively.",
+        description:
+          "Get the latest news on insurance, retirement planning, and cybersecurity to navigate financial risks effectively.",
         keywords: "",
         shortDescription:
           "Navigate financial risks confidently with Trust Finance Advisory's news on comprehensive insurance solutions, strategic retirement planning, and vital cybersecurity alerts. Protect your assets and secure your future.",
@@ -234,39 +235,39 @@ const CategoryPosts = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
           {remainingPosts.map((post) => (
-            <div
-              key={post.id}
-              className="bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-              <img
-                src={
-                  post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
-                  "https://via.placeholder.com/300x200.png?text=No+Image"
-                }
-                alt={
-                  post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
-                  post.title.rendered
-                }
-                className="w-full h-40 object-cover mb-2"
-                loading="lazy"
-              />
-              <div className="p-2">
-                <h2
-                  className="text-lg font-bold text-gray-800 line-clamp-2"
-                  dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+            <Link to={generateBlogUrl(post)} key={post.id}>
+              <div className="bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img
+                  src={
+                    post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
+                    "https://via.placeholder.com/300x200.png?text=No+Image"
+                  }
+                  alt={
+                    post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                    post.title.rendered
+                  }
+                  className="w-full h-40 object-cover mb-2"
+                  loading="lazy"
                 />
-                <p
-                  className="text-sm text-gray-700 line-clamp-2"
-                  dangerouslySetInnerHTML={{
-                    __html: post.excerpt.rendered,
-                  }}
-                />
-                <Link
-                  to={generateBlogUrl(post)}
-                  className="text-[#00008B] hover:underline inline-block">
-                  Read More...
-                </Link>
+                <div className="p-2">
+                  <h2
+                    className="text-lg font-bold text-gray-800 line-clamp-2"
+                    dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                  />
+                  <p
+                    className="text-sm text-gray-700 line-clamp-2"
+                    dangerouslySetInnerHTML={{
+                      __html: post.excerpt.rendered,
+                    }}
+                  />
+                  <Link
+                    to={generateBlogUrl(post)}
+                    className="text-[#00008B] hover:underline inline-block">
+                    Read More...
+                  </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         {/* Pagination Controls */}
@@ -402,43 +403,44 @@ const CategoryPosts = () => {
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-6 gap-2 lg:mt-8 pb-8">
               {posts.slice(3).map((post) => (
                 <>
-                  <div
-                    key={post.id}
-                    className="flex flex-row items-start lg:gap-10 gap-2">
-                    <div className="w-5/12">
-                      <img
-                        src={
-                          post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
-                          "https://via.placeholder.com/300x200.png?text=No+Image"
-                        }
-                        alt={
-                          post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
-                          post.title.rendered
-                        }
-                        className="w-full lg:h-[150px] h-[130px] object-cover"
-                        loading="lazy"
-                      />
+                  <Link to={generateBlogUrl(post)} key={post.id}>
+                    <div className="flex flex-row items-start lg:gap-10 gap-2">
+                      <div className="w-5/12">
+                        <img
+                          src={
+                            post._embedded["wp:featuredmedia"]?.[0]
+                              ?.source_url ||
+                            "https://via.placeholder.com/300x200.png?text=No+Image"
+                          }
+                          alt={
+                            post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                            post.title.rendered
+                          }
+                          className="w-full lg:h-[150px] h-[130px] object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="w-2/3">
+                        <h3
+                          className="lg:text-lg text-base font-semibold line-clamp-2"
+                          dangerouslySetInnerHTML={{
+                            __html: post.title.rendered,
+                          }}
+                        />
+                        <p
+                          className="lg:text-base text-sm text-gray-600 mt-2 line-clamp-2"
+                          dangerouslySetInnerHTML={{
+                            __html: post.excerpt.rendered,
+                          }}
+                        />
+                        <Link
+                          to={generateBlogUrl(post)}
+                          className="text-blue-600 hover:underline mt-2 inline-block">
+                          Read More...
+                        </Link>
+                      </div>
                     </div>
-                    <div className="w-2/3">
-                      <h3
-                        className="lg:text-lg text-base font-semibold line-clamp-2"
-                        dangerouslySetInnerHTML={{
-                          __html: post.title.rendered,
-                        }}
-                      />
-                      <p
-                        className="lg:text-base text-sm text-gray-600 mt-2 line-clamp-2"
-                        dangerouslySetInnerHTML={{
-                          __html: post.excerpt.rendered,
-                        }}
-                      />
-                      <Link
-                        to={generateBlogUrl(post)}
-                        className="text-blue-600 hover:underline mt-2 inline-block">
-                        Read More...
-                      </Link>
-                    </div>
-                  </div>
+                  </Link>
                 </>
               ))}
             </div>
@@ -497,63 +499,66 @@ const CategoryPosts = () => {
             <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-6 gap-2 lg:mt-8 pb-8">
               {posts.map((post) => (
                 <>
-                  <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
-                    <img
-                      src={
-                        post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
-                        "https://via.placeholder.com/300x200.png?text=No+Image"
-                      }
-                      alt={
-                        post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
-                        post.title.rendered
-                      }
-                      className="h-[250px] w-full object-cover"
-                    />
-                    <div className="p-4">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <img
-                            src={
-                              post._embedded.author?.[0]?.avatar_urls?.["48"] ||
-                              "https://via.placeholder.com/48"
-                            }
-                            alt={post._embedded.author?.[0]?.name}
-                            className="w-6 h-6 rounded-full"
-                          />
-                          <p className="text-sm font-semibold text-gray-700">
-                            {post._embedded.author?.[0]?.name}
-                          </p>
+                  <Link to={generateBlogUrl(post)}>
+                    <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
+                      <img
+                        src={
+                          post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
+                          "https://via.placeholder.com/300x200.png?text=No+Image"
+                        }
+                        alt={
+                          post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                          post.title.rendered
+                        }
+                        className="h-[250px] w-full object-cover"
+                      />
+                      <div className="p-4">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <img
+                              src={
+                                post._embedded.author?.[0]?.avatar_urls?.[
+                                  "48"
+                                ] || "https://via.placeholder.com/48"
+                              }
+                              alt={post._embedded.author?.[0]?.name}
+                              className="w-6 h-6 rounded-full"
+                            />
+                            <p className="text-sm font-semibold text-gray-700">
+                              {post._embedded.author?.[0]?.name}
+                            </p>
+                          </div>
+                          <time
+                            dateTime={post.date}
+                            className="text-xs text-gray-400 font-semibold">
+                            {new Date(post.date).toLocaleDateString("en-US", {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            })}
+                          </time>
                         </div>
-                        <time
-                          dateTime={post.date}
-                          className="text-xs text-gray-400 font-semibold">
-                          {new Date(post.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })}
-                        </time>
-                      </div>
-                      <h2
-                        className="text-lg font-bold text-gray-800 line-clamp-2"
-                        dangerouslySetInnerHTML={{
-                          __html: post.title.rendered,
-                        }}
-                      />
-                      <p
-                        className="text-sm text-gray-700 line-clamp-2"
-                        dangerouslySetInnerHTML={{
-                          __html: post.excerpt.rendered,
-                        }}
-                      />
-                      <Link
-                        to={generateBlogUrl(post)}
-                        className="text-white border border-white py-2
+                        <h2
+                          className="text-lg font-bold text-gray-800 line-clamp-2"
+                          dangerouslySetInnerHTML={{
+                            __html: post.title.rendered,
+                          }}
+                        />
+                        <p
+                          className="text-sm text-gray-700 line-clamp-2"
+                          dangerouslySetInnerHTML={{
+                            __html: post.excerpt.rendered,
+                          }}
+                        />
+                        <Link
+                          to={generateBlogUrl(post)}
+                          className="text-white border border-white py-2
                         rounded-lg lg:px-8 px-4 bg-[#FF822E] mt-2 inline-block">
-                        Read More...
-                      </Link>
+                          Read More...
+                        </Link>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </>
               ))}
             </div>
@@ -612,63 +617,66 @@ const CategoryPosts = () => {
             <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-6 gap-2 lg:mt-8 pb-8">
               {posts.map((post) => (
                 <>
-                  <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
-                    <img
-                      src={
-                        post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
-                        "https://via.placeholder.com/300x200.png?text=No+Image"
-                      }
-                      alt={
-                        post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
-                        post.title.rendered
-                      }
-                      className="h-[250px] w-full object-cover"
-                    />
-                    <div className="p-4">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <img
-                            src={
-                              post._embedded.author?.[0]?.avatar_urls?.["48"] ||
-                              "https://via.placeholder.com/48"
-                            }
-                            alt={post._embedded.author?.[0]?.name}
-                            className="w-6 h-6 rounded-full"
-                          />
-                          <p className="text-sm font-semibold text-gray-700">
-                            {post._embedded.author?.[0]?.name}
-                          </p>
+                  <Link to={generateBlogUrl(post)}>
+                    <div className="bg-white border rounded-xl shadow-md hover:shadow-lg overflow-hidden">
+                      <img
+                        src={
+                          post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
+                          "https://via.placeholder.com/300x200.png?text=No+Image"
+                        }
+                        alt={
+                          post._embedded["wp:featuredmedia"]?.[0]?.alt_text ||
+                          post.title.rendered
+                        }
+                        className="h-[250px] w-full object-cover"
+                      />
+                      <div className="p-4">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <img
+                              src={
+                                post._embedded.author?.[0]?.avatar_urls?.[
+                                  "48"
+                                ] || "https://via.placeholder.com/48"
+                              }
+                              alt={post._embedded.author?.[0]?.name}
+                              className="w-6 h-6 rounded-full"
+                            />
+                            <p className="text-sm font-semibold text-gray-700">
+                              {post._embedded.author?.[0]?.name}
+                            </p>
+                          </div>
+                          <time
+                            dateTime={post.date}
+                            className="text-xs text-gray-400 font-semibold">
+                            {new Date(post.date).toLocaleDateString("en-US", {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            })}
+                          </time>
                         </div>
-                        <time
-                          dateTime={post.date}
-                          className="text-xs text-gray-400 font-semibold">
-                          {new Date(post.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })}
-                        </time>
-                      </div>
-                      <h2
-                        className="text-lg font-bold text-gray-800 line-clamp-2"
-                        dangerouslySetInnerHTML={{
-                          __html: post.title.rendered,
-                        }}
-                      />
-                      <p
-                        className="text-sm text-gray-700 line-clamp-2"
-                        dangerouslySetInnerHTML={{
-                          __html: post.excerpt.rendered,
-                        }}
-                      />
-                      <Link
-                        to={generateBlogUrl(post)}
-                        className="text-white border border-white py-2
+                        <h2
+                          className="text-lg font-bold text-gray-800 line-clamp-2"
+                          dangerouslySetInnerHTML={{
+                            __html: post.title.rendered,
+                          }}
+                        />
+                        <p
+                          className="text-sm text-gray-700 line-clamp-2"
+                          dangerouslySetInnerHTML={{
+                            __html: post.excerpt.rendered,
+                          }}
+                        />
+                        <Link
+                          to={generateBlogUrl(post)}
+                          className="text-white border border-white py-2
                         rounded-lg lg:px-8 px-4 bg-[#FF822E] mt-2 inline-block">
-                        Read More...
-                      </Link>
+                          Read More...
+                        </Link>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </>
               ))}
             </div>
