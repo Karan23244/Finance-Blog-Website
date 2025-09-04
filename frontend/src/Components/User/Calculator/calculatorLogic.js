@@ -66,7 +66,7 @@ export const calculateResult = (id, inputs) => {
         (((1 + inputs.rate / 100 / 12) ** (inputs.time * 12) - 1) /
           (inputs.rate / 100 / 12));
       const annuity = (npsCorpus * inputs.annuityRate) / 100;
-      return `Corpus: ₹${npsCorpus.toFixed(2)}, Monthly Pension: ₹${(
+      return `Corpus: $${npsCorpus.toFixed(2)}, Monthly Pension: $${(
         annuity / 12
       ).toFixed(2)}`;
 
@@ -126,9 +126,9 @@ export const calculateResult = (id, inputs) => {
           (1 + reducingRate) ** interestRateComparisontenureMonths) /
         ((1 + reducingRate) ** interestRateComparisontenureMonths - 1);
 
-      return `Flat EMI: ₹${flatEMI.toFixed(
+      return `Flat EMI: $${flatEMI.toFixed(
         2
-      )}, Reducing EMI: ₹${reducingEMI.toFixed(2)}`;
+      )}, Reducing EMI: $${reducingEMI.toFixed(2)}`;
 
     case "brokerage":
       const brokerage = (inputs.transactionAmount * inputs.brokerageRate) / 100;

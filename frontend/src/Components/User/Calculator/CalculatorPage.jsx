@@ -208,7 +208,7 @@ const CalculatorPage = ({ goBack }) => {
         </div>
         <div>
           <div
-            className="custom-html my-8"
+            className="my-8"
             dangerouslySetInnerHTML={{ __html: calculator.html }}
           />
         </div>
