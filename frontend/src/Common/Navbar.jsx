@@ -702,7 +702,7 @@ function Navbar() {
                 />
               </div>
               <h2 className="text-[#FF822E] text-sm lg:text-lg font-medium">
-                Trust Finance Advisory
+                Trust Financial Advisory
               </h2>
             </div>
             <div className="flex items-center lg:order-2 pr-3">

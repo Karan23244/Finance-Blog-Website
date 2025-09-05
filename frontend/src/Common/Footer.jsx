@@ -208,7 +208,7 @@ function Footer() {
                     />
                   </div>
                   <h2 className="lg:text-xl text-sm font-bold text-center">
-                    Trust <span className="text-[#FF822E]">Finance</span>{" "}
+                    Trust <span className="text-[#FF822E]">Financial</span>{" "}
                     Advisory
                   </h2>
                 </div>
