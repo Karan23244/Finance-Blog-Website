@@ -751,12 +751,12 @@ function Navbar() {
                       {mainCat.name}
                     </Link>
                     {mainCat.subcategories.length > 0 && (
-                      <ul className="absolute hidden group-hover:block bg-black min-w-[220px] w-auto z-200 border-b-2 border-orange-400">
+                      <ul className="absolute hidden group-hover:block bg-black w-[220px] z-200 border-b-2 border-orange-400">
                         {mainCat.subcategories.map((sub) => (
                           <li key={sub.id}>
                             <Link
                               to={`/${mainCat.slug}/${sub.slug}`}
-                              className="block px-4 py-2 text-white hover:text-[#FF822E] whitespace-nowrap">
+                              className="block px-4 py-2 text-white hover:text-[#FF822E] whitespace-normal break-words">
                               {sub.name}
                             </Link>
                           </li>
