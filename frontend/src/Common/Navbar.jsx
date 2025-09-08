@@ -741,69 +741,67 @@ function Navbar() {
               </button>
             </div>
             {/* Desktop Menu */}
-            //{" "}
-            <div className="lg:flex items-center hidden justify-end lg:w-[80%] lg:order-1 pr-3 min-h-[50px]">
-              <ul className="flex items-center gap-12 font-medium">
-                <>
-                  {groupedCategories.map((mainCat) => (
-                    <li className="relative group" key={mainCat.id}>
-                      <Link
-                        to={`/${mainCat.slug}`}
-                        className="text-white text-base font-semibold hover:text-orange-400">
-                        {mainCat.name}
-                      </Link>
-                      {mainCat.subcategories.length > 0 && (
-                        <ul className="absolute hidden group-hover:block bg-black w-[250px] z-200 border-b-2 border-orange-400">
-                          {mainCat.subcategories.map((sub) => (
-                            <li key={sub.id}>
-                              <Link
-                                to={`/${mainCat.slug}/${sub.slug}`}
-                                className="block px-4 py-2 text-white hover:text-[#FF822E]">
-                                {sub.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-
-                  {/* Search Input */}
-                  <li className="relative">
-                    <input
-                      type="text"
-                      value={searchQuery}
-                      onChange={handleSearchChange}
-                      placeholder="Search blogs..."
-                      className="border rounded-lg px-4 py-2 w-[250px] focus:ring-amber-400"
-                    />
-                    {showDropdown && (
-                      <ul
-                        ref={dropdownRef}
-                        className="absolute left-0 bg-white border shadow-xl mt-2 max-w-[300px] z-50 rounded-md">
-                        {suggestions.length > 0 ? (
-                          suggestions.map((sug) => (
-                            <li
-                              key={sug.id}
-                              className="relative group px-4 py-3 flex justify-between items-center gap-2 text-sm text-gray-800 hover:bg-gray-100 hover:border-l-4 cursor-pointer hover:border-orange-500 hover:pr-6 transition-all duration-200 "
-                              onClick={() => handleSuggestionClick(sug)}>
-                              <span className="">{sug.title.rendered}</span>
-                              <span className="text-gray-400 group-hover:text-orange-500">
-                                →
-                              </span>
-                            </li>
-                          ))
-                        ) : (
-                          <li className="px-4 py-3 text-gray-400">
-                            No results found
+            <div className="lg:flex items-center hidden justify-between lg:flex-1 lg:order-1 px-6 min-h-[60px]">
+              <ul className="flex items-center gap-6 font-medium flex-nowrap whitespace-nowrap">
+                {groupedCategories.map((mainCat) => (
+                  <li className="relative group" key={mainCat.id}>
+                    <Link
+                      to={`/${mainCat.slug}`}
+                      className="text-white text-base font-semibold hover:text-orange-400">
+                      {mainCat.name}
+                    </Link>
+                    {mainCat.subcategories.length > 0 && (
+                      <ul className="absolute hidden group-hover:block bg-black min-w-[220px] w-auto z-200 border-b-2 border-orange-400">
+                        {mainCat.subcategories.map((sub) => (
+                          <li key={sub.id}>
+                            <Link
+                              to={`/${mainCat.slug}/${sub.slug}`}
+                              className="block px-4 py-2 text-white hover:text-[#FF822E] whitespace-nowrap">
+                              {sub.name}
+                            </Link>
                           </li>
-                        )}
+                        ))}
                       </ul>
                     )}
                   </li>
-                </>
+                ))}
               </ul>
+
+              {/* Search Input */}
+              <div className="relative ml-4 flex-shrink-0">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                  placeholder="Search blogs..."
+                  className="border rounded-lg px-4 py-2 w-[180px] focus:ring-amber-400"
+                />
+                {showDropdown && (
+                  <ul
+                    ref={dropdownRef}
+                    className="absolute left-0 bg-white border shadow-xl mt-2 max-w-[300px] z-50 rounded-md">
+                    {suggestions.length > 0 ? (
+                      suggestions.map((sug) => (
+                        <li
+                          key={sug.id}
+                          className="relative group px-4 py-3 flex justify-between items-center gap-2 text-sm text-gray-800 hover:bg-gray-100 hover:border-l-4 cursor-pointer hover:border-orange-500 hover:pr-6 transition-all duration-200 "
+                          onClick={() => handleSuggestionClick(sug)}>
+                          <span>{sug.title.rendered}</span>
+                          <span className="text-gray-400 group-hover:text-orange-500">
+                            →
+                          </span>
+                        </li>
+                      ))
+                    ) : (
+                      <li className="px-4 py-3 text-gray-400">
+                        No results found
+                      </li>
+                    )}
+                  </ul>
+                )}
+              </div>
             </div>
+
             {/* Mobile Menu */}
             <div
               className={`lg:hidden absolute w-full bg-black shadow-lg transition-all ${

@@ -61,7 +61,7 @@ function App() {
               path="/:param1/:param2/:param3"
               element={<FullPostAdmin />}
             />
-            <Route path="/calculator" element={<CalculatorHome />} />
+            <Route path="/financial-calculators" element={<CalculatorHome />} />
             <Route path="/risk-management" element={<RiskManagement />} />
             <Route path="/personal-finance" element={<Personalfinance />} />
             <Route path="/news" element={<News />} />
@@ -70,7 +70,7 @@ function App() {
               element={<Investment />}
             />
             <Route
-              path="/calculator/:calculatorName"
+              path="/financial-calculators/:calculatorName"
               element={<CalculatorPage />}
             />
 
