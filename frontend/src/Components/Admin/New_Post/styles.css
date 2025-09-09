@@ -311,7 +311,7 @@ input[type="file"] {
   padding-bottom: 12px;
   padding-left: 10px;
   text-align: left;
-  background-color: #00008B;
+  background-color: #FF822E;
 }
 .custom-html table th p{
   color: white !important;
@@ -319,7 +319,7 @@ input[type="file"] {
 .custom-html table td, #customers th {
   padding: 8px;
 }
-.custom-html table tr:nth-child(even){background-color: #DEDEFF;}
+.custom-html table tr:nth-child(even){background-color:#eaaa7f;}
 .custom-html table {
   border-collapse: collapse;
   width: 100%;

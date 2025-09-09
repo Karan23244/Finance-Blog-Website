@@ -217,12 +217,12 @@ const FullPost = () => {
                         : "0"
                     } ${
                       activeSection === item.id
-                        ? "font-bold text-blue-600"
+                        ? "font-bold text-orange-600"
                         : "text-gray-800"
                     }`}>
                     <a
                       href={`#${item.id}`}
-                      className="hover:text-blue-800 hover:underline text-lg font-medium block"
+                      className="hover:text-orange-600 text-lg font-medium block"
                       onClick={(e) => {
                         e.preventDefault();
                         handleTOCClick(item.id);
