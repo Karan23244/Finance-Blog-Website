@@ -94,7 +94,7 @@ const CalculatorPage = ({ goBack }) => {
           </Helmet>
       <div className="mx-auto max-w-screen-xl py-10 px-2">
         <button
-          onClick={() => navigate("/calculator")}
+          onClick={() => navigate("/financial-calculators")}
           className="mb-6 px-4 py-2 bg-[#FF822E] text-white rounded-lg hover:shadow-md transition-all">
           Back
         </button>
