@@ -583,7 +583,7 @@ const calculators = [
   },
   {
     id: "rd",
-    name: "Recurring Deposit (RD) Calculator",
+    name: "Recurring Deposit Calculator",
     description:
       "Observe how gradual interest earnings from modest, regular deposits can grow into a sizeable sum. ",
     inputs: [
@@ -675,7 +675,7 @@ const calculators = [
   },
   {
     id: "fd",
-    name: "Fixed Deposit (FD) Calculator",
+    name: "Fixed Deposit Calculator",
     description:
       "To effectively maximise returns, figure out the interest and maturity value of your fixed deposit investment.",
     inputs: [
