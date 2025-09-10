@@ -8,7 +8,9 @@ import { Helmet } from "react-helmet-async";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DoughnutChart = lazy(() => import("react-chartjs-2").then(module => ({ default: module.Doughnut })));
+const DoughnutChart = lazy(() =>
+  import("react-chartjs-2").then((module) => ({ default: module.Doughnut }))
+);
 
 const CalculatorPage = ({ goBack }) => {
   const { calculatorName } = useParams();
@@ -18,7 +20,7 @@ const CalculatorPage = ({ goBack }) => {
 
   // Fetch calculator details based on the normalized name
   const calculator = calculators.find(
-    (c) => c.name === normalizedCalculatorName
+    (c) => c.name.toLowerCase() === normalizedCalculatorName.toLowerCase()
   );
   const { pathname } = useLocation();
   const defaultInputs = calculator.inputs.reduce((acc, input) => {
@@ -81,17 +83,17 @@ const CalculatorPage = ({ goBack }) => {
 
   return (
     <>
-    {/* React Helmet for SEO */}
-          <Helmet>
-            <title>{calculator.seotitle}</title>
-            <meta name="description" content={calculator.seodescription} />
-            <meta name="keywords" content="" />
-            <meta property="og:title" content={calculator.title} />
-            <meta property="og:description" content={calculator.description} />
-            <meta property="og:type" content="Calculator Page" />
-            <meta property="og:url" content={currentUrl} />
-            <link rel="canonical" href={currentUrl} />
-          </Helmet>
+      {/* React Helmet for SEO */}
+      <Helmet>
+        <title>{calculator.seotitle}</title>
+        <meta name="description" content={calculator.seodescription} />
+        <meta name="keywords" content="" />
+        <meta property="og:title" content={calculator.title} />
+        <meta property="og:description" content={calculator.description} />
+        <meta property="og:type" content="Calculator Page" />
+        <meta property="og:url" content={currentUrl} />
+        <link rel="canonical" href={currentUrl} />
+      </Helmet>
       <div className="mx-auto max-w-screen-xl py-10 px-2">
         <button
           onClick={() => navigate("/financial-calculators")}
@@ -208,7 +210,7 @@ const CalculatorPage = ({ goBack }) => {
         </div>
         <div>
           <div
-            className="my-8"
+            className="custom-html my-8"
             dangerouslySetInnerHTML={{ __html: calculator.html }}
           />
         </div>

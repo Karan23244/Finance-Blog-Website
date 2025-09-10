@@ -29,64 +29,42 @@ const calculators = [
     ],
     output: "Future Value ($)",
     showGraph: true,
-    html: `<p><span style="font-weight: 400;">Welcome to the SIP Calculator by Trust Financial Advisory! We made this for you to make your financial journey management much easier with the help of Systematic Investment Plans, or SIPs. This will let you see how much money has grown in time, irrespective of whether you have been investing for years or just beginning. We look forward to guiding you toward wise choices that will bring about your financial success!</span></p>
-<p class="demoTitle">&nbsp;</p>
-<p><strong>What is a SIP Calculator?</strong></p>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">You can calculate returns on your SIP investment with a very useful financial tool called the SIP Calculator. This is how one can easily make wealth creation. SIPs are a great facility which allows one to invest a fixed sum in mutual funds at regular intervals. Variables like amount, investment period, and expected rate of return can be used to calculate how your money might increase by using this calculator.</span></p>
-<p class="demoTitle">&nbsp;</p>
-<p><strong>How Does the SIP Calculator Work?</strong></p>
-<p class="demoTitle">&nbsp;</p>
-<p><strong>The SIP Calculator works by taking three steps:</strong></p>
-<p class="demoTitle">&nbsp;</p>
-<ul style ="list-style-type:disc;">
-<li style="font-weight: 400;"><strong>Monthly Investment Amount:</strong><span style="font-weight: 400;"> It is the fixed amount of money you are going to invest every month.</span></li>
-<li style="font-weight: 400;"><strong>Investment Period:</strong><span style="font-weight: 400;"> It is the number of years you will keep investing.</span></li>
-<li style="font-weight: 400;"><strong>Expected Rate of Return:</strong><span style="font-weight: 400;"> It is the annual rate of return that you expect from your investments.</span></li>
-</ul>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">With these inputs, the calculator will calculate the future value of the investment. This includes the principal amount invested at the beginning and the interest that is earned in the course of the investment period.</span></p>
-<p class="demoTitle">&nbsp;</p>
-<p><strong>For Example&nbsp;</strong></p>
-<p class="demoTitle">&nbsp;</p>
-<p><strong>Assumptions:</strong><span style="font-weight: 400;"> You have chosen an investment of $5,000 a month for ten years in a mutual fund that you believe will return 12% per annum.</span></p>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">Brief Description of Your Strategy:</span></p>
-<p class="demoTitle">&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">Welcome to SIP Calculator, brought to you by Trust Financial Advisory, the smart way to plan your investments and create wealth. Here's how Systematic Investment Plans (SIPs) can help you estimate how much your money can grow over the years.</span></p>
+<p><span style="font-weight: 400;">Whether you are a new investor or an experienced investor, you can get a fair idea of how investing through SIP can work wonders for your investments and take informed investment decisions using our online SIP return calculator.</span></p>
+<h2><strong>What is a SIP Calculator?</strong></h2>
+<p><span style="font-weight: 400;">SIP Calculator is a free online tool to estimate returns based on investing in a SIP in mutual funds. You&rsquo;ll be able to easily plan your financial goals by inputting information such as monthly investment, tenure, and the return you expect.&nbsp;</span></p>
+<p><span style="font-weight: 400;">This calculator is just the thing to illustrate how disciplined investments and the power of compounding contribute to long-term wealth creation.Through SIPs, you can make a regular investment of a predetermined amount in mutual funds where you benefit from dollar cost averaging and compounding.&nbsp;</span></p>
+<p><span style="font-weight: 400;">Plan Confidently with a SIP Calculator Online The online SIP calculator provides you with an approximate figure of how much your investment will grow in the future, and thus, you can plan better.</span></p>
+<h2><strong>How Does the SIP Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">The mutual fund SIP calculator is based on three basic inputs:</span></p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;</span><strong>Amount each month:</strong><span style="font-weight: 400;"> $5,000.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;</span><strong>Number of months:</strong><span style="font-weight: 400;"> 120 months or 10 years.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;</span><strong>Expected Rate of Return:</strong><span style="font-weight: 400;"> 12% Annually</span></li>
+<li style="font-weight: 400;"><strong>Monthly investment amount &ndash;</strong><span style="font-weight: 400;"> The specific amount that you invest on a monthly basis.</span></li>
+<li style="font-weight: 400;"><strong>Investment Period &ndash;</strong><span style="font-weight: 400;"> The years you&rsquo;ll be making contributions.</span></li>
+<li style="font-weight: 400;"><strong>Expected Rate of Return &ndash;</strong><span style="font-weight: 400;"> The annual average return you anticipate receiving from the market.</span></li>
 </ul>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">This will enable you to increase the quantum of your investments over time and avail of compounding rates.</span></p>
-<p class="demoTitle">&nbsp;</p>
-<p><strong>Using the SIP Calculator will yield some interesting numbers:</strong></p>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">The investment was worth $5,00,000, which amounts to $5,000 per month for 120 months.</span></p>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">Estimated future value amounts to around $10,50,000.&nbsp;</span></p>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">This would mean that if you save $5,000 every month for ten years, the money added may be more than $10 lakh! Primarily, growth or appreciation will come because of compounding, which allows the returns to earn returns on the initial investment and returns over time.</span></p>
-<p class="demoTitle">&nbsp;</p>
-<p><strong>Advantages of Using the SIP Calculator</strong></p>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">The SIP calculator helps you to set practical financial goals by calculating the amount you would need to achieve the desired outcome or goal.</span></p>
-<p class="demoTitle">&nbsp;</p>
+<p><span style="font-weight: 400;">After you provide these details, this SIP returns calculator tells</span></p>
+<h2><strong>Example of SIP Returns</strong></h2>
+<p><span style="font-weight: 400;">Let&rsquo;s assume:</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Investment Plan:</strong><span style="font-weight: 400;"> This will keep you on the right track by enabling it to guide and assist you on where and how much to invest considering your current financial position, along with the schedule that is in line with what is necessary for you.</span></li>
-<li style="font-weight: 400;"><strong>Short-Term investments:</strong><span style="font-weight: 400;"> It shows how regular, minute-by-minute, short-term investments can grow into huge amounts of money.</span></li>
-<li style="font-weight: 400;"><strong>User-Friendly Interface:</strong><span style="font-weight: 400;"> Our SIP Calculator is accessible to all users regardless of their financial background because it is made simple to use and intuitive.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Monthly SIP: $60</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Duration: 10 years (120 months)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expected Return: 12% annually</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Future Value: $14,000</span></li>
 </ul>
-<p class="demoTitle">&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p class="demoTitle">&nbsp;</p>
-<p><span style="font-weight: 400;">Invest early so that your money grows. Small amounts can be accumulated into great wealth.</span></p>
-<p class="demoTitle">&nbsp;</p>
+<p><span style="font-weight: 400;">If you invest $60 each month for 10 years, your total investment would be $7,200. With the SIP calculator, you should have been able to estimate the wealth created to be close to $14,000. This demonstrates how SIP mutual fund investments grow over a period of time with the effect of compounding.</span></p>
+<h2><strong>Benefits of Using a SIP Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Consistency is the key to long-term financial success. Regular investments through SIPs help in developing disciplined saving habits.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">SIPs reduce the effects of market volatility by investing fixed amounts at regular intervals. This averages your investment costs over time.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Review and adjust your SIP amount or duration regularly based on your financial goals and current market conditions.</span></li>
+<li style="font-weight: 400;"><strong>Goal-Based Planning &ndash;</strong><span style="font-weight: 400;"> Know how much to invest for fulfilling all your financial goals, like your house, children&rsquo;s education, retirement, etc.</span></li>
+<li style="font-weight: 400;"><strong>Compounding &ndash;</strong><span style="font-weight: 400;"> Walmart for the Rich Man If you've never done the math, witness the power of compounding in the trees of a "Do Nothing" portfolio.</span></li>
+<li style="font-weight: 400;"><strong>Risk Control &ndash;</strong><span style="font-weight: 400;"> SIPs mitigate the risk of timing the market through an averaging of your costs.</span></li>
+<li style="font-weight: 400;"><strong>Easy-To-Use &ndash;</strong><span style="font-weight: 400;"> Even if you know nothing about finance, you can effortlessly use our SIP return calculator.</span></li>
+</ul>
+<h2><strong>Key Insights for SIP Investments</strong></h2>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invest early &ndash; Compounding: The earlier you start, the more compounding works its magic.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invest with discipline &ndash; if you persevere, you will eventually become wealthy.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Through SIPs, an investor can manage market volatility by spreading his investment over a given period.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensure you quantify your SIP amount and tenure per time period to remain in sync with your financial goals.</span></li>
 </ul>
 <!-- Comments are visible in the HTML source only -->`,
     seotitle: "SIP Calculator | Plan Your Investment Smartly",
@@ -123,63 +101,46 @@ const calculators = [
     ],
     output: "Future Value ($)",
     showGraph: true,
-    html: `<p><span style="font-weight: 400;">Hello from the Trust Financial Advisory Lumpsum Calculator. One can use this to analyze the return on a lump sum mutual fund or any alternative investment. One could eventually see savings for your child's education or retirement in the future.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">This Lumpsum Calculator will help you make better investment decisions, because it gives relevant information to you so that you can know how much return will be on your investment more accurately. This makes financial planning simpler and better for you. Check out your choices now to get nearer to your monetary goals!</span></p>
-<p>&nbsp;</p>
-<p><strong>What is a Lumpsum Calculator?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">A lump sum calculator is one of the useful financial tools that can estimate the future value of a single investment given a rate of return and investment duration. While SIPs require constant installments, a lump sum investment is a one-time, sizable payment.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">It can be said that this calculator reflects all the merits of compounding by showing the increase in the investment amount. Using it allows you to know your possible investment growth better and the degree of knowledge with which you can make decisions for them. Excellent method for financial planning!</span></p>
-<p>&nbsp;</p>
-<p><strong>How Does the Lumpsum Calculator Work?</strong></p>
-<p>&nbsp;</p>
-<p><strong>The Lumpsum Calculator requires three key inputs:</strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to Lumpsum Calculator from Trust Financial Advisory Lumpsum Calculator, a tool that lets you determine the future wealth on the basis of lump sum investment.&nbsp;</span></p>
+<p><span style="font-weight: 400;">If you are thinking of your child's education, retirement, or long-term wealth creation, then our online lumpsum calculator allows you to see how a one-time investment grows over time thanks to the power of compounding.</span></p>
+<h2><strong>What is a Lumpsum Calculator?</strong></h2>
+<p><span style="font-weight: 400;">A lumpsum calculator is a free financial planning tool that calculates the future value of a one-time investment based on your input values like investment amount, expected rate of return, and duration. Unlike a SIP (Systematic Investment Plan), which requires regular installments, a lumpsum investment in mutual funds is a single large payment made upfront.</span></p>
+<p><span style="font-weight: 400;">This calculator highlights the benefits of compounding, showing how your money grows exponentially over time, making it easier to visualize financial planning goals.</span></p>
+<h2><strong>How Does the Lumpsum Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">Here are simple 3 inputs to start using mutual fund lumpsum calculator:</span></p>
 <p>&nbsp;</p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">That is, the investment amount is the sum of the entire capital you anticipate having to invest in one transaction.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">The investment period refers to the total number of years that you will hold the investment.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">The expected rate of return is the percent yield per annum that you will expect on your investment.</span></li>
+<li style="font-weight: 400;"><strong>Investing Amount &ndash;</strong><span style="font-weight: 400;"> Amount of overall money you would like to commit upfront.</span></li>
+<li style="font-weight: 400;"><strong>Investment Time frame &ndash;</strong><span style="font-weight: 400;"> Duration of time you wish to be invested.</span></li>
+<li style="font-weight: 400;"><strong>Anticipated Return &ndash;</strong><span style="font-weight: 400;"> The return you anticipate from your mutual fund or investment option, per year.</span></li>
 </ul>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Using this tool, one can calculate a future worth of an investment. This tool is defined as the total of the initial capital and the returns obtained over the course of the investment period.</span></p>
-<p>&nbsp;</p>
-<p><strong>For Example&nbsp;</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Assume that you have invested $1,00,000 in a mutual fund which is likely to fetch an annual rate of return of 10% over the next five years.</span></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">The tool takes these inputs and automatically does the math to figure out how much your lumpsum investment will grow to be in the future with principal and compounded returns applied so you can make smarter money decisions.</span></p>
+<h2><strong>Example of Lumpsum Investment Growth</strong></h2>
+<p><strong>Suppose you invest:</strong></p>
 <ul>
-<li style="font-weight: 400;"><strong>Amount Invested:</strong><span style="font-weight: 400;"> $1,00,000</span></li>
-<li style="font-weight: 400;"><strong>Investment Tenure:</strong><span style="font-weight: 400;"> Five Years</span></li>
-<li style="font-weight: 400;"><strong>Expected Return Rate:</strong><span style="font-weight: 400;"> 10% per annum</span></li>
+<li style="font-weight: 400;"><strong>Investment Amount: </strong><span style="font-weight: 400;">$1,200</span></li>
+<li style="font-weight: 400;"><strong>Duration:</strong><span style="font-weight: 400;"> 5 years</span></li>
+<li style="font-weight: 400;"><strong>Expected Return Rate:</strong><span style="font-weight: 400;"> 10% annually</span></li>
+<li style="font-weight: 400;"><strong>Future Value:</strong><span style="font-weight: 400;"> $1,940</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">With the Lumpsum Calculator you will get:</span></p>
-<p>&nbsp;</p>
-<p><strong>Approx Future Value:</strong><span style="font-weight: 400;"> $1,61,051</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">So with compounding, your investment of $1,00,000 today will double and more to over $1.61 lakh in just 5 years!</span></p>
-<p><br /><br /><br /></p>
-<p><strong>Advantages of Using the Lumpsum Calculator</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Expedited Evaluation: The Lumpsum Calculator offers a transparent and efficient evaluation of the potential growth associated with an individual investment.</span></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">If you use the lumpsum mutual fund calculator, then your projected investment amount will be $1,940 after 5 years.</span></p>
+<p><span style="font-weight: 400;">This example illustrates how, even with an initial investment made only once, compound interest grows wealth more and more rapidly over a period of years.</span></p>
+<h2><strong>Benefits of Using a Lumpsum Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">It assists in establishing precise financial objectives and facilitates goal-directed planning for major life occurrences by demonstrating the prospective future value of your investment.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">By depicting the impact of your capital's growth over time, it enhances your comprehension of how compounding influences your investment.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">This will enable a person to test different levels of investment, different time horizons, and varied expected rates of return and therefore customize their investment plan and see what this would mean for the value of future wealth.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;It will be accessible to everyone of any skill level.</span></li>
+<li style="font-weight: 400;"><strong>Immediate Feedback-</strong><span style="font-weight: 400;"> Quickly assess the value of your investment in the future.</span></li>
+<li style="font-weight: 400;"><strong>Goal Base Financial Planning &ndash;</strong><span style="font-weight: 400;"> Have achievable targets like education, retirement, or wealth building.</span></li>
+<li style="font-weight: 400;"><strong>Compounding &ndash;</strong><span style="font-weight: 400;"> Learn how gains made on your returns speed up wealth building through gathering interest.</span></li>
+<li style="font-weight: 400;"><strong>Scenario Test &ndash;</strong><span style="font-weight: 400;"> Test with various investment amounts, periods or return assumption to compare results.</span></li>
+<li style="font-weight: 400;"><strong>Easy to Use &ndash;</strong><span style="font-weight: 400;"> Lumpsum calculator online tool is easy to use for all investors regardless if they are beginners or have been in the industry long enough.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p>&nbsp;</p>
+<h2><strong>Key Insights for Lumpsum Investments</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Temporal Factors:</strong><span style="font-weight: 400;"> The timing of an investment plays a very crucial role in the potential benefits that it can generate, especially when the market is bullish. One should consider the current market situation before investing.</span></li>
-<li style="font-weight: 400;"><strong>Long-term Perspective:</strong><span style="font-weight: 400;"> The compounding principle increases the value of your investment over time. In general, a long-term investment strategy is likely to yield more money.</span></li>
-<li style="font-weight: 400;"><strong>Risk Assessment:</strong><span style="font-weight: 400;"> Before investing one-time, assess your risk level. Higher risk often comes with higher potential return, so the investment choices made should be based on your goals.</span></li>
+<li style="font-weight: 400;"><strong>It&rsquo;s About Timing &ndash;</strong><span style="font-weight: 400;"> The state of the market when the investment is made is very important to returns.</span></li>
+<li style="font-weight: 400;"><strong>Think Ahead &ndash;</strong><span style="font-weight: 400;"> Longer time frames, supercharge the power of compounding for greater wealth.</span></li>
+<li style="font-weight: 400;"><strong>Risk Assessment &ndash;</strong><span style="font-weight: 400;"> Align with your risk appetite and objectives with your one-time investment.</span></li>
 </ul>
-<p><strong>Diversification:</strong><span style="font-weight: 400;"> Try to distribute one-time investment in several different classes of assets. This strategy helps increase your probable returns and</span></p>
+<p><strong>Spread it Around &ndash;</strong><span style="font-weight: 400;"> Use single-time contributions across a variety of mutual funds and investment categories to help mitigate risk and enhance potential return.</span></p>
 <!-- Comments are visible in the HTML source only -->`,
     seotitle: "Lumpsum Investment Calculator | Smart Financial Planning",
     seodescription:
@@ -222,81 +183,53 @@ const calculators = [
     ],
     output: "Remaining Balance ($)",
     showGraph: false,
-    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s SWP Calculator! You&apos;re on the correct platform if you&apos;re interested in utilizing your investments to create a regular income stream. With our Systematic Withdrawal Plan (SWP) Calculator, you can calculate how much you can withdraw from your mutual fund investments on a routine basis while keeping the growth of your capital intact.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Systematic Withdrawal Plan (SWP)?</span></strong></p>
-<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investors can withdraw a fixed amount from their mutual fund investments on a monthly or quarterly basis through a Systematic Withdrawal Plan (SWP). This option provides a balanced method of managing investments and cash flow, which is ideal for individuals seeking a regular income while still enjoying the advantages of potential capital appreciation.</span></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our SWP Calculator?</span></strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Finanical Advisory's SWP Calculator – your companion for constant income in your mutual fund. Frequently, within a SWP, the investor is able to withdraw a fixed amount at regular intervals, such as monthly, quarterly, or annually, where the remaining proceeds are free to continue to earn going forward. </span></p>
+<p><span style="font-weight: 400;">That’s what makes SWPs a great option for retirees and anyone looking for regular income distribution without cashing out their entire portfolio.</span></p>
+<h2><strong>What is a Systematic Withdrawal Plan (SWP)?</strong></h2>
+<p><span style="font-weight: 400;">SWP (Systematic Withdrawal Plan): It is the facility that provides an investor with a fixed amount in the normal course at periodic intervals of time from his mutual fund investments. SWPs are not like lump-sum withdrawals and allow you a regular flow of income while your capital remains invested for potential market-related returns. This has a few implications, but in particular for people interested in the following:</span></p>
+ 
 <ul>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Estimates:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Get instant calculations of your potential withdrawals without any hassle.</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter your investment amount, expected return rate, and withdrawal frequency to see your potential income.</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Helps you plan your withdrawals effectively to meet your financial goals.</span></p>
-  </li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Retirement income planning</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Supplementing monthly expenses</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Balancing withdrawals with wealth appreciation</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the SWP Calculator</span></strong></p>
+<p><span style="font-weight: 400;">The mutual fund SWP calculator helps you sort out this mess in an orderly manner.</span></p>
+<h2><strong>Why Use Our SWP Calculator?</strong></h2>
 <ul>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Investment Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the total amount you have invested in the mutual fund.</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Expected Return Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the expected annual return rate of your investment (e.g., 8%).</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Select Withdrawal Frequency:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Choose how often you want to withdraw (monthly, quarterly, annually).</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view your estimated withdrawal amount and remaining investment balance.</span></p>
-  </li>
+<li style="font-weight: 400;"><strong>Quick Calculations –</strong><span style="font-weight: 400;"> Know immediately the amount of withdrawal while maintaining the corpus.</span></li>
+<li style="font-weight: 400;"><strong>Easy to Use –</strong><span style="font-weight: 400;"> Easy-to-understand interface for ease of use.</span></li>
+<li style="font-weight: 400;"><strong>Personalizable Inputs –</strong><span style="font-weight: 400;"> Type the amount to invest, estimated return, and withdrawal frequency to see the actual value.</span></li>
+<li style="font-weight: 400;"><strong>Smart Retirement Planning –</strong><span style="font-weight: 400;"> Prepare for your future and make withdrawals coincide with long-term retirement planning and related financial security.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
+<h2><strong>How to Use the SWP Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Input Investment Amount –</strong><span style="font-weight: 400;"> Enter the amount you initially invested in mutual funds.</span></li>
+<li style="font-weight: 400;"><strong>Insert Anticipated Return Rate –</strong><span style="font-weight: 400;"> The interest rate that you anticipate getting on your investments per year for use with this portfolio dividend calculator.</span></li>
+<li style="font-weight: 400;"><strong>Choose The Withdrawal Frequency –</strong><span style="font-weight: 400;"> Do you want withdrawals monthly, quarterly, or yearly?</span></li>
+<li style="font-weight: 400;"><strong>Run the Numbers –</strong><span style="font-weight: 400;"> Now you can see your projected withdrawal amounts and future investment balance on the fly.</span></li>
+</ol>
+<h2><strong>Example of SWP Withdrawals</strong></h2>
 <ul>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$10,00,000</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expected Return Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;8% per annum</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Withdrawal Frequency:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Monthly</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Withdrawal Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$50,000</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Estimated Remaining Investment After 1 Year:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$8,00,000</span></p>
-  </li>
+<li style="font-weight: 400;"><strong>Investment Amount:</strong><span style="font-weight: 400;"> $12,000</span></li>
+<li style="font-weight: 400;"><strong>Expected Return Rate:</strong><span style="font-weight: 400;"> 8% annually</span></li>
+<li style="font-weight: 400;"><strong>Withdrawal Frequency:</strong><span style="font-weight: 400;"> Monthly</span></li>
+<li style="font-weight: 400;"><strong>Withdrawal Amount:</strong><span style="font-weight: 400;"> $600</span></li>
+<li style="font-weight: 400;"><strong>Assuming remaining investment after 1 year is</strong><span style="font-weight: 400;"> $9,600</span></li>
 </ul>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our SWP Calculator</span></strong></p>
+<p><span style="font-weight: 400;">This case illustrates how you can carve out withdrawals for income while preserving at least part of your capital for compounding growth.</span></p>
+<h2><strong>Advantages of Using an SWP Calculator</strong></h2>
 <ul>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Income Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand how much you can withdraw regularly without depleting your capital too quickly.</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Management:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Monitor the impact of withdrawals on your overall investment portfolio.</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Security:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Create a reliable income stream for retirement or other financial needs.</span></p>
-  </li>
+<li style="font-weight: 400;"><strong>Income Certainty –</strong><span style="font-weight: 400;"> Establish a set of predictable withdrawals to balance household or retirement budgets.</span></li>
+<li style="font-weight: 400;"><strong>Portfolio Manager –</strong><span style="font-weight: 400;"> Monitor the impact of withdrawals on your mutual fund investments.</span></li>
+<li style="font-weight: 400;"><strong>Tactical Security –</strong><span style="font-weight: 400;"> Don't run out of cash early on; find the right level of withdrawals for you.</span></li>
+<li style="font-weight: 400;"><strong>Retirement Planning –</strong><span style="font-weight: 400;"> Generate a consistent source of income that’s not dependent on pensions or fixed deposits.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
+<h2><strong>Additional Resources</strong></h2>
 <ul>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding SWP:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn more about how Systematic Withdrawal Plans work and their benefits.</span></p>
-  </li>
-  <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-      <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various strategies for managing your investments effectively.</span></p>
-  </li>
+<li style="font-weight: 400;"><strong>Learn about SWPs –</strong><span style="font-weight: 400;"> understand how SWP fares versus SIP and lumpsum.</span></li>
+<li style="font-weight: 400;"><strong>Investment Strategies –</strong><span style="font-weight: 400;"> Learning to find a balance between growth, taking money out, and diversification between accounts.</span></li>
 </ul>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`,
+<p><strong>Professional Help – </strong><span style="font-weight: 400;">Read our financial blogs to develop a plan to suit your needs.</span></p>`,
     seotitle: "SWP Calculator | Retirement Planning Tool",
     seodescription:
       "Use the SWP Calculator to plan retirement withdrawals from mutual funds. Ensure a steady income stream and secure your finances for a stress-free future.",
@@ -331,59 +264,42 @@ const calculators = [
     ],
     output: "Maturity Value ($)",
     showGraph: true,
-    html: `<p><span style="font-weight: 400;">Salutations from Trust Financial Advisory, the Mutual Fund Calculator. This important tool has been created to help people understand how much their money will generate returns in their mutual fund investments. In light of making smart investment decisions, our mutual fund calculator provides beneficial knowledge. With respect to your personal financial planning, you can research and expand your planning.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is a Mutual Fund Calculator?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">A mutual fund calculator is quite handy when computing the future values of investments based on the principal amount, time horizon, and the expected rate of return. Computing an estimate of the value of investments that they can produce after a certain period accounting for the performance of the market and the compounding effect makes better decisions easier by enabling a better understanding of the possible growth of investments.</span></p>
-<p>&nbsp;</p>
-<p><strong>How Does the Mutual Fund Calculator Work?</strong></p>
-<p>&nbsp;</p>
-<p><strong>The Mutual Fund Calculator requires three key inputs:</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">This is the amount of capital one intends to invest in a mutual fund. The amount of capital in question, therefore, stands to be an investment sum.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Duration of Investment: This is the period in years that one intends to keep his or her mutual fund investment.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">This is an estimated annual percentage rate expected to be generated by the mutual fund investment.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">That can be done by inputting the relevant data into the calculator. According to the chosen formula, the future value calculated encompasses not only the amount of the investment but also any profits accrued during the investment duration.</span></p>
-<p><br /><br /><br /></p>
-<p><strong>For Example&nbsp;</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Suppose one decides to invest $50,000 annually for ten years in a mutual fund one expects returns of 12% per annum.</span></p>
-<p>&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">Mutual Fund Calculator by Trust Financial Advisory Thinking of investing in mutual funds but not sure about which scheme should be preferred and what the estimated return would be? Whether you are taking your first steps in the investment world or have years of experience, this webcast can help you compare the potential return on investments and clarify your investment planning decisions with valid financial reasoning. </span></p>
+<p><span style="font-weight: 400;">Comparing investment strategies in line with your long-term financial goals is a click away with our online mutual return calculator.</span></p>
+<h2><strong>What is a Mutual Fund Calculator?</strong></h2>
+<p><span style="font-weight: 400;">What is a mutual fund return calculator? A mutual fund return calculator is an online tool which showcases the future value of the investment made in mutual funds by considering the 3 factors: amount of the investment, investment period and expected rate of return. </span></p>
+<p><span style="font-weight: 400;">Investors can mock how their investment would perform in the future by playing with this calculator. To see the impact of market performance and compounded vs. simple returns.</span></p>
+<p><span style="font-weight: 400;">This makes it an indispensable tool for long-term perspective planning like retirement, higher education, home purchase or wealth creation.</span></p>
+<h2><strong>How Does the Mutual Fund Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">Mutual Fund Return Calculator The following input is required according to this mutual fund calculator:</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Annual investible amount:</strong><span style="font-weight: 400;"> $50,000</span></li>
-<li style="font-weight: 400;"><strong>Number of years:</strong><span style="font-weight: 400;"> 10 years</span></li>
-<li style="font-weight: 400;"><strong>Expected rate of return annually:</strong><span style="font-weight: 400;"> 12%</span></li>
+<li style="font-weight: 400;"><strong>Amount of Investment –</strong><span style="font-weight: 400;"> The amount of money you ultimately will plan spend per month, per year, or as a single payment.</span></li>
+<li style="font-weight: 400;"><strong>Time Horizon of Investment –</strong><span style="font-weight: 400;"> Number of years you will be an investor.</span></li>
+<li style="font-weight: 400;"><strong>Expected Return Rate –</strong><span style="font-weight: 400;"> The rate of return that you expect the mutual fund to earn, on average, each year.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Using the Mutual Fund Calculator, one would find</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Cumulative investment is the product of annual investment and number of years, which turns out to be $5,00,000, the product of $50,000 and ten years.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The approximate calculated future value is around $11,60,000.</span></p>
-<p><span style="font-weight: 400;">This implies a sum of 50,000 as annual investment can be reached to over 11.6 lakh by the end of a decade with compound interest.</span></p>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using the Mutual Fund Calculator</strong></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">By inputting these figures, the calculator estimates the future value of the investments, initial contributions and compounding earnings.</span></p>
+<h2><strong>Example of Mutual Fund Investment Growth</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Goal-Oriented Planning:</strong><span style="font-weight: 400;"> The Mutual Fund Calculator assists you in formulating explicit goals that indicate how your money will appreciate over time, thereby preparing for any major life events, including retirement, education, or home ownership.</span></li>
-<li style="font-weight: 400;"><strong>Formulation of an Investment Strategy:</strong><span style="font-weight: 400;"> This allows for the designing of a personal investment strategy in that one has the opportunity to try out various different amounts, terms, and compounding rates with the calculator providing insight into what happens to value in the future.</span></li>
-<li style="font-weight: 400;"><strong>Understanding Compounding:</strong><span style="font-weight: 400;"> This calculator helps explain the impact of compounding on investments and even demonstrates how a capital base could grow over time.</span></li>
-<li style="font-weight: 400;"><strong>Risk Assessment:</strong><span style="font-weight: 400;"> Complete knowledge of probable returns will, therefore, improve the accurate determination of risks from different mutual funds, thus resulting in decisions that best fit the given financial goals.</span></li>
-<li style="font-weight: 400;"><strong>User-Friendly Interface:</strong><span style="font-weight: 400;"> The mutual fund calculator is simple to use and intuitively designed such that everyone has access to the tool, no matter the background in finance.</span></li>
+<li style="font-weight: 400;"><strong>Annual Investment: </strong><span style="font-weight: 400;">$600</span></li>
+<li style="font-weight: 400;"><strong>Duration:</strong><span style="font-weight: 400;"> 10 years</span></li>
+<li style="font-weight: 400;"><strong>Anticipated ROI:</strong><span style="font-weight: 400;"> 12% per year.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">With a mutual fund calculator, the amount invested in total over 10 years is $6,000. But the anticipated value after 10 years is nearly $14,000.</span></p>
+<p><span style="font-weight: 400;">This calculation shows the power of compounding, as your returns earn more returns, resulting in exponential investment growth.</span></p>
+<h2><strong>Advantages of Using the Mutual Fund Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Start Early:</strong><span style="font-weight: 400;"> The earlier you begin to invest in mutual funds, the more time your money has to grow. Small, regular investments add up to huge wealth over the years.</span></li>
-<li style="font-weight: 400;"><strong>The idea is mainly diversification:</strong><span style="font-weight: 400;"> spreading your money across many mutual funds reduces risk and grows the potential for returns. Based on the risk, you may want to have a diversified portfolio comprising debt, equity, and hybrid funds.</span></li>
+<li style="font-weight: 400;"><strong>Life Goals Planning –</strong><span style="font-weight: 400;"> Plan for life goals like retirement, children’s education, or home buying.</span></li>
+<li style="font-weight: 400;"><strong>Custom Invest Strategy – </strong><span style="font-weight: 400;">Test scenarios by adjusting the investment amount, time period, and expected rates of return to build a strategy that’ll fit your needs.</span></li>
+<li style="font-weight: 400;"><strong>Learn the Power of Compounding –</strong><span style="font-weight: 400;"> See your money work and multiply with the help of time.</span></li>
+<li style="font-weight: 400;"><strong>Risk Awareness –</strong><span style="font-weight: 400;"> You would also be able to estimate in advance. What returns to expect from different categories of mutual funds (equity, debt, hybrid) in order to take better care of risk.</span></li>
+<li style="font-weight: 400;"><strong>Simple to Use Tool –</strong><span style="font-weight: 400;"> The tool that’s Simple to Use for both beginner and experienced investors.</span></li>
 </ul>
-<p><strong>Monitoring:</strong><span style="font-weight: 400;"> It would be a very good idea to monitor your investments in mutual funds from time to time and fine-tune them in accordance with your financial objectives and the state of the prevailing market.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<h2><strong>Key Insights for Mutual Fund Investors</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Start Early –</strong><span style="font-weight: 400;"> Compounding has a greater effect the longer you have to invest.</span></li>
+<li style="font-weight: 400;"><strong>Diversify carefully –</strong><span style="font-weight: 400;"> Spread investment across equity, debt and hybrid schemes to balance risk and returns.</span></li>
+</ul>
+<p><strong>Monitor On A Regular Basis –</strong><span style="font-weight: 400;"> Carefully monitor your investments from time to time to match them with your financial plan and market conditions.</span></p>`,
     seotitle: "Mutual Fund Calculator | Growth with Trust Financial Advisory",
     seodescription:
       "Use our Mutual Fund Calculator to maximize returns. Get accurate projections and grow your investments wisely with Trust Financial Advisory. Start smart investing today!",
@@ -417,61 +333,47 @@ const calculators = [
     ],
     output: "Maturity Value ($)",
     showGraph: true,
-    html: `<p><span style="font-weight: 400;">Hello, With its highly advantageous PPF Calculator, Trust Financial Advisory has made it easy to understand the potential returns generated with investments in the Public Provident Fund. Our PPF Calculator helps you with required information about saving funds securely, planning retirement, and paying for your child's education, among others, thereby giving you informed decisions regarding your financial goals.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is a PPF Calculator?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">PPF calculator is one financial tool that allows you to project the future worth of your Public Provident Fund investments. Favourable interest rates and tax advantages make PPF a long-term savings plan supported by the Indian government.&nbsp;</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Considering the fact that the PPF scheme involves a fixed interest rate and the compounding factor, the calculator explains how more and more benefits from your investments over time.</span></p>
-<p>&nbsp;</p>
-<p><strong>How Does the PPF Calculator Work?</strong></p>
-<p>&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's PPF Calculator. With our tool, it’s easy to calculate the maturity value of your Public Provident Fund (PPF) investment to plan for your retirement, your child’s education, or any other long-term financial goals. </span></p>
+<p><span style="font-weight: 400;">The PPF (Public Provident Fund) scheme is a long-term investment offered by the Govt of India which also provides guaranteed returns, tax benefits, and attractive interest rates. Use our PPF calculator to plan your investments and know how your money grows over time for future planning.</span></p>
+<h2><strong>What is a PPF Calculator?</strong></h2>
+<p><span style="font-weight: 400;">A PPF calculator is a financial tool that estimates the maturity amount of investments in a Public Provident Fund. PPF, being a government-backed scheme, is one of the safest investment instruments for 15 years. It provides competitive interest rates, tax deductions under Section 80C and guaranteed returns, which is why many low-risk investors find it an attractive option.</span></p>
+<p><span style="font-weight: 400;">This tool demonstrates how your monthly contributions, annually compounded at the current interest in PPF rate, accumulate to a corpus of wealth in 15 years or more.</span></p>
+<h2><strong>How Does the PPF Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">To use the Public Provident Fund calculator, there are just three variables needed:</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Monthly Investment Amount:</strong><span style="font-weight: 400;"> The pre-defined amount you want to commit each month in your PPF account.</span></li>
-<li style="font-weight: 400;"><strong>Total Number of Years:</strong><span style="font-weight: 400;"> The minimum 15-year tenure for which you want to keep your money locked in your PPF account.</span></li>
-<li style="font-weight: 400;"><strong>Expected Rate of Return:</strong><span style="font-weight: 400;"> PPF returns at an annual rate of around 7.1 percent for the scheme as of the year 2025, though that might change later.</span></li>
+<li style="font-weight: 400;"><strong>Monthly Contribution –</strong><span style="font-weight: 400;"> The amount you want to invest per month in your PPF account.</span></li>
+<li style="font-weight: 400;"><strong>Investment Term –</strong><span style="font-weight: 400;"> 15 years (5 year block is also available)</span></li>
+<li style="font-weight: 400;"><strong>Rate of Interest –</strong><span style="font-weight: 400;"> At present PPF interest is around 7.1% compounded annually (as for 2025 it is subject to quarterly revision).</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">With these inputs, the calculator calculates the expected value of an investment based on the principal amount at the start as well as interest earned over time.</span></p>
-<p>&nbsp;</p>
-<p><strong>For Example&nbsp;</strong></p>
-<p>&nbsp;</p>
+ 
+<p><span style="font-weight: 400;">By putting in these figures, the calculator will highlight the investment amount, interest accrued, and maturity value at the end of the period.</span></p>
+<h2><strong>Example of PPF Returns</strong></h2>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Invest $5,000 a month at 7.1% for 15 years in a PPF account.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Monthly investment: $5,000&nbsp;</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Investment tenure: 15 years (180 months) 7.1% is the rate of return on an annual basis.&nbsp;</span></li>
+<li style="font-weight: 400;"><strong>Monthly Investment:</strong><span style="font-weight: 400;"> $60</span></li>
+<li style="font-weight: 400;"><strong>Type of Investment:</strong><span style="font-weight: 400;"> Long-Term Investment Duration of Investment: 15 years (180 months)</span></li>
+<li style="font-weight: 400;"><strong>Rate of Return:</strong><span style="font-weight: 400;"> 7.1% annually</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Results from PPF Calculator:</strong></p>
-<p>&nbsp;</p>
+<h3><strong>PPF Maturity Calculation Results:</strong></h3>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Total Investment: $9,000,000&nbsp;</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Approx. Estimated Future Value: ~$17,000,000&nbsp;</span></li>
+<li style="font-weight: 400;"><strong>Total Investment:</strong><span style="font-weight: 400;"> $10,800</span></li>
+<li style="font-weight: 400;"><strong>IFV (Maturity Value):</strong><span style="font-weight: 400;"> $20,500</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">$5,000 will be approximately $17 lakh in 15 years if it's deposited every month.</span></p>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using the PPF Calculator</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The PPF Calculator will reveal to you how money can grow with time and thereby enables you to set specific financial goals for a landmark major life event like retirement and college education.</span></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">In simple terms, $60 per month for 15 years can grow to as high as $20,500 with the power of compounding and guaranteed returns.</span></p>
+<h2><strong>Advantages of Using the PPF Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Long-term planning -</strong><span style="font-weight: 400;"> Now you begin to understand the advantages of long-term savings. You now realize that the earlier one starts investing, the better, and there is the need to persist in one's efforts.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Understanding Compounding: The calculator explains how money can compound over time, which makes it easier to understand the power of compounding on investments.</span></li>
-<li style="font-weight: 400;"><strong>Intuitive Interface:</strong><span style="font-weight: 400;"> Our PPF Calculator has been designed to be intuitive and easy to use, so everyone, regardless of their financial literacy, can access it.</span></li>
-<li style="font-weight: 400;"><strong>User-Friendly Interface:</strong><span style="font-weight: 400;"> Our PPF Calculator is designed to be straightforward and user-friendly, so that any individual with financial literacy can access it.</span></li>
+<li style="font-weight: 400;"><strong>Retirement &amp; Goal Planning –</strong><span style="font-weight: 400;"> Quickly check how much corpus will be available at maturity for retirement or for a child’s education.</span></li>
+<li style="font-weight: 400;"><strong>Discipline Long Term –</strong><span style="font-weight: 400;"> Promotes systematic saving for 15 years to meet your objectives.</span></li>
+<li style="font-weight: 400;"><strong>Understanding Compounding –</strong><span style="font-weight: 400;"> Visualise How Your Investments Are Compounded Yearly.</span></li>
+<li style="font-weight: 400;"><strong>Tax Benefit –</strong><span style="font-weight: 400;"> Investment is eligible for deduction under Section 80C, and the maturity amount is tax-free.</span></li>
+<li style="font-weight: 400;"><strong>Easy To Use –</strong><span style="font-weight: 400;"> A tool that suits everyone, whether you come from a financial or non-financial background!</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p>&nbsp;</p>
+<h2><strong>Key Insights for PPF Investors</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Start Early:</strong><span style="font-weight: 400;"> If you start saving early in a PPF account, your money will have more years to grow. Gradually, little and steady amounts of savings translate into huge riches.</span></li>
-<li style="font-weight: 400;"><strong>Lock-in Period:</strong><span style="font-weight: 400;"> This 15-year lock-in period of PPF encourages thrifty saving. Yet, partial withdrawal is allowed from the seventh year onwards, giving some liquidity to the account holder.</span></li>
-<li style="font-weight: 400;"><strong>Interest Rate Risk:</strong><span style="font-weight: 400;"> The current interest rates would have to be tracked as the PPF interest rate is expected to shift every quarter.</span></li>
+<li style="font-weight: 400;"><strong>Start Early –</strong><span style="font-weight: 400;"> Invest Early; the more the compounding, the more the maturity corpus when the policy matures.</span></li>
+<li style="font-weight: 400;"><strong>Lock-in a Must –</strong><span style="font-weight: 400;"> PPF carries a lock-in of 15 years, with withdrawals permitted partially only from the 7th year.</span></li>
+<li style="font-weight: 400;"><strong>Keep track –</strong><span style="font-weight: 400;"> if the interest rate – interest rates on PPF – is changed by the government every quarter, be updated.</span></li>
 </ul>
-<p><strong>Diversification:</strong><span style="font-weight: 400;"> Even though PPF is a risk-free investment, one should diversify the portfolio with other investment choices to strike the right balance between risk and returns.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<p><strong>Invest in PPF –</strong><span style="font-weight: 400;"> Invest 15 years to avoid financial crunch, but diversify. PPF is risk-free, but for a higher return, you need to invest some in equity mutual funds, SIPs or any other instrument.</span></p>`,
     seotitle: "PPF Interest Calculator | Plan Your Retirement Savings Now",
     seodescription:
       "Calculate your PPF returns with our easy-to-use PPF Calculator. Estimate savings growth, plan investments wisely, and secure your financial future today!",
@@ -520,63 +422,56 @@ const calculators = [
     ],
     output: "EPF Corpus ($)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">We are happy to introduce you to the EPF Calculator from Trust Financial Advisory. This is one of the vital tools that helps assess possible returns on investments into the Employees Provident Fund (EPF). The EPF Calculator will provide you with invaluable information to make informed decisions for your money, be it to retire or get a better feel for your savings.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is an EPF Calculator?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Using an EPF calculator, one could calculate the likely value of savings in the EPF by looking at factors including the amount individuals contribute monthly, employers' contributions, the rate that interest is offered, and a number of years spent working. The Employee Provident Fund in India is also a retirement benefit plan where some fraction of every employee's paycheck is deducted toward a savings program by both parties-the employer as well as the employee.</span></p>
-<p>&nbsp;</p>
-<p><strong>How Does the EPF Calculator Work?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">You should input the following essential data into this calculator:</span></p>
-<p>&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">We are pleased to present the EPF calculator by Trust Financial Advisory that will help you calculate your EPF balance so that you can make your personal finance estimations according to the result provided. </span></p>
+<p><span style="font-weight: 400;">When you’re in the run-up to retirement and want to ensure your savings target is within firing distance; want to understand how your monthly contributions will snowball into a huge retirement corpus; you know where to find an easy to use, online EPF calculator.</span></p>
+<h2><strong>What is an EPF Calculator?</strong></h2>
+<p><span style="font-weight: 400;">An EPF calculator permits you to estimate the corpus you will have in the end, though taking into account certain important variables.</span></p>
+ 
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">This is simply the sum total of your monthly contributions to your Employee Provident Fund.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">The Employer Contribution is the amount that your employer puts into your Employee Provident Fund account. In most cases, this is 12% of your basic salary.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">It involves the annual percentage interest rate to be charged over EPF and is about 8.5% in the year 2025. With time, its value changes also.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">The duration for which one intends to put his or her EPF funds is called an investment period in years.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Your monthly EPF contribution</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Employer’s contribution</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Applicable interest rate</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Investment time-period (in number of years)</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Using all these inputs, the calculator will calculate the future value of your EPF savings based on the principal and interest you will accrue during the investment period.</span></p>
-<p>&nbsp;</p>
-<p><strong>For Example&nbsp;</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Suppose you opt for a monthly deposit of $5,000 in your EPF account, and your employer also deposits an amount of $5,000. You will deposit it for 20 years. The annual interest rate expected is 8.5%.</span></p>
-<p>&nbsp;</p>
+ 
+<p><span style="font-weight: 400;">EPF, or the Employees’ Provident Fund, is a government-run retirement savings plan to which both employer and employee contribute a set percentage of the employee’s basic pay. With time, contributions plus compound interest form a formidable retirement foundation.</span></p>
+<h2><strong>How Does the EPF Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">The necessary inputs for EPF maturity calculator are as follows:</span></p>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Monthly contribution by Employee:</strong><span style="font-weight: 400;"> $5,000</span></li>
-<li style="font-weight: 400;"><strong>Monthly contribution by Employer</strong><span style="font-weight: 400;">: $5,000</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Annual interest rate is 8.5%.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">It lasts for 20 years, or 240 months.</span></li>
+<li style="font-weight: 400;"><strong>Employee Contribution –</strong><span style="font-weight: 400;"> The share obtained from your salary per month to be deducted towards EPF.</span></li>
+<li style="font-weight: 400;"><strong>Employer’s Contribution –</strong><span style="font-weight: 400;"> Circa 12% of your Basic salary, Paid by your employer.</span></li>
+<li style="font-weight: 400;"><strong>EPF Interest Rate –</strong><span style="font-weight: 400;"> This is announced by the government every year; it is approximately 8.5% for 2025.</span></li>
+<li style="font-weight: 400;"><strong>Length of Investment –</strong><span style="font-weight: 400;"> Number of years for which you are going to save until retirement.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Using the EPF Calculator, you would find that:</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The cumulative contribution amounted to $24,00,000 (calculated as $10,000 multiplied by 240 months).</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Estimated Future Value: Approximately $1,00,00,000</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">This would mean with the power of compound interest, you would save roughly an amount of $ 1 crore in your EPF by paying $ 10,000 a month for 20 years-your contribution plus your employer's.</span></p>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using the EPF Calculator</strong></p>
-<p>&nbsp;</p>
+ 
+<p><span style="font-weight: 400;">Based on these figures, the calculator depicts your overall contributions and retirement maturity amount, taking into account compound growth.</span></p>
+<h2><strong>Example of EPF Returns</strong></h2>
+<p><span style="font-weight: 400;">Say you put $60 a month into your EPF account, with a matching contribution from your employer of $60. Term=20 years, rate of interest=8.5% per annum.</span></p>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Retirement Planning:</strong><span style="font-weight: 400;"> The EPF calculator will be very useful in formulating financial goals, since the amount of one's EPF savings that will be achieved after a particular time is forecasted. This, therefore, will assist one to plan how to retire.</span></li>
-<li style="font-weight: 400;"><strong>Understanding Contributions:</strong><span style="font-weight: 400;"> It also includes employer matching in the computation. Contributions made by an individual are added to that contributed by the employer.</span></li>
-<li style="font-weight: 400;"><strong>Advantages of Compounding:</strong><span style="font-weight: 400;"> Now, you will use the calculator and see how that money can be compounded over some period of time. That's how effective compounding works for your EPF money.</span></li>
-<li style="font-weight: 400;"><strong>Tax benefits:</strong><span style="font-weight: 400;"> EPF is a tax-friendly savings instrument because the contribution qualifies for tax relief under Section 80C of the Income Tax Act. You will be able to estimate what you will have saved in addition to the sum you will be saving through accretion.</span></li>
-<li style="font-weight: 400;"><strong>Easy to use interface:</strong><span style="font-weight: 400;"> our EPF calculator is developed in such a way that it can be used by all the users without any financial knowledge, hence it will be user-friendly.</span></li>
+<li style="font-weight: 400;"><strong>Monthly Contribution (Employee + Employer):</strong><span style="font-weight: 400;"> $120</span></li>
+<li style="font-weight: 400;"><strong>Duration:</strong><span style="font-weight: 400;"> 20 years (240 months)</span></li>
+<li style="font-weight: 400;"><strong>Total Contribution:</strong><span style="font-weight: 400;"> $28,900</span></li>
+<li style="font-weight: 400;"><strong>Estimated Future Value:</strong><span style="font-weight: 400;"> $120,500</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p>&nbsp;</p>
+ 
+<p><span style="font-weight: 400;">And when combined with the compounding factor and employer contributions, your EPF savings can help create a corpus worth almost $1.2 lakh in 20 years.</span></p>
+<h2><strong>Advantages of Using the EPF Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Start Early:</strong><span style="font-weight: 400;"> The earlier you start, the more years your money works for you. Periodic payments for such a long period can accumulate into enormous amounts of wealth.</span></li>
-<li style="font-weight: 400;"><strong>Grab the Employer's Contribution:</strong><span style="font-weight: 400;"> As a general principle, it would be most ideal to capitalize on this advantage to fully make use of your employer's matching contribution. This implies essentially "free money" which greatly contributes to one's retirement account.</span></li>
-<li style="font-weight: 400;"><strong>Interest Rate Fluctuation:</strong><span style="font-weight: 400;"> To make proper decisions, one needs to keep track of the latest interest rates as they may change anytime.</span></li>
+<li style="font-weight: 400;"><strong>Retirement Planning –</strong><span style="font-weight: 400;"> Predict your retirement income and lifestyle.</span></li>
+<li style="font-weight: 400;"><strong>Employer Match Visibility –</strong><span style="font-weight: 400;"> Witness how much employer contributions can explode your saving efforts.</span></li>
+<li style="font-weight: 400;"><strong>Power of Compounding –</strong><span style="font-weight: 400;"> Learn about how savings end up multiplying faster over the long period.</span></li>
+<li style="font-weight: 400;"><strong>Tax Benefits –</strong><span style="font-weight: 400;"> EPF deposits qualify for deduction under Section 80C; hence, it is a tax-saving instrument.</span></li>
+<li style="font-weight: 400;"><strong>User-Friendly &amp; Accessible –</strong><span style="font-weight: 400;"> A simple tool that is even usable for those with no knowledge of finance.</span></li>
 </ul>
-<p><strong>Withdrawal Rules:</strong><span style="font-weight: 400;"> Know the rules for EPF withdrawal as it may influence your retirement planning. Generally, you can withdraw your EPF amount at the time of retirement or under specific conditions.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<h2><strong>Key Insights for EPF Investors</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Begin Younger –</strong><span style="font-weight: 400;"> Time stories with broader paths to your savings.</span></li>
+<li style="font-weight: 400;"><strong>Maximise Employer’s Contribution –</strong><span style="font-weight: 400;"> Never let employer contributions go unclaimed; it is like free money towards your future.</span></li>
+<li style="font-weight: 400;"><strong>Follow Interest Rates –</strong><span style="font-weight: 400;"> EPF deposit rates change every year, decided by the government.</span></li>
+</ul>
+<p><strong>Learn the Rules –</strong><span style="font-weight: 400;"> In general, withdrawals can be made at retirement or for certain circumstances such as unemployment, emergencies, or housing.</span></p>`,
     seotitle: "EPF Calculator | Calculate PF Contributions & Interest",
     seodescription:
       "Use our free EPF calculator to estimate your Employee Provident Fund (EPF) savings. Get insights into your retirement savings and plan a secure future today.",
@@ -611,64 +506,51 @@ const calculators = [
     ],
     output: "Maturity Value ($)",
     showGraph: true,
-    html: `<p><span style="font-weight: 400;">Welcome to the Recurring Deposit Calculator by Trust Financial Advisory. It is a highly important tool which will help you look over the returns on investments that would be generated through recurring deposits.&nbsp;</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Be it planning and setting apart money for your dream wedding, vacation, or paying off a mortgage deposit, our RD Calculator will give you all the insight you would need into making a wise financial decision.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is a Recurring Deposit (RD) Calculator?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Based on the number of years that a deposit is made, interest rate, and the monthly deposit amount, it determines the amount of money an individual may make in return from such deposits. Since periodic deposits allow an individual to invest a certain amount of money at a specific time gap, which is accumulated over years to form an enormous corpus, these are probably the most popular options for savings.</span></p>
-<p>&nbsp;</p>
-<p><strong>How Does the RD Calculator Work?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The other critical components required for the RD Calculator are:</span></p>
-<p>&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">Welcome to the Trust Financial Advisory RD Calculator. We have created an easy and simple way to calculate the return on your RD investment. </span></p>
+<p><span style="font-weight: 400;">Whether planning for a dream wedding, saving for an exotic vacation, or simply planning for that dream home, our RD calculator can help you get a clear idea of how your investment will grow over time.</span></p>
+<h2><strong>What is a Recurring Deposit (RD) Calculator?</strong></h2>
+<p><span style="font-weight: 400;">Recurring Deposit Calculator is an online financial tool which allows you to calculate the maturity of the recurring deposit based on the three main components – monthly deposit, tenure, and interest rate offered by the bank. Then with recurring deposits, you continue to add a certain amount every month, which will grow over time with the interest you are compounding it at.</span></p>
+<p><span style="font-weight: 400;">Due to its flexibility and lower risk, RD is one among the most preferred savings options among Indians. The tool demonstrates how your monthly saving adds up to funds corpus over a chosen time horizon.</span></p>
+<h2><strong>How Does the RD Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">To use the RD maturity calculator, you need to provide the following details:</span></p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">The total one intends to put aside every month is known as the monthly deposit amount.</span></li>
-<li style="font-weight: 400;"><strong>Interest Rate:</strong><span style="font-weight: 400;"> This is the yearly interest rate a bank offers to a person in a recurring deposit.</span></li>
-<li style="font-weight: 400;"><strong>Investment Duration:</strong><span style="font-weight: 400;"> This is the whole period of years that one wishes to maintain the regular deposit.</span></li>
+<li style="font-weight: 400;"><strong>Monthly Deposit –</strong><span style="font-weight: 400;"> The amount of deposit that is constant every month.</span></li>
+<li style="font-weight: 400;"><strong>Rate of interest –</strong><span style="font-weight: 400;"> The rate of interest that the bank is offering on its deposits.</span></li>
+<li style="font-weight: 400;"><strong>Investment period number of years –</strong><span style="font-weight: 400;"> This is how many years or months you will invest in RD.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The above amount represents the future value of a recurring deposit, calculated using both principal sum and interest generated during the investment period by the calculator.</span></p>
-<p>&nbsp;</p>
-<p><strong>For Example&nbsp;</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Assuming the saver saves $5,000 per month to a recurring deposit account for five years, then the annual interest rate would be 7%.</span></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Based on these inputs, the calculator calculates the maturity value comprising principal contributions plus compound interest.</span></p>
+<h2><strong>Example of RD Calculation</strong></h2>
+<p><span style="font-weight: 400;">Let's say you deposit ₹5,000 a month for five years at a 7% annual interest rate in a recurring deposit.</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Periodic deposit:</strong><span style="font-weight: 400;"> $5,000.</span></li>
-<li style="font-weight: 400;"><strong>Annual interest rate:</strong><span style="font-weight: 400;"> 7%</span></li>
-<li style="font-weight: 400;"><strong>Investment Period:</strong><span style="font-weight: 400;"> 5 Years (60 Months)</span></li>
+<li style="font-weight: 400;"><strong>Monthly Deposit:</strong><span style="font-weight: 400;"> $60</span></li>
+<li style="font-weight: 400;"><strong>Investment Duration:</strong><span style="font-weight: 400;"> 5 years (60 months)</span></li>
+<li style="font-weight: 400;"><strong>Annual Interest Rate:</strong><span style="font-weight: 400;"> 7%</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Using the RD Calculator, you would find that:</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Total investment is $3,00,000 ($5,000 x 60 months).</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Future value estimated at about $3,48,000.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">That will mean with the addition of compound interest, you can grow your investment up to about $3.48 lakh if you add a monthly deposit of $5,000 for five years.</span></p>
-<p><br /><br /><br /></p>
-<p><strong>Advantages of Using the RD Calculator</strong></p>
-<p>&nbsp;</p>
+ 
+<h3><strong>Recurring deposit calculator results:</strong></h3>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Goal-Oriented Savings:</strong><span style="font-weight: 400;"> The RD Calculator will assist you in formulating specific financial goals because it displays how much your recurring deposits will grow with time, thereby enabling you to better plan for important life events.</span></li>
-<li style="font-weight: 400;"><strong>Disciplined Saving:</strong><span style="font-weight: 400;"> It also encourages disciplined savings because it makes you envision the benefits of consistent contributions and substantial wealth buildup.</span></li>
-<li style="font-weight: 400;"><strong>Understanding Compounding:</strong><span style="font-weight: 400;"> The calculator shows the impact of compounding on investments, helping users understand how their money can grow over time.</span></li>
-<li style="font-weight: 400;"><strong>Flexibility:</strong><span style="font-weight: 400;"> It enables users to change different deposit amounts, interest rates, and periods to see how they affect future value, making it easier to develop a tailored savings plan.</span></li>
-<li style="font-weight: 400;"><strong>User-friendly interface:</strong><span style="font-weight: 400;"> The RD Calculator has been developed with an eye to user intuition and ease of operation, ensuring accessibility to all, irrespective of their financial acumen.</span></li>
+<li style="font-weight: 400;"><strong>Total Investment:</strong><span style="font-weight: 400;"> $3,600 (₹5,000 (x) 60 months)</span></li>
+<li style="font-weight: 400;"><strong>Future Value (Maturity Amount):</strong><span style="font-weight: 400;"> $4,190</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The more time your money has to grow, the better. Consistent monthly contributions are bound to build you enormous wealth in the long term.</span></p>
-<p>&nbsp;</p>
+ 
+<p><span style="font-weight: 400;">This is an example of the power of monthly deposits held over time and combined with interest being compounded.</span></p>
+<h2><strong>Advantages of Using the RD Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Variability of interest rate:</strong><span style="font-weight: 400;"> Recurring deposits can have a different interest rate with each bank. So you need to shop around for the best possible interest rates.</span></li>
-<li style="font-weight: 400;"><strong>Liquidity Considerations:</strong><span style="font-weight: 400;"> Although recurring deposits have attractive interest rates, they generally have a lock-in period. Understand the terms and conditions related to premature withdrawals.</span></li>
+<li style="font-weight: 400;"><strong>Goal-based Savings –</strong><span style="font-weight: 400;"> Assists you in defining your financial objectives for long-term expenses such as education, weddings and home purchases.</span></li>
+<li style="font-weight: 400;"><strong>Regular Savings –</strong><span style="font-weight: 400;"> It promotes financial discipline through regular and fixed contributions.</span></li>
+<li style="font-weight: 400;"><strong>Power of Compounding –</strong><span style="font-weight: 400;"> Demonstrates how investment grows as interest compounds on monthly deposits.</span></li>
+<li style="font-weight: 400;"><strong>Flexibility –</strong><span style="font-weight: 400;"> Experiment with various deposit amounts, interest rates and tenures to create your own customized savings plan.</span></li>
+<li style="font-weight: 400;"><strong>User-Friendly –</strong><span style="font-weight: 400;"> Easy user interface, perfect for first-time investors and those with experience.</span></li>
 </ul>
-<p><strong>Tax Implications:</strong><span style="font-weight: 400;"> Interest earned on recurring deposits is taxable. So, be sure to factor in tax implications while planning your savings.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<h2><strong>Key Insights for RD Investments</strong></h2>
+<p><span style="font-weight: 400;">The Longer You Save, the More The abovementioned example has shown that the longer you save, the better the amount will be.</span></p>
+ 
+<ul>
+<li style="font-weight: 400;"><strong>Interest Rate Variation –</strong><span style="font-weight: 400;"> Interest rates offered by various banks vary, so look before you invest.</span></li>
+<li style="font-weight: 400;"><strong>Liquidity –</strong><span style="font-weight: 400;"> RDs usually come with a lock-in to avoid making them premature; the same leads to lower returns.</span></li>
+</ul>
+<p><strong>Tax Implications –</strong><span style="font-weight: 400;"> The interest you earn on a recurring deposit is taxable; remember to consider this in your savings scheme.</span></p>`,
     seotitle: "Recurring Deposit Calculator | Calculate RD Returns Instantly",
     seodescription:
       "Quickly calculate your RD maturity amount and interest with our free Recurring Deposit (RD) Calculator. Plan your savings smartly and achieve your goals",
@@ -703,59 +585,47 @@ const calculators = [
     ],
     output: "Maturity Value ($)",
     showGraph: true,
-    html: `<p><span style="font-weight: 400;">Welcome to the Trust Financial Advisory Fixed Deposit Calculator! The free, easy-to-use calculator helps you discover the returns you could get from fixed deposits. The FD calculator offered here will allow all sorts of people, from beginners to professionals, to find out what your probable return will be, so you make the best financial decisions possible.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is the FD Calculator?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">It uses an FD calculator that gives you an approximate maturity amount you'll be getting from your fixed deposit. Using the most important parameters concerning your principal amount, interest rate, and tenure within the calculator will make it very easy for you to see how your investment is going to grow with time.&nbsp;</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">This tool will certainly be very useful to people who want to compare various FD options, plan their savings, or determine how different interest rates will affect their returns.</span></p>
-<p>&nbsp;</p>
-<p><strong>How the FD Calculator Works</strong></p>
-<p>&nbsp;</p>
-<p><strong>Using our FD Calculator is straightforward. Here&rsquo;s how it works:</strong></p>
-<p>&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's Fixed Deposit (FD) Calculator! Our FD calculator is a free and simple online tool which helps you calculate returns on your fixed deposit investment. </span></p>
+<p><span style="font-weight: 400;">Be it a novice or an experienced investor, you now have a simple-to-use FD maturity calculator to compute with ease the interest receivable on your FD and the maturity amount.</span></p>
+<h2><strong>What is an FD Calculator?</strong></h2>
+<p><span style="font-weight: 400;">A fixed deposit calculator is a financial device that illustrates the maturity amount you will receive after your FD period is complete. The calculator shows you how your investment interest and gain will grow when you invest. </span></p>
+<p><span style="font-weight: 400;">That saves you the hassle of doing everything manually and allows you to compare FD options across banks and financial institutions with ease. The FD calculator is great for those who wish to plan their future deposits by choosing the best scheme and want to know how changing rates of interest can impact the returns.</span></p>
+<h2><strong>How Does the FD Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">Our tool for FD interest calculation is easy to use. Here are the simple steps:</span></p>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Enter the Principal Amount:</strong><span style="font-weight: 400;"> The amount you want to deposit in the fixed deposit.</span></li>
-<li style="font-weight: 400;"><strong>Choose the Rate of Interest:</strong><span style="font-weight: 400;"> You need to fill in the annual percentage interest rate that the bank or the financial institution is offering.</span></li>
-<li style="font-weight: 400;"><strong>Choose the Tenure:</strong><span style="font-weight: 400;"> Mention the period that the fixed deposit will be held; this could be a few months to even several years.</span></li>
-<li style="font-weight: 400;"><strong>Calculate: </strong><span style="font-weight: 400;">Click on "Calculate" Button and view the total interest accrued along with the maturity amount estimated.</span></li>
+<li style="font-weight: 400;"><strong>Principal –</strong><span style="font-weight: 400;"> The item used to issue a fixed deposit.</span></li>
+<li style="font-weight: 400;"><strong>Interest Rate –</strong><span style="font-weight: 400;"> The interest rate a bank or money lender is willing to offer to individuals or companies.</span></li>
+<li style="font-weight: 400;"><strong>Tenure –</strong><span style="font-weight: 400;"> The length for which your funds are deposited in the FD account.</span></li>
+<li style="font-weight: 400;"><strong>Calculate –</strong><span style="font-weight: 400;"> The calculator gives you not just the interest earned but also the maturity amount at the click of a button.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>For Example&nbsp;</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Let&rsquo;s say you want to invest in a fixed deposit with the following details:</span></p>
-<p>&nbsp;</p>
+<h2><strong>Example of Fixed Deposit Returns</strong></h2>
+<p><span style="font-weight: 400;">Let’s say you invest $120 in a fixed deposit with the below details:</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Principal Amount:</strong><span style="font-weight: 400;"> 10,000</span></li>
+<li style="font-weight: 400;"><strong>Principal Amount:</strong><span style="font-weight: 400;"> $120</span></li>
 <li style="font-weight: 400;"><strong>Interest Rate:</strong><span style="font-weight: 400;"> 5% per annum</span></li>
 <li style="font-weight: 400;"><strong>Tenure:</strong><span style="font-weight: 400;"> 3 years</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Using the FD Calculator, you would input these values, and upon clicking "Calculate," you would find:</span></p>
-<p>&nbsp;</p>
-<p><strong>Maturity Amount:</strong><span style="font-weight: 400;"> $11,576.25</span></p>
-<p><strong>Total Interest Earned:</strong><span style="font-weight: 400;"> $1,576.25</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">This means that after 3 years, your initial investment of $10,000 will grow to $11,576.25, earning you a total interest of $1,576.25.</span></p>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using the FD Calculator</strong></p>
-<p>&nbsp;</p>
+<h3><strong>Results from the FD calculator:</strong></h3>
 <ul>
-<li style="font-weight: 400;"><strong>Fast and Accurate Computations:</strong><span style="font-weight: 400;"> Use our handy calculator to save time and avoid doing manual calculations.</span></li>
-<li style="font-weight: 400;"><strong>Decision Making:</strong><span style="font-weight: 400;"> Compare the various FD options and interest rates to choose the best investment for your financial goals.</span></li>
-<li style="font-weight: 400;"><strong>Financial Planning:</strong><span style="font-weight: 400;"> Use the calculator to know how much you can make in the long run by planning your savings.</span></li>
-<li style="font-weight: 400;"><strong>Visualization of Growth:</strong><span style="font-weight: 400;"> Analyze the growth of your investment based on different principal amounts, interest rates, and tenures.</span></li>
+<li style="font-weight: 400;"><strong>Maturity Amount:</strong><span style="font-weight: 400;"> $139.50</span></li>
+<li style="font-weight: 400;"><strong>Total Interest Earned:</strong><span style="font-weight: 400;"> $19.00</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">That is, after 3 years with 5% interest per year, your $120 will grow to $139.50.</span></p>
+<h2><strong>Advantages of Using the FD Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Interest Rates Matter:</strong><span style="font-weight: 400;"> Even slight interest rate differences can make huge returns. So always compare different rates from other banks.</span></li>
-<li style="font-weight: 400;"><strong>Time compounds:</strong><span style="font-weight: 400;"> Typically speaking, the more time your money is committed for, the better the interest rates. Of course, you must factor how much you would need before committing that money to years from now.</span></li>
+<li style="font-weight: 400;"><strong>Fast &amp; Accurate Answer –</strong><span style="font-weight: 400;"> Computes returns with no cumbersome formulas.</span></li>
+<li style="font-weight: 400;"><strong>Make a More Informed Decision –</strong><span style="font-weight: 400;"> Compare FD options and get the best interest rates.</span></li>
+<li style="font-weight: 400;"><strong>Improved Money Management –</strong><span style="font-weight: 400;"> Project long-term savings growth more accurately.</span></li>
+<li style="font-weight: 400;"><strong>Visualize Clearly –</strong><span style="font-weight: 400;"> Understand maturity values via principal, interest &amp; tenure comparisons.</span></li>
 </ul>
-<p><strong>Interest growth:</strong><span style="font-weight: 400;"> Compounding Effect Compounds interest earned from fixed deposits can be compounded quarterly, semiannually, or annually to enhance their returns. See which one compounds the most often.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<h2><strong>Key Insights for FD Investments</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Compare Interest Rates –</strong><span style="font-weight: 400;"> The marginal difference in FD rates can lead to a large impact on returns.</span></li>
+<li style="font-weight: 400;"><strong>More Time, More Growth –</strong><span style="font-weight: 400;"> The rule of thumb is that the longer you lock up for, the more you’ll earn.</span></li>
+<li style="font-weight: 400;"><strong>Know about compounding frequency –</strong><span style="font-weight: 400;"> FD interest is generally compounded quarterly, half-yearly or yearly, and the more the frequency of compounding, the higher your returns will be.</span></li>
+</ul>
+<p><strong>Plan Liquidity Needs –</strong><span style="font-weight: 400;"> Be sure to only freeze the funds you actually do not need during the deposit period.</span></p>`,
     seotitle:
       "Fixed Deposit (FD) Interest Calculator | Trust Financial Advisory",
     seodescription:
@@ -798,64 +668,49 @@ const calculators = [
     ],
     output: "Corpus & Pension ($)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">We are pleased to introduce you to the National Pension System (NPS) Calculator by Trust Financial Advisory. Be it the time when you first joined your workplace or at the final mile of retiring, this simple calculator would help you in estimating the retirement corpus under the NPS scheme so that you can confidently plan for your financial future.</span></p>
-<p>&nbsp;</p>
-<p><strong>What is the NPS Calculator?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Basically, the NPS Calculator gives one a very vivid picture of just how much money one might possibly save towards their retirement savings in terms of how much one has contributed, rate of return on investment, and the number of years for that investment. The important parameters put together regarding one's monthly contribution, expected rate of return, and period of investment make the savings increase quite apparent over time. This is very useful for individuals who would want to save regularly to have the financial capability for the future.</span></p>
-<p>&nbsp;</p>
-<p><strong>How the NPS Calculator Works</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Using our NPS Calculator is simple and user-friendly. Here&rsquo;s how it works:</span></p>
-<p>&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">We are happy to announce NPS Calculator by Trust Financial Advisory – a simple online tool that will help you to calculate your retirement corpus under NPS (National Pension System). Whether you have just begun your career or are close to retirement, our NPS retirement calculator helps you estimate the amount of corpus you need to build a financially stress-free future.</span></p>
+<h2><strong>What is an NPS Calculator?</strong></h2>
+<p><span style="font-weight: 400;">An NPS calculator helps you to calculate how much wealth you can create by regularly investing in NPS, a government-sponsored pension scheme for long-term retirement planning. It takes in to account important things such as your monthly contribution, expected market-linked return, and the duration before you plan to hang up your boots, to calculate the future value of your retirement corpus.</span></p>
+<p><span style="font-weight: 400;">Due to its structuring, cost-effective investment and tax advantages, NPS is considered one of the best long-term retirement plans.</span></p>
+<h2><strong>How Does the NPS Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">“It is simple to use our National Pension System calculator. Here’s how it works:</span></p>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Monthly contribution:</strong><span style="font-weight: 400;"> Enter the amount of money you plan to invest in NPS every month.</span></li>
-<li style="font-weight: 400;"><strong>Expected rate of return:</strong><span style="font-weight: 400;"> Enter an annual rate of return, usually between 8% to 10%, that you expect from your investments in NPS.</span></li>
-<li style="font-weight: 400;"><strong>Time frame for investing:</strong><span style="font-weight: 400;"> Let the website know how long you plan to contribute to NPS by selecting the choice of investing until retirement.</span></li>
-<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> To view your estimated retirement corpus and the total amount contributed, click the "Calculate" button.</span></li>
+<li style="font-weight: 400;"><strong>Monthly Contribution –</strong><span style="font-weight: 400;"> Just put the amount which you will be regularly investing every month in the NPS.</span></li>
+<li style="font-weight: 400;"><strong>Expected Return –</strong><span style="font-weight: 400;"> Usually between 8% and 10% per annum (PA) depending on your asset allocation.</span></li>
+<li style="font-weight: 400;"><strong>Time Horizon –</strong><span style="font-weight: 400;"> How long you plan to keep your money invested (preferably until retirement).</span></li>
+<li style="font-weight: 400;"><strong>Estimate –</strong><span style="font-weight: 400;"> The calculator also tells the estimated retirement corpus, total contribution made and total interest earned.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>For Example&nbsp;</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Now, let us consider an example wherein you desire to compute the corpus for retirement, using the following values,</span></p>
-<p>&nbsp;</p>
+<h2><strong>Example of NPS Returns</strong></h2>
+<p><span style="font-weight: 400;">Let’s consider the following scenario:</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Contribution per Month:</strong><span style="font-weight: 400;"> $500</span></li>
-<li style="font-weight: 400;"><strong>Expected Rate of Return:</strong><span style="font-weight: 400;"> 9% per year</span></li>
-<li style="font-weight: 400;"><strong>Period of Investment:</strong><span style="font-weight: 400;"> 30 Years</span></li>
+<li style="font-weight: 400;"><strong>Monthly Contribution: </strong><span style="font-weight: 400;">$6</span></li>
+<li style="font-weight: 400;"><strong>Prospective Total Initial Returns:</strong><span style="font-weight: 400;"> 9% per annum</span></li>
+<li style="font-weight: 400;"><strong>Investment Duration:</strong><span style="font-weight: 400;"> 30 years</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">On putting all these values in NPS Calculator, clicking on "Calculate," the result would have been as under:</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">It will be about $1,200,000. This is an estimated retirement corpus.</span></p>
-<p>&nbsp;</p>
+<h3><strong>Results from the NPS calculator:</strong></h3>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Total Contributions:</strong><span style="font-weight: 400;"> $180,000</span></li>
-<li style="font-weight: 400;"><strong>Total Interest:</strong><span style="font-weight: 400;"> $1,020,000</span></li>
+<li style="font-weight: 400;"><strong>Total Contributions:</strong><span style="font-weight: 400;"> $2,170</span></li>
+<li style="font-weight: 400;"><strong>Total Interest Earned:</strong><span style="font-weight: 400;"> $12,300</span></li>
+<li style="font-weight: 400;"><strong>Estimated Retirement Corpus:</strong><span style="font-weight: 400;"> $14,500</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">This means you could have an amount of around $1,200,000 with a total interest of $1,020,000 from 30 years of monthly contributions of $500.</span></p>
-<p><br /><br /></p>
-<p><strong>Advantages of Using the NPS Calculator</strong></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">This sequence of events shows the destructive power of continuous contributions coupled with the effects of compounding low monthly investments into a significant retirement nest.</span></p>
+<h2><strong>Advantages of Using the NPS Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Simple planning:</strong><span style="font-weight: 400;"> calculate how much you should contribute to your retirement, estimating the savings amount in no time.</span></li>
-<li style="font-weight: 400;"><strong>Informed decisions:</strong><span style="font-weight: 400;"> comparing contributions and rates of return for you to decide what is best suited for your retirement planning.</span></li>
-<li style="font-weight: 400;"><strong>Long-term vision:</strong><span style="font-weight: 400;"> think of compound interest and how consistent contributions could grow into enormous savings over a long period of time.</span></li>
+<li style="font-weight: 400;"><strong>Simple &amp; Precise Planning –</strong><span style="font-weight: 400;"> Determining what you need for your retirement doesn’t have to be difficult!</span></li>
+<li style="font-weight: 400;"><strong>Smart Choices –</strong><span style="font-weight: 400;"> Evaluate various contribution levels and return assumptions to determine an optimal match.</span></li>
+<li style="font-weight: 400;"><strong>Compounding Impact – Gain</strong><span style="font-weight: 400;"> an appreciation for the future value of regular savings and compounding growth.</span></li>
+<li style="font-weight: 400;"><strong>Assessing Your Retirement Readiness –</strong><span style="font-weight: 400;"> Determine whether or not your contributions will bring you the lifestyle you desire after you retire.</span></li>
+<li style="font-weight: 400;"><strong>Tax Benefits –</strong><span style="font-weight: 400;"> NPS investments attract the benefit of being invested under Section 80CCD and thus are tax-saving in nature as well.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Retirement Readiness Determine how well your current savings plan fits your retirement goals and adjust as necessary.</span></p>
-<p>&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">You will benefit from more compounding returns if you start early for your NPS. After all, time makes even smaller amounts add up significantly.</span></p>
-<p>&nbsp;</p>
+<h2><strong>Key Insights for NPS Investors</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Increase Contributions:</strong><span style="font-weight: 400;"> To build the retirement corpus, you might want to consider increasing monthly contributions with increase in income.</span></li>
-<li style="font-weight: 400;"><strong>Diversify Your Investments:</strong><span style="font-weight: 400;"> NPS offers you the facility to buy government securities, corporate bonds, or equity. You can increase returns and control risk by diversifying your investments.</span></li>
+<li style="font-weight: 400;"><strong>Begin Early –</strong><span style="font-weight: 400;"> The earlier your money starts getting compounded, the higher your retirement corpus will be.</span></li>
+<li style="font-weight: 400;"><strong>Increase Contributions Over Time –</strong><span style="font-weight: 400;"> Raise your monthly NPS contribution with an increase in your income for bigger savings in the future.</span></li>
+<li style="font-weight: 400;"><strong>Diversify within NPS –</strong><span style="font-weight: 400;"> Divide the fund allocation between equities, corporate bonds and government securities for spreading risks and return options.</span></li>
 </ul>
-<p><strong>Tax Benefits:</strong><span style="font-weight: 400;"> The NPS is a tax-efficient retirement savings option because contributions are deductible under Section 80CCD.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<p><strong>Tax benefits –</strong><span style="font-weight: 400;"> NPS gives you the extra tax deduction beyond the limit of Section 80C, and NPS is one of the most tax-friendly retirement schemes.</span></p>`,
     seotitle:
       "National Pension System (NPS) Calculator | Trust Financial Advisory",
     seodescription:
@@ -905,44 +760,41 @@ const calculators = [
     ],
     output: "Retirement Corpus ($)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Trust Financial Advisory retirement calculator: Next biggest decision that you make during the whole course of your life comes regarding your retirement. Use the retirement calculator below to understand exactly how much money you are likely to require for the post- retirement years to spend in order to enjoy and then what you have to save each month in that respect.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Using only your life expectancy, expected age at retirement, current savings amount, and several other financial points, you may get a precise estimate of what your retirement will be like and how much time you will actually have to build up your old-age savings, thereby helping boost your confidence toward planning for retirement years.</span></p>
-<p><strong>How It Works</strong></p>
-<p><span style="font-weight: 400;">It is very simple to use our Retirement Calculator. Here's how it works:</span></p>
-<ol>
-<li style="font-weight: 400;"><strong>Input Your Current Age:</strong><span style="font-weight: 400;"> First, you require to enter your age as a foundation for your retirement planning.</span></li>
-<li style="font-weight: 400;"><strong>Desired Retirement Age:</strong><span style="font-weight: 400;"> Let us know when you plan to retire. This assists us figure out how many years you have left to save.</span></li>
-<li style="font-weight: 400;"><strong>Life Expectancy:</strong><span style="font-weight: 400;"> Please give details on your projected life expectancy. This will determine how long retirement savings will likely last.</span></li>
-<li style="font-weight: 400;"><strong>Amount Saved to Retirement:</strong><span style="font-weight: 400;"> Please let us know your total amount currently saved for retirement. This ranges from savings to retirement accounts as well as your investments.</span></li>
-<li style="font-weight: 400;"><strong>Month Contributions:</strong><span style="font-weight: 400;"> In this section, please indicate your monthly savings intended for retirement savings. This should include contributions to any 401(k), IRA or other savings products.</span></li>
-<li style="font-weight: 400;"><strong>Expected Rate of Return:</strong><span style="font-weight: 400;"> Estimate what you expect to average annually on the investments. This is a reasonably safe estimate - between 5% and 7%.</span></li>
-<li style="font-weight: 400;"><strong>Compute:</strong><span style="font-weight: 400;"> Click the Compute button to compute your projected savings at retirement, and see whether you are heading toward your target retirement goals.</span></li>
-</ol>
-<p><span style="font-weight: 400;">That's it! We want to help take control of your financial future!.</span></p>
-<p><strong>For Example&nbsp;</strong></p>
-<p><span style="font-weight: 400;">Let's try to explain how the Retirement Calculator works by taking an example for you:</span></p>
+    html: `<p><span style="font-weight: 400;">Trust Fianacial Adviser Retirement Calculator – A necessity to plan retirement and financial freedom. Retirement is one of the biggest decisions of your financial life, and our retirement calculator can help you figure out precisely how much you need to put away each month to be able to live the way you want to when you retire. </span></p>
+<p><span style="font-weight: 400;">With consideration for factors such as life expectancy, retirement age, current savings and anticipated returns, our calculator offers tailored and unique options; giving you peace of mind that planning for the future can be certain and stress-free.</span></p>
+<h2><strong>How Does the Retirement Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">With our retirement saving calculator, you can do it easily and trail the path to financial independence:</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Age now:</strong><span style="font-weight: 400;"> 30</span></li>
-<li style="font-weight: 400;"><strong>Age to retire:</strong><span style="font-weight: 400;"> 65</span></li>
-<li style="font-weight: 400;"><strong>Expected age of life:</strong><span style="font-weight: 400;"> 85</span></li>
-<li style="font-weight: 400;"><strong>Money currently saved:</strong><span style="font-weight: 400;"> $50,000</span></li>
-<li style="font-weight: 400;"><strong>Amount deposited monthly:</strong><span style="font-weight: 400;"> $500</span></li>
-<li style="font-weight: 400;"><strong>Desired annual interest rate:</strong><span style="font-weight: 400;"> 6%</span></li>
+<li style="font-weight: 400;"><strong>Input Current Age –</strong><span style="font-weight: 400;"> Let’s get started! TIP: A great starting point is to use your current age as the guide for your retirement plan.</span></li>
+<li style="font-weight: 400;"><strong>Expected Retirement Age – </strong><span style="font-weight: 400;">Enter the age of retirement; this is your saving window.</span></li>
+<li style="font-weight: 400;"><strong>Life expectancy –</strong><span style="font-weight: 400;"> Put in how many years you think you’re going to live so we can figure out how long you’re retirement savings need to last.</span></li>
+<li style="font-weight: 400;"><strong>Current Savings for Retirement –</strong><span style="font-weight: 400;"> Enter the sum of all retirement savings to date, such as retirement accounts and investments.</span></li>
+<li style="font-weight: 400;"><strong>Monthly Contributions –</strong><span style="font-weight: 400;"> Specify how much you contribute to your retirement savings accounts per month, this could be 401(k), IRA or equivalent plans.</span></li>
+<li style="font-weight: 400;"><strong>Nominal Rate of Return –</strong><span style="font-weight: 400;"> Give the annual rate of return you initially expect to earn on your investments (over the years experience will tell you what rate you’re likely to achieve).</span></li>
+<li style="font-weight: 400;"><strong>Do the math —</strong><span style="font-weight: 400;"> The calculator estimates the amount you will potentially save by retirement age and indicates whether that is on track for your post-retirement needs.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">You can put in the above data and it will tell you how much money you will save by your age of 65 and for how long the amount saved would sustain you as long as you live.</span></p>
-<p><span style="font-weight: 400;">Let's just take this case where you are saving $500 per month and earning a 6% return. Then, when you retire, you might have your savings around $15,00,000. This will help you predict if the savings strategy you are following is good enough to take you through the lifestyle you desire during retirement. It is an excellent means of reviewing your strategy and implementing the right one.</span></p>
-<p><strong>Key Insights</strong></p>
+<h2><strong>Example Calculation</strong></h2>
+<p><span style="font-weight: 400;">Let’s take the following input as an example:</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Personalized Projections:</strong><span style="font-weight: 400;"> The calculator will provide you with a customized view of your specific financial situation to project how prepared you are for retirement.</span></li>
-<li style="font-weight: 400;"><strong>Goal Setting:</strong><span style="font-weight: 400;"> Visualization of retirement savings helps set more realistic goals, so you may be able to change the contribution rates in order to be on target.</span></li>
-<li style="font-weight: 400;"><strong>Investment Strategy:</strong><span style="font-weight: 400;"> It can experiment with different rates of return to understand the impact your investment decisions might have on your retirement savings.</span></li>
-<li style="font-weight: 400;"><strong>Peace of Mind:</strong><span style="font-weight: 400;"> Knowing your bottom line in retirement planning can calm worries and give you a greater sense of security for the future.</span></li>
-<li style="font-weight: 400;"><strong>Actionable Insights:</strong><span style="font-weight: 400;"> The calculator can be useful in giving you an idea of where you are, directing what changes you may want to consider in your savings plan, investment mix, or even potentially retirement age.</span></li>
+<li style="font-weight: 400;"><strong>Current Age:</strong><span style="font-weight: 400;"> 30</span></li>
+<li style="font-weight: 400;"><strong>Retirement Age:</strong><span style="font-weight: 400;"> 65</span></li>
+<li style="font-weight: 400;"><strong>Life Expectancy:</strong><span style="font-weight: 400;"> 85</span></li>
+<li style="font-weight: 400;"><strong>Current Savings:</strong><span style="font-weight: 400;"> $50,000</span></li>
+<li style="font-weight: 400;"><strong>Monthly Contributions:</strong><span style="font-weight: 400;"> $500</span></li>
+<li style="font-weight: 400;"><strong>Targeted Rate of Return:</strong><span style="font-weight: 400;"> 6% per year</span></li>
 </ul>
-<p><span style="font-weight: 400;">With these great features, the Retirement Calculator is very powerful in supporting you on the way to comfortably retiring!</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+ 
+<p><span style="font-weight: 400;">The retirement calculator assumes by 65, will earn about $1,500,000. Drawdown Table - Based on the above assumptions, what you put in and your investment strategy, you get a projected corpus and can see if your contributions &amp; investing style will help you continue to spend your retired life as you do now and prepares you well in advance.</span></p>
+<h2><strong>Key Insights for Retirement Planning</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Customized Projections –</strong><span style="font-weight: 400;"> Get a customized view of your retirement readiness based on your numbers and goals.</span></li>
+<li style="font-weight: 400;"><strong>Goal Setting –</strong><span style="font-weight: 400;"> See how contributions impact progress or keep future, more secure, by changing contributions to stay on track for retirement.</span></li>
+<li style="font-weight: 400;"><strong>Test Your Strategy –</strong><span style="font-weight: 400;"> Experiment with various returns, savings rates, and retirement dates.</span></li>
+<li style="font-weight: 400;"><strong>Peace of Mind-</strong><span style="font-weight: 400;"> eliminate ambiguity by knowing exactly where you are and what steps you need to take in order to achieve a comfortable future.</span></li>
+<li style="font-weight: 400;"><strong>Actionable Advice —</strong><span style="font-weight: 400;"> Utilize advice to help you refine your savings plan, adjust your investment allocations or consider whether early retirement is the right decision for you.</span></li>
+</ul>
+ 
+<p><span style="font-weight: 400;">The Trust Financial Advisory Retirement Calculator is intended to help set a baseline for intelligent retirement planning, providing a new free tool to calculate the retirement you deserve so that you can sleep easy and enjoy your golden years.</span></p>`,
     seotitle: "Retirement Savings Calculator | Trust Financial Advisory",
     seodescription:
       "Don't leave your future to chance! Use our Retirement Calculator for a clear roadmap to financial security. Start planning today!",
@@ -977,52 +829,60 @@ const calculators = [
     ],
     output: "Monthly EMI ($)",
     showGraph: false,
-    html: `<p><strong>What is an EMI Calculator?</strong></p>
-<p><span style="font-weight: 400;">EMI is short for Equated Monthly Instalment, and in easy words, it is the amount you are supposed to pay every month if you borrow any amount of loan. Whether purchasing a home or purchasing a car on credit, getting an EMI is very necessary for smart planning. It's a great means of budgeting and ensuring preparedness for commitment, based on your funds.</span></p>
-<p><strong>What is the EMI Calculator?</strong></p>
-<p><span style="font-weight: 400;">The prime aim of the EMI Calculator is to update you on how much amount is going to be deducted every month to repay the loan. This will consider your principal amount, interest rate, or tenure for which you have taken a loan and, therefore, make your borrowing choices an informed one. So with this knowledge, you can further create a more accurate budget for yourself and then opt for the best loan in your budget.</span></p>
-<p><strong>How Does the EMI Calculator Work?</strong></p>
-<p><span style="font-weight: 400;">The EMI calculator uses a very simple formula for calculating your monthly payments as below:</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">[EMI = \frac{P \times r \times (1 + r)^n}{(1 + r)^n - 1}]</span></p>
-<p>&nbsp;</p>
-<p><strong>Where,</strong></p>
-<p>&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">EMI calculator – An overview EMI calculator, also known as loan calculator, is a tool mainly used to evaluate installments based on the amount borrowed, rate of interest and loan tenure for any type of loan, be it personal loan, car loan or home loan.</span></p>
+<p><span style="font-weight: 400;"> Here’s how using the loan EMI calculator can save your day: - Saves Time- You no longer have to lose precious time worrying about the details, as you can calculate your EMI instantly using the calculator.</span></p>
+<h2><strong>What is an EMI Calculator?</strong></h2>
+<p><span style="font-weight: 400;">The EMI calculator tells you just how much you will need to pay per month to repay your loan. (It asks you to input information like principal loan amount, interest rate and loan tenure, after which it immediately shows you your monthly repayment.) This convenience makes financial planning and comparing loans as easy and clear as possible.</span></p>
+<h2><strong>How Does the EMI Calculator Work?</strong></h2>
+<p><span style="font-weight: 400;">The EMI calculation formula is:</span></p>
+<p><span style="font-weight: 400;">EMI=P×r×(1+r)n(1+r)n−1</span></p>
+<p><em><span style="font-weight: 400;">EMI</span></em><span style="font-weight: 400;">=</span></p>
+<p><span style="font-weight: 400;">(1+</span><em><span style="font-weight: 400;">r</span></em><span style="font-weight: 400;">)</span></p>
+<p><em><span style="font-weight: 400;">n</span></em></p>
+<p><span style="font-weight: 400;">−1</span></p>
+<p><em><span style="font-weight: 400;">P</span></em><span style="font-weight: 400;">×</span><em><span style="font-weight: 400;">r</span></em><span style="font-weight: 400;">×(1+</span><em><span style="font-weight: 400;">r</span></em><span style="font-weight: 400;">)</span></p>
+<p><em><span style="font-weight: 400;">n</span></em></p>
+<h3><strong>Where:</strong></h3>
+ 
 <ul>
 <li style="font-weight: 400;"><strong>EMI =</strong><span style="font-weight: 400;"> Equated Monthly Installment</span></li>
 <li style="font-weight: 400;"><strong>P =</strong><span style="font-weight: 400;"> Principal loan amount</span></li>
-<li style="font-weight: 400;"><strong>r =</strong><span style="font-weight: 400;"> Monthly interest rate (annual interest rate divided by 12)</span></li>
+<li style="font-weight: 400;"><strong>r =</strong><span style="font-weight: 400;"> Monthly interest rate (annual rate divided by 12, in decimal)</span></li>
 <li style="font-weight: 400;"><strong>n =</strong><span style="font-weight: 400;"> Loan tenure in months</span></li>
 </ul>
-<p><strong>For Example&nbsp;</strong></p>
-<p><span style="font-weight: 400;">Let&rsquo;s say you&rsquo;re thinking about taking out a home loan of $200,000 with an annual interest rate of 6% for a term of 20 years (240 months).</span></p>
-<p>&nbsp;</p>
+<h3><strong>Example:</strong></h3>
+<p><span style="font-weight: 400;">Say, for example, that you’re going to borrow $200,000 at 6 percent for 240 months in the example below.</span></p>
+ 
 <ul>
 <li style="font-weight: 400;"><strong>Principal (P):</strong><span style="font-weight: 400;"> $200,000</span></li>
 <li style="font-weight: 400;"><strong>Annual Interest Rate:</strong><span style="font-weight: 400;"> 6%</span></li>
-<li style="font-weight: 400;"><strong>Monthly Interest Rate (r):</strong><span style="font-weight: 400;"> 6% / 12 = 0.5% = 0.005 (in decimal)</span></li>
-<li style="font-weight: 400;"><strong>Loan Tenure (n):</strong><span style="font-weight: 400;"> 20 years = 240 months</span></li>
+<li style="font-weight: 400;"><strong>r = 6%/12 = 0.5%</strong><span style="font-weight: 400;"> = 0.005 (Monthly Rate)</span></li>
+<li style="font-weight: 400;"><strong>Loan Tenure (n):</strong><span style="font-weight: 400;"> 240 months</span></li>
 </ul>
-<p><strong>Using the EMI formula:</strong></p>
-<p><span style="font-weight: 400;">[ \text{EMI} = \frac{200,000 \times 0.005 \times (1 + 0.005)^{240}}{(1 + 0.005)^{240} - 1} ]</span></p>
-<p><span style="font-weight: 400;">It would mean that you could calculate that you would pay approximately $1,299.71 as EMI. This way, you will know what you are going to pay every month in order to manage your expenses accordingly.</span></p>
-<p><strong>Advantages of Using the EMI Calculator</strong></p>
+<h3><strong>Calculation:</strong></h3>
+<p><span style="font-weight: 400;">EMI=200,000×0.005×(1+0.005)240(1+0.005)240−1</span></p>
+<p><em><span style="font-weight: 400;">EMI</span></em><span style="font-weight: 400;">=</span></p>
+<p><span style="font-weight: 400;">(1+0.005)</span></p>
+<p><span style="font-weight: 400;">240</span></p>
+<p><span style="font-weight: 400;">−1</span></p>
+<p><span style="font-weight: 400;">200,000×0.005×(1+0.005)</span></p>
+<p><span style="font-weight: 400;">240</span></p>
+<p><span style="font-weight: 400;">This gives us an estimated EMI of $1,433.39. This number demonstrates what you’d need to pay each month, which can be helpful for budgeting and repayment outlooks.</span></p>
+<h2><strong>Advantages of Using the EMI Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Budgeting:</strong><span style="font-weight: 400;"> You can control your monthly expenses better knowing exactly how much of your income is going towards loan repayment. You can budget your finances better knowing totally how much of your income is going towards loan repayment.</span></li>
-<li style="font-weight: 400;"><strong>Compare:</strong><span style="font-weight: 400;"> Using the EMI Calculator makes it easy to compare various loan options. You can see how changes in the principal amount, interest rate, and loan tenure influence your monthly outgo using the adjustable variables.</span></li>
-<li style="font-weight: 400;"><strong>Financial Planning:</strong><span style="font-weight: 400;"> This will keep you aware of the EMI you will need to pay which is a direct measure of financial security. So you can know how much of the loan is appropriate for your budget and decide on the quantity to be availed.</span></li>
-<li style="font-weight: 400;"><strong>Saves Time:</strong><span style="font-weight: 400;"> The time-consuming calculations are bypassed by providing immediate results of this calculator.</span></li>
+<li style="font-weight: 400;"><strong>Precise Budgeting –</strong><span style="font-weight: 400;"> Know, down to the penny, how much of your earnings will be used to service a loan.</span></li>
+<li style="font-weight: 400;"><strong>Compare Loan Offers –</strong><span style="font-weight: 400;"> Evaluate how the total cost will vary with the loan amount, tenure and interest rate.</span></li>
+<li style="font-weight: 400;"><strong>Smart Financial Planning –</strong><span style="font-weight: 400;"> Understand how much loan you are comfortable with and steer clear of over-borrowing.</span></li>
+<li style="font-weight: 400;"><strong>Time-Saving – </strong><span style="font-weight: 400;">No more manual number crunching</span></li>
+<li style="font-weight: 400;"><strong>What If –</strong><span style="font-weight: 400;"> See potential changes in scenarios – determine the effect of rate movement, prepaids, or tenure adjustments on a case-by-case basis..</span></li>
 </ul>
-<p><span style="font-weight: 400;">Using the EMI calculator can make your financial planning smoother and more efficient!</span></p>
-<p><strong>Key Insights</strong></p>
+<h2><strong>Key Insights for Loan EMI Planning</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Impact of Interest Rate:</strong><span style="font-weight: 400;"> A slight increase in the interest rate will highly affect your EMI. Suppose the interest rate is increased from 6% to 7%. Then the payment will rise in proportion to the hike, and hence, it affects the budget completely.</span></li>
-<li style="font-weight: 400;"><strong>Loan Tenure:</strong><span style="font-weight: 400;"> The larger the loan tenor, the more the EMI will be minimal. That will mean you save a lot with a lesser rate per month but at the total interest paid over and above the lending period. As such, by taking a very short tenure period, your EMIs will enhance, but lessen the total sum of interest payback.</span></li>
-<li style="font-weight: 400;"><strong>Prepayment options:</strong><span style="font-weight: 400;"> Prepayments on a loan can make things quite interesting; an EMI Calculator can depict the impact that prepayments might have on remaining EMIs as well as on total interest payments, which means that you would be saving quite a lot of money in the long run.</span></li>
+<li style="font-weight: 400;"><strong>Rate of Interest Impact –</strong><span style="font-weight: 400;"> When interest rates go up even by a shade, the impact of the same on your EMI is going to be hard on your pocket.</span></li>
+<li style="font-weight: 400;"><strong>Impact of Loan Tenure – </strong><span style="font-weight: 400;">Long tenure = lower EMIs, more total interest; short tenure = higher EMI, lower overall outgo.</span></li>
+<li style="font-weight: 400;"><strong>Prepayments –</strong><span style="font-weight: 400;"> If you make regular prepayments, it will reduce EMI burden and overall interest paid. See potential savings with the calculator.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Understand the above factors that can help in better decision making while you plan your loan and your whole financial strategy.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+<p><span style="font-weight: 400;">By using the Trust Financial Advisory EMI Calculator, you make informed borrowing choices, ensuring your long-term financial health.</span></p>`,
     seotitle: "Free EMI Calculator | Trust Financial Advisory",
     seodescription:
       "Get instant EMI calculations for home, car, and personal loans. Plan your finances better with Trust Financial Advisory’s smart loan calculator tool.",
@@ -1057,71 +917,72 @@ const calculators = [
     ],
     output: "Monthly EMI ($)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's auto loan EMI calculator! This calculator is made to help you determine your monthly auto loan payments. Understanding your monthly EMI can simplify your budgeting and financial management process. This calculator can assist you in your journey to buying that perfect car, whether new or old.</span></p>
-<p>&nbsp;</p>
-<p><strong>The Car Loan EMI Calculator's Objective</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Your monthly car loan payments can be simply calculated with the Car Loan EMI Calculator. easily inputting details such as the amount of the loan, interest rate, or duration of the loan permits you to see your monthly emi in real-time. You'll feel more confident when you go to buying your vehicle because this information assists you make better financial decisions and gives you a better understanding of your budget.</span></p>
-<p>&nbsp;</p>
-<p><strong>How the Car Loan EMI Calculator Works</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The Car Loan EMI Calculator determines your EMI using a standard formula. The equation is:</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">[ EMI = \frac{P \times r \times (1 + r)^n}{(1 + r)^n - 1} ]</span></p>
-<p>&nbsp;</p>
-<p><strong>Where:</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">EMI = Equated Monthly Installment</span></p>
-<p><span style="font-weight: 400;">P = Principal loan amount (the total amount you borrowed)</span></p>
-<p><span style="font-weight: 400;">r = Monthly interest rate (annual interest rate divided by 12)</span></p>
-<p><span style="font-weight: 400;">n = Loan tenure in months (number of monthly payments)</span></p>
-<p>&nbsp;</p>
-<p><strong>Detailed Instructions for Using the Calculator</strong></p>
-<p>&nbsp;</p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory Auto Loan EMI Calculator. This easy-to-use calculator will make it easy to budget for your new or used car. As long as you establish your monthly EMI at the outset, you are in control and are better equipped to make the right decision on your way to ownership of your next car.</span></p>
+<h2><strong>Purpose of the Car Loan EMI Calculator</strong></h2>
+<p><span style="font-weight: 400;">The Car Loan EMI, or Equated Monthly installment Calculator offers a detailed overview of your car loan and EMI. You can get an estimated monthly installment by keying in the loan amount, interest rate and tenure. This will assist you in comparing finance alternatives and organizing a budget to ease your auto loan.</span></p>
+<h2><strong>How the Car Loan EMI Calculator Works</strong></h2>
+<p><span style="font-weight: 400;">The monthly EMI is calculated using the standard loan formula:</span></p>
+<p><span style="font-weight: 400;">EMI=P×r×(1+r)n(1+r)n−1</span></p>
+<p><em><span style="font-weight: 400;">EMI</span></em><span style="font-weight: 400;">=</span></p>
+<p><span style="font-weight: 400;">(1+</span><em><span style="font-weight: 400;">r</span></em><span style="font-weight: 400;">)</span></p>
+<p><em><span style="font-weight: 400;">n</span></em></p>
+<p><span style="font-weight: 400;">−1</span></p>
+<p><em><span style="font-weight: 400;">P</span></em><span style="font-weight: 400;">×</span><em><span style="font-weight: 400;">r</span></em><span style="font-weight: 400;">×(1+</span><em><span style="font-weight: 400;">r</span></em><span style="font-weight: 400;">)</span></p>
+<p><em><span style="font-weight: 400;">n</span></em></p>
+<h3><strong>Where:</strong></h3>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Insert the loan amount here: </strong><span style="font-weight: 400;">Enter the amount you want to borrow to purchase your car.</span></li>
-<li style="font-weight: 400;"><strong>Enter the Interest Rate: </strong><span style="font-weight: 400;">Put in the annual interest rate your lender is offering.</span></li>
-<li style="font-weight: 400;"><strong>Select Loan Tenure: </strong><span style="font-weight: 400;">Decide for how many years you wish to take the loan, generally from one to seven years.</span></li>
+<li style="font-weight: 400;"><strong>EMI =</strong><span style="font-weight: 400;"> Equated Monthly Installment</span></li>
+<li style="font-weight: 400;"><strong>P =</strong><span style="font-weight: 400;"> principal (the total amount borrowed)</span></li>
+<li style="font-weight: 400;"><strong>r =</strong><span style="font-weight: 400;"> Rate of interest (annual rate, decimal 1/12y)</span></li>
+<li style="font-weight: 400;"><strong>n =</strong><span style="font-weight: 400;"> Loan tenure in months</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">To get a calculation of your monthly EMI, click the "Calculate" button.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">You can learn more about your auto loan and figure out how much your monthly payments will be by doing these simple steps.</span></p>
-<p><br /></p>
-<p><strong>For Example&nbsp;</strong></p>
-<p>&nbsp;</p>
-<p><strong>Scenario 1:</strong><span style="font-weight: 400;"> New Car Purchase</span></p>
-<p><strong>Loan Amount:</strong><span style="font-weight: 400;"> $20,000</span></p>
-<p><strong>Interest Rate:</strong><span style="font-weight: 400;"> 8% per annum</span></p>
-<p><strong>Loan Tenure:</strong><span style="font-weight: 400;"> 5 years (60 months)</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Using the formula, the EMI would be approximately $404. This means you will need to budget around $404 each month for the next 5 years to repay your car loan.</span></p>
-<p>&nbsp;</p>
-<p><strong>Example 2: Used Car Purchase</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The loan amount is $10,000.</span></p>
-<p><span style="font-weight: 400;">Interest Rate: 10% per annum</span></p>
-<p><span style="font-weight: 400;">Loan Tenure: 3 years (36 months)</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Your approximate EMI in this scenario would be around $322. This example shows how your monthly emi will be more manageable if you borrow a lesser amount and for a shorter period of time.</span></p>
-<p>&nbsp;</p>
-<p><strong>Advantages of Using the EMI Calculator for Auto Loans</strong></p>
-<p>&nbsp;</p>
+ 
+<h2><strong>How To Use The Calculator? Simple and Easy!</strong></h2>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Budgeting: </strong><span style="font-weight: 400;">You can handle your finances more easily and with more confidence when you plan your monthly budget more cleverly if you know your EMI.</span></li>
-<li style="font-weight: 400;"><strong>Comparison: </strong><span style="font-weight: 400;">In order to determine the option that is most appropriate for your financial needs, you can easily compare various loan amounts, interest rates, and tenures.</span></li>
-<li style="font-weight: 400;"><strong>Financial Planning: </strong><span style="font-weight: 400;">Being aware of your EMI gives you the ability to make options regarding the purchase of your vehicle and your general financial health.</span></li>
-<li style="font-weight: 400;"><strong>Time-saving: </strong><span style="font-weight: 400;">By giving you instant results, the calculator saves you the hassle of manual calculations and enables you to focus on what is most important.</span></li>
+<li style="font-weight: 400;"><strong>Loan Amount:</strong><span style="font-weight: 400;"> Enter the total loan amount of the vehicle purchase.</span></li>
+<li style="font-weight: 400;"><strong>Enter Interest Rate:</strong><span style="font-weight: 400;"> Your annual interest rate from your lender.</span></li>
+<li style="font-weight: 400;"><strong>Select Tenure:</strong><span style="font-weight: 400;"> Select the period for which you want the loan, this can range from 1 year to 7 years.</span></li>
+<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Enter your interest rate and loan tenure in the calculator above and then click on the “Calculate” button to see your EMI.</span></li>
 </ul>
-<p>&nbsp;</p>
-<p><strong>Key Insights</strong></p>
-<p>&nbsp;</p>
+<p><span style="font-weight: 400;">You can easily adjust the numbers to compare scenarios and choose the best loan for your needs.</span></p>
+ 
+<h3><strong>Examples</strong></h3>
+ 
+<p><strong>Scenario 1: New Car Purchase</strong></p>
+ 
 <ul>
-<li style="font-weight: 400;"><strong>Outcome of Interest Rates: </strong><span style="font-weight: 400;">Your EMI can be significantly affected by even a minor variation in the interest rate. It is always wise to shop around for the most beneficial prices.</span></li>
-<li style="font-weight: 400;"><strong>Loan Tenure: </strong><span style="font-weight: 400;">Choosing a long-term loan tenure may mean a smaller monthly EMI, but it also means paying more in interest over the term of the loan. Finding the balance between the overall cost of the loan and an affordable monthly payment is key.</span></li>
+<li style="font-weight: 400;"><strong>Loan Amount:</strong><span style="font-weight: 400;"> $20,000</span></li>
+<li style="font-weight: 400;"><strong>Interest Rate:</strong><span style="font-weight: 400;"> 8% per annum</span></li>
+<li style="font-weight: 400;"><strong>Terms of Loan:</strong><span style="font-weight: 400;"> 5 years (60 months)</span></li>
+<li style="font-weight: 400;"><strong>Monthly EMI:</strong><span style="font-weight: 400;"> Approximately $404</span></li>
 </ul>
-<p><strong>Prepayment Options: </strong><span style="font-weight: 400;">Make use of your loan's prepayment options if possible. In this way, you can settle your loan faster and with less interest in total.</span></p>
-<!-- Comments are visible in the HTML source only -->`,
+ 
+<p><strong>Scenario 2: Used Car Purchase</strong></p>
+ 
+<ul>
+<li style="font-weight: 400;"><strong>Loan Amount:</strong><span style="font-weight: 400;"> $10,000</span></li>
+<li style="font-weight: 400;"><strong>Interest Rate:</strong><span style="font-weight: 400;"> 10% per annum</span></li>
+<li style="font-weight: 400;"><strong>Duration of the Loan:</strong><span style="font-weight: 400;"> 3 years (36 Months)</span></li>
+<li style="font-weight: 400;"><strong>Monthly EMI:</strong><span style="font-weight: 400;"> Approximately $322</span></li>
+</ul>
+<p><span style="font-weight: 400;">The examples below illustrate how your monthly EMI varies with loan amount, rate and tenure. Less principal and time means less payments that are easier to make.</span></p>
+<h2><strong>Advantages of Using the Auto Loan EMI Calculator</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Easy Budgeting:</strong><span style="font-weight: 400;"> Get a view of your exact monthly outgo for better money management.</span></li>
+<li style="font-weight: 400;"><strong>Simple Comparison:</strong><span style="font-weight: 400;"> Do a side-by-side comparison of loan amounts, tenures and interest rates to select the most cost-effective option in a jiffy.</span></li>
+<li style="font-weight: 400;"><strong>Enlightened Money Management:</strong><span style="font-weight: 400;"> Destined to buy more wisely when considering a vehicle purchase and managing the budget.</span></li>
+<li style="font-weight: 400;"><strong>Save Time:</strong><span style="font-weight: 400;"> Achieve instant results - no manual math or challenging spreadsheets needed.</span></li>
+</ul>
+<h2><strong>Key Insights for Car Loan EMI Planning</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Interest Rate Sensitivity:</strong><span style="font-weight: 400;"> Even a small gap of a few percentage points can hike or lower your EMI significantly – compare rates always.</span></li>
+<li style="font-weight: 400;"><strong>Trade-Off:</strong><span style="font-weight: 400;"> Longer terms lower your EMI but up interest paid. Strike the ideal match between monthly affordability and total loan cost.</span></li>
+<li style="font-weight: 400;"><strong>Prepayment Penalties:</strong><span style="font-weight: 400;"> Consider prepayment options to pay off your auto loan early and lower overall interest, if your lender permits.</span></li>
+</ul>
+ 
+<p><span style="font-weight: 400;">Let the Trust Financial Advisory Car Loan EMI Calculator give you full financial control of the car of your dreams!</span></p>`,
     seotitle: "Car Loan EMI Calculator | Monthly Car Loan Payments Instantly",
     seodescription:
       "Easily calculate your car loan EMI with our Car Loan EMI Calculator. Compare loan options, adjust amount, interest rate & tenure to find the best EMI for you.",
@@ -1156,48 +1017,47 @@ const calculators = [
     ],
     output: "Monthly EMI ($)",
     showGraph: false,
-    html: `<p><span style="font-weight: 400;">Welcome to the Home Loan EMI Calculator from Trust Financial Advisory! Knowing your financial obligations is crucial if you intend to purchase your ideal home. You can manage your money and make future plans more easily by using our calculator to estimate your monthly payments.</span></p>
-<p><strong>EMI: What is it?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">The payment you do on your house loan every month is referred to as an Equated Monthly Installment (EMI). Your interest and principal are both paid in this amount. It is essential to understand your EMI as it helps you manage your money and expenses better.</span></p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial EMI Calculator for home Loans. If you’re hoping to lock down your dream home, you’ll need to gauge your potential monthly payments before you ever make an offer.</span></p>
+<p><span style="font-weight: 400;">Our housing loan EMI calculator facilitates the easy calculation of your equated monthly instalments, helping you to plan smarter as you manage your finances.</span></p>
+<h2><strong>What is a Home Loan EMI?</strong></h2>
+<p><span style="font-weight: 400;">EMI (Equated Monthly Installment) – EMI is the fixed amount you pay per month to your home loan. All EMIs comprise of principal and interest amounts. It’s really important that you know your EMI, it is required to do you budgeting on monthly basis and to make sure it is something that is comfortable and acceptable for you.</span></p>
+<h2><strong>Why Use Our Home Loan EMI Calculator?</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Why Use Our Home Loan EMI Calculator?</strong></li>
+<li style="font-weight: 400;"><strong>Results in Seconds:</strong><span style="font-weight: 400;"> Receive accurate monthly payment estimates without having to perform any math on your own.</span></li>
+<li style="font-weight: 400;"><strong>Easy to Use:</strong><span style="font-weight: 400;"> The simple interface is very easy to navigate while designing the software.</span></li>
+<li style="font-weight: 400;"><strong>Customized Inputs:</strong><span style="font-weight: 400;"> Illuminate Your Possibilities: Try and vary the input loan amount, interest rate and tenure to see the impact on your EMI.</span></li>
+<li style="font-weight: 400;"><strong>Strong Financial Planning:</strong><span style="font-weight: 400;"> Simply choose your home purchase price and let the monthly payments or total loan amount be your guide.</span></li>
 </ul>
-<p>&nbsp;</p>
+<h2><strong>How to Use the Home Loan EMI Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><strong>Instant Results: </strong><span style="font-weight: 400;">Get effortless, quick estimates.</span></li>
-<li style="font-weight: 400;"><strong>User-Friendly Interface: </strong><span style="font-weight: 400;">Leverage a simple and intuitive design that makes it easy to navigate.</span></li>
-<li style="font-weight: 400;"><strong>Customisable Inputs: </strong><span style="font-weight: 400;">To observe how your EMI is influenced by the loan amount, interest rate, and tenure, just alter these parameters.</span></li>
-<li style="font-weight: 400;"><strong>Financial Planning: </strong><span style="font-weight: 400;">Equip yourself with the ability to make informed decisions about your home loan.</span></li>
+<li style="font-weight: 400;"><strong>Loan Amount:</strong><span style="font-weight: 400;"> Enter the amount you want to borrow for your home.</span></li>
+<li style="font-weight: 400;"><strong>Enter Rate of Interest:</strong><span style="font-weight: 400;"> The annual interest rate the bank charges.</span></li>
+<li style="font-weight: 400;"><strong>Loan Tenure:</strong><span style="font-weight: 400;"> Enter the term of your loan in months or years.</span></li>
+<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Tap to see projected monthly EMI and payment schedule.</span></li>
 </ul>
-<p><span style="font-weight: 400;">The Home Loan EMI Calculator: How to Use It</span></p>
+<h2><strong>Example Calculation</strong></h2>
+<p><span style="font-weight: 400;">Suppose:</span></p>
 <ul>
-<li style="font-weight: 400;"><strong>Type the loan amount: </strong><span style="font-weight: 400;">Type the whole loan amount that you want to borrow for your home.</span></li>
-<li style="font-weight: 400;"><strong>Select the Interest Rate: </strong><span style="font-weight: 400;">Input your lender's proposed interest rate as a percentage each year.</span></li>
-<li style="font-weight: 400;"><strong>Select the Loan Tenure: </strong><span style="font-weight: 400;">Enter the duration of the loan in months or years.</span></li>
-<li style="font-weight: 400;"><strong>Calculate: </strong><span style="font-weight: 400;">Click on the 'Calculate' button to see your projected monthly payment schedule.</span></li>
-</ul>
-<p><strong>For Example&nbsp;</strong></p>
-<ul>
-<li style="font-weight: 400;"><strong>Size of Loan:</strong><span style="font-weight: 400;"> $50,000,000</span></li>
+<li style="font-weight: 400;"><strong>Loan Amount:</strong><span style="font-weight: 400;"> $500,000</span></li>
 <li style="font-weight: 400;"><strong>Interest Rate:</strong><span style="font-weight: 400;"> 8% per annum</span></li>
-<li style="font-weight: 400;"><strong>loan term:</strong><span style="font-weight: 400;"> 20 years</span></li>
-<li style="font-weight: 400;"><strong>Monthly EMI:</strong><span style="font-weight: 400;"> $42,000.</span></li>
+<li style="font-weight: 400;"><strong>Loan Term:</strong><span style="font-weight: 400;"> 20 years (240 months).</span></li>
 </ul>
-<p><span style="font-weight: 400;">Based on this example, your EMI would be approximated at $42,000 if you have a loan amount of $50,000,000 for 20 years and an interest rate of 8%.</span></p>
-<p><strong>Advantages of Using Our EMI Calculator</strong></p>
+ 
+<p><span style="font-weight: 400;">As per EMI, (approximate) of $4,182 you will have to pay.</span></p>
+<p><span style="font-weight: 400;">If you take out the cash in the same way, you would be paying $4,182 each month for the next 20 years to be free of a $500,000 home loan at an 8% annual interest rate.</span></p>
+<h2><strong>Advantages of Using the Home Loan EMI Calculator</strong></h2>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Creating a budget aids in figuring out how much you can afford to borrow.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">It is easy to compare various loan schemes and the respective EMIs.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Enhance your planning for the future by acquiring discerning knowledge regarding your future financial commitments.</span></li>
+<li style="font-weight: 400;"><strong>Budget Friendly:</strong><span style="font-weight: 400;"> Find out what you can afford for hassle-free monthly payments.</span></li>
+<li style="font-weight: 400;"><strong>Shop Loans &amp; Save:</strong><span style="font-weight: 400;"> Compare options before you refinance or apply for a home loan.</span></li>
+<li style="font-weight: 400;"><strong>Smarter Money Management:</strong><span style="font-weight: 400;"> Instantly know how your financial responsibilities change with different loan parameters.</span></li>
+<li style="font-weight: 400;"><strong>Save Time:</strong><span style="font-weight: 400;"> Instant Match Through HomeLend, it will save you time by giving you all the information you need so you can concentrate on finding the right home and the right loan.</span></li>
 </ul>
-<p><span style="font-weight: 400;">Other Sources</span></p>
+<h2><strong>Additional Resources</strong></h2>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Use the home loan eligibility calculator to determine how much you can borrow based on your credit score and income.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Discover the many types of home loans that can be yours, together with their interest rates and payback schedules.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">For personalized advice tailored to your specific needs, contact our financial advisors for a professional consultation.</span></li>
+<li style="font-weight: 400;"><strong>Home Loan Eligibility Calculator:</strong><span style="font-weight: 400;"> How much can you borrow? In home loan, the eligible amount is calculated keeping 3 basic in mind. 1) down payment 2) Repayment capacity 3) Loan Against Property method.</span></li>
+<li style="font-weight: 400;"><strong>Home Loan Comparison:</strong><span style="font-weight: 400;"> Understand the different types of home loans, interest rates and repayment schedules.</span></li>
 </ul>
-<!-- Comments are visible in the HTML source only -->`,
+<p><strong>Expert Advice:</strong><span style="font-weight: 400;"> Visit with our financial advisors for advice that’s tailored toward your individual homeowner goals.</span></p>`,
     seotitle: "Home Loan EMI Calculator | Trust Financial Advisory",
     seodescription:
       "Calculate your home loan EMI instantly with our free EMI calculator. Get accurate monthly estimates and plan your loan smartly with Trust Financial Advisory",
@@ -1239,80 +1099,46 @@ const calculators = [
     ],
     output: "Future Value ($)",
     showGraph: true,
-    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to the Step-Up SIP Calculator by Trust Financial Advisory! You&apos;ve reached the perfect place if you&apos;re eager to optimize your investment strategy. Think of our calculator as your own financial advisor, guiding you through the vision of your investment growth as you gradually increase your monthly investment. We&apos;re here to guide you at each step, whether you&apos;re starting or looking to raise the amount of your investments. Let&apos;s take a look together at the options for your financial future!</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Step-Up SIP?</span></strong></p>
-<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Suppose you have a Step-Up SIP where you can gradually increase your investment amount periodically, usually once a year. What you&apos;re doing is actively trying to grow your wealth over time and not just keep pace with inflation. It&apos;s a smart way to ensure your money keeps pace with increasing expenses while enhancing your financial future.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Step-Up SIP Calculator?</span></strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to the Step-Up SIP Calculator, an online tool to get you to step up your investment game better and faster, exclusively by Trust Financial Advisory. It is like your personal financial planner that demonstrates how merely enhancing the monthly SIP contribution over time can enhance your overall wealth creation journey.</span></p>
+<p><span style="font-weight: 400;">Whether you are a beginner looking to start investing or a seasoned hand planning to bump up the SIP amount annually, our calculator walks you through getting a head start on a better financial future.</span></p>
+<h2><strong>What is a Step-Up SIP?</strong></h2>
+<p><span style="font-weight: 400;">A Step-Up SIP is a SIP in which you increase the SIP amount at regular intervals, usually once every year. This is a double-barrelled way to grow your investments in line with inflation (and those ever-increasing expenses that the rest of the world seems to be hit with, except us), where you will maintain your purchasing power and expedite wealth creation. </span></p>
+<p><span style="font-weight: 400;">It’s a smart way to construct a disciplined, growing investment portfolio in conjunction with your rising financial capacity.</span></p>
+<h2><strong>Why Use Our Step-Up SIP Calculator?</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Future Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Visualize the future growth of your investments as you build up your contributions over time.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User-Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Take advantage of simple navigation that makes using the site effortless.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customisable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Take control by adjusting your original investment, step-up rate, and investment duration to try out various scenarios that suit your needs.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Insights:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Make sure that you&apos;re on the right path towards achieving your financial goals by equipping yourself with the details you need to make sound decisions about your investment plan.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Plan in advance:</strong><span style="font-weight: 400;"> Imagine how your growing SIP amount will add to your portfolio growth in the future.</span></li>
+<li style="font-weight: 400;"><strong>User Friendly:</strong><span style="font-weight: 400;"> Everyone can easily navigate the calculator without any confusion, making it easy to use for all types of investors.</span></li>
+<li style="font-weight: 400;"><strong>Input Flexibility:</strong><span style="font-weight: 400;"> Change the initial investment amount, the increase rate per annum and the return rate as per your requirements.</span></li>
+<li style="font-weight: 400;"><strong>Financial Intelligence:</strong><span style="font-weight: 400;"> Know the status of your investments and plan with confidence.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Step-Up SIP Estimator</span></strong></p>
-<p><br></p>
+<h2><strong>How to Use the Step-Up SIP Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Initial Investment Amount:</strong><span style="font-weight: 400;"> Enter the SIP amount that you will start investing in monthly.</span></li>
+<li style="font-weight: 400;"><strong>Select Step-Up Percentage:</strong><span style="font-weight: 400;"> Opt for the percentage with which the SIP amount will step up annually.</span></li>
+<li style="font-weight: 400;"><strong>Select Investment Duration:</strong><span style="font-weight: 400;"> Select the number of years you are going to invest.</span></li>
+<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Press “Calculate” to see what your estimated returns could possibly be and see what can happen by stepping up investments.</span></li>
+</ol>
+<h2><strong>Example</strong></h2>
 <ul>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Enter Initial Investment Amount:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">First, enter the amount of initial investment that you plan to invest.</span></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Select Step-Up Percentage:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Then, choose how much you wish to increase your SIP each year.</span></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Choose Investment Tenure:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Enter the amount of years that you want to invest.</span></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Calculate:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Finally, press the &apos;Calculate&apos; button to see your projected returns and better understand the potential growth of your investment.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Initial Monthly Investment:</strong><span style="font-weight: 400;"> $10,000</span></li>
+<li style="font-weight: 400;"><strong>Step-Up Percentage:</strong><span style="font-weight: 400;"> 10% per year</span></li>
+<li style="font-weight: 400;"><strong>Expected Return Rate:</strong><span style="font-weight: 400;"> 12% annually</span></li>
+<li style="font-weight: 400;"><strong>Investment Tenure:</strong><span style="font-weight: 400;"> 20 years</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
+ 
+<p><span style="font-weight: 400;">With those inputs, the calculator calculates how your rising SIP investments can compound and build significant wealth over two decades.</span></p>
+<h2><strong>Advantages of Using Our Step-Up SIP Calculator</strong></h2>
 <ul>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Initial Monthly Investment = $10,000</span></strong></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Step-up Percentage = 10% per year (increases by 10% annually)</span></strong></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Expected Return Rate = 12% per annum</span></strong></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Investment Duration = 20 years</span></strong></p>
-    </li>
+<li style="font-weight: 400;"><strong>Inflation Hedge:</strong><span style="font-weight: 400;"> ramp up your contributions to sustain and possibly even build your purchasing power against higher prices.</span></li>
+<li style="font-weight: 400;"><strong>Richer Wealth Creation:</strong><span style="font-weight: 400;"> Staircase investments yield much higher returns than the fixed SIPs.</span></li>
+<li style="font-weight: 400;"><strong>Goal tracking:</strong><span style="font-weight: 400;"> Makes your goal the cornerstone of your investment strategy, keeping you focused on the future.</span></li>
 </ul>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">of Using Our Step-Up SIP Calculator</span></strong></p>
+<h2><strong>Additional Resources</strong></h2>
 <ul>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Inflation Hedge:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;You can actually keep pace with rising costs and maintain your buying power by increasing your contributions.</span></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Wealth Creation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Discover how gradually increasing your investments can ultimately lead to far greater returns.</span></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Goal Attainment:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To keep you on course and achieve your goals, ensure that your investment plan aligns with your financial goals.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>SIP or Lump Sum Investment:</strong><span style="font-weight: 400;"> Here are the advantages and differences between investing systematically and lump sum to help you decide the right way to invest.</span></li>
+<li style="font-weight: 400;"><strong>Investment Planning Guide:</strong><span style="font-weight: 400;"> Discover numerous investment plans and strategies which match your risk profile and objectives.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">SIP vs. Lump Sum Investment:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;In order to know which investment approach is suitable for you, invest some time in learning about the benefits and differences of each.</span></p>
-    </li>
-    <li style="list-style-type:disc;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Investment Planning Guide:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Discover a variety of investment opportunities and strategies that are tailored to your specific needs and goals.</span></p>
-    </li>
-</ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Consult with an Expert:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Don&apos;t hold back from approaching our financial advisers for personalized investment advice that will help you go about your money path with confidence.</span></p>`,
+<p><strong>Expert Advice:</strong><span style="font-weight: 400;"> Call our experienced financial advisers for investing that helps meet all your Life Goals.</span></p>`,
     seotitle: "Step-Up SIP Calculator | Plan Your Future Investment",
     seodescription:
       "Plan your investments wisely with our Step-Up SIP Calculator. Analyze your financial growth with precise calculations. Try now on Trust Financial Advisory!",
@@ -1340,76 +1166,43 @@ const calculators = [
     ],
     output: "Tax Payable ($)",
     showGraph: false,
-    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Hello to Trust Financial Advisory&apos;s Income Tax Calculator! We know how the complexities of income tax could be a little intimidating. Because of this, our income tax calculator is designed to help simplify matters for you. It simplifies matters a great deal by helping you to estimate the tax you should pay based on your income as well as possible deductions.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is an Income Tax Calculator?</span></strong></p>
-<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Depending on your overall income, deductions, and the tax slabs that are applicable to you, an income tax calculator is a handy instrument that helps you to approximate your income tax. You can make use of it in order to comprehend your tax obligations better, which will allow you to make sounder financial decisions.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Income Tax Calculator?</span></strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to the Trust Financial Advisory Income Tax Calculator. However, the world of income tax can be confusing and daunting, so we created a calculator to help you know where you stand. </span></p>
+<p><span style="font-weight: 400;">It helps in smart financial planning by estimating your tax liability correctly on your incomes, eligible deductions and applicable tax slabs, making you a step ahead in financial planning and reporting.</span></p>
+<h2><strong>What is an Income Tax Calculator?</strong></h2>
+<p><span style="font-weight: 400;">An income tax calculator is a free tool available online for everyone that allows you to calculate your payable taxes, and can find out how much tax you need to pay or deduct from your salary. By using this calculator you can estimate your tax liability and ease your budget planning, tax saving and tax compliance initiative.</span></p>
+<h2><strong>Why Use Our Income Tax Calculator?</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Quick and Precise:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Obtain the information you need right away by utilizing convenient, on-the-spot estimates of your tax burden.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">User-Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;You are able to navigate easily due to a design that ensures everything goes smoothly for you.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Personalizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Simply plug in your own income, deductions, and other relevant information to see your individual tax calculations.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Financial Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To create a better financial future, utilize the insights of the calculator to make smart decisions on your savings and investments.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Fast &amp; Accurate:</strong><span style="font-weight: 400;"> Receiving immediate, accurate estimates of your tax obligation saves you time and out-of-pocket mistakes.</span></li>
+<li style="font-weight: 400;"><strong>Easy-To-Use Interface:</strong><span style="font-weight: 400;"> A user-friendly interface ensures simple operation, whether you’re a tax expert or filing for the first time.</span></li>
+<li style="font-weight: 400;"><strong>Personalized Inputs:</strong><span style="font-weight: 400;"> Put in your correct income, deductions (e.g., under Sections 80C, 80D) and the tax regime of your choice to get your personalized calculations.</span></li>
+<li style="font-weight: 400;"><strong>Strategic Financial Planning:</strong><span style="font-weight: 400;"> Apply insights from your tax estimate into investment decisions and to minimize tax flow out, legally.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Income Tax Calculator</span></strong></p>
+<h2><strong>How to Use the Income Tax Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Input Gross Income:</strong><span style="font-weight: 400;"> Enter total income received during the year.</span></li>
+<li style="font-weight: 400;"><strong>Enter Deductions:</strong><span style="font-weight: 400;"> Include the deductions permissible, like investments u/s 80C, if any and Medical Insurance u/s 80D, etc.</span></li>
+<li style="font-weight: 400;"><strong>Opt for Tax Regime:</strong><span style="font-weight: 400;"> Select the old or new tax regime for customised calculation (as and when applicable).</span></li>
+<li style="font-weight: 400;"><strong>To Calculate:</strong><span style="font-weight: 400;"> This will enable you to work out your estimated income tax payable and help you understand your tax situation.</span></li>
+</ol>
+<h2><strong>Example</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Your Total Income:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;First, enter all of your sources of income for the year.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Deductions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Then, fill in any deductions that you are entitled to under sections like 80C, 80D, and so on.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Choose Tax Regime:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;In order to tailor your calculations, choose either the old tax regime or, where available, the new tax regime.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;In order to view your estimated income tax and obtain a better understanding of your tax responsibilities, click the &apos;Calculate&apos; button.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Total Income:</strong><span style="font-weight: 400;"> $10,000,000</span></li>
+<li style="font-weight: 400;"><strong>Deductions:</strong><span style="font-weight: 400;"> $150,000</span></li>
+<li style="font-weight: 400;"><strong>Estimated Income Tax:</strong><span style="font-weight: 400;"> $75,000</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
+<p><span style="font-weight: 400;">Based on this data, your estimated tax liability is $75,000, illustrating how deductions effectively reduce your taxable income.</span></p>
+<h2><strong>Advantages of Using Our Income Tax Calculator</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Income:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Let&apos;s say you make $10,000,000 a year.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Deductions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;You have deductions of $1,50,000.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Estimated Income Tax:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Your estimated income tax is $75,000 as per this information.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Effective Tax Planning:</strong><span style="font-weight: 400;"> Take informed decisions on saving taxes and managing expenses.</span></li>
+<li style="font-weight: 400;"><strong>Uncover Deductions and Exemptions:</strong><span style="font-weight: 400;"> Reduce taxable income and increase wealth with deductions and exemptions.</span></li>
+<li style="font-weight: 400;"><strong>Stay Updated:</strong><span style="font-weight: 400;"> Stay informed about the latest tax slabs, rules, and regulations.</span></li>
 </ul>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Income Tax Calculator</span></strong></p>
+<h2><strong>Additional Resources</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Tax Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To effectively plan your investments, you must have a clear understanding of your tax liability.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Maximise Deductions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about possible deductions that can lower your taxable income and result in financial savings.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Stay Informed:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To stay compliant and maximise your financial strategies, stay informed about the most recent tax slabs and regulations.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Tax Planning Guide:</strong><span style="font-weight: 400;"> Discover proactive strategies to reduce taxes and grow and preserve wealth.</span></li>
+<li style="font-weight: 400;"><strong>Get to know tax slabs on individuals: </strong><span style="font-weight: 400;">Understanding tax brackets imposed on individuals will allow you to have a clearer picture of your liabilities.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Tax Planning Guide:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Discover a variety of strategies designed to minimize your tax burden and keep more of your hard-earned money.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Tax Slabs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To understand your tax obligations better, take a little time to learn about the different slabs of tax applicable to individual taxpayers.</span></p>
-    </li>
-</ul>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Advice:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;For personalized tax planning advice tailored to your specific situation and goals, feel free to reach out to our financial planners.</span></p>`,
+<p><strong>Expert Assistance:</strong><span style="font-weight: 400;"> Contact our expert financial planners to receive customised, circumstance-specific advice on tax.</span></p>`,
     seotitle: "Income Tax Calculator | Accurate Tax Estimation online",
     seodescription:
       "Instantly calculate your income tax online. Estimate taxes, plan finances, and maximize savings with Trust Financial Advisory's Income Tax Calculator.",
@@ -1451,89 +1244,53 @@ const calculators = [
     ],
     output: "Comparison Results",
     showGraph: false,
-    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to the Flat vs. Decreasing Interest Rate Calculator by Trust Financial Advisory! Your financial future can be greatly influenced by the interest rate profile of your loan. By presenting the differences between flat and decreasing interest rates in a clear manner, our calculator is designed to help you make well-informed borrowing choices. In this way, you can choose the best option for your budgetary goals.</span></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What are Flat and Reducing Interest Rates?</span></strong></p>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Flat Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;The flat interest rate approach calculates interest on the total principal amount for the duration of the loan. This means that your EMI remains constant, but during the loan period, you may end up paying more interest.</span></p>
-<p><br></p>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Reducing Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Here, interest is calculated on the amount borrowed, which decreases as you pay it back. In the long run, this reduces interest charges, which may lead to a reduced cost of the loan.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Calculator?</span></strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's Flat vs Declining Interest Rate Calculator. The method in which your loan’s interest is calculated is a critical factor in determining the real cost of your loan and how much you will pay now and in the future. </span></p>
+<p><span style="font-weight: 400;">Our calculator provides a clear comparison of flat and reducing (declining balance) interest rates so that you can make an informed borrowing decision based on your budget constraints and time line.</span></p>
+<h2><strong>What Are Flat and Reducing Interest Rates?</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Compare Costs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Easily compare the total cost of loans under both interest rate structures.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter your loan amount, tenure, and interest rates to see the differences in total payments.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Informed Decisions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Make better financial choices based on clear calculations.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Flat Interest Rate:</strong><span style="font-weight: 400;"> Here the interest is charged on the full amount of the principal initially borrowed, e.g., per year. This gives you a fixed EMI, but total interest payments over the life of the loan are usually higher.</span></li>
+<li style="font-weight: 400;"><strong>Interest Rate Reduction:</strong><span style="font-weight: 400;"> Interest is assessed on the declining balance of your loan as you pay off the principal. This usually results in lower interest expenses and a smaller aggregate loan repayment amount.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Flat vs. Reducing Interest Rate Calculator</span></strong></p>
+<h2><strong>Why Use Our Calculator?</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Loan Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the total amount you wish to borrow.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Tenure:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Specify the duration of the loan in years or months.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Flat Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the flat interest rate offered by your lender.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Reducing Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the reducing interest rate offered by your lender.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view a comparison of total payments under both interest rate structures.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Compare Your Cashes:</strong><span style="font-weight: 400;"> Compare the total repayment under both interest rate types.</span></li>
+<li style="font-weight: 400;"><strong>Easy Interface:</strong><span style="font-weight: 400;"> Easy to navigate to enter loan information and see results.</span></li>
+<li style="font-weight: 400;"><strong>Fully Customizable Inputs:</strong><span style="font-weight: 400;"> Customize loan amount, duration and interest rate to match your exact loan offers.</span></li>
+<li style="font-weight: 400;"><strong>In the Know:</strong><span style="font-weight: 400;"> Make smart decisions with clear, side-by-side comparisons of loan options.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
+<h2><strong>How to Use the Flat vs. Reducing Interest Rate Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Insert Loan Amount:</strong><span style="font-weight: 400;"> place down the complete loan you are going to take.</span></li>
+<li style="font-weight: 400;"><strong>Enter the parameters of the loan:</strong><span style="font-weight: 400;"> Number of years or months.</span></li>
+<li style="font-weight: 400;"><strong>Flat Interest Rate:</strong><span style="font-weight: 400;"> Enter the flat rate that is offered by your lender.</span></li>
+<li style="font-weight: 400;"><strong>Add Reducing Interest Rate:</strong><span style="font-weight: 400;"> Input the reducing balance rate that you can get from your lending origin.</span></li>
+<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Click this to see how much more you’d need to pay in total by way of each method.</span></li>
+</ol>
+<h2><strong>Example</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Loan Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$10,00,000</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Flat Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10%</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Reducing Interest Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;8%</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Tenure:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 years</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Total Payment (Flat Rate):</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$12,00,000</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Total Payment (Reducing Rate):</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$11,00,000</span></p>
-    </li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Loan Amount: $1,000,000</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Flat Interest Rate: 10%</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reducing Interest Rate: 8%</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Loan Tenure: 10 years</span></li>
 </ul>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Calculator</span></strong></p>
+<h3><strong>Results:</strong></h3>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Cost Comparison:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand how different interest rate structures affect your total loan cost.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Clarity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Gain insights into which option may be more beneficial for your financial situation.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Empower Your Decisions:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Make informed choices about your loan options based on clear data.</span></p>
-    </li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Total Payment (Flat Rate): $1,200,000</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Total Payment (Reducing Rate): $1,100,000</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
+<p><span style="font-weight: 400;">This example shows how opting for a reducing interest rate loan can save you $100,000 in interest over the loan tenure.</span></p>
+<h2><strong>Advantages of Using Our Calculator</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Loan Types:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about various types of loans and their interest structures.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Loan Repayment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore strategies to pay off your loans faster and save on interest.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Cost Comparison:</strong><span style="font-weight: 400;"> Between duration, interest rate type, and additional variables, you can balance interest rates versus cost over the tenure of your loan.</span></li>
+<li style="font-weight: 400;"><strong>Financial Transparency:</strong><span style="font-weight: 400;"> Understand which loan is better overall for your money.</span></li>
+<li style="font-weight: 400;"><strong>Inform Your Decisions:</strong><span style="font-weight: 400;"> Borrow with confidence using side-by-side comparisons and clear, unbiased information you can trust.</span></li>
 </ul>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized loan advice tailored to your needs.</span></p>`,
+<h2><strong>Additional Resources</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Loan Types Explained:</strong><span style="font-weight: 400;"> Marketing money products and how that interest is calculated.</span></li>
+<li style="font-weight: 400;"><strong>Loan Repayment Tactics:</strong><span style="font-weight: 400;"> Find out how to repay loans ahead of time and save on interest costs.</span></li>
+</ul>
+<p><strong>Expert Advice:</strong><span style="font-weight: 400;"> Reach out to our team of financial consultants for personalised advice and loan structuring.</span></p>`,
     seotitle:
       "Loan Interest Rate Calculator | Flat vs. Reducing Rate Comparison",
     seodescription:
@@ -1569,83 +1326,46 @@ const calculators = [
     ],
     output: "Total Charges ($)",
     showGraph: false,
-    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Hello, Trust Financial Advisory Broking Calculator! You have arrived at the right place if you are curious to learn what it will take to purchase and sell securities. With our Broking Calculator, you can now make informed investments that support your financial goals through the estimation of your broking charges and additional costs of trading.</span></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Brokerage Calculator?</span></strong></p>
-<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">A Brokerage Calculator is a tool that allows you to calculate the total brokerage fees you will incur when buying or selling stocks, mutual funds, or other financial instruments. It helps you understand the impact of these fees on your overall investment returns.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Brokerage Calculator?</span></strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Advisory's Brokerage Calculator. If you want an idea of how much it costs to buy or sell a security, you have ended up in the right place. Our calculator allows you to see your commission costs and other trading-related costs so you know what you need to trade and from which you can ensure that you use the right amount of capital for the type of trades you make.</span></p>
+<h2><strong>What is a Brokerage Calculator?</strong></h2>
+<p><span style="font-weight: 400;">“A brokerage calculator is used to calculate the complete brokerage which you have to pay against your trading such as stocks, future and option, commodity and currency trading.” </span></p>
+<p><span style="font-weight: 400;">Knowing these fees allows you to see how they impact your net investment returns and allows you to plan your trades prudently.</span></p>
+<h2><strong>Why Use Our Brokerage Calculator?</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Estimates:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Get instant calculations of your brokerage fees without any hassle.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter your trade amount, brokerage rate, and other relevant details to see your total costs.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Clarity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Helps you understand how brokerage fees affect your investment returns.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Instant Estimates:</strong><span style="font-weight: 400;"> Quick and reliable broking calculations at your fingertips.</span></li>
+<li style="font-weight: 400;"><strong>User-Friendly Dashboard:</strong><span style="font-weight: 400;"> Simply trade with our tool; it is good for the beginners and experienced users.</span></li>
+<li style="font-weight: 400;"><strong>Keyboard Inputs:</strong><span style="font-weight: 400;"> Type in your trade amount, broking and any other fees to get your total cost based on your trade.</span></li>
+<li style="font-weight: 400;"><strong>Financial Transparency:</strong><span style="font-weight: 400;"> Learn exactly how broking charges are eating into your investment profits.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Brokerage Calculator</span></strong></p>
+<h2><strong>How to Use the Brokerage Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Enter Trade Amount:</strong><span style="font-weight: 400;"> Type the value of securities you are looking to buy or sell.</span></li>
+<li style="font-weight: 400;"><strong>Input Brokerage Rate:</strong><span style="font-weight: 400;"> The fee you are required to pay your broker to make a trade.</span></li>
+<li style="font-weight: 400;"><strong>Add Other Charges (if any):</strong><span style="font-weight: 400;"> Add the transaction charges/surcharge, GST or any levy if applicable.</span></li>
+<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Press “Calculate” button to get total brokerage fees and your net investment cost.</span></li>
+</ol>
+<h2><strong>Example Calculation</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Trade Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the total value of the securities you wish to buy or sell.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Brokerage Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the brokerage fee percentage charged by your broker.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Include Other Charges:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;If applicable, input any additional charges (like transaction fees, GST, etc.).</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view your total brokerage fees and net investment.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Transaction Amount:</strong><span style="font-weight: 400;"> $100,000</span></li>
+<li style="font-weight: 400;"><strong>Brokerage Fee (0.5%):</strong><span style="font-weight: 400;"> $500</span></li>
+<li style="font-weight: 400;"><strong>Taxes &amp; Other Charges (0.2%):</strong><span style="font-weight: 400;"> $200</span></li>
+<li style="font-weight: 400;"><strong>Total Charges:</strong><span style="font-weight: 400;"> $700</span></li>
+<li style="font-weight: 400;"><strong>Total Cost of Transaction:</strong><span style="font-weight: 400;"> $100,700</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
+ 
+<p><span style="font-weight: 400;">This example illustrates how brokerage and associated costs add up when trading so that you can have these as considerations in your investment planning.</span></p>
+<h2><strong>Advantages of Using Our Brokerage Calculator</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Transaction Amount:</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$1,00,000</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Brokerage Fee (0.5%):</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$500</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Taxes &amp; Other Charges (0.2%):&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">$200</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Charges:&nbsp;</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">$700</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Cost of Transaction:</span></strong><span style="font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$1,00,700</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Cost Awareness:</strong><span style="font-weight: 400;"> Know the cost of trading and be better informed about investments.</span></li>
+<li style="font-weight: 400;"><strong>Increased Cospecificity:</strong><span style="font-weight: 400;"> Account for (and minimize) the cost of participation in your general investment plan.</span></li>
+<li style="font-weight: 400;"><strong>Make the Most of Your Portfolio:</strong><span style="font-weight: 400;"> Find ways to minimize fees and maximize returns on your investments.</span></li>
 </ul>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Brokerage Calculator</span></strong></p>
+<h2><strong>Additional Resources</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Cost Awareness:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand the fees associated with your trades to make better investment decisions.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Factor in brokerage costs when planning your investment strategy.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Maximize Returns:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Identify ways to minimize brokerage fees and maximize your investment returns.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Understanding Brokerage Charges:</strong><span style="font-weight: 400;"> As a trader, it is important to know the Introduction to Brokerage Traditionally, brokers use and how the brokerage is calculated against different types of brokerage.</span></li>
+<li style="font-weight: 400;"><strong>Strategies:</strong><span style="font-weight: 400;"> Discover new strategies to help you with your trades and win Optimise your portfolio.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Brokerage Fees:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about different types of brokerage fees and how they are calculated.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various investment strategies to enhance your portfolio.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>
-    </li>
-</ul>
+<p><strong>Expert Advice:</strong><span style="font-weight: 400;"> Talk to our financial specialists for tailored advice on brokerage or investment planning</span></p>
 `,
     seotitle: "Brokerage Calculator for NSE, BSE & Options Trading",
     seodescription:
@@ -1674,81 +1394,43 @@ const calculators = [
     ],
     output: "Margin Required ($)",
     showGraph: false,
-    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Margin Calculator! You&apos;ve come to the right website if you&apos;d like to learn how margin trading works and how much you can lend against your investments. By helping you project your margin requirements, our Margin Calculator allows you to make informed trading decisions that support your investment strategy.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Margin Calculator?</span></strong></p>
-<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">A useful aid to determining how much you can borrow from your broker to use in trading securities is a margin calculator. It helps you make more informed decisions when you trade on margin by helping you understand the relationship between your equity, margin requirements, and the total value of your investments.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Margin Calculator?</span></strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial Margin Calculator You’ve found your margin tool to help you better understand margin trading and to work out how much you can borrow against your investments. This calculator will enable you to calculate the margin requirements so that you can make your trading decisions accordingly.</span></p>
+<h2><strong>What is a Margin Calculator?</strong></h2>
+<p><span style="font-weight: 400;">A margin calculator is used to determine the amount you can borrow from your broker to trade securities on margin. It communicates the correlation of your equity, margin percent requirements and your total trade exposure, allowing you to securely leverage your account without “blowing it up.”</span></p>
+<h2><strong>Why Use Our Margin Calculator?</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Estimates:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To enable you to make decisions in a hurry, you can quickly get instant calculations of your margin requirements.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User-Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Leverage easy navigation and a design that ensures a seamless experience for all users.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customisable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;To see your borrowing limit according to your individual situation, input your investment amount, margin percentage, and other relevant data.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Clarity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Discover more about how margin trading can enhance your investment opportunities and help you make smart trading choices.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Fast Calculations:</strong><span style="font-weight: 400;"> Determine instantly how much margin is required for your trade.</span></li>
+<li style="font-weight: 400;"><strong>Simple Navigation:</strong><span style="font-weight: 400;"> Designed for everyone from the beginner investor to the experienced trader.</span></li>
+<li style="font-weight: 400;"><strong>Custom Inputs:</strong><span style="font-weight: 400;"> Enter your investment amount, your broker required margin percentage, and your maximum loss percentage and you can customize every in/out of the trade for your precise calculations.</span></li>
+<li style="font-weight: 400;"><strong>Financial Clarity:</strong><span style="font-weight: 400;"> Learn how margin trading can increase buying power, potential returns, and risk.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Margin Calculator</span></strong></p>
+<h2><strong>How to Use the Margin Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Amount:</strong><span style="font-weight: 400;"> Type the amount of /securities you want to trade.</span></li>
+<li style="font-weight: 400;"><strong>Input Margin Percentage:</strong><span style="font-weight: 400;"> This is the percent margin you set with your broker (typically 50%).</span></li>
+<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Click 'Calculate' to see the required margin and your total trading exposure.</span></li>
+</ol>
+<h2><strong>Example Calculation</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Investment Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the total value of the securities you wish to purchase.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Margin Percentage:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the margin percentage set by your broker (e.g., 50%).</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view your margin amount and the total equity required.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Trade Value:</strong><span style="font-weight: 400;"> $50,000</span></li>
+<li style="font-weight: 400;"><strong>Leverage Factor:</strong><span style="font-weight: 400;"> 10x</span></li>
+<li style="font-weight: 400;"><strong>Margin Required:</strong><span style="font-weight: 400;"> $5,000</span></li>
+<li style="font-weight: 400;"><strong>Total Exposure:</strong><span style="font-weight: 400;"> $50,000</span></li>
+<li style="font-weight: 400;"><strong>Potential P/L (for a 5% price movement):</strong><span style="font-weight: 400;"> ± $2,500</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
+<p><span style="font-weight: 400;">This is an illustration of how trading on margin increases possible gains as well as potential risk.</span></p>
+<h2><strong>Advantages of Using Our Margin Calculator</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Trade Value:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">$50,000</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Leverage Factor:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">10x</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Margin Required:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">$5,000</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Total Exposure:</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">$50,000</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Potential Profit/Loss (5% Move):</span></strong><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&plusmn; $2,500</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Learn About Leverage:</strong><span style="font-weight: 400;"> Learn why margin trading can make up to 4x the profit!</span></li>
+<li style="font-weight: 400;"><strong>Risk Calculation:</strong><span style="font-weight: 400;"> Figure out how much risk is there in margin trading, so that you take safer trade with your money.</span></li>
+<li style="font-weight: 400;"><strong>Planning for Investment:</strong><span style="font-weight: 400;"> The necessary margin requirement should form part of your overall investment and risk planning.</span></li>
 </ul>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Margin Calculator</span></strong></p>
+<h2><strong>Additional Resources</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understand Leverage:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn how margin trading can increase your buying power and potential returns.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Risk Assessment:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Evaluate the risks associated with margin trading and make informed decisions.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Factor in margin requirements when planning your investment strategy.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>What is margin trading:</strong><span style="font-weight: 400;"> a fundamental introduction to margin trading and its terms.</span></li>
+<li style="font-weight: 400;"><strong>Strategic Trading:</strong><span style="font-weight: 400;"> Learn how to integrate margin trading with all types of trading strategies.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Margin Trading:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about the basics of margin trading, including its benefits and risks.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various investment strategies that can be enhanced through margin trading.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>
-    </li>
-</ul>`,
+<p><strong>Consultation Service:</strong><span style="font-weight: 400;"> You can contact our financial expert for any help that you need.</span></p>`,
     seotitle: "Forex & Stock Margin Calculator | Trust Financial Advisory",
     seodescription:
       "Calculate your margin for forex, stocks & more with our Margin Calculator. Trade confidently with precise calculations at Trust Financial Advisory.",
@@ -1783,78 +1465,45 @@ const calculators = [
     ],
     output: "Future Value ($)",
     showGraph: false,
-    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Inflation Calculator! Proper financial planning involves an awareness of the impact of inflation on your investments and savings. Using our inflation calculator, you can calculate how inflation will reduce your money&apos;s purchasing power over the long term and make sound financial decisions.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is an Inflation Calculator?</span></strong></p>
-<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">One helpful tool that allows you to calculate the future value of your funds using a specified inflation rate is an inflation calculator. It enables you to make informed financial decisions to protect and grow your wealth by shedding light on how inflation slowly erodes purchasing power.</span></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Inflation Calculator?</span></strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to the Trust Financial Inflation Calculator. When it comes to financial planning, you need to guess at how inflation will eat away at the earning power of your money over time. </span></p>
+<p><span style="font-weight: 400;">Use our inflation calculator to calculate the equivalent value of your savings or investment or to help you decide how much you need to save or invest for a specific one-off amount in X years adjusted for the annual increase in prices.</span></p>
+<p><strong>What is an Inflation Calculator?</strong></p>
+<p><span style="font-weight: 400;">An inflation calculator is a useful website that provides the future value of any amount of money at the end of year based on an inflation rate. It helps explain how increasing prices gradually erode the purchasing power of your money, so you can do better financial planning toward preserving everything cheap that you love to buy.</span></p>
+<h2><strong>Why Use Our Inflation Calculator?</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Estimates:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Get instant calculations of future values adjusted for inflation.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter your current amount, inflation rate, and time period to see the future value of your money.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Awareness:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Helps you understand the long-term effects of inflation on your savings and investments.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Back of the Envelope Calculator:</strong><span style="font-weight: 400;"> It's easy to figure out how inflation impacts your future money.</span></li>
+<li style="font-weight: 400;"><strong>Easy to Use:</strong><span style="font-weight: 400;"> user-friendly interface that is usable for all by all investors as well as savers.</span></li>
+<li style="font-weight: 400;"><strong>Personal Inputs:</strong><span style="font-weight: 400;"> Input your current balance, estimated rate of inflation and time horizon for a much more personalised forecast.</span></li>
+<li style="font-weight: 400;"><strong>Financial Literacy:</strong><span style="font-weight: 400;"> Grasp the long-term effects of inflation on your savings, retirement funds or any other investment objectives.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Inflation Calculator</span></strong></p>
+<h2><strong>How to Use the Inflation Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Enter the current value:</strong><span style="font-weight: 400;"> Enter the amount of money, savings, or investment as at the current time.</span></li>
+<li style="font-weight: 400;"><strong>inflation rate:</strong><span style="font-weight: 400;"> enter the expected annual inflation rate (e.g., 3%).</span></li>
+<li style="font-weight: 400;"><strong>Choose Time Horizon:</strong><span style="font-weight: 400;"> Enter the number of years in the future to forecast.</span></li>
+<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Enter an amount, and then click “Calculate” to see how much your money will be worth after inflation</span></li>
+</ol>
+<h2><strong>Example Calculation</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Current Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the amount of money you want to evaluate.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Inflation Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the expected annual inflation rate (e.g., 3%).</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Select Time Period:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Specify the number of years you want to project into the future.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view the future value of your money adjusted for inflation.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Current Amount:</strong><span style="font-weight: 400;"> $100,000</span></li>
+<li style="font-weight: 400;"><strong>Inflation Rate:</strong><span style="font-weight: 400;"> 3% per annum</span></li>
+<li style="font-weight: 400;"><strong>Time Period:</strong><span style="font-weight: 400;"> 10 years</span></li>
+<li style="font-weight: 400;"><strong>Future Value:</strong><span style="font-weight: 400;"> Approximately $134,392</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Example Calculation</span></strong></p>
+ 
+<p><span style="font-weight: 400;">That means you’ll need approximately $134,392 in 10 years if 3% inflation holds between now and then to have the same purchasing power as $100,000 toady.</span></p>
+<h2><strong>Advantages of Using Our Inflation Calculator</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Current Amount:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$1,00,000</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Inflation Rate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;3% per annum</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Time Period:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 years</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Future Value:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$1,34,392 (This means that in 10 years, $1,00,000 will have the purchasing power equivalent to $1,34,392 today.)</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Financial Awareness Services:</strong><span style="font-weight: 400;"> Find out how inflation erodes the purchasing power of the dollar.</span></li>
+<li style="font-weight: 400;"><strong>Improved Financial Planning:</strong><span style="font-weight: 400;"> Include a figure for inflation in calculations for retirement, education and other large expenses.</span></li>
+<li style="font-weight: 400;"><strong>Investment Approach:</strong><span style="font-weight: 400;"> Select investments that have opportunities to make a return higher than the HICP to ensure wealth is maintained and grown.</span></li>
 </ul>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Inflation Calculator</span></strong></p>
+<h2><strong>Additional Resources</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchasing Power Awareness:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand how inflation impacts your savings and investments over time.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Financial Planning:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Factor in inflation when planning for future expenses, such as retirement or education.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategy:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Make informed decisions about investments that can potentially outpace inflation.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>The Basics of Inflation:</strong><span style="font-weight: 400;"> Learn what inflation is, what causes it and what its effects are on your finances and the economy.</span></li>
+<li style="font-weight: 400;"><strong>An Investment Approach to Inflation:</strong><span style="font-weight: 400;"> Learn about different asset classes and ways to invest with inflation in mind.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Inflation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about the causes and effects of inflation on the economy and personal finances.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies Against Inflation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various investment options that can help protect your wealth from inflation.</span></p>
-    </li>
-</ul>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized advice tailored to your financial goals.</span></p>`,
+<p><strong>Professional Advice:</strong><span style="font-weight: 400;"> Contact our financial professionals for advice tailored to your financial needs.</span></p>`,
     seotitle: "Free Inflation Calculator | Track Inflation Over Time",
     seodescription:
       "Easily calculate inflation's impact with our Inflation Calculator. See how your money’s value changes over time. Get fast, accurate results for smart planning!",
@@ -1896,92 +1545,85 @@ const calculators = [
     ],
     output: "Average Price per Share ($)",
     showGraph: false,
-    html: `<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Welcome to Trust Financial Advisory&apos;s Stock Average Calculator! While investing in stocks can be profitable, it is only by knowing your average cost per share that you can manage your portfolio effectively. To empower you to make informed investment choices that harmonize with your financial goals, our Stock Average Calculator is designed to help you calculate the average purchase price of a stock.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">What is a Stock Average Calculator?</span></strong></p>
-<p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">A useful device that allows you to calculate the average value of your shares from multiple buys at different prices is a stock average calculator. This helps you make more informed investment choices by providing you with a clear idea of your overall investment in a given stock and computing your profit or loss when you sell.</span></p>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Why Use Our Stock Average Calculator?</span></strong></p>
+    html: `<p><span style="font-weight: 400;">Welcome to Trust Financial's Stock Average Calculator! Stock investing can be profitable, but successfully managing your portfolio requires knowing your average cost per share. </span></p>
+<p><span style="font-weight: 400;">Our calculator enables you to calculate the average weighted purchase price of stock you've purchased across different transactions, enabling you to make informed financial decision in line with your financial objectives.</span></p>
+<h2><strong>What is a Stock Average Calculator?</strong></h2>
+<p><span style="font-weight: 400;">With a stock average calculator you can calculate the average stock price of shares bought at different prices and quantities. This tool will provide visibility on your total investment in a given stock and make it easy to see your profit or loss when you sell.</span></p>
+<h2><strong>Why Use Our Stock Average Calculator?</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quick Calculations:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Get instant calculations of your average cost per share without any hassle.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">User -Friendly Interface:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Designed for easy navigation and a seamless experience.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Customizable Inputs: Enter your purchase prices and quantities to see your average cost.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Clarity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Helps you track your investments and make informed decisions about buying or selling.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Fast Calculation:</strong><span style="font-weight: 400;"> Learn your average price per share without using a calculator.</span></li>
+<li style="font-weight: 400;"><strong>Easy to Use:</strong><span style="font-weight: 400;"> Simply input your information for a smooth calculation.</span></li>
+<li style="font-weight: 400;"><strong>Customizable Input:</strong><span style="font-weight: 400;"> Input different purchase prices and share numbers for proper averaging.</span></li>
+<li style="font-weight: 400;"><strong>Investment clarity:</strong><span style="font-weight: 400;"> smart investment tracking and buying or selling strategy planning.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">How to Use the Stock Average Calculator</span></strong></p>
+<h2><strong>How to Use the Stock Average Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Enter Purchase Prices:</strong><span style="font-weight: 400;"> Type in the prices shares were purchased for each transaction.</span></li>
+<li style="font-weight: 400;"><strong>Insert Quantity:</strong><span style="font-weight: 400;"> Enter the quantity of shares purchased at each price.</span></li>
+<li style="font-weight: 400;"><strong>Compute:</strong><span style="font-weight: 400;"> After clicking the calculate button, you will view the total average cost per share.</span></li>
+</ol>
+<h2><strong>Example</strong></h2>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Transaction</strong></p>
+</td>
+<td>
+<p><strong>Purchase Price per Share</strong></p>
+</td>
+<td>
+<p><strong>Quantity of Shares</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>1</strong></p>
+</td>
+<td>
+<p><strong>$100</strong></p>
+</td>
+<td>
+<p><strong>10</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>2</strong></p>
+</td>
+<td>
+<p><strong>$120</strong></p>
+</td>
+<td>
+<p><strong>5</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>3</strong></p>
+</td>
+<td>
+<p><strong>$90</strong></p>
+</td>
+<td>
+<p><strong>15</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;">Average Cost per Share: $102.50</span></p>
+<h2><strong>Advantages of Using Our Stock Average Calculator</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Enter Purchase Prices:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Input the price at which you bought the stock for each transaction.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Input Quantities:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Enter the number of shares purchased at each price.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Calculate:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Click on the &apos;Calculate&apos; button to view your average cost per share.</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Cost Control:</strong><span style="font-weight: 400;"> Be aware of your average price for buying and manage to hold or sell the holding wisely.</span></li>
+<li style="font-weight: 400;"><strong>P&amp;L (Profit &amp; Loss) Calculation: </strong><span style="font-weight: 400;">Calculate the profit and loss of options positions at current spot prices.</span></li>
+<li style="font-weight: 400;"><strong>Portfolio Strategy:</strong><span style="font-weight: 400;"> Utilize average cost information to make better investment and portfolio balancing decisions.</span></li>
 </ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">For Example&nbsp;</span></strong></p>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 1</span></strong></p>
+<h2><strong>Additional Resources</strong></h2>
 <ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$100</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;10 shares</span></p>
-    </li>
+<li style="font-weight: 400;"><strong>Stock Investments Explained:</strong><span style="font-weight: 400;"> Discover stock investing for beginners and how to properly diversify a portfolio.</span></li>
+<li style="font-weight: 400;"><strong>Investing Strategies:</strong><span style="font-weight: 400;"> Learn how to profit from day trading, swing trading and more!</span></li>
 </ul>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 2</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$120</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;5 shares</span></p>
-    </li>
-</ul>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Transaction 3</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Purchase Price:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$90</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Quantity:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;15 shares</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Average Cost per Share:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;$102.50</span></p>
-    </li>
-</ul>
-<p><br></p>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Advantages of Using Our Stock Average Calculator</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Cost Management:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Understand your average cost to make better decisions about selling or holding your stocks.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Profit and Loss Assessment:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Easily calculate your potential profit or loss based on the current market price.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategy:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Use the average cost to inform your investment strategy and portfolio management.</span></p>
-    </li>
-</ul>
-<p><strong><span style="font-size:12pt;font-family:Arial,sans-serif;">Additional Resources</span></strong></p>
-<ul>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Understanding Stock Investments:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Learn about the basics of stock investing and how to build a diversified portfolio.</span></p>
-    </li>
-    <li style="list-style-type:disc;color:#374151;font-size:12pt;font-family:Arial,sans-serif;">
-        <p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Investment Strategies:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Explore various strategies for buying and selling stocks effectively.</span></p>
-    </li>
-</ul>
-<p><strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">Expert Consultation:</span></strong><span style="color:#374151;font-size:12pt;font-family:Arial,sans-serif;">&nbsp;Contact our financial advisors for personalized investment advice tailored to your needs.</span></p>`,
+<p><strong>Quick Help:</strong><span style="font-weight: 400;"> Get answers to any questions you may have about your investment plan from our network of sophisticated financial advisors.</span></p>`,
     seotitle: "Stock Average Calculator | Free Online Tool for Smart Traders",
     seodescription:
       "New to investing?  Easily calculate the average cost of your stocks with our Stock Average Calculator. No registration required—fast, accurate, and easy to use.",

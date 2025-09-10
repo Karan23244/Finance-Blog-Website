@@ -25,8 +25,8 @@ const usePostsByCategory = () => {
 
   // Define pagination limits per category type
   const categoryLimits = {
-    "Personal Finance": 4,
-    "Investment And Wealth Growth": 19,
+    "Personal Finance": 10,
+    "Investment And Wealth Growth": 13,
     "Risk Management": 12,
   };
 

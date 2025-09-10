@@ -6,7 +6,9 @@ const CalculatorCard = ({ name, description, id }) => {
   return (
     <div
       onClick={() =>
-        navigate(`/financial-calculators/${name.replace(/\s+/g, "-")}`)
+        navigate(
+          `/financial-calculators/${name.toLowerCase().replace(/\s+/g, "-")}`
+        )
       }
       className="cursor-pointer p-4 shadow-md border border-gray-500 rounded-xl hover:shadow-lg transition group lg:h-48 flex flex-col">
       {/* Card Heading */}
