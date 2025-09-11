@@ -9,3 +9,7 @@ body {
   src: url('/path-to-font.woff2') format('woff2');
   font-display: swap;
 }
+html {
+  scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}

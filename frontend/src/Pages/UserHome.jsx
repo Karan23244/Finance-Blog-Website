@@ -139,11 +139,11 @@ const UserHome = () => {
       </Helmet>
       <Hero />
       <TrendingNow posts={posts} />
-      <NewsList/>
+      <NewsList />
       <div className="lg:min-h-[800px] h-[600px]">
         {showMarket && (
           <div
-            id="Market"
+            id="market"
             className="flex items-center justify-center min-h-[300px]">
             <div className="w-full max-w-7xl mx-auto p-6">
               <h2 className="text-3xl font-bold text-left mb-8 text-[#FF822E]">

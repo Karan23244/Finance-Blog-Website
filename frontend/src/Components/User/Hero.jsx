@@ -35,7 +35,7 @@ const Hero = memo(() => {
         {/* Icons Section */}
         <div className="flex flex-row lg:flex-col items-center gap-6 lg:items-start">
           <div className="bg-black bg-opacity-80 p-3 rounded-xl shadow-md">
-            <a href="#Currency">
+            <a href="#currency">
               <img
                 src="/currency.svg"
                 alt="Currency"
@@ -47,7 +47,7 @@ const Hero = memo(() => {
             </a>
           </div>
           <div className="bg-black bg-opacity-80 p-3 rounded-xl shadow-md">
-            <Link to="/calculator">
+            <Link to="/financial-calculators">
               <img
                 src="/calculator.svg"
                 alt="Calculator"
@@ -59,7 +59,7 @@ const Hero = memo(() => {
             </Link>
           </div>
           <div className="bg-black bg-opacity-80 p-3 rounded-xl shadow-md">
-            <a href="#Market">
+            <a href="#market">
               <img
                 src="/market.svg"
                 alt="Market"
