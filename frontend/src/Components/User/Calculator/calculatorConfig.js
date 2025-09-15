@@ -2,8 +2,8 @@ const calculators = [
   {
     id: "sip",
     name: "SIP Calculator",
-    description:
-      "Plan your SIP investments carefully and learn how the power of intelligent compounding can transform modest monthly contributions into a sizable fortune over time.",
+    description: "Grow wealth steadily with smart SIP planning.",
+    src: "SIP.svg",
     inputs: [
       {
         label: "Monthly Investment ($)",
@@ -74,8 +74,8 @@ const calculators = [
   {
     id: "lumpsum",
     name: "Lumpsum Calculator",
-    description:
-      "Find out how much your one-time investment will be worth in the future and use mutual fund compounding to increase your returns.",
+    description: "Calculate future returns on your lumpsum investments.",
+    src: "Lumpsum.svg",
     inputs: [
       {
         label: "Investment Amount ($)",
@@ -149,8 +149,8 @@ const calculators = [
   {
     id: "swp",
     name: "SWP Calculator",
-    description:
-      "Plan your withdrawals strategically with the SWP calculator and ensure a steady income flow while maintaining investment growth over time.",
+    description: "Plan withdrawals maintaining income, growth balance.",
+    src: "SWP.svg",
     inputs: [
       {
         label: "Initial Investment ($)",
@@ -237,8 +237,8 @@ const calculators = [
   {
     id: "mutualFund",
     name: "Mutual Fund Calculator",
-    description:
-      "To reach your financial objectives faster, estimate your mutual fund returns with ease and make wise investment choices.",
+    description: "Maximize mutual fund returns with precise calculations.",
+    src: "MF.svg",
     inputs: [
       {
         label: "Investment Amount ($)",
@@ -307,8 +307,8 @@ const calculators = [
   {
     id: "ppf",
     name: "PPF Calculator",
-    description:
-      "By carefully planning your savings and calculating the returns on your Public Provident Fund, you can safeguard your future. ",
+    description: "Secure tax-free returns via PPF contributions. ",
+    src: "PPF.svg",
     inputs: [
       {
         label: "Yearly Investment ($)",
@@ -381,8 +381,8 @@ const calculators = [
   {
     id: "epf",
     name: "EPF Calculator",
-    description:
-      "Keep track of your future corpus and contributions to the Employee Provident Fund to guarantee a comfortable retirement.",
+    description: "Track EPF savings for retirement security.",
+    src: "EPF.svg",
     inputs: [
       {
         label: "Monthly Basic Salary ($)",
@@ -479,8 +479,8 @@ const calculators = [
   {
     id: "rd",
     name: "Recurring Deposit Calculator",
-    description:
-      "Observe how gradual interest earnings from modest, regular deposits can grow into a sizeable sum. ",
+    description: "Calculate consistent gains with recurring deposits.",
+    src: "RD.svg",
     inputs: [
       {
         label: "Monthly Deposit ($)",
@@ -558,8 +558,8 @@ const calculators = [
   {
     id: "fd",
     name: "Fixed Deposit Calculator",
-    description:
-      "To effectively maximise returns, figure out the interest and maturity value of your fixed deposit investment.",
+    description: "Ensure fixed returns through calculated investments.",
+    src: "FD.svg",
     inputs: [
       {
         label: "Deposit Amount ($)",
@@ -634,8 +634,8 @@ const calculators = [
   {
     id: "nps",
     name: "NPS Calculator",
-    description:
-      "Estimate your monthly pension and total corpus under the National Pension System to make an informed retirement plan.",
+    description: "Plan retirement savings with NPS precision.",
+    src: "NPS.svg",
     inputs: [
       {
         label: "Monthly Contribution ($)",
@@ -719,8 +719,8 @@ const calculators = [
   {
     id: "retirement",
     name: "Retirement Calculator",
-    description:
-      "Find out how much you need to save now for a financially independent and stress-free retirement.",
+    description: "Forecast retirement corpus and income needs.",
+    src: "Retirement.svg",
     inputs: [
       {
         label: "Monthly Expenses ($)",
@@ -802,8 +802,8 @@ const calculators = [
   {
     id: "emi",
     name: "EMI Calculator",
-    description:
-      "To prevent financial stress, quickly calculate your loan EMI and improve your monthly budget.",
+    description: "Calculate monthly EMI for easy budgeting.",
+    src: "EMI.svg",
     inputs: [
       {
         label: "Loan Amount ($)",
@@ -890,8 +890,8 @@ const calculators = [
   {
     id: "carLoan",
     name: "Car Loan EMI Calculator",
-    description:
-      "Drive the car of your dreams without worrying about money by being aware of your monthly auto loan payments in advance.",
+    description: "Manage car loan EMIs effectively with calculator.",
+    src: "CarLoanEMI.svg",
     inputs: [
       {
         label: "Car Loan Amount ($)",
@@ -990,8 +990,8 @@ const calculators = [
   {
     id: "homeLoan",
     name: "Home Loan EMI Calculator",
-    description:
-      "To purchase your ideal home with confidence, calculate your home loan's interest outflow, EMI, and repayment schedule. ",
+    description: "Calculate home loan EMIs for easy planning.",
+    src: "HomeLoanEMI.svg",
     inputs: [
       {
         label: "Home Loan Amount ($)",
@@ -1065,8 +1065,8 @@ const calculators = [
   {
     id: "stepUpSip",
     name: "Step Up SIP Calculator",
-    description:
-      "Discover how raising your SIP contributions each year can greatly increase the long-term returns on your investments. ",
+    description: "Plan increasing SIP investments strategically for wealth.",
+    src: "SteptoSIP.svg",
     inputs: [
       {
         label: "Initial Monthly Investment ($)",
@@ -1144,10 +1144,83 @@ const calculators = [
       "Plan your investments wisely with our Step-Up SIP Calculator. Analyze your financial growth with precise calculations. Try now on Trust Financial Advisory!",
   },
   {
+    id: "inflation",
+    name: "Inflation Calculator",
+    description: "Measure inflation’s impact on your savings.",
+    src: "Inflation.svg",
+    inputs: [
+      {
+        label: "Current Amount ($)",
+        key: "currentAmount",
+        type: "number",
+        default: 100000,
+        max: 10000000,
+      },
+      {
+        label: "Inflation Rate (%)",
+        key: "inflationRate",
+        type: "number",
+        default: 6,
+        max: 10,
+      },
+      {
+        label: "Time Period (Years)",
+        key: "time",
+        type: "number",
+        default: 10,
+        max: 50,
+      },
+    ],
+    output: "Future Value ($)",
+    showGraph: false,
+    html: `<p><span style="font-weight: 400;">Welcome to the Trust Financial Inflation Calculator. When it comes to financial planning, you need to guess at how inflation will eat away at the earning power of your money over time. </span></p>
+<p><span style="font-weight: 400;">Use our inflation calculator to calculate the equivalent value of your savings or investment or to help you decide how much you need to save or invest for a specific one-off amount in X years adjusted for the annual increase in prices.</span></p>
+<p><strong>What is an Inflation Calculator?</strong></p>
+<p><span style="font-weight: 400;">An inflation calculator is a useful website that provides the future value of any amount of money at the end of year based on an inflation rate. It helps explain how increasing prices gradually erode the purchasing power of your money, so you can do better financial planning toward preserving everything cheap that you love to buy.</span></p>
+<h2><strong>Why Use Our Inflation Calculator?</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Back of the Envelope Calculator:</strong><span style="font-weight: 400;"> It's easy to figure out how inflation impacts your future money.</span></li>
+<li style="font-weight: 400;"><strong>Easy to Use:</strong><span style="font-weight: 400;"> user-friendly interface that is usable for all by all investors as well as savers.</span></li>
+<li style="font-weight: 400;"><strong>Personal Inputs:</strong><span style="font-weight: 400;"> Input your current balance, estimated rate of inflation and time horizon for a much more personalised forecast.</span></li>
+<li style="font-weight: 400;"><strong>Financial Literacy:</strong><span style="font-weight: 400;"> Grasp the long-term effects of inflation on your savings, retirement funds or any other investment objectives.</span></li>
+</ul>
+<h2><strong>How to Use the Inflation Calculator</strong></h2>
+<ol>
+<li style="font-weight: 400;"><strong>Enter the current value:</strong><span style="font-weight: 400;"> Enter the amount of money, savings, or investment as at the current time.</span></li>
+<li style="font-weight: 400;"><strong>inflation rate:</strong><span style="font-weight: 400;"> enter the expected annual inflation rate (e.g., 3%).</span></li>
+<li style="font-weight: 400;"><strong>Choose Time Horizon:</strong><span style="font-weight: 400;"> Enter the number of years in the future to forecast.</span></li>
+<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Enter an amount, and then click “Calculate” to see how much your money will be worth after inflation</span></li>
+</ol>
+<h2><strong>Example Calculation</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Current Amount:</strong><span style="font-weight: 400;"> $100,000</span></li>
+<li style="font-weight: 400;"><strong>Inflation Rate:</strong><span style="font-weight: 400;"> 3% per annum</span></li>
+<li style="font-weight: 400;"><strong>Time Period:</strong><span style="font-weight: 400;"> 10 years</span></li>
+<li style="font-weight: 400;"><strong>Future Value:</strong><span style="font-weight: 400;"> Approximately $134,392</span></li>
+</ul>
+ 
+<p><span style="font-weight: 400;">That means you’ll need approximately $134,392 in 10 years if 3% inflation holds between now and then to have the same purchasing power as $100,000 toady.</span></p>
+<h2><strong>Advantages of Using Our Inflation Calculator</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>Financial Awareness Services:</strong><span style="font-weight: 400;"> Find out how inflation erodes the purchasing power of the dollar.</span></li>
+<li style="font-weight: 400;"><strong>Improved Financial Planning:</strong><span style="font-weight: 400;"> Include a figure for inflation in calculations for retirement, education and other large expenses.</span></li>
+<li style="font-weight: 400;"><strong>Investment Approach:</strong><span style="font-weight: 400;"> Select investments that have opportunities to make a return higher than the HICP to ensure wealth is maintained and grown.</span></li>
+</ul>
+<h2><strong>Additional Resources</strong></h2>
+<ul>
+<li style="font-weight: 400;"><strong>The Basics of Inflation:</strong><span style="font-weight: 400;"> Learn what inflation is, what causes it and what its effects are on your finances and the economy.</span></li>
+<li style="font-weight: 400;"><strong>An Investment Approach to Inflation:</strong><span style="font-weight: 400;"> Learn about different asset classes and ways to invest with inflation in mind.</span></li>
+</ul>
+<p><strong>Professional Advice:</strong><span style="font-weight: 400;"> Contact our financial professionals for advice tailored to your financial needs.</span></p>`,
+    seotitle: "Free Inflation Calculator | Track Inflation Over Time",
+    seodescription:
+      "Easily calculate inflation's impact with our Inflation Calculator. See how your money’s value changes over time. Get fast, accurate results for smart planning!",
+  },
+  {
     id: "incomeTax",
     name: "Income Tax Calculator",
-    description:
-      "Quickly calculate your tax liability and make financial plans to save more effectively and legally.",
+    description: "Calculate tax liability quickly and accurately.",
+    src: "IncomeTax.svg",
     inputs: [
       {
         label: "Annual Income ($)",
@@ -1210,8 +1283,8 @@ const calculators = [
   {
     id: "interestRateComparison",
     name: "Flat vs Reducing Interest Rate Calculator",
-    description:
-      "For greater savings, compare the various loan interest rates and select the most economical repayment plan.",
+    description: "Compare flat and reducing interest payments easily.",
+    src: "FlatVsReducingRate.svg",
     inputs: [
       {
         label: "Loan Amount ($)",
@@ -1299,8 +1372,8 @@ const calculators = [
   {
     id: "brokerage",
     name: "Brokerage Calculator",
-    description:
-      "Optimise your stock investments by learning the precise amount of broking fees you pay on your trades.",
+    description: "Calculate brokerage fees for investment profitability.",
+    src: "Brokerage.svg",
     inputs: [
       {
         label: "Transaction Amount ($)",
@@ -1374,8 +1447,8 @@ const calculators = [
   {
     id: "margin",
     name: "Margin Calculator",
-    description:
-      "Determine the margin needed to trade stocks, then carefully manage your investments to optimise profits.",
+    description: "Assess margin requirements for leveraged trading.",
+    src: "Margin.svg",
     inputs: [
       {
         label: "Trade Value ($)",
@@ -1436,83 +1509,10 @@ const calculators = [
       "Calculate your margin for forex, stocks & more with our Margin Calculator. Trade confidently with precise calculations at Trust Financial Advisory.",
   },
   {
-    id: "inflation",
-    name: "Inflation Calculator",
-    description:
-      "Examine how inflation will impact the future worth of your money and modify your savings plan as necessary.",
-    inputs: [
-      {
-        label: "Current Amount ($)",
-        key: "currentAmount",
-        type: "number",
-        default: 100000,
-        max: 10000000,
-      },
-      {
-        label: "Inflation Rate (%)",
-        key: "inflationRate",
-        type: "number",
-        default: 6,
-        max: 10,
-      },
-      {
-        label: "Time Period (Years)",
-        key: "time",
-        type: "number",
-        default: 10,
-        max: 50,
-      },
-    ],
-    output: "Future Value ($)",
-    showGraph: false,
-    html: `<p><span style="font-weight: 400;">Welcome to the Trust Financial Inflation Calculator. When it comes to financial planning, you need to guess at how inflation will eat away at the earning power of your money over time. </span></p>
-<p><span style="font-weight: 400;">Use our inflation calculator to calculate the equivalent value of your savings or investment or to help you decide how much you need to save or invest for a specific one-off amount in X years adjusted for the annual increase in prices.</span></p>
-<p><strong>What is an Inflation Calculator?</strong></p>
-<p><span style="font-weight: 400;">An inflation calculator is a useful website that provides the future value of any amount of money at the end of year based on an inflation rate. It helps explain how increasing prices gradually erode the purchasing power of your money, so you can do better financial planning toward preserving everything cheap that you love to buy.</span></p>
-<h2><strong>Why Use Our Inflation Calculator?</strong></h2>
-<ul>
-<li style="font-weight: 400;"><strong>Back of the Envelope Calculator:</strong><span style="font-weight: 400;"> It's easy to figure out how inflation impacts your future money.</span></li>
-<li style="font-weight: 400;"><strong>Easy to Use:</strong><span style="font-weight: 400;"> user-friendly interface that is usable for all by all investors as well as savers.</span></li>
-<li style="font-weight: 400;"><strong>Personal Inputs:</strong><span style="font-weight: 400;"> Input your current balance, estimated rate of inflation and time horizon for a much more personalised forecast.</span></li>
-<li style="font-weight: 400;"><strong>Financial Literacy:</strong><span style="font-weight: 400;"> Grasp the long-term effects of inflation on your savings, retirement funds or any other investment objectives.</span></li>
-</ul>
-<h2><strong>How to Use the Inflation Calculator</strong></h2>
-<ol>
-<li style="font-weight: 400;"><strong>Enter the current value:</strong><span style="font-weight: 400;"> Enter the amount of money, savings, or investment as at the current time.</span></li>
-<li style="font-weight: 400;"><strong>inflation rate:</strong><span style="font-weight: 400;"> enter the expected annual inflation rate (e.g., 3%).</span></li>
-<li style="font-weight: 400;"><strong>Choose Time Horizon:</strong><span style="font-weight: 400;"> Enter the number of years in the future to forecast.</span></li>
-<li style="font-weight: 400;"><strong>Calculate:</strong><span style="font-weight: 400;"> Enter an amount, and then click “Calculate” to see how much your money will be worth after inflation</span></li>
-</ol>
-<h2><strong>Example Calculation</strong></h2>
-<ul>
-<li style="font-weight: 400;"><strong>Current Amount:</strong><span style="font-weight: 400;"> $100,000</span></li>
-<li style="font-weight: 400;"><strong>Inflation Rate:</strong><span style="font-weight: 400;"> 3% per annum</span></li>
-<li style="font-weight: 400;"><strong>Time Period:</strong><span style="font-weight: 400;"> 10 years</span></li>
-<li style="font-weight: 400;"><strong>Future Value:</strong><span style="font-weight: 400;"> Approximately $134,392</span></li>
-</ul>
- 
-<p><span style="font-weight: 400;">That means you’ll need approximately $134,392 in 10 years if 3% inflation holds between now and then to have the same purchasing power as $100,000 toady.</span></p>
-<h2><strong>Advantages of Using Our Inflation Calculator</strong></h2>
-<ul>
-<li style="font-weight: 400;"><strong>Financial Awareness Services:</strong><span style="font-weight: 400;"> Find out how inflation erodes the purchasing power of the dollar.</span></li>
-<li style="font-weight: 400;"><strong>Improved Financial Planning:</strong><span style="font-weight: 400;"> Include a figure for inflation in calculations for retirement, education and other large expenses.</span></li>
-<li style="font-weight: 400;"><strong>Investment Approach:</strong><span style="font-weight: 400;"> Select investments that have opportunities to make a return higher than the HICP to ensure wealth is maintained and grown.</span></li>
-</ul>
-<h2><strong>Additional Resources</strong></h2>
-<ul>
-<li style="font-weight: 400;"><strong>The Basics of Inflation:</strong><span style="font-weight: 400;"> Learn what inflation is, what causes it and what its effects are on your finances and the economy.</span></li>
-<li style="font-weight: 400;"><strong>An Investment Approach to Inflation:</strong><span style="font-weight: 400;"> Learn about different asset classes and ways to invest with inflation in mind.</span></li>
-</ul>
-<p><strong>Professional Advice:</strong><span style="font-weight: 400;"> Contact our financial professionals for advice tailored to your financial needs.</span></p>`,
-    seotitle: "Free Inflation Calculator | Track Inflation Over Time",
-    seodescription:
-      "Easily calculate inflation's impact with our Inflation Calculator. See how your money’s value changes over time. Get fast, accurate results for smart planning!",
-  },
-  {
     id: "stockAverage",
     name: "Stock Average Calculator",
-    description:
-      "For greater returns, average the prices at which you buy stocks and make better-informed choices.",
+    description: "Calculate average cost of stock investments.",
+    src: "StockAverage.svg",
     inputs: [
       {
         label: "Shares Bought (First Purchase)",

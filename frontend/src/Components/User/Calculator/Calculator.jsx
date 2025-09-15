@@ -30,6 +30,7 @@ function Calculator({ setSelectedCalculator }) {
               key={calculator.id}
               name={calculator.name}
               description={calculator.description}
+              svgSrc={calculator.src}
               id={calculator.id}
               onClick={() => setSelectedCalculator(calculator)} // Set the selected calculator
             />
