@@ -5,6 +5,9 @@ import { calculateResult } from "./calculatorLogic";
 import "../../Admin/New_Post/styles.css";
 import calculators from "./calculatorConfig";
 import { Helmet } from "react-helmet-async";
+import Subscribe from "../../../Common/Subscribe";
+import Footer from "../../../Common/Footer";
+
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -215,6 +218,8 @@ const CalculatorPage = ({ goBack }) => {
           />
         </div>
       </div>
+      <Subscribe />
+      <Footer />
     </>
   );
 };
